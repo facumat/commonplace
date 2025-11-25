@@ -1,10 +1,10 @@
 [
     {
-        "title": "Everything Everywhere All at Once",
-        "director": "Daniels",
-        "year": "2022",
-        "date": "2024-11-20",
-        "tags": ["multiverse", "family"]
+        "title": "title",
+        "director": "director",
+        "year": "year",
+        "dateWatched": "YYYY-MM-DD",
+        "tags": ["tag1", "tag2"]
     },
     {
         "title": "The Matrix",
