@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Commonplace</title>
+</head>
+<body>
+    <h1>My Commonplace</h1>
+    <div id="books"></div>
+    
+    <script>
+        // Fetch the JSON file
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                // Get the container
+                const container = document.getElementById('books');
+                
+                // Process each entry
+                data.forEach(book => {
+                    // Create HTML
+                    container.innerHTML += `
+                        <div class="entry">
+                            <h2>${book.title}</h2>
+                            <p>${book.author} - ${book.date}</p>
+                            <p>${book.tags.join(', ')}</p>
+                        </div>
+                    `;
+                });
+            });
+    </script>
+</body>
+</html>

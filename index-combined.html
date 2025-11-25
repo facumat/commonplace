@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Commonplace</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>My Commonplace</h1>
+    
+    <div class="collection">
+        <h2>Books</h2>
+        <div id="books"></div>
+    </div>
+    
+    <div class="collection">
+        <h2>Movies</h2>
+        <div id="movies"></div>
+    </div>
+    
+    <div class="collection">
+        <h2>Quotes</h2>
+        <div id="quotes"></div>
+    </div>
+    
+    <script>
+        // Fetch and display books
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('books');
+                data.forEach(book => {
+                    container.innerHTML += `
+                        <div class="entry">
+                            <h3>${book.title}</h3>
+                            <p>${book.author} - ${book.date}</p>
+                            <p><em>${book.tags.join(', ')}</em></p>
+                        </div>
+                    `;
+                });
+            });
+        
+        // Fetch and display movies
+        fetch('movies.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('movies');
+                data.forEach(movie => {
+                    container.innerHTML += `
+                        <div class="entry">
+                            <h3>${movie.title}</h3>
+                            <p>${movie.director} (${movie.year}) - Added: ${movie.date}</p>
+                            <p><em>${movie.tags.join(', ')}</em></p>
+                        </div>
+                    `;
+                });
+            });
+        
+        // Fetch and display quotes
+        fetch('quotes.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('quotes');
+                data.forEach(quote => {
+                    container.innerHTML += `
+                        <div class="entry">
+                            <p>"${quote.text}"</p>
+                            <p>— ${quote.source} - ${quote.date}</p>
+                            <p><em>${quote.tags.join(', ')}</em></p>
+                        </div>
+                    `;
+                });
+            });
+    </script>
+</body>
+</html>
