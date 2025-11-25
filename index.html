@@ -55,6 +55,22 @@
                     `;
                 });
             });
+
+        // Fetch and display glossary
+        fetch('glossary.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('glossary');
+                data.forEach(word => {
+                    container.innerHTML += `
+                        <div class="entry">
+                            <h3>${word.word}</h3>
+                            <p>${word.meanining}</p>
+                            <p><em>${movie.tags.join(', ')}</em></p>
+                        </div>
+                    `;
+                });
+            });
         
         // Fetch and display quotes
         fetch('quotes.json')
