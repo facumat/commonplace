@@ -1,9 +1,11 @@
 [
     {
-        "text": "text",
-        "source": "source",
-        "date": "YYY-MM-DD",
-        "tags": ["tag1", "tag2"]
+        "name": "title",
+        "from": "author",
+        "year": "year",
+        "dateConsumed": "dateRead",
+        "tags": [" "],
+        "thoughts": "thoughts"
     },
     {
         "text": "We are what we pretend to be, so we must be careful about what we pretend to be.",

@@ -1,12 +1,11 @@
 [
     {
-        "title": "title",
-        "author": " ",
-        "dateAdded": " ",
-        "dateRead": " ",
+        "name": "title",
+        "from": "author",
+        "year": "year",
+        "dateConsumed": "dateRead",
         "tags": [" "],
-        "thoughts": " ",
-        "encounter": " "
+        "thoughts": "thoughts"
     },
     {
         "title": " of the Sower",

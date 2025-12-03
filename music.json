@@ -1,0 +1,19 @@
+[
+    {
+        "name": "text",
+        "from": "name",
+        "year": "YYYY",
+        "dateConsumed": "YYYY-MM-DD",
+        "tags": ["tag1", "tag2"],
+        "thoughts": "thoughts"
+    },
+    {
+        "album": "Si abro los ojos no es real",
+        "song": "source",
+        "artist": "Amaia",
+        "genre": ["pop", "alt"],
+        "year": "2025",
+        "dateAdded": "2025-11-28",
+        "tags": ["spain"]
+    }
+]
