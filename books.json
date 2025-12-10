@@ -3,7 +3,7 @@
         "name": "title",
         "from": "author",
         "year": "year",
-        "dateConsumed": "dateRead",
+        "consumed": "dateRead",
         "tags": [" "],
         "thoughts": "thoughts"
     },
