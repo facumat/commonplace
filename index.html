@@ -10,13 +10,12 @@
     <p>This must be the place to organize information: those items that are static in nature. Movies, books, quotes that will remain the same throughout the test of time but that I might come back to again and again with my persona changed and developed by the years. That is what separates this from a diary. This is not a record of the different people I have been, but a record of the people that strike a chord along my journey.</p>
     <hr>
     <div class="collection">
-        <h2>Books</h2>
-        <div id="books"></div>
-    </div>
-    <hr>
-    <div class="collection">
         <h2>Movies</h2>
         <div id="movies"></div>
+    </div>
+    <div class="collection">
+        <h2>Books</h2>
+        <div id="books"></div>
     </div>
     <hr>
     <div class="collection">
@@ -42,6 +41,8 @@
                             <h3>${watch.name}</h3>
                             <p>${watch.author} (${movie.year}) - Added: ${watch.added}</p>
                             <p><em>${watch.tags.join(', ')}</em></p>
+                            <p>${watch.thoughts}</p>
+
                         </div>
                     `;
                 });
@@ -63,21 +64,7 @@
                 });
             });
         
-        // Fetch and display quotes
-        fetch('quotes.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('quotes');
-                data.forEach(quote => {
-                    container.innerHTML += `
-                        <div class="entry">
-                            <h4>"${quote.text}"</h4>
-                            <p>${quote.source} - ${quote.date}</p>
-                            <p><em>${quote.tags.join(', ')}</em></p>
-                        </div>
-                    `;
-                });
-            });
+
     </script>
 </body>
 </html>
