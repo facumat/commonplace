@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>My Commonplace</h1>
-    <p>This must be the place to organize information: those items that are static in nature. Movies, books, quotes that will remain the same throughout the test of time but that I might come back to again and again with my persona changed and developed by the years. That is what separates this from a diary. This is not a record of the different people I have been, but a record of the people that strike a chord along my journey.</p>
+    <p>This must be the place to organize information: those items that are static in nature.</p>
     <hr>
     <div class="collection">
         <h2>Movies</h2>
@@ -59,6 +59,8 @@
                             <h3>${word.word}</h3>
                             <p>${word.meaning}</p>
                             <p><em>${word.tags.join(', ')}</em></p>
+                            <p>${word.thoughts}</p>
+
                         </div>
                     `;
                 });
