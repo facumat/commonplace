@@ -30,33 +30,18 @@
     </div>
     
     <script>
-        // Fetch and display books
-        fetch('books.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('books');
-                data.forEach(book => {
-                    container.innerHTML += `
-                        <div class="entry">
-                            <h3>${book.title}</h3>
-                            <p>${book.author} - ${book.date}</p>
-                            <p><em>${book.tags.join(', ')}</em></p>
-                        </div>
-                    `;
-                });
-            });
-        
+
         // Fetch and display movies
-        fetch('movies.json')
+        fetch('watched.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('movies');
-                data.forEach(movie => {
+                data.forEach(watch => {
                     container.innerHTML += `
                         <div class="entry">
-                            <h3>${movie.title}</h3>
-                            <p>${movie.director} (${movie.year}) - Added: ${movie.date}</p>
-                            <p><em>${movie.tags.join(', ')}</em></p>
+                            <h3>${watch.name}</h3>
+                            <p>${watch.author} (${movie.year}) - Added: ${watch.added}</p>
+                            <p><em>${watch.tags.join(', ')}</em></p>
                         </div>
                     `;
                 });

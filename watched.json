@@ -1,7 +1,7 @@
 [
     {
         "name": "text",
-        "from": "name",
+        "author": "name",
         "year": "YYYY",
         "added": "YYYY-MM-DD",
         "consumed": "YYYY-MM-DD",
@@ -11,12 +11,12 @@
     },
     {
         "name": "Dolores Guapa",
-        "from": "Jesús Pascual",
+        "author": "Jesús Pascual",
         "year": "2021",
         "added": "2025-12-9",
         "consumed": "YYYY-MM-DD",
         "type": "movie",
         "tags": ["spain", "queer", "religion"],
-        "thoughts": "Pre: una mirada marica sobre la religión esn Sevilla."
+        "thoughts": "Pre: una mirada marica sobre la religión en Sevilla."
     }
 ]
