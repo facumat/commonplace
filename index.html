@@ -3,6 +3,13 @@
 <head>
     <title>My Commonplace</title>
     <style>
+        body {
+            font-family: "Didot", serif;
+            background-color: #CEE2FF;
+            padding: 0px 24px;
+        }
+
+        hr {height: 1px; color: #AEC8EF;}
     </style>
 </head>
 <body>
@@ -40,7 +47,7 @@
                     container.innerHTML += `
                         <div class="entry">
                             <h3>${watch.name}</h3>
-                            <p>${watch.author} (${movie.year}) - Added: ${watch.added}</p>
+                            <p>${watch.author} (${watch.year}) - Added: ${watch.added}</p>
                             <p><em>${watch.tags.join(', ')}</em></p>
                             <p>${watch.thoughts}</p>
 
@@ -49,23 +56,6 @@
                 });
             });
 
-        // Fetch and display glossary
-        fetch('glossary.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('glossary');
-                data.forEach(word => {
-                    container.innerHTML += `
-                        <div class="entry">
-                            <h3>${word.word}</h3>
-                            <p>${word.meaning}</p>
-                            <p><em>${word.tags.join(', ')}</em></p>
-                            <p>${word.thoughts}</p>
-
-                        </div>
-                    `;
-                });
-            });
         
 
     </script>

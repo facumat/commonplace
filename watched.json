@@ -3,11 +3,14 @@
         "name": "text",
         "author": "name",
         "year": "YYYY",
+        "image": "null",
+        "url": "null",
         "added": "YYYY-MM-DD",
         "consumed": "YYYY-MM-DD",
         "type": "movie",
         "tags": ["tag1", "tag2"],
-        "thoughts": "thoughts"
+        "thoughts": "thoughts",
+        "_comment":"Unused values must be set to NULL"
     },
     {
         "name": "Dolores Guapa",
