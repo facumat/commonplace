@@ -1,7 +1,7 @@
 [
     {
         "name": "text",
-        "author": "name",
+        "from": "name",
         "year": "YYYY",
         "image": "null",
         "url": "null",
@@ -14,7 +14,7 @@
     },
     {
         "name": "Dolores Guapa",
-        "author": "Jesús Pascual",
+        "from": "Jesús Pascual",
         "year": "2021",
         "added": "2025-12-9",
         "consumed": "YYYY-MM-DD",

@@ -15,24 +15,25 @@
 <body>
     <h1>My Commonplace</h1>
     <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
+    <p>Planted: Nov 2025. Last tended: 25 Dec 2025</p>
     <hr>
     <div class="collection">
-        <h2>Movies</h2>
+        <h2>Video</h2>
         <div id="movies"></div>
     </div>
     <hr>
     <div class="collection">
-        <h2>Books</h2>
+        <h2>Text</h2>
         <div id="books"></div>
     </div>
     <hr>
     <div class="collection">
-        <h2>Quotes</h2>
+        <h2>Image</h2>
         <div id="quotes"></div>
     </div>
     <hr>
     <div class="collection">
-        <h2>Glossary</h2>
+        <h2>Collected</h2>
         <div id="glossary"></div>
     </div>
     
@@ -47,7 +48,7 @@
                     container.innerHTML += `
                         <div class="entry">
                             <h3>${watch.name}</h3>
-                            <p>${watch.author} (${watch.year}) - Added: ${watch.added}</p>
+                            <p>${watch.from} (${watch.year}) - Added: ${watch.added} - Watched: ${watch.consumed}</p>
                             <p><em>${watch.tags.join(', ')}</em></p>
                             <p>${watch.thoughts}</p>
 
