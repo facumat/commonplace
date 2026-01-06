@@ -1,9 +1,9 @@
 [
     {
-        "name": "text",
-        "from": "name",
+        "name": null,
+        "from": "null",
         "year": "YYYY",
-        "image": "null",
+        "image": "images/sample.gif",
         "url": "null",
         "added": "YYYY-MM-DD",
         "consumed": "YYYY-MM-DD",

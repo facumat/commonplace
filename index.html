@@ -63,7 +63,8 @@
                     .then(response => response.json())
                     .then(data => {
                         const container = document.getElementById('movies');
-                        data.forEach(watch => {
+                        data.filter(watch => watch.name !== null)
+                            .forEach(watch => {
                             container.innerHTML += `
                                 <div class="entry">
                                     ${watch.image ? `<img src="${watch.image}" alt="${watch.name}" class="movie-poster" loading="lazy">` : ''}
