@@ -47,11 +47,11 @@
                 data.forEach(watch => {
                     container.innerHTML += `
                         <div class="entry">
+                            ${watch.image ? `<img src="${watch.image}" alt="${watch.name}">` : ''}
                             <h3>${watch.name}</h3>
                             <p>${watch.from} (${watch.year}) - Added: ${watch.added} - Watched: ${watch.consumed}</p>
                             <p><em>${watch.tags.join(', ')}</em></p>
                             <p>${watch.thoughts}</p>
-
                         </div>
                     `;
                 });
