@@ -67,9 +67,9 @@
     },
     {
         "name": "The Mastermind",
-        "from": null,
+        "from": "Kelly Reichardt",
         "year": "2025",
-        "image": null,
+        "image": "images/the-mastermind-2025.gif",
         "url": "https://boxd.it/Q7ge",
         "added": "2025-11-12",
         "consumed": "2025-11-11",
@@ -79,9 +79,9 @@
     },
     {
         "name": "Frankenstein",
-        "from": null,
+        "from": "Guillermo Del Toro",
         "year": "2025",
-        "image": null,
+        "image": "images/frankenstein-2025.gif",
         "url": "https://boxd.it/Ecsg",
         "added": "2025-11-12",
         "consumed": "2025-11-11",
