@@ -16,15 +16,12 @@
         "name": "Bugonia",
         "from": "Yorgos Lanthimos",
         "year": "2025",
-        "image": null,
+        "image": "images/bugonia-2025.gif",
         "url": "https://boxd.it/qeWY",
         "added": "2025-12-28",
         "consumed": "2025-12-27",
         "type": "movie",
-        "tags": [
-            "comedy",
-            "crime",
-            "sci-fi"
+        "tags": ["comedy","crime","sci-fi"
         ],
         "thoughts": "★3 - Con mi marido salimos charlando sobre si la ema era alien o no. Para él era obvio unilateralmente y literalmente que era alien. Para mi anything goes. Ahí, en el ida y vuelta de la charla pensé que tal vez esto de hacer creer al espectador de que la Emma es alien, es parte del juego: los incels se convencen también en su echo chamber que hasta nosotros los que estamos frente a la pantalla, nos lo creemos. El efecto ambiguo simple y clásico pero bien logrado me pareció que estaba bueno. El resto, entretenido."
     },
@@ -32,14 +29,12 @@
         "name": "Die My Love",
         "from": "Lynne Ramsay",
         "year": "2025",
-        "image": null,
+        "image": "images/die-my-love-2025.gif",
         "url": "https://boxd.it/D5cI",
         "added": "2025-12-13",
         "consumed": "2025-12-13",
         "type": "movie",
-        "tags": [
-            "drama",
-            "thriller"
+        "tags": ["drama","thriller"
         ],
         "thoughts": "★3"
     },
@@ -47,7 +42,7 @@
         "name": "The Godfather",
         "from": "Francis Ford Coppola",
         "year": "1972",
-        "image": null,
+        "image": "images/the-godfather-2025.gif",
         "url": "https://boxd.it/2aNK",
         "added": "2025-12-12",
         "consumed": "2025-12-12",
@@ -62,7 +57,7 @@
         "name": "Kiki's Delivery Service",
         "from": null,
         "year": "1989",
-        "image": null,
+        "image": "images/kikis-delivery-service-1989.gif",
         "url": "https://boxd.it/1JAY",
         "added": "2025-11-26",
         "consumed": "2025-11-26",
