@@ -10,55 +10,72 @@
         }
 
         hr {height: 1px; color: #AEC8EF;}
+
+        .flex-h {
+            display: flex;
+            gap: 56px;  
+            align-items: flex-start;  
+            margin-bottom: 30px;
+        }
+
+        .flex-h .movie-poster {
+            width: 150px; 
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <h1>My Commonplace</h1>
-    <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
-    <p>Planted: Nov 2025. Last tended: 25 Dec 2025</p>
-    <hr>
-    <div class="collection">
-        <h2>Video</h2>
-        <div id="movies"></div>
-    </div>
-    <hr>
-    <div class="collection">
-        <h2>Text</h2>
-        <div id="books"></div>
-    </div>
-    <hr>
-    <div class="collection">
-        <h2>Image</h2>
-        <div id="quotes"></div>
-    </div>
-    <hr>
-    <div class="collection">
-        <h2>Collected</h2>
-        <div id="glossary"></div>
-    </div>
-    
-    <script>
+    <section class="flex-h">
+        <div class="left-panel">
+            <h1>My Commonplace</h1>
+            <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
+            <p>Planted: Nov 2025. Last tended: 25 Dec 2025</p>
+        </div>
+        <div class="right-panel">
+            <div class="collection">
+                <h2>Video</h2>
+                <div id="movies"></div>
+            </div>
+            <hr>
+            <div class="collection">
+                <h2>Text</h2>
+                <div id="books"></div>
+            </div>
+            <hr>
+            <div class="collection">
+                <h2>Image</h2>
+                <div id="quotes"></div>
+            </div>
+            <hr>
+            <div class="collection">
+                <h2>Collected</h2>
+                <div id="glossary"></div>
+            </div>
+            
+            <script>
 
-        // Fetch and display movies
-        fetch('watched.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('movies');
-                data.forEach(watch => {
-                    container.innerHTML += `
-                        <div class="entry">
-                            ${watch.image ? `<img src="${watch.image}" alt="${watch.name}">` : ''}
-                            <h3>${watch.name}</h3>
-                            <p>${watch.from} (${watch.year}) - Added: ${watch.added} - Watched: ${watch.consumed}</p>
-                            <p><em>${watch.tags.join(', ')}</em></p>
-                            <p>${watch.thoughts}</p>
-                        </div>
-                    `;
-                });
-            });
+                // Fetch and display movies
+                fetch('watched.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('movies');
+                        data.forEach(watch => {
+                            container.innerHTML += `
+                                <div class="entry">
+                                    ${watch.image ? `<img src="${watch.image}" alt="${watch.name}" class="movie-poster" loading="lazy">` : ''}
+                                    <h3>${watch.name}</h3>
+                                    <p>${watch.from} (${watch.year}) - Added: ${watch.added} - Watched: ${watch.consumed}</p>
+                                    <p><em>${watch.tags.join(', ')}</em></p>
+                                    <p>${watch.thoughts}</p>
+                                </div>
+                            `;
+                        });
+                    });
 
-        
+                
 
-    </script>
+            </script>
+        </div>
+    </section>
 </body>
 </html>
