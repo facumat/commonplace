@@ -79,41 +79,42 @@
                 <h2>Collected</h2>
                 <div id="glossary"></div>
             </div>
-            
-            <script>
-
-            // Fetch and display movies and collected items
-            Promise.all([
-                fetch('watched.json').then(response => response.json()),
-                fetch('collected.json').then(response => response.json())
-            ])
-            .then(([watched, collected]) => {
-                // Combine both arrays
-                const allItems = [...watched, ...collected];
-                
-                const container = document.getElementById('movies');
-                
-                allItems
-                    .filter(item => (item.name !== null || item.thing !== null))
-                    .forEach(item => {
-                        const title = item.name || item.thing;
-                        const date = item.consumed || item.collected;
-                        
-                        container.innerHTML += `
-                            <div class="entry">
-                                ${item.image ? `<img src="${item.image}" alt="${title}" class="movie-poster" loading="lazy">` : ''}
-                                <h3>${title}</h3>
-                                <p>${item.from} (${item.year}) - Watched: ${date}</p>
-                                <p><em>${item.tags.join(', ')}</em></p>
-                                <p>${item.thoughts}</p>
-                            </div>
-                        `;
-                    });
-            });
-                
-
-            </script>
         </div>
     </section>
+    
+    <script>
+        // Fetch and display movies and collected items
+        Promise.all([
+            fetch('watched.json').then(response => response.json()),
+            fetch('collected.json').then(response => response.json()).catch(() => [])
+        ])
+        .then(([watched, collected]) => {
+            // Combine both arrays
+            const allItems = [...watched, ...collected];
+            
+            const container = document.getElementById('movies');
+            
+            allItems
+                .filter(item => (item.name !== null || item.thing !== null))
+                .forEach(item => {
+                    const title = item.name || item.thing;
+                    const date = item.consumed || item.collected;
+                    
+                    container.innerHTML += `
+                        <div class="entry">
+                            ${item.image ? `<img src="${item.image}" alt="${title}" class="movie-poster" loading="lazy">` : ''}
+                            <h3>${title}</h3>
+                            <p>${item.from} (${item.year}) - Watched: ${date}</p>
+                            <p><em>${item.tags.join(', ')}</em></p>
+                            <p>${item.thoughts}</p>
+                        </div>
+                    `;
+                });
+        })
+        .catch(error => {
+            console.error('Error loading data:', error);
+            document.getElementById('movies').innerHTML = '<p>Error loading content</p>';
+        });
+    </script>
 </body>
 </html>
