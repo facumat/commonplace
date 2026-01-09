@@ -11,14 +11,16 @@
             "tag1",
             "tag2"
         ],
-        "thoughts": "thoughts",
-        "_comment": "Unused values must be set to NULL. What about deleting Added?"
+        "thoughts": "thoughts"
+    },
+    {
+        "_comment": "Unused values must be set to NULL. Movies must be 150 x 225 px gif at 4 colors."
     },
     {
         "name": "Sentimental Value",
         "from": "Joachim Trier",
         "year": "2025",
-        "image": null,
+        "image": "images/sentimental-value-2025.gif",
         "url": "https://boxd.it/GwcG",
         "consumed": "2026-01-05",
         "type": "movie",

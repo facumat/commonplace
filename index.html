@@ -19,7 +19,7 @@
         }
 
         .flex-h img {
-            width: 150px; 
+            width: 75px; 
             height: auto;
         }
 
@@ -55,6 +55,9 @@
             <p class="journal-entry">
                 8 Jan 2026.<br>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.<br>---
             </p>
+            <p class="journal-entry">
+                8 Jan 2025<br>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?<br>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.<br>---
+            </p>
         </div>
         <div class="right-panel">
             <div class="collection">
@@ -79,25 +82,34 @@
             
             <script>
 
-                // Fetch and display movies
-                fetch('watched.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const container = document.getElementById('movies');
-                        data.filter(watch => watch.name !== null)
-                            .forEach(watch => {
-                            container.innerHTML += `
-                                <div class="entry">
-                                    ${watch.image ? `<img src="${watch.image}" alt="${watch.name}" class="movie-poster" loading="lazy">` : ''}
-                                    <h3>${watch.name}</h3>
-                                    <p>${watch.from} (${watch.year}) - Watched: ${watch.consumed}</p>
-                                    <p><em>${watch.tags.join(', ')}</em></p>
-                                    <p>${watch.thoughts}</p>
-                                </div>
-                            `;
-                        });
+            // Fetch and display movies and collected items
+            Promise.all([
+                fetch('watched.json').then(response => response.json()),
+                fetch('collected.json').then(response => response.json())
+            ])
+            .then(([watched, collected]) => {
+                // Combine both arrays
+                const allItems = [...watched, ...collected];
+                
+                const container = document.getElementById('movies');
+                
+                allItems
+                    .filter(item => (item.name !== null || item.thing !== null))
+                    .forEach(item => {
+                        const title = item.name || item.thing;
+                        const date = item.consumed || item.collected;
+                        
+                        container.innerHTML += `
+                            <div class="entry">
+                                ${item.image ? `<img src="${item.image}" alt="${title}" class="movie-poster" loading="lazy">` : ''}
+                                <h3>${title}</h3>
+                                <p>${item.from} (${item.year}) - Watched: ${date}</p>
+                                <p><em>${item.tags.join(', ')}</em></p>
+                                <p>${item.thoughts}</p>
+                            </div>
+                        `;
                     });
-
+            });
                 
 
             </script>

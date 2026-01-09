@@ -1,0 +1,68 @@
+[
+    {
+        "thing": null,
+        "from": null,
+        "year": null,
+        "image": "images",
+        "url": "null",
+        "collected": "YYYY-MM-DD",
+        "type": "movie",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": "thoughts"
+    },
+    {
+        "thing": "A commonplace book (or commonplaces) is a personal notebook for collecting and organizing information, such as quotes, poems, recipes, and thoughts, that you find inspiring or useful. It serves as a personal treasury of knowledge to be revisited later and can be adapted to include a wide variety of content.",
+        "from": "Common place book",
+        "year": null,
+        "image": "images",
+        "url": "null",
+        "collected": "2025-11-23",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Ana Julia, my boyfriend's friend/family, mentioned how Antonio Lussich would keep books classifying things like seeds, wood, plants, and much more. Instantly, it ringed a bell with my need and jhoy in collecting pieces of things that interest me."
+    },
+    {
+        "thing": "The branch of science concerned with classification, especially of organisms; systematics.",
+        "from": "Taxonomy",
+        "year": null,
+        "image": "images",
+        "url": "null",
+        "collected": "2025-11-22",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Found in an article. This was the start of something new: having a name for the joy of classifying and the need to create one place to hold everything together."
+    },
+    {
+        "thing": "Tiny Awards",
+        "from": null,
+        "year": null,
+        "image": "images",
+        "url": "https://tinyawards.net/",
+        "collected": "2025-11-22",
+        "type": "website",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "Annual awards that, since 2023, select small, poetic, personal and handmade websites."
+    },
+    {
+        "thing": "100% hand coded",
+        "from": null,
+        "year": null,
+        "image": "images/100handcoded.webp",
+        "url": null,
+        "collected": "2025-11-22",
+        "type": "image",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "thoughts"
+    }
+]
