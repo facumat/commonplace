@@ -41,7 +41,7 @@
     },
     {
         "thing": "Tiny Awards",
-        "from": null,
+        "from": "dnr",
         "year": null,
         "image": "images",
         "url": "https://tinyawards.net/",
@@ -54,7 +54,7 @@
     },
     {
         "thing": "100% hand coded",
-        "from": null,
+        "from": "are.na",
         "year": null,
         "image": "images/100handcoded.webp",
         "url": null,
