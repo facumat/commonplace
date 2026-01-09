@@ -119,23 +119,59 @@
                     const thoughts = item.thoughts || '';
                     const from = item.from || '';
                     
-                    // Only show year if it's valid
                     const yearDisplay = (item.year && item.year !== 'YYYY' && item.year !== 'null') 
                         ? `(${item.year})` 
                         : '';
                     
-                    // Format the date
                     const formattedDate = formatDate(date);
                     
-                    container.innerHTML += `
-                        <div class="entry">
-                            ${item.image ? `<img src="${item.image}" alt="${title}" class="movie-poster" loading="lazy">` : ''}
-                            <h3>${title}</h3>
-                            <p>${from} ${yearDisplay} - Watched: ${formattedDate}</p>
-                            <p><em>${tags.join(', ')}</em></p>
-                            <p>${thoughts}</p>
-                        </div>
-                    `;
+                    // Different HTML based on type
+                    let entryHTML = '';
+                    
+                    if (item.type === 'movie') {
+                        entryHTML = `
+                            <div class="entry entry-movie">
+                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                                <div class="content">
+                                    <h3>${title}</h3>
+                                    <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                    <p><em>${tags.join(', ')}</em></p>
+                                    ${thoughts ? `<p>${thoughts}</p>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    } else if (item.type === 'glossary') {
+                        entryHTML = `
+                            <div class="entry entry-glossary">
+                                <h4>${from}</h4>
+                                <p class="definition">${title}</p>
+                                <p class="meta">${formattedDate} · ${tags.join(', ')}</p>
+                                ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
+                            </div>
+                        `;
+                    } else if (item.type === 'image') {
+                        entryHTML = `
+                            <div class="entry entry-image">
+                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                                <p class="caption">${title}</p>
+                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
+                        `;
+                    } else {
+                        // Default format for other types
+                        entryHTML = `
+                            <div class="entry entry-${item.type || 'default'}">
+                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                                <h3>${title}</h3>
+                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p><em>${tags.join(', ')}</em></p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
+                        `;
+                    }
+                    
+                    container.innerHTML += entryHTML;
                 });
         })
         .catch(error => {
