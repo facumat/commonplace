@@ -44,19 +44,19 @@
         <div class="left-panel">
             <h1>My Commonplace</h1>
             <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
-            <p><em>Planted: 24 Nov 2025. Last tended: 08 Jan 2025</em></p>
+            <p><em>Planted: Nov 24, 2025. Last tended: Jan 9, 2025</em></p>
             <div class="divider"><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p></div>
             <h2>Construction journal</h2>
             <p class="journal-entry">
                 <br>---
             </p>
             <p class="journal-entry">
-                6 Jan 2026.<br>This construction journal starts here because the idea did too. This has been in construction for a couple months now, but documentation of thought process starts here.<br>Why english? I don't really know, I guess it's gravitational force of the global north, in a way. The handmade poetic web world is mostly created in english and I want to be a part of that club too. I feel there's two things to weigh in: on one side, I have my integrity and love for the spanish language, being able to express myself with all due confidence my own language provides. On the other hand: I have the ease of use of keeping one language only, as well as being able to reach a broader audience. This commonplace is obviously not about reaching an audience, but doing so is a secondary goal. So for now, I will be contempt with just achieving the creation of this commonplace no matter the language, and try not to put too many sticks on my own wheels by just following my gut. For now, sorry to my country, my dear Spanish and Latinamerica (lol who do you think you are Facundo)<br>On another note, maybe, MAYBE, maybe I should just add consumed things and avoid the to watch, to read, to listen. Just actually consumed items. All in the same json. Just like a commonplace book. One file to handle all. Collected can stay separate tho, like a "notes" book<br>---</p>
+                Jan 6, 2026.<br>This construction journal starts here because the idea did too. This has been in construction for a couple months now, but documentation of thought process starts here.<br>Why english? I don't really know, I guess it's gravitational force of the global north, in a way. The handmade poetic web world is mostly created in english and I want to be a part of that club too. I feel there's two things to weigh in: on one side, I have my integrity and love for the spanish language, being able to express myself with all due confidence my own language provides. On the other hand: I have the ease of use of keeping one language only, as well as being able to reach a broader audience. This commonplace is obviously not about reaching an audience, but doing so is a secondary goal. So for now, I will be contempt with just achieving the creation of this commonplace no matter the language, and try not to put too many sticks on my own wheels by just following my gut. For now, sorry to my country, my dear Spanish and Latinamerica (lol who do you think you are Facundo)<br>On another note, maybe, MAYBE, maybe I should just add consumed things and avoid the to watch, to read, to listen. Just actually consumed items. All in the same json. Just like a commonplace book. One file to handle all. Collected can stay separate tho, like a "notes" book<br>---</p>
             <p class="journal-entry">
-                8 Jan 2026.<br>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.<br>---
+                Jan 8, 2026.<br>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.<br>---
             </p>
             <p class="journal-entry">
-                8 Jan 2025<br>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?<br>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.<br>---
+                Jan 8, 2025<br>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?<br>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.<br>---
             </p>
         </div>
         <div class="right-panel">
@@ -94,19 +94,39 @@
             
             const container = document.getElementById('movies');
             
+            // Function to format date
+            function formatDate(dateString) {
+                if (!dateString || dateString === 'YYYY-MM-DD') return '';
+                
+                const date = new Date(dateString);
+                const options = { month: 'short', day: 'numeric', year: 'numeric' };
+                return date.toLocaleDateString('en-US', options);
+            }
+
             allItems
                 .filter(item => (item.name !== null || item.thing !== null))
                 .forEach(item => {
                     const title = item.name || item.thing;
                     const date = item.consumed || item.collected;
+                    const tags = item.tags || [];
+                    const thoughts = item.thoughts || '';
+                    const from = item.from || '';
+                    
+                    // Only show year if it's valid
+                    const yearDisplay = (item.year && item.year !== 'YYYY' && item.year !== 'null') 
+                        ? `(${item.year})` 
+                        : '';
+                    
+                    // Format the date
+                    const formattedDate = formatDate(date);
                     
                     container.innerHTML += `
                         <div class="entry">
                             ${item.image ? `<img src="${item.image}" alt="${title}" class="movie-poster" loading="lazy">` : ''}
                             <h3>${title}</h3>
-                            <p>${item.from} (${item.year}) - Watched: ${date}</p>
-                            <p><em>${item.tags.join(', ')}</em></p>
-                            <p>${item.thoughts}</p>
+                            <p>${from} ${yearDisplay} - Watched: ${formattedDate}</p>
+                            <p><em>${tags.join(', ')}</em></p>
+                            <p>${thoughts}</p>
                         </div>
                     `;
                 });
