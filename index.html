@@ -83,6 +83,15 @@
     </section>
     
     <script>
+        // Function to format date
+        function formatDate(dateString) {
+            if (!dateString || dateString === 'YYYY-MM-DD') return '';
+            
+            const date = new Date(dateString);
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
         // Fetch and display movies and collected items
         Promise.all([
             fetch('watched.json').then(response => response.json()),
@@ -92,16 +101,14 @@
             // Combine both arrays
             const allItems = [...watched, ...collected];
             
-            const container = document.getElementById('movies');
+            // Sort by date, newest first
+            allItems.sort((a, b) => {
+                const dateA = a.consumed || a.collected || '';
+                const dateB = b.consumed || b.collected || '';
+                return dateB.localeCompare(dateA);
+            });
             
-            // Function to format date
-            function formatDate(dateString) {
-                if (!dateString || dateString === 'YYYY-MM-DD') return '';
-                
-                const date = new Date(dateString);
-                const options = { month: 'short', day: 'numeric', year: 'numeric' };
-                return date.toLocaleDateString('en-US', options);
-            }
+            const container = document.getElementById('movies');
 
             allItems
                 .filter(item => (item.name !== null || item.thing !== null))
