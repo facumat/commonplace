@@ -14,6 +14,32 @@
         "thoughts": "thoughts"
     },
     {
+        "name": "The Kiss of the Spider Woman",
+        "from": "null",
+        "year": "2025",
+        "image": "images/the-kiss-of-the-spider-woman-2025.gif",
+        "url": "null",
+        "consumed": "2026-01-10",
+        "type": "movie",
+        "tags": [
+            "musicals"
+        ],
+        "thoughts": "thoughts"
+    },
+  {
+        "name": "Homem com H",
+        "from": "null",
+        "year": "2018",
+        "image": "images/homem-com-h-2018.gif",
+        "url": "null",
+        "consumed": "2026-01-09",
+        "type": "movie",
+        "tags": [
+            "biopic"
+        ],
+        "thoughts": "thoughts"
+    },
+    {
         "name": "Sentimental Value",
         "from": "Joachim Trier",
         "year": "2025",
