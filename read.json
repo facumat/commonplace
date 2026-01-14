@@ -14,10 +14,10 @@
         "thoughts": "thoughts"
     },
     {
-        "thing": null,
-        "from": null,
-        "year": null,
-        "image": "images",
+        "thing": "Research as leisure activity",
+        "from": "Celine Nguyen",
+        "year": "2025",
+        "image": null,
         "url": "https://substack.com/home/post/p-145011020",
         "consumed": "2026-01-14",
         "type": "article",
