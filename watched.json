@@ -14,6 +14,19 @@
         "thoughts": "thoughts"
     },
     {
+        "name": "Sangue Latino",
+        "from": "Ney Matogrosso / Secos & Molhados",
+        "year": "1973",
+        "image": "images/sample.gif",
+        "url": "https://youtu.be/HVy6fSdOzpw?list=RDHVy6fSdOzpw",
+        "consumed": "2026-01-13",
+        "type": "performance",
+        "tags": [
+            "mpb"
+        ],
+        "thoughts": "Los movimientos performáticamente naturales de este hombre son espectaculares."
+    },
+    {
         "name": "The Kiss of the Spider Woman",
         "from": "Bill Condon",
         "year": "2025",

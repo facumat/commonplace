@@ -1,0 +1,43 @@
+[
+    {
+        "name": null,
+        "from": "null",
+        "year": "YYYY",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": "YYYY-MM-DD",
+        "type": "movie",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": "thoughts"
+    },
+    {
+        "thing": null,
+        "from": null,
+        "year": null,
+        "image": "images",
+        "url": "https://substack.com/home/post/p-145011020",
+        "consumed": "2026-01-14",
+        "type": "article",
+        "tags": [
+            "research",
+            "creativity"
+        ],
+        "thoughts": "thoughts"
+    },
+    {
+        "thing": "Resonant Computing Manifesto",
+        "from": null,
+        "year": "2025",
+        "image": "images",
+        "url": "https://resonantcomputing.org/",
+        "consumed": "2026-01-14",
+        "type": "article",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "thoughts"
+    }
+]

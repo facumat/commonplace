@@ -85,16 +85,18 @@
         // Fetch and display movies and collected items
         Promise.all([
             fetch('watched.json').then(response => response.json()),
-            fetch('collected.json').then(response => response.json()).catch(() => [])
+            fetch('collected.json').then(response => response.json()).catch(() => []),
+            fetch('read.json').then(response => response.json()).catch(() => [])
         ])
-        .then(([watched, collected]) => {
+        .then(([watched, collected, read]) => {
             // Combine both arrays
-            const allItems = [...watched, ...collected];
+            const allItems = [...watched, ...collected, ...read];
             
             // Sort by date, newest first
             allItems.sort((a, b) => {
                 const dateA = a.consumed || a.collected || '';
                 const dateB = b.consumed || b.collected || '';
+
                 return dateB.localeCompare(dateA);
             });
             
