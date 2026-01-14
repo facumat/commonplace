@@ -25,7 +25,7 @@
             "research",
             "creativity"
         ],
-        "thoughts": "thoughts"
+        "thoughts": null
     },
     {
         "thing": "Resonant Computing Manifesto",
@@ -38,6 +38,6 @@
         "tags": [
             "handmade web"
         ],
-        "thoughts": "thoughts"
+        "thoughts": null
     }
 ]

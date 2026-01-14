@@ -5,13 +5,13 @@
         "year": "YYYY",
         "image": "images/sample.gif",
         "url": "null",
-        "consumed": "YYYY-MM-DD",
+        "consumed": null,
         "type": "movie",
         "tags": [
             "tag1",
             "tag2"
         ],
-        "thoughts": "thoughts"
+        "thoughts": null
     },
     {
         "name": "Sangue Latino",
