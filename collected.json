@@ -4,8 +4,8 @@
         "from": null,
         "year": null,
         "image": "images",
-        "url": "null",
-        "collected": "YYYY-MM-DD",
+        "url": null,
+        "collected": null,
         "type": "movie",
         "tags": [
             "tag1",
