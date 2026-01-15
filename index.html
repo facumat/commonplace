@@ -85,7 +85,7 @@
             return date.toLocaleDateString('en-US', options);
         }
 
-        // Fetch and display movies and collected items
+        // Fetch and dsplay movies and collected items
         Promise.all([
             fetch('watched.json').then(response => response.json()),
             fetch('collected.json').then(response => response.json()).catch(() => []),
