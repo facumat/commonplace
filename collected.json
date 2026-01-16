@@ -14,6 +14,48 @@
         "thoughts": null
     },
     {
+        "thing": "The term 'handmade' usually refers to objects made by hand or by using simple tools rather than machines. The result may be homely — as in a child's clay ashtray — or exquisite — as in a pair of bespoke brogues. I evoke the term 'handmade web' to refer to web pages coded by hand rather than by software; web pages made and maintained by individuals rather than by businesses or corporations; web pages which are provisional, temporary, or one-of-a-kind; web pages which challenge conventions of reading, writing, design, ownership, privacy, security, or identity.",
+        "from": "Handmade Web",
+        "year": null,
+        "image": null,
+        "url": "https://luckysoap.com/statements/handmadeweb.html",
+        "collected": "2025-11-07",
+        "type": "glossary",
+        "tags": [
+            "handmade web",
+            "tag2"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "Permacomputing is both a concept and a community of practice oriented around issues of resilience and regenerativity in computer and network technology inspired by permaculture. ପໄଓ☾☼✫ -☆:*",
+        "from": "Permacomputing",
+        "year": null,
+        "image": null,
+        "url": null,
+        "collected": "2024-08-08",
+        "type": "glossary",
+        "tags": [
+            "handmade web",
+            "permacomputing"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "American standard code for international interchange",
+        "from": "ASCII",
+        "year": null,
+        "image": null,
+        "url": null,
+        "collected": "2023-12-07",
+        "type": "glossary",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": null
+    },
+    {
         "thing": "There's a feeling you get in the presence of beautiful buildings and bustling courtyards. A sense that these spaces are inviting you to slow down, deepen your attention and be a bit more human. What if our software could do the same?",
         "from": "Resonant Computer Manifesto",
         "year": null,
