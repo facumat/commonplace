@@ -1,0 +1,30 @@
+[
+    {
+        "thing": null,
+        "from": "null",
+        "year": "YYYY",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": null,
+        "type": "movie",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": "thoughts"
+    },
+    {
+        "thing": "Daily coffee page",
+        "from": "youngjo",
+        "year": null,
+        "image": "images/coffeeyoungjo.webp",
+        "url": "https://coffee.youngjo.com/",
+        "consumed": "2026-01-25",
+        "type": "website",
+        "tags": [
+            "personal projects",
+            "collections"
+        ],
+        "thoughts": "thoughts"
+    }
+]
