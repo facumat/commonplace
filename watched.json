@@ -1,6 +1,6 @@
 [
     {
-        "name": null,
+        "thing": null,
         "from": "null",
         "year": "YYYY",
         "image": "images/sample.gif",
@@ -14,7 +14,7 @@
         "thoughts": null
     },
     {
-        "name": "Sangue Latino",
+        "thing": "Sangue Latino",
         "from": "Ney Matogrosso / Secos & Molhados",
         "year": "1973",
         "image": null,
@@ -27,7 +27,7 @@
         "thoughts": "Los movimientos performáticamente naturales de este hombre son espectaculares."
     },
     {
-        "name": "The Kiss of the Spider Woman",
+        "thing": "The Kiss of the Spider Woman",
         "from": "Bill Condon",
         "year": "2025",
         "image": "images/kiss-of-the-spider-woman-2025.gif",
@@ -40,7 +40,7 @@
         "thoughts": "★1.5 -  Una estrella y media por buenos actores supongo? Se siente peligroso hacer una película tan despolitizada sobre la dictadura hoy en día. She be like oh imaginate que estas en un musical y la dictadura ya no existirá (??????). La cara toda aibrusheada de Jlo. La latinoamerica pobre o tropical que se imagina yankilandia. Estereotipo de mujer trans queriendo ser ama de casa. El sexo homosexual violento y despersonalizado. Que bien baila Jlo igual. "
     },
   {
-        "name": "Homem com H",
+        "thing": "Homem com H",
         "from": "Esmir Filho",
         "year": "2025",
         "image": "images/homem-com-h-2025.gif",
@@ -53,7 +53,7 @@
         "thoughts": "★5 -  Que espectacular madre mía. Tenemos que revitalizar los íconos maricones locales mi gente latino. A Ney Matogrosso lo tenía de nombre, sabía muy poco de él y no había escuchado nada. Ante la búsqueda de ver algo random y ligero en Netflix apareció esta joya: la historia, los actores, el vestuario, las perfos, ese pack de lujurias cinematográficas qu se te quedan estancadas en la mente por días. Obviamente esto llevó a lanzarme en la discrografía de este ícono. I love she"
     },
     {
-        "name": "Sentimental Value",
+        "thing": "Sentimental Value",
         "from": "Joachim Trier",
         "year": "2025",
         "image": "images/sentimental-value-2025.gif",
@@ -66,7 +66,7 @@
         "thoughts": "Ya con el primer tramo narrando como Nora había escrito un cuento desde la perspectiva de su casa-objeto dije bueno, estoy sentadoseated."
     },
     {
-        "name": "Dolores guapa!",
+        "thing": "Dolores guapa!",
         "from": null,
         "year": "2021",
         "image": null,
@@ -80,7 +80,7 @@
         "thoughts": "★3,5 - Claro, al final tiene sentido toda la fascinacón madonnesca con toda la imagen religiosa de la Semana Santa por los maricas. No option but to stan. Hubiese sido un lindo balance mostrar más imagen de los pasos, de la Semana, de todo el despliegue para darle imágenes a esos testimonios."
     },
     {
-        "name": "Bugonia",
+        "thing": "Bugonia",
         "from": "Yorgos Lanthimos",
         "year": "2025",
         "image": "images/bugonia-2025.gif",
@@ -95,7 +95,7 @@
         "thoughts": "★3 - Con mi marido salimos charlando sobre si la ema era alien o no. Para él era obvio unilateralmente y literalmente que era alien. Para mi anything goes. Ahí, en el ida y vuelta de la charla pensé que tal vez esto de hacer creer al espectador de que la Emma es alien, es parte del juego: los incels se convencen también en su echo chamber que hasta nosotros los que estamos frente a la pantalla, nos lo creemos. El efecto ambiguo simple y clásico pero bien logrado me pareció que estaba bueno. El resto, entretenido."
     },
     {
-        "name": "Die My Love",
+        "thing": "Die My Love",
         "from": "Lynne Ramsay",
         "year": "2025",
         "image": "images/die-my-love-2025.gif",
@@ -109,7 +109,7 @@
         "thoughts": "★3"
     },
     {
-        "name": "The Godfather",
+        "thing": "The Godfather",
         "from": "Francis Ford Coppola",
         "year": "1972",
         "image": "images/the-godfather-1972.gif",
@@ -123,7 +123,7 @@
         "thoughts": null
     },
     {
-        "name": "Kiki's Delivery Service",
+        "thing": "Kiki's Delivery Service",
         "from": null,
         "year": "1989",
         "image": "images/kikis-delivery-service-1989.gif",
@@ -134,7 +134,7 @@
         "thoughts": null
     },
     {
-        "name": "The Mastermind",
+        "thing": "The Mastermind",
         "from": "Kelly Reichardt",
         "year": "2025",
         "image": "images/the-mastermind-2025.gif",
@@ -145,7 +145,7 @@
         "thoughts": "★4 - Banco mucho a la Kelly. No es una película que se vaya a quedar conmigo mucho tiempo, aunque la re disfruté. De todos modos le pongo 4 estrellas para peliar las reviews de gente malhumorada que no puede sentarse durante 2 hs de películas sencillas y lentas."
     },
     {
-        "name": "Frankenstein",
+        "thing": "Frankenstein",
         "from": "Guillermo Del Toro",
         "year": "2025",
         "image": "images/frankenstein-2025.gif",
@@ -156,7 +156,7 @@
         "thoughts": "★2 - Fun fun. Aunque pensé que iba a tener mejor fotografía, con todos los sets espectaculares y vestuarios y escenografía que tiene, podría haberlo merecido. La clásica versión de mostro es humano, mostro quiere amor, mostro es femicida, kinda story."
     },
     {
-        "name": "Materialists",
+        "thing": "Materialists",
         "from": null,
         "year": "2025",
         "image": "images/materialists-2025.gif",
@@ -167,7 +167,7 @@
         "thoughts": "★2 - Me dormí a la mitad, sin ningún tipo de culpa ni ganas de volver a ver lo que me perdí. Pochoclera."
     },
     {
-        "name": "Broken Embraces",
+        "thing": "Broken Embraces",
         "from": null,
         "year": "2009",
         "image": "images/los-abrazos-rotos-2009.gif",
@@ -178,7 +178,7 @@
         "thoughts": "★4 - Yet otra película que almodovar hace una trama donde X tuvo un romance y luego un drama bárbaro con Y, pero Y en realidad ahora se llama Z, pero V, que es la pareja de X, y W, que es el hijo de X, no saben que Z es Y, pero tampoco saben, que X se llamaba S cuando conocía a Y, quien ahora es Z, y de la nada Z (quien antes era Y) aparece en la vida de X y le despatarra todo, tal vez llegando a un final con una clausura emocional media a elevada.\n\nAsí y todo: DAME MÁS DE ESTAS PELÍCULAS PEDRO."
     },
     {
-        "name": "A Few Feet Away",
+        "thing": "A Few Feet Away",
         "from": null,
         "year": "2025",
         "image": "images/a-metros-de-distancia-2025.gif",
@@ -189,7 +189,7 @@
         "thoughts": null
     },
     {
-        "name": "A Traveler's Needs",
+        "thing": "A Traveler's Needs",
         "from": null,
         "year": "2024",
         "image": "images/a-travelers-needs-2024.gif",
@@ -200,7 +200,7 @@
         "thoughts": "★4 - Ella es solo una chica indirectamente psicoanalizando la gente que estafa con sus clases de francés introspectivo."
     },
     {
-        "name": "Pulp: a Film About Life, Death & Supermarkets",
+        "thing": "Pulp: a Film About Life, Death & Supermarkets",
         "from": null,
         "year": "2014",
         "image": "images/pulp-life-death-and-supermarkets-2014.gif",
@@ -211,7 +211,7 @@
         "thoughts": "★4 - Estoy un poco biased. Unos días atrás vi a Pulp en vivo: entré al concierto sabiendo solo 4 o 5 canciones, y salí fanatizado, convertido, evangelizado, hipnotizado por los movimientos honestos y libres del señor Jarvis. Además de eso, me atrae mucho esta suerte de género concert film - documental - visual essay. Teniendo eso en cuenta, estaba muy propenso a que me guste este film.\n\nHay como una ida y vuelta en el film. Pulp, cantando sobre la gente común y asuntos cotidianos. La gente común, hablando sobre Pulp en su cotidianeidad. Hay una simbiosis entre Pulp y lo cotidiano que se mete hasta en la propia expresión de la banda: miembros vestidos bastante normal, que parecen ser el vecino de al lado, pero que llevan a cabo una música y unos bailes peculiares y extraordinarios. Tal vez Pulp sea eso, una metáfora de encontrar lo especialmente bello en la vida común.\n\n"
     },
     {
-        "name": "A Complete Unknown",
+        "thing": "A Complete Unknown",
         "from": null,
         "year": "2024",
         "image": "images/a-complete-unknown-2024.gif",
@@ -222,7 +222,7 @@
         "thoughts": null
     },
     {
-        "name": "Lilo & Stitch",
+        "thing": "Lilo & Stitch",
         "from": null,
         "year": "2025",
         "image": "images/lilo-stitch-2025.gif",
@@ -233,7 +233,7 @@
         "thoughts": "★2.5 - Barf barf"
     },
     {
-        "name": "A Fidai Film",
+        "thing": "A Fidai Film",
         "from": null,
         "year": "2024",
         "image": "images/a-fidai-film-2024.gif",
@@ -244,7 +244,7 @@
         "thoughts": "★4 - A pesar de ser un film bastante experimental en estructura, sin que haya un narrador omnipotente o una linea clara entre imagen e image, el mensaje es claro y la angustia es grande. Como otro film que vi hace poco, me lleva a preguntarme qu{e hay de aquellas culturas que han sido abruptamente borradas, ¿existenm aún? ¿Se pueden resucitar? Creo que este tipo de registro es un poco una respuesta a eso entre tantas cosas, manetener la memoria viva."
     },
     {
-        "name": "Mistress Dispeller",
+        "thing": "Mistress Dispeller",
         "from": null,
         "year": "2024",
         "image": "images/mistress-dispeller-2024.gif",
@@ -255,7 +255,7 @@
         "thoughts": "★3.5 - Alguien que les de un libro sobre poliamor!!!!"
     },
     {
-        "name": "Familiar Touch",
+        "thing": "Familiar Touch",
         "from": null,
         "year": "2024",
         "image": "images/familiar-touch-2024.gif",
@@ -266,7 +266,7 @@
         "thoughts": "★4 - Ella solo quiere un chongo y cocinar!!! Free la señora!!! \n\nPavadas de lado, qué ternura y qué trágica. Justo antes de esta vi El último azul, que va del mismo tema, pero con final más ameno."
     },
     {
-        "name": "Universal Language",
+        "thing": "Universal Language",
         "from": null,
         "year": "2024",
         "image": "images/universal-language.gif",
@@ -277,7 +277,7 @@
         "thoughts": "★2 - Le perdí el hilo a este Wes Anderson con saturación baja."
     },
     {
-        "name": "We Are on Air",
+        "thing": "We Are on Air",
         "from": null,
         "year": "2024",
         "image": "images/estamos-no-ar-2024.gif",
@@ -288,7 +288,7 @@
         "thoughts": "★3.5 - Copadita. Mucha destreza para construir mundos donde se siente coherente que los personajes sean tan hilarantes y deprimentes al mismo tiempo. Quiero el color de pelo y de paredes de la señora."
     },
     {
-        "name": "Gods of Stone",
+        "thing": "Gods of Stone",
         "from": null,
         "year": "2025",
         "image": "images/dioses-de-piedra-2024.gif",
@@ -299,7 +299,7 @@
         "thoughts": null
     },
     {
-        "name": "The Blue Trail",
+        "thing": "The Blue Trail",
         "from": null,
         "year": "2025",
         "image": "images/el-ultimo-azul-2025.gif",
@@ -310,7 +310,7 @@
         "thoughts": "★5 - Qué sorpresón esta película. Reflexiva, divertida, linda, entrañable."
     },
     {
-        "name": "How to Be Normal and the Oddness of the Other World",
+        "thing": "How to Be Normal and the Oddness of the Other World",
         "from": null,
         "year": "2025",
         "image": "images/how-to-be-normal-2025.gif",
@@ -321,7 +321,7 @@
         "thoughts": null
     },
     {
-        "name": "The Botanist",
+        "thing": "The Botanist",
         "from": null,
         "year": "2025",
         "image": "images/the-botanist-2025.gif",
@@ -332,7 +332,7 @@
         "thoughts": null
     },
     {
-        "name": "Thesis on a Domestication",
+        "thing": "Thesis on a Domestication",
         "from": null,
         "year": "2024",
         "image": "images/tesis-sobre-una-domesticacion-2024.gif",
@@ -343,7 +343,7 @@
         "thoughts": "★4 - Camila dándolo trolo en la actuación, madre santa. \n\nLeí a alguien decir por ahí que el \"\"\"conflicto\"\"\" aparece muy tarde en la película y estoy en total desacuerdo. La tensión en la domesticación de este personaje aparecer desde el momento 0. "
     },
     {
-        "name": "Ariel",
+        "thing": "Ariel",
         "from": null,
         "year": "2025",
         "image": "images/ariel-2025.gif",
@@ -354,7 +354,7 @@
         "thoughts": "★1.5 - Goodness gracious. Muy linda filmada, y técnicamente y bla pero qué despilfarro es esto?"
     },
     {
-        "name": "Bury Your Dead",
+        "thing": "Bury Your Dead",
         "from": null,
         "year": "2024",
         "image": "images/enterre-seus-mortos-2024.gif",
@@ -365,7 +365,7 @@
         "thoughts": "★3.5 - Muy a favor de esta película. Una cosa bíblica, perturbadora, entretenida y mundana, todo a la vez."
     },
     {
-        "name": "Apocalypse in the Tropics",
+        "thing": "Apocalypse in the Tropics",
         "from": null,
         "year": "2024",
         "image": "images/apocalypse-nos-tropics-2023.gif",
@@ -376,7 +376,7 @@
         "thoughts": "★5 - Las pocas esperanzas que me quedaban en latinoamérica y el mundo left the chat."
     },
     {
-        "name": "On Falling",
+        "thing": "On Falling",
         "from": null,
         "year": "2024",
         "image": "images/on-falling-2024.gif",
@@ -387,7 +387,7 @@
         "thoughts": "★4 - Mi amicha con la que fui salió totalmente desesperanzada y aturdida de esta película por las mismas razones que a mi me pareció un peliculón: un retrato real y crudo de la soledad sistemática en que vivimos, mostrando también el simple antídoto a todo esto: un juego, una caricia, una charla a la pasada. "
     },
     {
-        "name": "Punku",
+        "thing": "Punku",
         "from": null,
         "year": "2025",
         "image": "images/punku-2025.gif",
@@ -398,7 +398,7 @@
         "thoughts": "★1.5 - Ave maría purísima. Creo que el recurso de construir ambiente con una solapación intensa de imágenes, sonidos y tramas se agota para lo que es la duración de la película. Pienso que hubiese funcionado mejor si durara la mitad, tipo una hora. O si al menos diera más contexto para todas las ramas que abre. Sentí que estaba viendo una película hiper cargada pero medio vacía a la vez."
     },
     {
-        "name": "Dreams",
+        "thing": "Dreams",
         "from": null,
         "year": "2024",
         "image": "images/dreams-2024.gif",
@@ -409,7 +409,7 @@
         "thoughts": "★3.5 - Qué ternurita. Yo también necesito la capacidad emocional de esta gurisa pero ahora a mis 29 años. Also she has a type tho."
     },
     {
-        "name": "The Flamenco Guitar of Yerai Cortés",
+        "thing": "The Flamenco Guitar of Yerai Cortés",
         "from": null,
         "year": "2024",
         "image": "images/la-guitarra-flamenca-de-yerai-cortes-2024.gif",
@@ -420,7 +420,7 @@
         "thoughts": "★2.5 - Me temo que la película es buena porque la salva su calidad visual y musical. Qué buen ojo tiene el Tangana. "
     },
     {
-        "name": "Saturn Return",
+        "thing": "Saturn Return",
         "from": null,
         "year": "2024",
         "image": "images/segundo-premio-2024.gif",
@@ -431,7 +431,7 @@
         "thoughts": "★3 - Me gustó pero se queda trancado mucho tiempo en el círculo de [nos drogamos y no hacemos el disco uwu]. Más allá de eso, cómo me gusta la onda rockerita tierna sensiblera. Me fui escuándo el dsico en cuestión por la rambla, porque dramática se nace. Banco."
     },
     {
-        "name": "WHERE DO YOU CALL HOME?",
+        "thing": "WHERE DO YOU CALL HOME?",
         "from": null,
         "year": "2025",
         "image": null,
@@ -442,7 +442,7 @@
         "thoughts": null
     },
     {
-        "name": "A Procura de Martina",
+        "thing": "A Procura de Martina",
         "from": null,
         "year": "2024",
         "image": null,
@@ -453,7 +453,7 @@
         "thoughts": null
     },
     {
-        "name": "My Armenian Phantoms",
+        "thing": "My Armenian Phantoms",
         "from": null,
         "year": "2025",
         "image": null,
@@ -464,7 +464,7 @@
         "thoughts": "★4 - Siendo yo alguien que valora mucho los documentales que balancean la visión objetica y global, con la historia personal, este documental le dió en el punto justo. Una buena cantidad de material de archivo de calidad espectacular, una linea de tiempo de este país en relación al cine y su sociedad, una narración de la vida de la directora entorno al cine. Emotiva con su analogía que usa al cine para preguntarse si una cultura que ha sido atacada y diezmada puede seguir existiendo o volver a renacer."
     },
     {
-        "name": "The Message",
+        "thing": "The Message",
         "from": null,
         "year": "2025",
         "image": null,
@@ -475,7 +475,7 @@
         "thoughts": "★4 - El otro día cuando miraba Volveréis, de Jonas Trueba, un personaje mencionaba que existen las películas circulares y las lineares. A mi el concepto me pareció claro instantáneamente, y esta película es claramente circular. No hay un gran desarrollo, un problema que atravesar. Lo que hay es una mirada en la vida de esta familia atípica, y si hay tramas que atravesar son las de la cotidianeidad, el día a día. Levantarse, encarar la vida, dormir, volver a empezar. Y me parece muy curioso, y realista, las películas que abordan una historia con este enfoque. En ese sentido, me pareció magnífica, lo cuál hace que me de un poco de bronca que mucha gente la califica mal porque creen que las películas \"circulares\" son simplemente malas y no dignas de su tiempo. Qué mala onda la gente che.\nNi hablar de la foto, los recursos, la música y las actuaciones. Una belleza."
     },
     {
-        "name": "The Other Way Around",
+        "thing": "The Other Way Around",
         "from": null,
         "year": "2024",
         "image": null,
@@ -486,7 +486,7 @@
         "thoughts": "★3.5 - So here we go again festival de cinemateca. Anécdota time, esto fue en la apertura del festival donde daban esta peli y yo pensé que era la peli y fin. PERO NO. De sorpresa hubo un coro de ópera y una presentación de Silvya Meyer (💝). Una noche se convirtió en un nochón. Gracias Cinemateca por tanto.\n\nEn fin, a lo que nos compete. El sensibilerío de Trueba me encanta, y siento que esa suerte de ternura se traduce hasta en los movimientos de los personajes, los entornos, etc. Toda la sutileza en el ida y vuelta entre la película que ella está haciendo, y esta película ser esa película, y que ellos sean la película. Habla un poco de constgruir las relaciones propias, festejarlas, cerrarlas, continuarlas, a la manera propia. Otra cosa que destaco es que hace mucho no veía montajes tan espectaculares, emocionantes y bien editados y acompañados por música. Una locurita.\n\n"
     },
     {
-        "name": "Grand Tour",
+        "thing": "Grand Tour",
         "from": null,
         "year": "2024",
         "image": null,
@@ -497,7 +497,7 @@
         "thoughts": "★2 - Es creativa, atractiva, novedosa, bla. Pero no le encontré el alma, si me permiten ponerme jipi."
     },
     {
-        "name": "Problemista",
+        "thing": "Problemista",
         "from": null,
         "year": "2023",
         "image": null,
@@ -508,7 +508,7 @@
         "thoughts": "★3.5 - Ta linda. Amorosa cute artsy. We stan. Me encanta cómo camina él 💖"
     },
     {
-        "name": "Despicable Me 4",
+        "thing": "Despicable Me 4",
         "from": null,
         "year": "2024",
         "image": null,
@@ -519,7 +519,7 @@
         "thoughts": "★2.5 - La empecé a ver porque quería ver algo tranqui mientras cenaba, algo que pudiese dejar por la mitad. Y oh surprise me gustó! Los minions son un poco bastante lgbtquá icons."
     },
     {
-        "name": "Salò, or the 120 Days of Sodom",
+        "thing": "Salò, or the 120 Days of Sodom",
         "from": null,
         "year": "1975",
         "image": null,
@@ -530,7 +530,7 @@
         "thoughts": "★3.5 - I mean, la pasé horrible, pero hay que bancarse todo este retrato de lo repugnante que somos los humanos, no? El final, cuando los dos pibes bailan y se preguntan el nombre de sus novias, mientras el infierno sucede ahí afuera. Eso fue la película para mí. Un retrato de la convivencia con el infierno. Muy actual."
     },
     {
-        "name": "Parthenope",
+        "thing": "Parthenope",
         "from": null,
         "year": "2024",
         "image": null,
@@ -541,7 +541,7 @@
         "thoughts": "★3 - ¿Es esta una película de esas que \"so bad it's good\"? Porque es como si alargaran una publicidad de un perfume caro a 2 horas. Todo se siente muy supérfluo. Como que todos SIENTEN Y SON PASIONALES, vacía pero dramáticamente como publicidad de high fashion con ojos muertos. Oh wait. Parthenope era medio eso, toda wow pero dead inside. Ven? So bad it's good. Una gran sátira de la atracción pasional sin ningún motivo más allá que ejercer el poder. \n\nMás allá de la historia que no me conmovió para nada, y con \"conmover\" me estaría refiriendo a algo así como \"no me dejó algo para recordar\", la fotografía, música y locaciones... madre mía, qué belleza.\n\n"
     },
     {
-        "name": "Montevideo Inolvidable",
+        "thing": "Montevideo Inolvidable",
         "from": null,
         "year": "2025",
         "image": null,
@@ -552,7 +552,7 @@
         "thoughts": "★2 - Me parece una mirada minúscula sobre un tema tan amplio: querer hablar de la arquitectura de Montevideo y no hablar de urbanismo, de espacio público, contaminación visual, no salir a la \"periferia\", no explorar posibilidades factibles, para solo acotarse a hablar de fachadas, \"belleza\" y llenar de comparaciones dispares a países del hemisferio norte, es un pifie. But hey, al menos pone la discusión y el enojo sobre la mesa, necesario más allá del resultado.\n\nNo comments en aspectos técnicos del documental pero solo diré: abusar de tomas aéreas de proporciones enormes, para luego hablar del disfrute del ciudadano a pie... Nada, eso."
     },
     {
-        "name": "Call Me by Your Name",
+        "thing": "Call Me by Your thing name",
         "from": null,
         "year": "2017",
         "image": null,
@@ -563,7 +563,7 @@
         "thoughts": "★4 - I want what they had. Rich parents too."
     },
     {
-        "name": "No Other Land",
+        "thing": "No Other Land",
         "from": null,
         "year": "2024",
         "image": null,
@@ -574,7 +574,7 @@
         "thoughts": "★4 - Qué oportuno mostrar el terror con un lente pequeño y personal. Siento que este tipo de documentales se pierden en la escala cuando lo quieren abarcar todo, y este no es el caso."
     },
     {
-        "name": "Mickey 17",
+        "thing": "Mickey 17",
         "from": null,
         "year": "2025",
         "image": null,
@@ -585,7 +585,7 @@
         "thoughts": "★3.5 - Si hacen peluches de los aliencitos, quiero. Si hacen del Robert también. Jokes aside, sabes que el villano trumpesque te salió bien cuando tenes ganas de que el colesterol haga su magia con la misma fuerza que querés que le suceda al real trumpesque thing."
     },
     {
-        "name": "Incendies",
+        "thing": "Incendies",
         "from": null,
         "year": "2010",
         "image": null,
@@ -596,7 +596,7 @@
         "thoughts": null
     },
     {
-        "name": "Taipei Story",
+        "thing": "Taipei Story",
         "from": null,
         "year": "1985",
         "image": null,
@@ -607,7 +607,7 @@
         "thoughts": null
     },
     {
-        "name": "Maria",
+        "thing": "Maria",
         "from": null,
         "year": "2024",
         "image": null,
@@ -618,7 +618,7 @@
         "thoughts": "★2.5 - O sea yas pero 404 alma de la película not found. Me hizo acordar un poco a aquella infame cinta de Monroe con Ana de Armas donde solo se le mostraba víctima, rota y errante a la protagonista. Tampoco es que conozca nada de esta persona, pero elijo creer que esto no resume ni hace justicia a su ser.\n\nEste año voy a paris y might o might not ponerme unas botas con tacones anchos y unos pantalones pinzados hasta el piso mientras camino por los parques veraniegos haciendome el misterioso que alucina con orquestas."
     },
     {
-        "name": "Bulworth",
+        "thing": "Bulworth",
         "from": null,
         "year": "1998",
         "image": null,
@@ -629,7 +629,7 @@
         "thoughts": "★3.5 - Bro found the spark of life too late so so sad.\n\nA pesar de que técnicamente hace aguas, el concepto es espectacular, y es tremendamente triste que siga tan vigente. Ke porkería el mundo.\n\nIronically fui con una jersey de basketball (o fútbol, vaya uno a saber) extra grande, y me sentí un señor blanco apropiándose _cosas_ como el senador Bulworth. Un pende viejo. Me faltan los desacatos de bombardeo de verdades y estamos."
     },
     {
-        "name": "Labyrinth of Passion",
+        "thing": "Labyrinth of Passion",
         "from": null,
         "year": "1982",
         "image": null,
@@ -640,7 +640,7 @@
         "thoughts": null
     },
     {
-        "name": "The Brutalist",
+        "thing": "The Brutalist",
         "from": null,
         "year": "2024",
         "image": null,
@@ -651,7 +651,7 @@
         "thoughts": "★4 - Cuatro estrellas porque engancharme con una película por 4 horas pero sin conmoverme en lo más mínimo, me parece que algo bastante bien hizo. \n\nEs peculiar porque en sí la historia es jodida: inmigrante escapando la inhumanidad llega a USA y se encuentra con más inhumanidad disfrazada, etc. Un bajón todo. Pero creo que el constante deus ex machina de la película no me dejaba empatizar con los personajes nunca. Onda, pa que voy a lagrimear cuando es totalmentye obvio de que este loco va a conocer un millonario o le va a caer alto proyecto milagrosamente. Además de que bastante soretes todos ellos.\nEn fin, Un dolor real tocaba temas aledaños desde la lejanía y tenía toneladas de comedia, y aún así, me conmovió muchísimo más. \n\nMás allá de no encontrarle alma a la película (que será lo que haga que no recuerde este film en un mes), técnicamente era espectacular: la fotografía, las actuaciones, el ritmo, la banda sonora madre mía. Conmtsntemente con los ojos abiertos por demás y la boca media abierta sumido en el esplendor de todo esto. Como un The Avengers del drama aspiracional post guerra.\n\nPa cerrar: los últimos 5 minutos descarrilan. Si los hubiesen recortado capaz se mantenía intacta la sensación de grandeur de la cuestión."
     },
     {
-        "name": "Flow",
+        "thing": "Flow",
         "from": null,
         "year": "2024",
         "image": null,
@@ -662,7 +662,7 @@
         "thoughts": "★4 - \"Ufa quiero que empiece la peli\" dijo un niño en voz alta mientras pasaban los comerciales en una sala de Cinemateca, con la desinhibición social que la niñez aporta, vociferando lo que los socios callamos (ahre drástico). Meet me at the station don't be late. B de barrio.\n\nBueno más allá de las anécdotas de cinemasnob: no son lágrimas, se me metió un gatito tratando de sobrevivir en un mundo postapocalípticamente mágico en el ojo. Al principio el tipo de animación se me hacía muy parecida a aquella de videojuegos, pero rápidamente se me pasó. El sonido, los movimientos, la comunicación de los personajes sin habla, era espectacular. Obviamente la angustia de animales indefensos era grande, pero la ternura de verles formar una pandilla para sobrellevar los desastres naturales era un sentimiento aún mayor. \n\nNota aparte, habían un par de niñes en la sala y me llamaba la atención lo diabólicos que son a veces. Hacían comentarios del tipo \"ay no lo va a matar!\" sin ningún tipo de desesperanza ni empatía en el comentario. Me pregunto si los gurices vienen así por defecto, o lo que consumen en las tablets los está insesibilizando a pasos adelantados. "
     },
     {
-        "name": "I'm Still Here",
+        "thing": "I'm Still Here",
         "from": null,
         "year": "2024",
         "image": null,
@@ -673,7 +673,7 @@
         "thoughts": "★5 - Si no le dan todos los premios a la Fernanda, we riot.\n\nLa película tenía un buen balance de vivencia personal y cotidianeidad, con datos históricos y lineales. Como la dictadura desgarraba a una familia para siempre, estaba mostrado de una forma sutil, sin meter grandes dagas en el cora, pero a la vez totalmente desgarradora: a lo largo de la película se iba viendo como la familia se desmoronaba y como crecía la angustia que cada personaje llevaba dentro. Especialmente Eunice, la madre, iba enmascarando su deseperación para proteger a sus hijes, con el desgarro comiéndola por dentro. Esa desesperación me iba llegando a través de los minutos, entonces no había momentos específicos de puñaladas para llorar, si no unas ganas crecientes de largar las lágrimas.\n\nDifícil usar adejtivos como \"uno\" con una historia como esta, que es una herida compartida en toda latinoamérica. Difícil entender el silencio cómplice. "
     },
     {
-        "name": "Cameraperson",
+        "thing": "Cameraperson",
         "from": null,
         "year": "2016",
         "image": null,
@@ -684,7 +684,7 @@
         "thoughts": "★4.5 - “Nuestros trabajos son difíciles porque procesamos estas historias y terminamos absorbiéndolas. Así que ¿cómo lidiamos con el trauma, con el estrés postraumático, nosotros que recolectamos estas historias y las compartimos con el mundo?”\n\nLo dijo un sujeto de la película, pero aplica perfectamente para un documentalista."
     },
     {
-        "name": "A Real Pain",
+        "thing": "A Real Pain",
         "from": null,
         "year": "2024",
         "image": null,
@@ -695,7 +695,7 @@
         "thoughts": "★4 - It’s a Yas from me. Tierna, graciosa, sentida. Humana.\n\nMe dieron ganas de indagar en mi propia historia familiar y todo."
     },
     {
-        "name": "The Summer Hit",
+        "thing": "The Summer Hit",
         "from": null,
         "year": "2024",
         "image": null,
@@ -706,7 +706,7 @@
         "thoughts": "★2 - No lo sé rick. Se siente como ese tipo de películas que fueron filmadas con la cámara, iluminación, sonido, música y actuación de una publicidad de panchos Schneck. Lo cual es un problema recurrente en el cine local creo. No me linchen. \n\nLas partes donde apareció Daniel Hendler eran las que me parecían más creíbles dentro del humor absurdo / clase b, como que en el resto le faltaba la inocencia y la película era demasiado consciente y obvia de su humor. No sé si me explico. Creo que no.\n\nEn fin, no importa.\n\nDos estrellas porque mates y zombies es una combinación bárbara."
     },
     {
-        "name": "Emilia Pérez",
+        "thing": "Emilia Pérez",
         "from": null,
         "year": "2024",
         "image": null,
@@ -717,7 +717,7 @@
         "thoughts": "★0.5 - Aprendí a poner media estrella para esta película. Qué bronca que tenga buena coreografía.\n\nPero por suerte la sala de Cinemateca estaba bien fresca, porque con los 40 grados que había afuera se me derretía la pinche vulva."
     },
     {
-        "name": "Conclave",
+        "thing": "Conclave",
         "from": null,
         "year": "2024",
         "image": null,
@@ -728,7 +728,7 @@
         "thoughts": "★2.5 - Peliculón. Un señoro con vestidos espectaculares se cansa de la burocracia eclesiástica y quiere irse a una misión en un pueblo remoto pero los otros señoros con túnicas be like no way you’re too good lead us daddy. \nLa intersección que logran entre lo sagrado y lo banal es espectacular. Una especie de “los máximos de la iglesia también son humanos”. Y también pecan, son corruptos y todo lo que cualquier ciervo común y corriente."
     },
     {
-        "name": "Anora",
+        "thing": "Anora",
         "from": null,
         "year": "2024",
         "image": null,
@@ -739,7 +739,7 @@
         "thoughts": "★5 - Creo que mi primer ⭐️⭐️⭐️⭐️⭐️ del año. Sean Baker siempre logra hacer una crítica social sin dejar de lado el disfrute, la ternura y la humanidad de sus personajes, lo cual me parece necesario en un mundo donde los marginados muchas veces parecen ser reducidos a simples victimas. Sufrimiento y nada más.\n\nAlso Ani where’d you get the hair shiny things I want it gurl"
     },
     {
-        "name": "Grave of the Fireflies",
+        "thing": "Grave of the Fireflies",
         "from": null,
         "year": "1988",
         "image": null,
@@ -750,7 +750,7 @@
         "thoughts": "★4 - Llevé a un chico en una segunda cita a ver esta película. Él no es de ir al cine ni de ver este tipo de films. El verdadero test if you ask me."
     },
     {
-        "name": "Absence",
+        "thing": "Absence",
         "from": null,
         "year": "2023",
         "image": null,
@@ -761,7 +761,7 @@
         "thoughts": "★3 - Esta película tiene el tipo de ritmo que al salir de la sala de cine percibís todo a una velocidad lenta, renovada y sutil."
     },
     {
-        "name": "Sundown",
+        "thing": "Sundown",
         "from": null,
         "year": "2021",
         "image": null,
@@ -772,7 +772,7 @@
         "thoughts": "★3.5 - No me lo esperaba pero un gran yas de drama espontáneo. Media problematik en todo el asunto “si vas a mexico te sekuestran” pero bueno. Como queda una herencia y vida en Acapulco."
     },
     {
-        "name": "Nosferatu",
+        "thing": "Nosferatu",
         "from": null,
         "year": "2024",
         "image": null,
@@ -783,7 +783,7 @@
         "thoughts": "★4 - Why not"
     },
     {
-        "name": "Megalopolis",
+        "thing": "Megalopolis",
         "from": null,
         "year": "2024",
         "image": null,
@@ -794,7 +794,7 @@
         "thoughts": "★1 - Really long Versace ad. Fuera de eso (lo cuál es bárbaro), muy cringe y boba chicos. Me hizo ir a subirle una estrella a Joker 2."
     },
     {
-        "name": "Creatura",
+        "thing": "Creatura",
         "from": null,
         "year": "2023",
         "image": null,
@@ -805,7 +805,7 @@
         "thoughts": "★4 - Muy redonda la película: una línea del tiempo que iba para atrás y para adelante pero funcionaba a la perfección, música y ambientación espectaculares, un toque de sueños surreales, fotografía impecable y una trama con un problema tan cotidiano pero tan escondido. El cuerpo robado y acaparado por la masculinidad.\n\nAlso, ella si no tiene un problema se lo inventa, alguien que le consiga una amiga honesta."
     },
     {
-        "name": "Dark City",
+        "thing": "Dark City",
         "from": null,
         "year": "1998",
         "image": null,
@@ -816,7 +816,7 @@
         "thoughts": "★3 - Wonder how that city would’ve been with Mariah Carey tuning"
     },
     {
-        "name": "Red One",
+        "thing": "Red One",
         "from": null,
         "year": "2024",
         "image": null,
@@ -827,7 +827,7 @@
         "thoughts": "★1 - Lol?"
     },
     {
-        "name": "Wicked",
+        "thing": "Wicked",
         "from": null,
         "year": "2024",
         "image": null,
@@ -838,7 +838,7 @@
         "thoughts": "★4 - Mar 2025 update: NO ONE MOURNS THE WICKEEEED. Perdón, a veces me levanto cantando esto nomas."
     },
     {
-        "name": "Blaga's Lessons",
+        "thing": "Blaga's Lessons",
         "from": null,
         "year": "2023",
         "image": null,
@@ -849,7 +849,7 @@
         "thoughts": "★4 - Terror capital social she said"
     },
     {
-        "name": "True Stories",
+        "thing": "True Stories",
         "from": null,
         "year": "1986",
         "image": null,
@@ -860,7 +860,7 @@
         "thoughts": "★4 - Tan raro, absurdo, real, divertido y triste. Todo a la misma vez. Un bolillero del american dream."
     },
     {
-        "name": "All That Jazz",
+        "thing": "All That Jazz",
         "from": null,
         "year": "1979",
         "image": null,
@@ -871,7 +871,7 @@
         "thoughts": null
     },
     {
-        "name": "Juniper",
+        "thing": "Juniper",
         "from": null,
         "year": "2021",
         "image": null,
@@ -882,7 +882,7 @@
         "thoughts": "★3 - Predecible? Claro que si, pero me vino bárbara para llenar la cuota de películas dramaticonas clásicas llorables. Belleza."
     },
     {
-        "name": "God's Own Country",
+        "thing": "God's Own Country",
         "from": null,
         "year": "2017",
         "image": null,
@@ -893,7 +893,7 @@
         "thoughts": "★4 - What a choice of a movie for a Monday huh?\n\nBeautiful, tender, raw, hopeful."
     },
     {
-        "name": "Queer",
+        "thing": "Queer",
         "from": null,
         "year": "2024",
         "image": null,
@@ -904,7 +904,7 @@
         "thoughts": "★3 - James Bond gaydar is broken which leads him to try ayahuasca in order to see what the actual fuck the indecisive twink he is dating wants.\n\nLol, jokes aside, there are two highlights for me on this movie. First, the experimentation Guadagnino is able to include on this, the surreal moments filled with dreaminess and abstract meaning, reminding me a bit of his Suspiria remake. Second, how he shows male love in ways not seen much in the big screen. The tenderness, the eagerness to touch your crush softly on the cheek, but also the passion, the flames, the male body on full display.\n\nThere’s something that didn’t click 100% for me, but I watched this movie hungover so might need to do a rewatch to get a better feeling for it.\n\nOh and I NEED THAT NECKLACE"
     },
     {
-        "name": "Joker: Folie à Deux",
+        "thing": "Joker: Folie à Deux",
         "from": null,
         "year": "2024",
         "image": null,
@@ -915,7 +915,7 @@
         "thoughts": null
     },
     {
-        "name": "Mixtape La Pampa",
+        "thing": "Mixtape La Pampa",
         "from": null,
         "year": "2023",
         "image": null,
@@ -926,7 +926,7 @@
         "thoughts": null
     },
     {
-        "name": "Beau Travail",
+        "thing": "Beau Travail",
         "from": null,
         "year": "1999",
         "image": null,
@@ -937,7 +937,7 @@
         "thoughts": "★4 - Cine meets danza contemporánea meets arte homoerótico meets colonialismo."
     },
     {
-        "name": "I Trust You",
+        "thing": "I Trust You",
         "from": null,
         "year": "2023",
         "image": null,
@@ -948,7 +948,7 @@
         "thoughts": null
     },
     {
-        "name": "Dog Day Afternoon",
+        "thing": "Dog Day Afternoon",
         "from": null,
         "year": "1975",
         "image": null,
@@ -959,7 +959,7 @@
         "thoughts": null
     },
     {
-        "name": "Savanna and the Mountain",
+        "thing": "Savanna and the Mountain",
         "from": null,
         "year": "2024",
         "image": null,
@@ -970,7 +970,7 @@
         "thoughts": null
     },
     {
-        "name": "The Room Next Door",
+        "thing": "The Room Next Door",
         "from": null,
         "year": "2024",
         "image": null,
@@ -981,7 +981,7 @@
         "thoughts": "★5 - La idea de Almodóvar alejándose de la España de vecindario y mudándose a una yankilandia adinerada que vacaciona en casas de lujo daba miedo. Pero lo logró hacer sin perder el ojo, la voz y la crítica. Yas Pedro."
     },
     {
-        "name": "Synecdoche, New York",
+        "thing": "Synecdoche, New York",
         "from": null,
         "year": "2008",
         "image": null,
@@ -992,7 +992,7 @@
         "thoughts": null
     },
     {
-        "name": "Don’t You Let Me Go",
+        "thing": "Don’t You Let Me Go",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1003,7 +1003,7 @@
         "thoughts": "★5 - Se me metió una película en el ojo 🥲 Qué lindo ver que se produzca una película tan tierna, femenina, nueva, diferente en el paisito. Uruguay, Uruguay."
     },
     {
-        "name": "Sometimes I Think About Dying",
+        "thing": "Sometimes I Think About Dying",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1014,7 +1014,7 @@
         "thoughts": "★3.5 - Hace poco me mudé a un apartamento en un octavo piso y las primeras veces que me asomé al balcón sentí la idea magnética de “¿qué pasaría si me tiro?”. Un poco así se siente la película. Una cabecita colmada de vértigo de vida."
     },
     {
-        "name": "The Firemen's Ball",
+        "thing": "The Firemen's Ball",
         "from": null,
         "year": "1967",
         "image": null,
@@ -1025,7 +1025,7 @@
         "thoughts": "★2.5 - They be like “ahhh piernas ohhhh fuego”. Una sátira y una manga de inútiles."
     },
     {
-        "name": "The Beast",
+        "thing": "The Beast",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1036,7 +1036,7 @@
         "thoughts": "★3.5 - Same amiga, same. Me sentí bastante incomodette con toda esta búsqueda de girlie sensiblera moderna que persigue sentir y ser humana pero la tecnología nos va insensibilizando de a poco (o de a mucho) y vos tipo QUIERO AMAR Y QUÉ y el mundo nah uh bitch take a chill pull purgue your emotions."
     },
     {
-        "name": "The Substance",
+        "thing": "The Substance",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1047,7 +1047,7 @@
         "thoughts": "★3 - Okay. El final se convirtió en una especie de suspiria cronenbergiesca"
     },
     {
-        "name": "Bad Reputation",
+        "thing": "Bad Reputation",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1058,7 +1058,7 @@
         "thoughts": null
     },
     {
-        "name": "L'immensità",
+        "thing": "L'immensità",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1069,7 +1069,7 @@
         "thoughts": "★2.5 - Las vibes rafaella carra y la actuación de la penelope salvan la peli"
     },
     {
-        "name": "Watchmen: Chapter I",
+        "thing": "Watchmen: Chapter I",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1080,7 +1080,7 @@
         "thoughts": null
     },
     {
-        "name": "Savage Nights",
+        "thing": "Savage Nights",
         "from": null,
         "year": "1992",
         "image": null,
@@ -1091,7 +1091,7 @@
         "thoughts": "★3.5 - Dejen de gritarse chiques, lluvia de té de tilo para todes. De todas maneras, un estudio de la perdición pasional bastante interesante."
     },
     {
-        "name": "The August Virgin",
+        "thing": "The August Virgin",
         "from": null,
         "year": "2019",
         "image": null,
@@ -1102,7 +1102,7 @@
         "thoughts": "★5 - Esta peli me da unas ganas bárbaras de que sea verano y me envuelva el sosiego acalorado."
     },
     {
-        "name": "The Practice",
+        "thing": "The Practice",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1113,7 +1113,7 @@
         "thoughts": null
     },
     {
-        "name": "The Astronaut Lovers",
+        "thing": "The Astronaut Lovers",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1124,7 +1124,7 @@
         "thoughts": "★1 - Tengo muchas ideas de mini reviews barderas así que las dejaré todas aquí:\n\n- ¿Realmente los hombres hetero cis curiosos hacen esta cantidad de chistes sobre pijas por minuto? \n\n- Aquí vamos de nuevo, otra vez la sexualidad homosexual reducida a chistes sobre pijas y penetración.\n\n- Ya chápense.\n\n- Qué cosa adormecedora los hetero curiosos vuelteros. Amigo tenes 35 años.\n\n- Creo que es una película sobre gays pakis. Así. Gays y Pakis.\n\n- No, en serio, era necesario un diálogo 89% en base a chistes sobre PENETRACIÓN PIJA Y CACA????\n\n- Si esto es el cine queer rioplatense me mword.\n\n- Tenía una señora sentada a mi derecha que se reía mucho. Must be hetero. \n\n- Por suerte antes de esta había visto un documental sobre la Hija de perra. Mi ida a la Cinemateca valió la pena.\n\n- Así y todo: Pedro dejá a ese nabo y llamame a mí 👁️🫦👁️"
     },
     {
-        "name": "So Filthy and So Happy",
+        "thing": "So Filthy and So Happy",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1135,7 +1135,7 @@
         "thoughts": "★5 - UUUAAAWGGGGH"
     },
     {
-        "name": "Sick of Myself",
+        "thing": "Sick of Myself",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1146,7 +1146,7 @@
         "thoughts": "★3.5 - El verdadero “conseguite un problema honesto amiga”"
     },
     {
-        "name": "No Guilt",
+        "thing": "No Guilt",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1157,7 +1157,7 @@
         "thoughts": null
     },
     {
-        "name": "Kinds of Kindness",
+        "thing": "Kinds of Kindness",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1168,7 +1168,7 @@
         "thoughts": "★2 - Is Yorgos lately obsessed with getting Emma Stone r*ped?"
     },
     {
-        "name": "Doli Goes Home",
+        "thing": "Doli Goes Home",
         "from": null,
         "year": "1986",
         "image": null,
@@ -1179,7 +1179,7 @@
         "thoughts": null
     },
     {
-        "name": "Rapado",
+        "thing": "Rapado",
         "from": null,
         "year": "1992",
         "image": null,
@@ -1190,7 +1190,7 @@
         "thoughts": null
     },
     {
-        "name": "Alien",
+        "thing": "Alien",
         "from": null,
         "year": "1979",
         "image": null,
@@ -1201,7 +1201,7 @@
         "thoughts": null
     },
     {
-        "name": "Alien: Romulus",
+        "thing": "Alien: Romulus",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1212,7 +1212,7 @@
         "thoughts": null
     },
     {
-        "name": "La Huella de las Palabras",
+        "thing": "La Huella de las Palabras",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1223,7 +1223,7 @@
         "thoughts": null
     },
     {
-        "name": "Three Colours: White",
+        "thing": "Three Colours: White",
         "from": null,
         "year": "1994",
         "image": null,
@@ -1234,7 +1234,7 @@
         "thoughts": null
     },
     {
-        "name": "Three Colours: Red",
+        "thing": "Three Colours: Red",
         "from": null,
         "year": "1994",
         "image": null,
@@ -1245,7 +1245,7 @@
         "thoughts": null
     },
     {
-        "name": "New York, New York",
+        "thing": "New York, New York",
         "from": null,
         "year": "1977",
         "image": null,
@@ -1256,7 +1256,7 @@
         "thoughts": "★2.5 - A big yas excuse to put Liza on beautiful gowns and sing jazz classics? I’m in. Also, stop screaming Robert."
     },
     {
-        "name": "Club Zero",
+        "thing": "Club Zero",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1267,7 +1267,7 @@
         "thoughts": "★2 - I mean excellent clothing and furniture."
     },
     {
-        "name": "Pearl",
+        "thing": "Pearl",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1278,7 +1278,7 @@
         "thoughts": null
     },
     {
-        "name": "Three Colours: Blue",
+        "thing": "Three Colours: Blue",
         "from": null,
         "year": "1993",
         "image": null,
@@ -1289,7 +1289,7 @@
         "thoughts": "★5 - It’s 1:40 as I finish watching this movie. Such a depth in how sadness and grief is portrayed. Such a complexity. I think it’s time to fade, with an orchestral sound, to my very few hours of sleep left."
     },
     {
-        "name": "Dogs Don't Wear Pants",
+        "thing": "Dogs Don't Wear Pants",
         "from": null,
         "year": "2019",
         "image": null,
@@ -1300,7 +1300,7 @@
         "thoughts": "★3 - Finnish people are you all okay?"
     },
     {
-        "name": "X",
+        "thing": "X",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1311,7 +1311,7 @@
         "thoughts": null
     },
     {
-        "name": "Network",
+        "thing": "Network",
         "from": null,
         "year": "1976",
         "image": null,
@@ -1322,7 +1322,7 @@
         "thoughts": "★4 - It’s giving small rating men energy"
     },
     {
-        "name": "Mad Max",
+        "thing": "Mad Max",
         "from": null,
         "year": "1979",
         "image": null,
@@ -1333,7 +1333,7 @@
         "thoughts": null
     },
     {
-        "name": "Mad Max 2",
+        "thing": "Mad Max 2",
         "from": null,
         "year": "1981",
         "image": null,
@@ -1344,7 +1344,7 @@
         "thoughts": null
     },
     {
-        "name": "The Seventh Continent",
+        "thing": "The Seventh Continent",
         "from": null,
         "year": "1989",
         "image": null,
@@ -1355,7 +1355,7 @@
         "thoughts": "★4 - La rutina y el desasosiego rutinario ya me asustaba bastante y ahora esta película confirmó la desazón diaria why r u like this janeke"
     },
     {
-        "name": "A Ravaging Wind",
+        "thing": "A Ravaging Wind",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1366,7 +1366,7 @@
         "thoughts": "★4.5 - Siempre al borde de “KE NO LE PASE NADA A LENI”. Also unas ganas de irme a pasear a las sierras uruguashas"
     },
     {
-        "name": "Carmín",
+        "thing": "Carmín",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1377,7 +1377,7 @@
         "thoughts": null
     },
     {
-        "name": "Starlet",
+        "thing": "Starlet",
         "from": null,
         "year": "2012",
         "image": null,
@@ -1388,7 +1388,7 @@
         "thoughts": "★4 - Ay, la vida. Qué linda. Qué dolor también. Pero qué linda. Me gusta como este muchacho muestra el -american dream- sin ningún tipo de filtro rosa, pero con la dosis de humanidad, ternura y esperanza correspondiente."
     },
     {
-        "name": "The Banshees of Inisherin",
+        "thing": "The Banshees of Inisherin",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1399,7 +1399,7 @@
         "thoughts": "★4 - Normalize breaking up with friends and asking if you have any fags"
     },
     {
-        "name": "Gaga Chromatica Ball",
+        "thing": "Gaga Chromatica Ball",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1410,7 +1410,7 @@
         "thoughts": null
     },
     {
-        "name": "Furiosa: A Mad Max Saga",
+        "thing": "Furiosa: A Mad Max Saga",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1421,7 +1421,7 @@
         "thoughts": "★4 - My desert my furiosa my dune.\n\nAlso amazed at furiosa for being able to keep her eyes pitch white amidst the dehydration, sand and fights. There must be an eye drops fortress somewhere."
     },
     {
-        "name": "Something You Said Last Night",
+        "thing": "Something You Said Last Night",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1432,7 +1432,7 @@
         "thoughts": null
     },
     {
-        "name": "Shin Godzilla",
+        "thing": "Shin Godzilla",
         "from": null,
         "year": "2016",
         "image": null,
@@ -1443,7 +1443,7 @@
         "thoughts": null
     },
     {
-        "name": "High & Low – John Galliano",
+        "thing": "High & Low – John Galliano",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1454,7 +1454,7 @@
         "thoughts": null
     },
     {
-        "name": "Love Lies Bleeding",
+        "thing": "Love Lies Bleeding",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1465,7 +1465,7 @@
         "thoughts": "★3 - I want a mullet cut please"
     },
     {
-        "name": "Challengers",
+        "thing": "Challengers",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1476,7 +1476,7 @@
         "thoughts": "★5 - FCK YEAH I WANNA PLAY TENNIS BE RIPPED ALMOST HAVE THREESOMES AND HAVE ZENDAYA BE ANGRY AND HORNY AT ME"
     },
     {
-        "name": "The Gleaners and I",
+        "thing": "The Gleaners and I",
         "from": null,
         "year": "2000",
         "image": null,
@@ -1487,7 +1487,7 @@
         "thoughts": null
     },
     {
-        "name": "Clouds of Sils Maria",
+        "thing": "Clouds of Sils Maria",
         "from": null,
         "year": "2014",
         "image": null,
@@ -1498,7 +1498,7 @@
         "thoughts": null
     },
     {
-        "name": "El bonaerense",
+        "thing": "El bonaerense",
         "from": null,
         "year": "2002",
         "image": null,
@@ -1509,7 +1509,7 @@
         "thoughts": null
     },
     {
-        "name": "Do Not Expect Too Much from the End of the World",
+        "thing": "Do Not Expect Too Much from the End of the World",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1520,7 +1520,7 @@
         "thoughts": null
     },
     {
-        "name": "Paris, Texas",
+        "thing": "Paris, Texas",
         "from": null,
         "year": "1984",
         "image": null,
@@ -1531,7 +1531,7 @@
         "thoughts": null
     },
     {
-        "name": "Meeting the Man: James Baldwin in Paris",
+        "thing": "Meeting the Man: James Baldwin in Paris",
         "from": null,
         "year": "1970",
         "image": null,
@@ -1542,7 +1542,7 @@
         "thoughts": "★4 - Tell ‘em kween"
     },
     {
-        "name": "Light Years",
+        "thing": "Light Years",
         "from": null,
         "year": "2017",
         "image": null,
@@ -1553,7 +1553,7 @@
         "thoughts": "★4 - Hasta la fecha no han encontrado el tono correcto de _desesperadamente_."
     },
     {
-        "name": "The African Desperate",
+        "thing": "The African Desperate",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1564,7 +1564,7 @@
         "thoughts": "★3 - Climax art schools’s version"
     },
     {
-        "name": "Titane",
+        "thing": "Titane",
         "from": null,
         "year": "2021",
         "image": null,
@@ -1575,7 +1575,7 @@
         "thoughts": "★3 - Bitch did a quick de-yassification in the airport bathrooms"
     },
     {
-        "name": "Yannick",
+        "thing": "Yannick",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1586,7 +1586,7 @@
         "thoughts": null
     },
     {
-        "name": "Foremost by Night",
+        "thing": "Foremost by Night",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1597,7 +1597,7 @@
         "thoughts": null
     },
     {
-        "name": "Winter Boy",
+        "thing": "Winter Boy",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1608,7 +1608,7 @@
         "thoughts": null
     },
     {
-        "name": "Sister, What Grows Where Land Is Sick?",
+        "thing": "Sister, What Grows Where Land Is Sick?",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1619,7 +1619,7 @@
         "thoughts": null
     },
     {
-        "name": "Negu hurbilak",
+        "thing": "Negu hurbilak",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1630,7 +1630,7 @@
         "thoughts": "★2 - Muy lindo todo muy importante todo pero diluidísimo todo me dormí"
     },
     {
-        "name": "Woman of...",
+        "thing": "Woman of...",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1641,7 +1641,7 @@
         "thoughts": null
     },
     {
-        "name": "Here",
+        "thing": "Here",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1652,7 +1652,7 @@
         "thoughts": null
     },
     {
-        "name": "Monster",
+        "thing": "Monster",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1663,7 +1663,7 @@
         "thoughts": "★4 - I went see Close without having much idea about the movie. Left the cinema in tears. Monster Close-d me all over again."
     },
     {
-        "name": "Cidade; Campo",
+        "thing": "Cidade; Campo",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1674,7 +1674,7 @@
         "thoughts": null
     },
     {
-        "name": "Matria",
+        "thing": "Matria",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1685,7 +1685,7 @@
         "thoughts": null
     },
     {
-        "name": "Muyeres",
+        "thing": "Muyeres",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1696,7 +1696,7 @@
         "thoughts": null
     },
     {
-        "name": "The Blue Star",
+        "thing": "The Blue Star",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1707,7 +1707,7 @@
         "thoughts": null
     },
     {
-        "name": "Evil Does Not Exist",
+        "thing": "Evil Does Not Exist",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1718,7 +1718,7 @@
         "thoughts": null
     },
     {
-        "name": "Norwegian Dream",
+        "thing": "Norwegian Dream",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1729,7 +1729,7 @@
         "thoughts": "★2 - Felt like a basic generic YA attempt at adult drama. Very simplistic in the bad ways."
     },
     {
-        "name": "The Enchanted",
+        "thing": "The Enchanted",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1740,7 +1740,7 @@
         "thoughts": null
     },
     {
-        "name": "Heartless",
+        "thing": "Heartless",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1751,7 +1751,7 @@
         "thoughts": null
     },
     {
-        "name": "Memories of a Burning Body",
+        "thing": "Memories of a Burning Body",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1762,7 +1762,7 @@
         "thoughts": null
     },
     {
-        "name": "La Chimera",
+        "thing": "La Chimera",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1773,7 +1773,7 @@
         "thoughts": null
     },
     {
-        "name": "The Universal Theory",
+        "thing": "The Universal Theory",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1784,7 +1784,7 @@
         "thoughts": null
     },
     {
-        "name": "Priscilla",
+        "thing": "Priscilla",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1795,7 +1795,7 @@
         "thoughts": "★1 - Mad at how bland and meaningless this movie is. Just make a short film about her teenage obsession and fin."
     },
     {
-        "name": "This Much I Know to Be True",
+        "thing": "This Much I Know to Be True",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1806,7 +1806,7 @@
         "thoughts": null
     },
     {
-        "name": "In This Tricky Life",
+        "thing": "In This Tricky Life",
         "from": null,
         "year": "2001",
         "image": null,
@@ -1817,7 +1817,7 @@
         "thoughts": null
     },
     {
-        "name": "Robot Dreams",
+        "thing": "Robot Dreams",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1828,7 +1828,7 @@
         "thoughts": "★2 - What kind of friends’ monogamy is this"
     },
     {
-        "name": "Dune: Part Two",
+        "thing": "Dune: Part Two",
         "from": null,
         "year": "2024",
         "image": null,
@@ -1839,7 +1839,7 @@
         "thoughts": null
     },
     {
-        "name": "The Beaches of Agnès",
+        "thing": "The Beaches of Agnès",
         "from": null,
         "year": "2008",
         "image": null,
@@ -1850,7 +1850,7 @@
         "thoughts": "★4 - Aspiring to be this interesting, funny, human and lovable when I get old."
     },
     {
-        "name": "The Teachers' Lounge",
+        "thing": "The Teachers' Lounge",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1861,7 +1861,7 @@
         "thoughts": null
     },
     {
-        "name": "Legally Blonde",
+        "thing": "Legally Blonde",
         "from": null,
         "year": "2001",
         "image": null,
@@ -1872,7 +1872,7 @@
         "thoughts": null
     },
     {
-        "name": "The Zone of Interest",
+        "thing": "The Zone of Interest",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1883,7 +1883,7 @@
         "thoughts": null
     },
     {
-        "name": "Bottoms",
+        "thing": "Bottoms",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1894,7 +1894,7 @@
         "thoughts": "★3 - Surrealistically absurd, this is how I want my YA comedy made."
     },
     {
-        "name": "Drifting Clouds",
+        "thing": "Drifting Clouds",
         "from": null,
         "year": "1996",
         "image": null,
@@ -1905,7 +1905,7 @@
         "thoughts": null
     },
     {
-        "name": "Piaffe",
+        "thing": "Piaffe",
         "from": null,
         "year": "2022",
         "image": null,
@@ -1916,7 +1916,7 @@
         "thoughts": "★2 - Is this what berliners do in their free time?"
     },
     {
-        "name": "Pan's Labyrinth",
+        "thing": "Pan's Labyrinth",
         "from": null,
         "year": "2006",
         "image": null,
@@ -1927,7 +1927,7 @@
         "thoughts": null
     },
     {
-        "name": "Society of the Snow",
+        "thing": "Society of the Snow",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1938,7 +1938,7 @@
         "thoughts": null
     },
     {
-        "name": "Perfect Days",
+        "thing": "Perfect Days",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1949,7 +1949,7 @@
         "thoughts": "★4 - Is Tokyo an Architectural Digest ad for public toilets?"
     },
     {
-        "name": "Wild at Heart",
+        "thing": "Wild at Heart",
         "from": null,
         "year": "1990",
         "image": null,
@@ -1960,7 +1960,7 @@
         "thoughts": "★3.5 - Needed this those of end credits while people sing and dance in the back"
     },
     {
-        "name": "A Chiara",
+        "thing": "A Chiara",
         "from": null,
         "year": "2021",
         "image": null,
@@ -1971,7 +1971,7 @@
         "thoughts": null
     },
     {
-        "name": "Jodorowsky's Dune",
+        "thing": "Jodorowsky's Dune",
         "from": null,
         "year": "2013",
         "image": null,
@@ -1982,7 +1982,7 @@
         "thoughts": null
     },
     {
-        "name": "Past Lives",
+        "thing": "Past Lives",
         "from": null,
         "year": "2023",
         "image": null,
@@ -1993,7 +1993,7 @@
         "thoughts": "★5 - Oh to be reassured that to be alive is fucking difficult in the emotions department"
     },
     {
-        "name": "Saltburn",
+        "thing": "Saltburn",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2004,7 +2004,7 @@
         "thoughts": "★2 - Such a big budget to see keoghan dancing naked and rosamund pike depressed but fabulously dressed. I’m in"
     },
     {
-        "name": "A Bigger Splash",
+        "thing": "A Bigger Splash",
         "from": null,
         "year": "2015",
         "image": null,
@@ -2015,7 +2015,7 @@
         "thoughts": null
     },
     {
-        "name": "Poor Things",
+        "thing": "Poor Things",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2026,7 +2026,7 @@
         "thoughts": null
     },
     {
-        "name": "Madonna: Truth or Dare",
+        "thing": "Madonna: Truth or Dare",
         "from": null,
         "year": "1991",
         "image": null,
@@ -2037,7 +2037,7 @@
         "thoughts": null
     },
     {
-        "name": "Age of Panic",
+        "thing": "Age of Panic",
         "from": null,
         "year": "2013",
         "image": null,
@@ -2048,7 +2048,7 @@
         "thoughts": null
     },
     {
-        "name": "Shiva Baby",
+        "thing": "Shiva Baby",
         "from": null,
         "year": "2020",
         "image": null,
@@ -2059,7 +2059,7 @@
         "thoughts": null
     },
     {
-        "name": "The Kingdom of Dreams and Madness",
+        "thing": "The Kingdom of Dreams and Madness",
         "from": null,
         "year": "2013",
         "image": null,
@@ -2070,7 +2070,7 @@
         "thoughts": null
     },
     {
-        "name": "The Boy and the Heron",
+        "thing": "The Boy and the Heron",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2081,7 +2081,7 @@
         "thoughts": null
     },
     {
-        "name": "Escape from New York",
+        "thing": "Escape from New York",
         "from": null,
         "year": "1981",
         "image": null,
@@ -2092,7 +2092,7 @@
         "thoughts": null
     },
     {
-        "name": "Casablanca",
+        "thing": "Casablanca",
         "from": null,
         "year": "1942",
         "image": null,
@@ -2103,7 +2103,7 @@
         "thoughts": null
     },
     {
-        "name": "All of Us Strangers",
+        "thing": "All of Us Strangers",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2114,7 +2114,7 @@
         "thoughts": null
     },
     {
-        "name": "Freaky Friday",
+        "thing": "Freaky Friday",
         "from": null,
         "year": "2003",
         "image": null,
@@ -2125,7 +2125,7 @@
         "thoughts": null
     },
     {
-        "name": "Anatomy of a Fall",
+        "thing": "Anatomy of a Fall",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2136,7 +2136,7 @@
         "thoughts": null
     },
     {
-        "name": "HOMECOMING: A film by Beyoncé",
+        "thing": "HOMECOMING: A film by Beyoncé",
         "from": null,
         "year": "2019",
         "image": null,
@@ -2147,7 +2147,7 @@
         "thoughts": null
     },
     {
-        "name": "Renaissance: A Film by Beyoncé",
+        "thing": "Renaissance: A Film by Beyoncé",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2158,7 +2158,7 @@
         "thoughts": null
     },
     {
-        "name": "Certain Women",
+        "thing": "Certain Women",
         "from": null,
         "year": "2016",
         "image": null,
@@ -2169,7 +2169,7 @@
         "thoughts": null
     },
     {
-        "name": "No Hard Feelings",
+        "thing": "No Hard Feelings",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2180,7 +2180,7 @@
         "thoughts": null
     },
     {
-        "name": "Killers of the Flower Moon",
+        "thing": "Killers of the Flower Moon",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2191,7 +2191,7 @@
         "thoughts": null
     },
     {
-        "name": "Portrait of My Father",
+        "thing": "Portrait of My Father",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2202,7 +2202,7 @@
         "thoughts": null
     },
     {
-        "name": "The Day of the Beast",
+        "thing": "The Day of the Beast",
         "from": null,
         "year": "1995",
         "image": null,
@@ -2213,7 +2213,7 @@
         "thoughts": null
     },
     {
-        "name": "Mistress America",
+        "thing": "Mistress America",
         "from": null,
         "year": "2015",
         "image": null,
@@ -2224,7 +2224,7 @@
         "thoughts": null
     },
     {
-        "name": "Voyage of Time: The IMAX Experience",
+        "thing": "Voyage of Time: The IMAX Experience",
         "from": null,
         "year": "2016",
         "image": null,
@@ -2235,7 +2235,7 @@
         "thoughts": null
     },
     {
-        "name": "Unrest",
+        "thing": "Unrest",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2246,7 +2246,7 @@
         "thoughts": null
     },
     {
-        "name": "Stop Making Sense",
+        "thing": "Stop Making Sense",
         "from": null,
         "year": "1984",
         "image": null,
@@ -2257,7 +2257,7 @@
         "thoughts": null
     },
     {
-        "name": "Mission: Impossible – Dead Reckoning",
+        "thing": "Mission: Impossible – Dead Reckoning",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2268,7 +2268,7 @@
         "thoughts": null
     },
     {
-        "name": "Barbara",
+        "thing": "Barbara",
         "from": null,
         "year": "2012",
         "image": null,
@@ -2279,7 +2279,7 @@
         "thoughts": null
     },
     {
-        "name": "Afire",
+        "thing": "Afire",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2290,7 +2290,7 @@
         "thoughts": null
     },
     {
-        "name": "Public Speaking",
+        "thing": "Public Speaking",
         "from": null,
         "year": "2010",
         "image": null,
@@ -2301,7 +2301,7 @@
         "thoughts": null
     },
     {
-        "name": "Passages",
+        "thing": "Passages",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2312,7 +2312,7 @@
         "thoughts": null
     },
     {
-        "name": "Sign Painters",
+        "thing": "Sign Painters",
         "from": null,
         "year": "2014",
         "image": null,
@@ -2323,7 +2323,7 @@
         "thoughts": null
     },
     {
-        "name": "The Quiet Girl",
+        "thing": "The Quiet Girl",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2334,7 +2334,7 @@
         "thoughts": null
     },
     {
-        "name": "Finde",
+        "thing": "Finde",
         "from": null,
         "year": "2021",
         "image": null,
@@ -2345,7 +2345,7 @@
         "thoughts": null
     },
     {
-        "name": "Strange Way of Life",
+        "thing": "Strange Way of Life",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2356,7 +2356,7 @@
         "thoughts": null
     },
     {
-        "name": "Regarding Susan Sontag",
+        "thing": "Regarding Susan Sontag",
         "from": null,
         "year": "2014",
         "image": null,
@@ -2367,7 +2367,7 @@
         "thoughts": null
     },
     {
-        "name": "Fantastic Planet",
+        "thing": "Fantastic Planet",
         "from": null,
         "year": "1973",
         "image": null,
@@ -2378,7 +2378,7 @@
         "thoughts": null
     },
     {
-        "name": "Barbie",
+        "thing": "Barbie",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2389,7 +2389,7 @@
         "thoughts": null
     },
     {
-        "name": "Possession",
+        "thing": "Possession",
         "from": null,
         "year": "1981",
         "image": null,
@@ -2400,7 +2400,7 @@
         "thoughts": null
     },
     {
-        "name": "Softie",
+        "thing": "Softie",
         "from": null,
         "year": "2021",
         "image": null,
@@ -2411,7 +2411,7 @@
         "thoughts": null
     },
     {
-        "name": "Idea",
+        "thing": "Idea",
         "from": null,
         "year": "1997",
         "image": null,
@@ -2422,7 +2422,7 @@
         "thoughts": null
     },
     {
-        "name": "Lost in Translation",
+        "thing": "Lost in Translation",
         "from": null,
         "year": "2003",
         "image": null,
@@ -2433,7 +2433,7 @@
         "thoughts": null
     },
     {
-        "name": "Carol",
+        "thing": "Carol",
         "from": null,
         "year": "2015",
         "image": null,
@@ -2444,7 +2444,7 @@
         "thoughts": null
     },
     {
-        "name": "Talk to Her",
+        "thing": "Talk to Her",
         "from": null,
         "year": "2002",
         "image": null,
@@ -2455,7 +2455,7 @@
         "thoughts": null
     },
     {
-        "name": "The Siamese Bond",
+        "thing": "The Siamese Bond",
         "from": null,
         "year": "2020",
         "image": null,
@@ -2466,7 +2466,7 @@
         "thoughts": null
     },
     {
-        "name": "Le Bonheur",
+        "thing": "Le Bonheur",
         "from": null,
         "year": "1965",
         "image": null,
@@ -2477,7 +2477,7 @@
         "thoughts": null
     },
     {
-        "name": "The Sleepwalkers",
+        "thing": "The Sleepwalkers",
         "from": null,
         "year": "2019",
         "image": null,
@@ -2488,7 +2488,7 @@
         "thoughts": null
     },
     {
-        "name": "Rotting in the Sun",
+        "thing": "Rotting in the Sun",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2499,7 +2499,7 @@
         "thoughts": null
     },
     {
-        "name": "Only Lovers Left Alive",
+        "thing": "Only Lovers Left Alive",
         "from": null,
         "year": "2013",
         "image": null,
@@ -2510,7 +2510,7 @@
         "thoughts": null
     },
     {
-        "name": "Moonlight",
+        "thing": "Moonlight",
         "from": null,
         "year": "2016",
         "image": null,
@@ -2521,7 +2521,7 @@
         "thoughts": null
     },
     {
-        "name": "The Notebook",
+        "thing": "The Notebook",
         "from": null,
         "year": "2004",
         "image": null,
@@ -2532,7 +2532,7 @@
         "thoughts": null
     },
     {
-        "name": "Manchester by the Sea",
+        "thing": "Manchester by the Sea",
         "from": null,
         "year": "2016",
         "image": null,
@@ -2543,7 +2543,7 @@
         "thoughts": null
     },
     {
-        "name": "Eyes Wide Shut",
+        "thing": "Eyes Wide Shut",
         "from": null,
         "year": "1999",
         "image": null,
@@ -2554,7 +2554,7 @@
         "thoughts": null
     },
     {
-        "name": "Whisky",
+        "thing": "Whisky",
         "from": null,
         "year": "2004",
         "image": null,
@@ -2565,7 +2565,7 @@
         "thoughts": null
     },
     {
-        "name": "25 Watts",
+        "thing": "25 Watts",
         "from": null,
         "year": "2001",
         "image": null,
@@ -2576,7 +2576,7 @@
         "thoughts": null
     },
     {
-        "name": "The King",
+        "thing": "The King",
         "from": null,
         "year": "2019",
         "image": null,
@@ -2587,7 +2587,7 @@
         "thoughts": null
     },
     {
-        "name": "Snow White and the Huntsman",
+        "thing": "Snow White and the Huntsman",
         "from": null,
         "year": "2012",
         "image": null,
@@ -2598,7 +2598,7 @@
         "thoughts": null
     },
     {
-        "name": "Gaga: Five Foot Two",
+        "thing": "Gaga: Five Foot Two",
         "from": null,
         "year": "2017",
         "image": null,
@@ -2609,7 +2609,7 @@
         "thoughts": null
     },
     {
-        "name": "A Star Is Born",
+        "thing": "A Star Is Born",
         "from": null,
         "year": "2018",
         "image": null,
@@ -2620,7 +2620,7 @@
         "thoughts": null
     },
     {
-        "name": "Cha Cha Real Smooth",
+        "thing": "Cha Cha Real Smooth",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2631,7 +2631,7 @@
         "thoughts": null
     },
     {
-        "name": "The Crow",
+        "thing": "The Crow",
         "from": null,
         "year": "1994",
         "image": null,
@@ -2642,7 +2642,7 @@
         "thoughts": null
     },
     {
-        "name": "Ida Vitale",
+        "thing": "Ida Vitale",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2653,7 +2653,7 @@
         "thoughts": null
     },
     {
-        "name": "Parallel Mothers",
+        "thing": "Parallel Mothers",
         "from": null,
         "year": "2021",
         "image": null,
@@ -2664,7 +2664,7 @@
         "thoughts": null
     },
     {
-        "name": "Red, White & Royal Blue",
+        "thing": "Red, White & Royal Blue",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2675,7 +2675,7 @@
         "thoughts": null
     },
     {
-        "name": "Batman v Superman: Dawn of Justice",
+        "thing": "Batman v Superman: Dawn of Justice",
         "from": null,
         "year": "2016",
         "image": null,
@@ -2686,7 +2686,7 @@
         "thoughts": null
     },
     {
-        "name": "Woman at War",
+        "thing": "Woman at War",
         "from": null,
         "year": "2018",
         "image": null,
@@ -2697,7 +2697,7 @@
         "thoughts": null
     },
     {
-        "name": "The Way He Looks",
+        "thing": "The Way He Looks",
         "from": null,
         "year": "2014",
         "image": null,
@@ -2708,7 +2708,7 @@
         "thoughts": null
     },
     {
-        "name": "The Worst Person in the World",
+        "thing": "The Worst Person in the World",
         "from": null,
         "year": "2021",
         "image": null,
@@ -2719,7 +2719,7 @@
         "thoughts": null
     },
     {
-        "name": "Oppenheimer",
+        "thing": "Oppenheimer",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2730,7 +2730,7 @@
         "thoughts": null
     },
     {
-        "name": "mother!",
+        "thing": "mother!",
         "from": null,
         "year": "2017",
         "image": null,
@@ -2741,7 +2741,7 @@
         "thoughts": null
     },
     {
-        "name": "Tenet",
+        "thing": "Tenet",
         "from": null,
         "year": "2020",
         "image": null,
@@ -2752,7 +2752,7 @@
         "thoughts": null
     },
     {
-        "name": "Indiana Jones and the Dial of Destiny",
+        "thing": "Indiana Jones and the Dial of Destiny",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2763,7 +2763,7 @@
         "thoughts": null
     },
     {
-        "name": "When Harry Met Sally...",
+        "thing": "When Harry Met Sally...",
         "from": null,
         "year": "1989",
         "image": null,
@@ -2774,7 +2774,7 @@
         "thoughts": null
     },
     {
-        "name": "Falling Down",
+        "thing": "Falling Down",
         "from": null,
         "year": "1993",
         "image": null,
@@ -2785,7 +2785,7 @@
         "thoughts": null
     },
     {
-        "name": "Blue Jasmine",
+        "thing": "Blue Jasmine",
         "from": null,
         "year": "2013",
         "image": null,
@@ -2796,7 +2796,7 @@
         "thoughts": null
     },
     {
-        "name": "Emily the Criminal",
+        "thing": "Emily the Criminal",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2807,7 +2807,7 @@
         "thoughts": null
     },
     {
-        "name": "Liberal Arts",
+        "thing": "Liberal Arts",
         "from": null,
         "year": "2012",
         "image": null,
@@ -2818,7 +2818,7 @@
         "thoughts": null
     },
     {
-        "name": "Phoenix",
+        "thing": "Phoenix",
         "from": null,
         "year": "2014",
         "image": null,
@@ -2829,7 +2829,7 @@
         "thoughts": null
     },
     {
-        "name": "Asteroid City",
+        "thing": "Asteroid City",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2840,7 +2840,7 @@
         "thoughts": null
     },
     {
-        "name": "Dead Man",
+        "thing": "Dead Man",
         "from": null,
         "year": "1995",
         "image": null,
@@ -2851,7 +2851,7 @@
         "thoughts": null
     },
     {
-        "name": "Nina & Emma",
+        "thing": "Nina & Emma",
         "from": null,
         "year": "2023",
         "image": null,
@@ -2862,7 +2862,7 @@
         "thoughts": null
     },
     {
-        "name": "Oslo, August 31st",
+        "thing": "Oslo, August 31st",
         "from": null,
         "year": "2011",
         "image": null,
@@ -2873,7 +2873,7 @@
         "thoughts": null
     },
     {
-        "name": "Godland",
+        "thing": "Godland",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2884,7 +2884,7 @@
         "thoughts": null
     },
     {
-        "name": "Secretary",
+        "thing": "Secretary",
         "from": null,
         "year": "2002",
         "image": null,
@@ -2895,7 +2895,7 @@
         "thoughts": null
     },
     {
-        "name": "Decision to Leave",
+        "thing": "Decision to Leave",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2906,7 +2906,7 @@
         "thoughts": null
     },
     {
-        "name": "Moonage Daydream",
+        "thing": "Moonage Daydream",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2917,7 +2917,7 @@
         "thoughts": null
     },
     {
-        "name": "Before Sunset",
+        "thing": "Before Sunset",
         "from": null,
         "year": "2004",
         "image": null,
@@ -2928,7 +2928,7 @@
         "thoughts": null
     },
     {
-        "name": "Irma Vep",
+        "thing": "Irma Vep",
         "from": null,
         "year": "1996",
         "image": null,
@@ -2939,7 +2939,7 @@
         "thoughts": null
     },
     {
-        "name": "Undine",
+        "thing": "Undine",
         "from": null,
         "year": "2020",
         "image": null,
@@ -2950,7 +2950,7 @@
         "thoughts": null
     },
     {
-        "name": "First Cow",
+        "thing": "First Cow",
         "from": null,
         "year": "2019",
         "image": null,
@@ -2961,7 +2961,7 @@
         "thoughts": null
     },
     {
-        "name": "Women Talking",
+        "thing": "Women Talking",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2972,7 +2972,7 @@
         "thoughts": null
     },
     {
-        "name": "Suzume",
+        "thing": "Suzume",
         "from": null,
         "year": "2022",
         "image": null,
@@ -2983,7 +2983,7 @@
         "thoughts": null
     },
     {
-        "name": "Chavela",
+        "thing": "Chavela",
         "from": null,
         "year": "2017",
         "image": null,
@@ -2994,7 +2994,7 @@
         "thoughts": null
     },
     {
-        "name": "What Happened, Miss Simone?",
+        "thing": "What Happened, Miss Simone?",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3005,7 +3005,7 @@
         "thoughts": null
     },
     {
-        "name": "Orlando, My Political Biography",
+        "thing": "Orlando, My Political Biography",
         "from": null,
         "year": "2023",
         "image": null,
@@ -3016,7 +3016,7 @@
         "thoughts": null
     },
     {
-        "name": "Mars Attacks!",
+        "thing": "Mars Attacks!",
         "from": null,
         "year": "1996",
         "image": null,
@@ -3027,7 +3027,7 @@
         "thoughts": null
     },
     {
-        "name": "Little Women",
+        "thing": "Little Women",
         "from": null,
         "year": "2019",
         "image": null,
@@ -3038,7 +3038,7 @@
         "thoughts": null
     },
     {
-        "name": "Brokeback Mountain",
+        "thing": "Brokeback Mountain",
         "from": null,
         "year": "2005",
         "image": null,
@@ -3049,7 +3049,7 @@
         "thoughts": null
     },
     {
-        "name": "Utama",
+        "thing": "Utama",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3060,7 +3060,7 @@
         "thoughts": null
     },
     {
-        "name": "The Power of the Dog",
+        "thing": "The Power of the Dog",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3071,7 +3071,7 @@
         "thoughts": null
     },
     {
-        "name": "Fantastic Fungi",
+        "thing": "Fantastic Fungi",
         "from": null,
         "year": "2019",
         "image": null,
@@ -3082,7 +3082,7 @@
         "thoughts": null
     },
     {
-        "name": "The Whale",
+        "thing": "The Whale",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3093,7 +3093,7 @@
         "thoughts": null
     },
     {
-        "name": "Close",
+        "thing": "Close",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3104,7 +3104,7 @@
         "thoughts": null
     },
     {
-        "name": "Hiroshima Mon Amour",
+        "thing": "Hiroshima Mon Amour",
         "from": null,
         "year": "1959",
         "image": null,
@@ -3115,7 +3115,7 @@
         "thoughts": null
     },
     {
-        "name": "Marina Abramović: The Artist Is Present",
+        "thing": "Marina Abramović: The Artist Is Present",
         "from": null,
         "year": "2012",
         "image": null,
@@ -3126,7 +3126,7 @@
         "thoughts": null
     },
     {
-        "name": "Melancholia",
+        "thing": "Melancholia",
         "from": null,
         "year": "2011",
         "image": null,
@@ -3137,7 +3137,7 @@
         "thoughts": null
     },
     {
-        "name": "Our Little Sister",
+        "thing": "Our Little Sister",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3148,7 +3148,7 @@
         "thoughts": null
     },
     {
-        "name": "Dressage",
+        "thing": "Dressage",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3159,7 +3159,7 @@
         "thoughts": null
     },
     {
-        "name": "Desperado",
+        "thing": "Desperado",
         "from": null,
         "year": "1995",
         "image": null,
@@ -3170,7 +3170,7 @@
         "thoughts": null
     },
     {
-        "name": "The Fabelmans",
+        "thing": "The Fabelmans",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3181,7 +3181,7 @@
         "thoughts": null
     },
     {
-        "name": "Hannah Gadsby: Douglas",
+        "thing": "Hannah Gadsby: Douglas",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3192,7 +3192,7 @@
         "thoughts": null
     },
     {
-        "name": "Scenes from a Marriage",
+        "thing": "Scenes from a Marriage",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3203,7 +3203,7 @@
         "thoughts": null
     },
     {
-        "name": "Bones and All",
+        "thing": "Bones and All",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3214,7 +3214,7 @@
         "thoughts": null
     },
     {
-        "name": "Urbanized",
+        "thing": "Urbanized",
         "from": null,
         "year": "2011",
         "image": null,
@@ -3225,7 +3225,7 @@
         "thoughts": null
     },
     {
-        "name": "Fire of Love",
+        "thing": "Fire of Love",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3236,7 +3236,7 @@
         "thoughts": null
     },
     {
-        "name": "Everything Everywhere All at Once",
+        "thing": "Everything Everywhere All at Once",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3247,7 +3247,7 @@
         "thoughts": null
     },
     {
-        "name": "Nick Cave & The Bad Seeds: One More Time with Feeling",
+        "thing": "Nick Cave & The Bad Seeds: One More Time with Feeling",
         "from": null,
         "year": "2016",
         "image": null,
@@ -3258,7 +3258,7 @@
         "thoughts": null
     },
     {
-        "name": "Malena Pichot: Estupidez compleja",
+        "thing": "Malena Pichot: Estupidez compleja",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3269,7 +3269,7 @@
         "thoughts": null
     },
     {
-        "name": "Nymphomaniac: Vol. I",
+        "thing": "Nymphomaniac: Vol. I",
         "from": null,
         "year": "2013",
         "image": null,
@@ -3280,7 +3280,7 @@
         "thoughts": null
     },
     {
-        "name": "Nymphomaniac: Vol. II",
+        "thing": "Nymphomaniac: Vol. II",
         "from": null,
         "year": "2013",
         "image": null,
@@ -3291,7 +3291,7 @@
         "thoughts": null
     },
     {
-        "name": "Interstellar",
+        "thing": "Interstellar",
         "from": null,
         "year": "2014",
         "image": null,
@@ -3302,7 +3302,7 @@
         "thoughts": null
     },
     {
-        "name": "1917",
+        "thing": "1917",
         "from": null,
         "year": "2019",
         "image": null,
@@ -3313,7 +3313,7 @@
         "thoughts": null
     },
     {
-        "name": "Ran",
+        "thing": "Ran",
         "from": null,
         "year": "1985",
         "image": null,
@@ -3324,7 +3324,7 @@
         "thoughts": null
     },
     {
-        "name": "Underground",
+        "thing": "Underground",
         "from": null,
         "year": "1995",
         "image": null,
@@ -3335,7 +3335,7 @@
         "thoughts": null
     },
     {
-        "name": "Delicatessen",
+        "thing": "Delicatessen",
         "from": null,
         "year": "1991",
         "image": null,
@@ -3346,7 +3346,7 @@
         "thoughts": null
     },
     {
-        "name": "F for Fake",
+        "thing": "F for Fake",
         "from": null,
         "year": "1973",
         "image": null,
@@ -3357,7 +3357,7 @@
         "thoughts": null
     },
     {
-        "name": "Mad Max: Fury Road",
+        "thing": "Mad Max: Fury Road",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3368,7 +3368,7 @@
         "thoughts": null
     },
     {
-        "name": "Lady Bird",
+        "thing": "Lady Bird",
         "from": null,
         "year": "2017",
         "image": null,
@@ -3379,7 +3379,7 @@
         "thoughts": null
     },
     {
-        "name": "Breakfast at Tiffany's",
+        "thing": "Breakfast at Tiffany's",
         "from": null,
         "year": "1961",
         "image": null,
@@ -3390,7 +3390,7 @@
         "thoughts": null
     },
     {
-        "name": "I Care a Lot",
+        "thing": "I Care a Lot",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3401,7 +3401,7 @@
         "thoughts": null
     },
     {
-        "name": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+        "thing": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3412,7 +3412,7 @@
         "thoughts": null
     },
     {
-        "name": "Kill Bill: Vol. 1",
+        "thing": "Kill Bill: Vol. 1",
         "from": null,
         "year": "2003",
         "image": null,
@@ -3423,7 +3423,7 @@
         "thoughts": null
     },
     {
-        "name": "Kill Bill: Vol. 2",
+        "thing": "Kill Bill: Vol. 2",
         "from": null,
         "year": "2004",
         "image": null,
@@ -3434,7 +3434,7 @@
         "thoughts": null
     },
     {
-        "name": "American Beauty",
+        "thing": "American Beauty",
         "from": null,
         "year": "1999",
         "image": null,
@@ -3445,7 +3445,7 @@
         "thoughts": null
     },
     {
-        "name": "Promising Young Woman",
+        "thing": "Promising Young Woman",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3456,7 +3456,7 @@
         "thoughts": null
     },
     {
-        "name": "I, Tonya",
+        "thing": "I, Tonya",
         "from": null,
         "year": "2017",
         "image": null,
@@ -3467,7 +3467,7 @@
         "thoughts": null
     },
     {
-        "name": "The Other Tom",
+        "thing": "The Other Tom",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3478,7 +3478,7 @@
         "thoughts": null
     },
     {
-        "name": "Frances Ha",
+        "thing": "Frances Ha",
         "from": null,
         "year": "2012",
         "image": null,
@@ -3489,7 +3489,7 @@
         "thoughts": null
     },
     {
-        "name": "Hannah Gadsby: Nanette",
+        "thing": "Hannah Gadsby: Nanette",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3500,7 +3500,7 @@
         "thoughts": null
     },
     {
-        "name": "TÁR",
+        "thing": "TÁR",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3511,7 +3511,7 @@
         "thoughts": null
     },
     {
-        "name": "Triangle of Sadness",
+        "thing": "Triangle of Sadness",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3522,7 +3522,7 @@
         "thoughts": null
     },
     {
-        "name": "(500) Days of Summer",
+        "thing": "(500) Days of Summer",
         "from": null,
         "year": "2009",
         "image": null,
@@ -3533,7 +3533,7 @@
         "thoughts": null
     },
     {
-        "name": "Minuscule: Valley of the Lost Ants",
+        "thing": "Minuscule: Valley of the Lost Ants",
         "from": null,
         "year": "2013",
         "image": null,
@@ -3544,7 +3544,7 @@
         "thoughts": null
     },
     {
-        "name": "Æon Flux",
+        "thing": "Æon Flux",
         "from": null,
         "year": "2005",
         "image": null,
@@ -3555,7 +3555,7 @@
         "thoughts": null
     },
     {
-        "name": "Silvia Prieto",
+        "thing": "Silvia Prieto",
         "from": null,
         "year": "1999",
         "image": null,
@@ -3566,7 +3566,7 @@
         "thoughts": null
     },
     {
-        "name": "Sidewalls",
+        "thing": "Sidewalls",
         "from": null,
         "year": "2011",
         "image": null,
@@ -3577,7 +3577,7 @@
         "thoughts": null
     },
     {
-        "name": "The Northman",
+        "thing": "The Northman",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3588,7 +3588,7 @@
         "thoughts": null
     },
     {
-        "name": "Aftersun",
+        "thing": "Aftersun",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3599,7 +3599,7 @@
         "thoughts": null
     },
     {
-        "name": "Sublime",
+        "thing": "Sublime",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3610,7 +3610,7 @@
         "thoughts": null
     },
     {
-        "name": "Blank Narcissus (Passion of the Swamp)",
+        "thing": "Blank Narcissus (Passion of the Swamp)",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3621,7 +3621,7 @@
         "thoughts": null
     },
     {
-        "name": "Caprice",
+        "thing": "Caprice",
         "from": null,
         "year": "1986",
         "image": null,
@@ -3632,7 +3632,7 @@
         "thoughts": null
     },
     {
-        "name": "Edward II",
+        "thing": "Edward II",
         "from": null,
         "year": "1991",
         "image": null,
@@ -3643,7 +3643,7 @@
         "thoughts": null
     },
     {
-        "name": "Argentina 1985",
+        "thing": "Argentina 1985",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3654,7 +3654,7 @@
         "thoughts": null
     },
     {
-        "name": "A Twelve-Year Night",
+        "thing": "A Twelve-Year Night",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3665,7 +3665,7 @@
         "thoughts": null
     },
     {
-        "name": "Joan Didion: The Center Will Not Hold",
+        "thing": "Joan Didion: The Center Will Not Hold",
         "from": null,
         "year": "2017",
         "image": null,
@@ -3676,7 +3676,7 @@
         "thoughts": null
     },
     {
-        "name": "Ripples of Life",
+        "thing": "Ripples of Life",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3687,7 +3687,7 @@
         "thoughts": null
     },
     {
-        "name": "Blonde",
+        "thing": "Blonde",
         "from": null,
         "year": "2022",
         "image": null,
@@ -3698,7 +3698,7 @@
         "thoughts": null
     },
     {
-        "name": "Tove",
+        "thing": "Tove",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3709,7 +3709,7 @@
         "thoughts": null
     },
     {
-        "name": "Paris, 13th District",
+        "thing": "Paris, 13th District",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3720,7 +3720,7 @@
         "thoughts": null
     },
     {
-        "name": "Boys",
+        "thing": "Boys",
         "from": null,
         "year": "2014",
         "image": null,
@@ -3731,7 +3731,7 @@
         "thoughts": null
     },
     {
-        "name": "Pieces of a Woman",
+        "thing": "Pieces of a Woman",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3742,7 +3742,7 @@
         "thoughts": null
     },
     {
-        "name": "Yojimbo",
+        "thing": "Yojimbo",
         "from": null,
         "year": "1961",
         "image": null,
@@ -3753,7 +3753,7 @@
         "thoughts": null
     },
     {
-        "name": "Sweet Charity",
+        "thing": "Sweet Charity",
         "from": null,
         "year": "1969",
         "image": null,
@@ -3764,7 +3764,7 @@
         "thoughts": null
     },
     {
-        "name": "Isle of Dogs",
+        "thing": "Isle of Dogs",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3775,7 +3775,7 @@
         "thoughts": null
     },
     {
-        "name": "The French Dispatch of the Liberty, Kansas Evening Sun",
+        "thing": "The French Dispatch of the Liberty, Kansas Evening Sun",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3786,7 +3786,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lighthouse",
+        "thing": "The Lighthouse",
         "from": null,
         "year": "2019",
         "image": null,
@@ -3797,7 +3797,7 @@
         "thoughts": null
     },
     {
-        "name": "Gravity",
+        "thing": "Gravity",
         "from": null,
         "year": "2013",
         "image": null,
@@ -3808,7 +3808,7 @@
         "thoughts": null
     },
     {
-        "name": "Arrival",
+        "thing": "Arrival",
         "from": null,
         "year": "2016",
         "image": null,
@@ -3819,7 +3819,7 @@
         "thoughts": null
     },
     {
-        "name": "Prometheus",
+        "thing": "Prometheus",
         "from": null,
         "year": "2012",
         "image": null,
@@ -3830,7 +3830,7 @@
         "thoughts": null
     },
     {
-        "name": "Thelma & Louise",
+        "thing": "Thelma & Louise",
         "from": null,
         "year": "1991",
         "image": null,
@@ -3841,7 +3841,7 @@
         "thoughts": null
     },
     {
-        "name": "The Martian",
+        "thing": "The Martian",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3852,7 +3852,7 @@
         "thoughts": null
     },
     {
-        "name": "The Green Knight",
+        "thing": "The Green Knight",
         "from": null,
         "year": "2021",
         "image": null,
@@ -3863,7 +3863,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lobster",
+        "thing": "The Lobster",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3874,7 +3874,7 @@
         "thoughts": null
     },
     {
-        "name": "The Hobbit: An Unexpected Journey",
+        "thing": "The Hobbit: An Unexpected Journey",
         "from": null,
         "year": "2012",
         "image": null,
@@ -3885,7 +3885,7 @@
         "thoughts": null
     },
     {
-        "name": "The Hobbit: The Desolation of Smaug",
+        "thing": "The Hobbit: The Desolation of Smaug",
         "from": null,
         "year": "2013",
         "image": null,
@@ -3896,7 +3896,7 @@
         "thoughts": null
     },
     {
-        "name": "The Hobbit: The Battle of the Five Armies",
+        "thing": "The Hobbit: The Battle of the Five Armies",
         "from": null,
         "year": "2014",
         "image": null,
@@ -3907,7 +3907,7 @@
         "thoughts": null
     },
     {
-        "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "thing": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
         "from": null,
         "year": "2005",
         "image": null,
@@ -3918,7 +3918,7 @@
         "thoughts": null
     },
     {
-        "name": "The Chronicles of Narnia: Prince Caspian",
+        "thing": "The Chronicles of Narnia: Prince Caspian",
         "from": null,
         "year": "2008",
         "image": null,
@@ -3929,7 +3929,7 @@
         "thoughts": null
     },
     {
-        "name": "Roma",
+        "thing": "Roma",
         "from": null,
         "year": "2018",
         "image": null,
@@ -3940,7 +3940,7 @@
         "thoughts": null
     },
     {
-        "name": "Y Tu Mamá También",
+        "thing": "Y Tu Mamá También",
         "from": null,
         "year": "2001",
         "image": null,
@@ -3951,7 +3951,7 @@
         "thoughts": null
     },
     {
-        "name": "Amores Perros",
+        "thing": "Amores Perros",
         "from": null,
         "year": "2000",
         "image": null,
@@ -3962,7 +3962,7 @@
         "thoughts": null
     },
     {
-        "name": "The Danish Girl",
+        "thing": "The Danish Girl",
         "from": null,
         "year": "2015",
         "image": null,
@@ -3973,7 +3973,7 @@
         "thoughts": null
     },
     {
-        "name": "The King's Speech",
+        "thing": "The King's Speech",
         "from": null,
         "year": "2010",
         "image": null,
@@ -3984,7 +3984,7 @@
         "thoughts": null
     },
     {
-        "name": "Nomadland",
+        "thing": "Nomadland",
         "from": null,
         "year": "2020",
         "image": null,
@@ -3995,7 +3995,7 @@
         "thoughts": null
     },
     {
-        "name": "Three Billboards Outside Ebbing, Missouri",
+        "thing": "Three Billboards Outside Ebbing, Missouri",
         "from": null,
         "year": "2017",
         "image": null,
@@ -4006,7 +4006,7 @@
         "thoughts": null
     },
     {
-        "name": "A Ghost Story",
+        "thing": "A Ghost Story",
         "from": null,
         "year": "2017",
         "image": null,
@@ -4017,7 +4017,7 @@
         "thoughts": null
     },
     {
-        "name": "Crimes of the Future",
+        "thing": "Crimes of the Future",
         "from": null,
         "year": "2022",
         "image": null,
@@ -4028,7 +4028,7 @@
         "thoughts": null
     },
     {
-        "name": "Hedwig and the Angry Inch",
+        "thing": "Hedwig and the Angry Inch",
         "from": null,
         "year": "2001",
         "image": null,
@@ -4039,7 +4039,7 @@
         "thoughts": null
     },
     {
-        "name": "In the Mood for Love",
+        "thing": "In the Mood for Love",
         "from": null,
         "year": "2000",
         "image": null,
@@ -4050,7 +4050,7 @@
         "thoughts": null
     },
     {
-        "name": "Chungking Express",
+        "thing": "Chungking Express",
         "from": null,
         "year": "1994",
         "image": null,
@@ -4061,7 +4061,7 @@
         "thoughts": null
     },
     {
-        "name": "Fallen Angels",
+        "thing": "Fallen Angels",
         "from": null,
         "year": "1995",
         "image": null,
@@ -4072,7 +4072,7 @@
         "thoughts": null
     },
     {
-        "name": "The Batman",
+        "thing": "The Batman",
         "from": null,
         "year": "2022",
         "image": null,
@@ -4083,7 +4083,7 @@
         "thoughts": null
     },
     {
-        "name": "Whiplash",
+        "thing": "Whiplash",
         "from": null,
         "year": "2014",
         "image": null,
@@ -4094,7 +4094,7 @@
         "thoughts": null
     },
     {
-        "name": "The Gray Man",
+        "thing": "The Gray Man",
         "from": null,
         "year": "2022",
         "image": null,
@@ -4105,7 +4105,7 @@
         "thoughts": null
     },
     {
-        "name": "North Terminal",
+        "thing": "North Terminal",
         "from": null,
         "year": "2021",
         "image": null,
@@ -4116,7 +4116,7 @@
         "thoughts": null
     },
     {
-        "name": "Great Freedom",
+        "thing": "Great Freedom",
         "from": null,
         "year": "2021",
         "image": null,
@@ -4127,7 +4127,7 @@
         "thoughts": null
     },
     {
-        "name": "Magnolia",
+        "thing": "Magnolia",
         "from": null,
         "year": "1999",
         "image": null,
@@ -4138,7 +4138,7 @@
         "thoughts": null
     },
     {
-        "name": "Ema",
+        "thing": "Ema",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4149,7 +4149,7 @@
         "thoughts": null
     },
     {
-        "name": "Incident by a Bank",
+        "thing": "Incident by a Bank",
         "from": null,
         "year": "2010",
         "image": null,
@@ -4160,7 +4160,7 @@
         "thoughts": null
     },
     {
-        "name": "Matthias & Maxime",
+        "thing": "Matthias & Maxime",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4171,7 +4171,7 @@
         "thoughts": null
     },
     {
-        "name": "The Kindergarten Teacher",
+        "thing": "The Kindergarten Teacher",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4182,7 +4182,7 @@
         "thoughts": null
     },
     {
-        "name": "Dark Habits",
+        "thing": "Dark Habits",
         "from": null,
         "year": "1983",
         "image": null,
@@ -4193,7 +4193,7 @@
         "thoughts": null
     },
     {
-        "name": "While We're Young",
+        "thing": "While We're Young",
         "from": null,
         "year": "2014",
         "image": null,
@@ -4204,7 +4204,7 @@
         "thoughts": null
     },
     {
-        "name": "Olla",
+        "thing": "Olla",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4215,7 +4215,7 @@
         "thoughts": null
     },
     {
-        "name": "Julieta",
+        "thing": "Julieta",
         "from": null,
         "year": "2016",
         "image": null,
@@ -4226,7 +4226,7 @@
         "thoughts": null
     },
     {
-        "name": "Women on the Verge of a Nervous Breakdown",
+        "thing": "Women on the Verge of a Nervous Breakdown",
         "from": null,
         "year": "1988",
         "image": null,
@@ -4237,7 +4237,7 @@
         "thoughts": null
     },
     {
-        "name": "Volver",
+        "thing": "Volver",
         "from": null,
         "year": "2006",
         "image": null,
@@ -4248,7 +4248,7 @@
         "thoughts": null
     },
     {
-        "name": "Manufactured Landscapes",
+        "thing": "Manufactured Landscapes",
         "from": null,
         "year": "2006",
         "image": null,
@@ -4259,7 +4259,7 @@
         "thoughts": null
     },
     {
-        "name": "My Neighbor Totoro",
+        "thing": "My Neighbor Totoro",
         "from": null,
         "year": "1988",
         "image": null,
@@ -4270,7 +4270,7 @@
         "thoughts": null
     },
     {
-        "name": "Spirited Away",
+        "thing": "Spirited Away",
         "from": null,
         "year": "2001",
         "image": null,
@@ -4281,7 +4281,7 @@
         "thoughts": null
     },
     {
-        "name": "Howl's Moving Castle",
+        "thing": "Howl's Moving Castle",
         "from": null,
         "year": "2004",
         "image": null,
@@ -4292,7 +4292,7 @@
         "thoughts": null
     },
     {
-        "name": "Castle in the Sky",
+        "thing": "Castle in the Sky",
         "from": null,
         "year": "1986",
         "image": null,
@@ -4303,7 +4303,7 @@
         "thoughts": null
     },
     {
-        "name": "The Wind Rises",
+        "thing": "The Wind Rises",
         "from": null,
         "year": "2013",
         "image": null,
@@ -4314,7 +4314,7 @@
         "thoughts": null
     },
     {
-        "name": "Marriage Story",
+        "thing": "Marriage Story",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4325,7 +4325,7 @@
         "thoughts": null
     },
     {
-        "name": "Fantastic Mr. Fox",
+        "thing": "Fantastic Mr. Fox",
         "from": null,
         "year": "2009",
         "image": null,
@@ -4336,7 +4336,7 @@
         "thoughts": null
     },
     {
-        "name": "The Grand Budapest Hotel",
+        "thing": "The Grand Budapest Hotel",
         "from": null,
         "year": "2014",
         "image": null,
@@ -4347,7 +4347,7 @@
         "thoughts": null
     },
     {
-        "name": "The Royal Tenenbaums",
+        "thing": "The Royal Tenenbaums",
         "from": null,
         "year": "2001",
         "image": null,
@@ -4358,7 +4358,7 @@
         "thoughts": null
     },
     {
-        "name": "Chicago",
+        "thing": "Chicago",
         "from": null,
         "year": "2002",
         "image": null,
@@ -4369,7 +4369,7 @@
         "thoughts": null
     },
     {
-        "name": "Cabaret",
+        "thing": "Cabaret",
         "from": null,
         "year": "1972",
         "image": null,
@@ -4380,7 +4380,7 @@
         "thoughts": null
     },
     {
-        "name": "Funny Girl",
+        "thing": "Funny Girl",
         "from": null,
         "year": "1968",
         "image": null,
@@ -4391,7 +4391,7 @@
         "thoughts": null
     },
     {
-        "name": "Les Misérables",
+        "thing": "Les Misérables",
         "from": null,
         "year": "2012",
         "image": null,
@@ -4402,7 +4402,7 @@
         "thoughts": null
     },
     {
-        "name": "The Rocky Horror Picture Show",
+        "thing": "The Rocky Horror Picture Show",
         "from": null,
         "year": "1975",
         "image": null,
@@ -4413,7 +4413,7 @@
         "thoughts": null
     },
     {
-        "name": "La La Land",
+        "thing": "La La Land",
         "from": null,
         "year": "2016",
         "image": null,
@@ -4424,7 +4424,7 @@
         "thoughts": null
     },
     {
-        "name": "Cold War",
+        "thing": "Cold War",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4435,7 +4435,7 @@
         "thoughts": null
     },
     {
-        "name": "Licorice Pizza",
+        "thing": "Licorice Pizza",
         "from": null,
         "year": "2021",
         "image": null,
@@ -4446,7 +4446,7 @@
         "thoughts": null
     },
     {
-        "name": "Bosco",
+        "thing": "Bosco",
         "from": null,
         "year": "2021",
         "image": null,
@@ -4457,7 +4457,7 @@
         "thoughts": null
     },
     {
-        "name": "Night of the Kings",
+        "thing": "Night of the Kings",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4468,7 +4468,7 @@
         "thoughts": null
     },
     {
-        "name": "Suspiria",
+        "thing": "Suspiria",
         "from": null,
         "year": "1977",
         "image": null,
@@ -4479,7 +4479,7 @@
         "thoughts": null
     },
     {
-        "name": "Suspiria",
+        "thing": "Suspiria",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4490,7 +4490,7 @@
         "thoughts": null
     },
     {
-        "name": "Lillian",
+        "thing": "Lillian",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4501,7 +4501,7 @@
         "thoughts": null
     },
     {
-        "name": "Sister",
+        "thing": "Sister",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4512,7 +4512,7 @@
         "thoughts": null
     },
     {
-        "name": "Daddy Nostalgia",
+        "thing": "Daddy Nostalgia",
         "from": null,
         "year": "1990",
         "image": null,
@@ -4523,7 +4523,7 @@
         "thoughts": null
     },
     {
-        "name": "Cinema Paradiso",
+        "thing": "Cinema Paradiso",
         "from": null,
         "year": "1988",
         "image": null,
@@ -4534,7 +4534,7 @@
         "thoughts": null
     },
     {
-        "name": "Border",
+        "thing": "Border",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4545,7 +4545,7 @@
         "thoughts": null
     },
     {
-        "name": "The Isle",
+        "thing": "The Isle",
         "from": null,
         "year": "2000",
         "image": null,
@@ -4556,7 +4556,7 @@
         "thoughts": null
     },
     {
-        "name": "Spring, Summer, Fall, Winter... and Spring",
+        "thing": "Spring, Summer, Fall, Winter... and Spring",
         "from": null,
         "year": "2003",
         "image": null,
@@ -4567,7 +4567,7 @@
         "thoughts": null
     },
     {
-        "name": "Window Boy Would Also Like to Have a Submarine",
+        "thing": "Window Boy Would Also Like to Have a Submarine",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4578,7 +4578,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lunchroom",
+        "thing": "The Lunchroom",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4589,7 +4589,7 @@
         "thoughts": null
     },
     {
-        "name": "Portrait of a Lady on Fire",
+        "thing": "Portrait of a Lady on Fire",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4600,7 +4600,7 @@
         "thoughts": null
     },
     {
-        "name": "Summer Night with Greek Profile, Almond Eyes and Scent of Basil",
+        "thing": "Summer Night with Greek Profile, Almond Eyes and Scent of Basil",
         "from": null,
         "year": "1986",
         "image": null,
@@ -4611,7 +4611,7 @@
         "thoughts": null
     },
     {
-        "name": "The Purple Rose of Cairo",
+        "thing": "The Purple Rose of Cairo",
         "from": null,
         "year": "1985",
         "image": null,
@@ -4622,7 +4622,7 @@
         "thoughts": null
     },
     {
-        "name": "It Must Be Heaven",
+        "thing": "It Must Be Heaven",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4633,7 +4633,7 @@
         "thoughts": null
     },
     {
-        "name": "Emilia",
+        "thing": "Emilia",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4644,7 +4644,7 @@
         "thoughts": null
     },
     {
-        "name": "Days",
+        "thing": "Days",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4655,7 +4655,7 @@
         "thoughts": null
     },
     {
-        "name": "Carmen Vidal, mujer detective",
+        "thing": "Carmen Vidal, mujer detective",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4666,7 +4666,7 @@
         "thoughts": null
     },
     {
-        "name": "Dune",
+        "thing": "Dune",
         "from": null,
         "year": "2021",
         "image": null,
@@ -4677,7 +4677,7 @@
         "thoughts": null
     },
     {
-        "name": "Bacurau",
+        "thing": "Bacurau",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4688,7 +4688,7 @@
         "thoughts": null
     },
     {
-        "name": "Amanda",
+        "thing": "Amanda",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4699,7 +4699,7 @@
         "thoughts": null
     },
     {
-        "name": "Mom + Mom",
+        "thing": "Mom + Mom",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4710,7 +4710,7 @@
         "thoughts": null
     },
     {
-        "name": "Angel",
+        "thing": "Angel",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4721,7 +4721,7 @@
         "thoughts": null
     },
     {
-        "name": "House",
+        "thing": "House",
         "from": null,
         "year": "1977",
         "image": null,
@@ -4732,7 +4732,7 @@
         "thoughts": null
     },
     {
-        "name": "The Last Matinee",
+        "thing": "The Last Matinee",
         "from": null,
         "year": "2020",
         "image": null,
@@ -4743,7 +4743,7 @@
         "thoughts": null
     },
     {
-        "name": "Monty Python and the Holy Grail",
+        "thing": "Monty Python and the Holy Grail",
         "from": null,
         "year": "1975",
         "image": null,
@@ -4754,7 +4754,7 @@
         "thoughts": null
     },
     {
-        "name": "Aniara",
+        "thing": "Aniara",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4765,7 +4765,7 @@
         "thoughts": null
     },
     {
-        "name": "Madame",
+        "thing": "Madame",
         "from": null,
         "year": "2017",
         "image": null,
@@ -4776,7 +4776,7 @@
         "thoughts": null
     },
     {
-        "name": "Madame",
+        "thing": "Madame",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4787,7 +4787,7 @@
         "thoughts": null
     },
     {
-        "name": "Ray & Liz",
+        "thing": "Ray & Liz",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4798,7 +4798,7 @@
         "thoughts": null
     },
     {
-        "name": "Bread and Roses",
+        "thing": "Bread and Roses",
         "from": null,
         "year": "2000",
         "image": null,
@@ -4809,7 +4809,7 @@
         "thoughts": null
     },
     {
-        "name": "Diane",
+        "thing": "Diane",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4820,7 +4820,7 @@
         "thoughts": null
     },
     {
-        "name": "A Rainy Day in New York",
+        "thing": "A Rainy Day in New York",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4831,7 +4831,7 @@
         "thoughts": null
     },
     {
-        "name": "Taste of Cherry",
+        "thing": "Taste of Cherry",
         "from": null,
         "year": "1997",
         "image": null,
@@ -4842,7 +4842,7 @@
         "thoughts": null
     },
     {
-        "name": "Another Day of Life",
+        "thing": "Another Day of Life",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4853,7 +4853,7 @@
         "thoughts": null
     },
     {
-        "name": "The Sharks",
+        "thing": "The Sharks",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4864,7 +4864,7 @@
         "thoughts": null
     },
     {
-        "name": "Inland Empire",
+        "thing": "Inland Empire",
         "from": null,
         "year": "2006",
         "image": null,
@@ -4875,7 +4875,7 @@
         "thoughts": null
     },
     {
-        "name": "Green Book",
+        "thing": "Green Book",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4886,7 +4886,7 @@
         "thoughts": null
     },
     {
-        "name": "In the Quarry",
+        "thing": "In the Quarry",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4897,7 +4897,7 @@
         "thoughts": null
     },
     {
-        "name": "The Favourite",
+        "thing": "The Favourite",
         "from": null,
         "year": "2018",
         "image": null,
@@ -4908,7 +4908,7 @@
         "thoughts": null
     },
     {
-        "name": "The Two Popes",
+        "thing": "The Two Popes",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4919,7 +4919,7 @@
         "thoughts": null
     },
     {
-        "name": "Sweet Country",
+        "thing": "Sweet Country",
         "from": null,
         "year": "2017",
         "image": null,
@@ -4930,7 +4930,7 @@
         "thoughts": null
     },
     {
-        "name": "Louise by the Shore",
+        "thing": "Louise by the Shore",
         "from": null,
         "year": "2016",
         "image": null,
@@ -4941,7 +4941,7 @@
         "thoughts": null
     },
     {
-        "name": "Pulp Fiction",
+        "thing": "Pulp Fiction",
         "from": null,
         "year": "1994",
         "image": null,
@@ -4952,7 +4952,7 @@
         "thoughts": null
     },
     {
-        "name": "Once Upon a Time... in Hollywood",
+        "thing": "Once Upon a Time... in Hollywood",
         "from": null,
         "year": "2019",
         "image": null,
@@ -4963,7 +4963,7 @@
         "thoughts": null
     },
     {
-        "name": "Reservoir Dogs",
+        "thing": "Reservoir Dogs",
         "from": null,
         "year": "1992",
         "image": null,
@@ -4974,7 +4974,7 @@
         "thoughts": null
     },
     {
-        "name": "Inglourious Basterds",
+        "thing": "Inglourious Basterds",
         "from": null,
         "year": "2009",
         "image": null,
@@ -4985,7 +4985,7 @@
         "thoughts": null
     },
     {
-        "name": "From Dusk Till Dawn",
+        "thing": "From Dusk Till Dawn",
         "from": null,
         "year": "1996",
         "image": null,
@@ -4996,7 +4996,7 @@
         "thoughts": null
     },
     {
-        "name": "Swallow",
+        "thing": "Swallow",
         "from": null,
         "year": "2019",
         "image": null,
@@ -5007,7 +5007,7 @@
         "thoughts": null
     },
     {
-        "name": "Blade Runner 2049",
+        "thing": "Blade Runner 2049",
         "from": null,
         "year": "2017",
         "image": null,
@@ -5018,7 +5018,7 @@
         "thoughts": null
     },
     {
-        "name": "Blade Runner",
+        "thing": "Blade Runner",
         "from": null,
         "year": "1982",
         "image": null,
@@ -5029,7 +5029,7 @@
         "thoughts": null
     },
     {
-        "name": "2001: A Space Odyssey",
+        "thing": "2001: A Space Odyssey",
         "from": null,
         "year": "1968",
         "image": null,
@@ -5040,7 +5040,7 @@
         "thoughts": null
     },
     {
-        "name": "The Dark Crystal",
+        "thing": "The Dark Crystal",
         "from": null,
         "year": "1982",
         "image": null,
@@ -5051,7 +5051,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lord of the Rings: The Two Towers",
+        "thing": "The Lord of the Rings: The Two Towers",
         "from": null,
         "year": "2002",
         "image": null,
@@ -5062,7 +5062,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lord of the Rings: The Return of the King",
+        "thing": "The Lord of the Rings: The Return of the King",
         "from": null,
         "year": "2003",
         "image": null,
@@ -5073,7 +5073,7 @@
         "thoughts": null
     },
     {
-        "name": "The Lord of the Rings: The Fellowship of the Ring",
+        "thing": "The Lord of the Rings: The Fellowship of the Ring",
         "from": null,
         "year": "2001",
         "image": null,
@@ -5084,7 +5084,7 @@
         "thoughts": null
     },
     {
-        "name": "Where the Wild Things Are",
+        "thing": "Where the Wild Things Are",
         "from": null,
         "year": "2009",
         "image": null,
@@ -5095,7 +5095,7 @@
         "thoughts": null
     },
     {
-        "name": "John Wick",
+        "thing": "John Wick",
         "from": null,
         "year": "2014",
         "image": null,
@@ -5106,7 +5106,7 @@
         "thoughts": null
     },
     {
-        "name": "John Wick: Chapter 2",
+        "thing": "John Wick: Chapter 2",
         "from": null,
         "year": "2017",
         "image": null,
@@ -5117,7 +5117,7 @@
         "thoughts": null
     },
     {
-        "name": "John Wick: Chapter 3 – Parabellum",
+        "thing": "John Wick: Chapter 3 – Parabellum",
         "from": null,
         "year": "2019",
         "image": null,
@@ -5128,7 +5128,7 @@
         "thoughts": null
     },
     {
-        "name": "Querelle",
+        "thing": "Querelle",
         "from": null,
         "year": "1982",
         "image": null,
@@ -5139,7 +5139,7 @@
         "thoughts": null
     },
     {
-        "name": "Before Sunrise",
+        "thing": "Before Sunrise",
         "from": null,
         "year": "1995",
         "image": null,
@@ -5150,7 +5150,7 @@
         "thoughts": null
     },
     {
-        "name": "Heartbeats",
+        "thing": "Heartbeats",
         "from": null,
         "year": "2010",
         "image": null,
@@ -5161,7 +5161,7 @@
         "thoughts": null
     },
     {
-        "name": "Mommy",
+        "thing": "Mommy",
         "from": null,
         "year": "2014",
         "image": null,
@@ -5172,7 +5172,7 @@
         "thoughts": null
     },
     {
-        "name": "I Killed My Mother",
+        "thing": "I Killed My Mother",
         "from": null,
         "year": "2009",
         "image": null,
@@ -5183,7 +5183,7 @@
         "thoughts": null
     },
     {
-        "name": "Tom at the Farm",
+        "thing": "Tom at the Farm",
         "from": null,
         "year": "2013",
         "image": null,
@@ -5194,7 +5194,7 @@
         "thoughts": null
     },
     {
-        "name": "Laurence Anyways",
+        "thing": "Laurence Anyways",
         "from": null,
         "year": "2012",
         "image": null,
@@ -5205,7 +5205,7 @@
         "thoughts": null
     },
     {
-        "name": "Pain and Glory",
+        "thing": "Pain and Glory",
         "from": null,
         "year": "2019",
         "image": null,
@@ -5216,7 +5216,7 @@
         "thoughts": null
     },
     {
-        "name": "All About My Mother",
+        "thing": "All About My Mother",
         "from": null,
         "year": "1999",
         "image": null,
@@ -5227,7 +5227,7 @@
         "thoughts": null
     },
     {
-        "name": "Bad Education",
+        "thing": "Bad Education",
         "from": null,
         "year": "2004",
         "image": null,
@@ -5238,7 +5238,7 @@
         "thoughts": null
     },
     {
-        "name": "Law of Desire",
+        "thing": "Law of Desire",
         "from": null,
         "year": "1987",
         "image": null,
@@ -5249,7 +5249,7 @@
         "thoughts": null
     },
     {
-        "name": "The Flower of My Secret",
+        "thing": "The Flower of My Secret",
         "from": null,
         "year": "1995",
         "image": null,
@@ -5260,7 +5260,7 @@
         "thoughts": null
     },
     {
-        "name": "High Heels",
+        "thing": "High Heels",
         "from": null,
         "year": "1991",
         "image": null,
@@ -5271,7 +5271,7 @@
         "thoughts": null
     },
     {
-        "name": "I'm So Excited!",
+        "thing": "I'm So Excited!",
         "from": null,
         "year": "2013",
         "image": null,
@@ -5282,7 +5282,7 @@
         "thoughts": null
     },
     {
-        "name": "Tie Me Up! Tie Me Down!",
+        "thing": "Tie Me Up! Tie Me Down!",
         "from": null,
         "year": "1989",
         "image": null,
@@ -5293,7 +5293,7 @@
         "thoughts": null
     },
     {
-        "name": "Kika",
+        "thing": "Kika",
         "from": null,
         "year": "1993",
         "image": null,
@@ -5304,7 +5304,7 @@
         "thoughts": null
     },
     {
-        "name": "What Have I Done to Deserve This?",
+        "thing": "What Have I Done to Deserve This?",
         "from": null,
         "year": "1984",
         "image": null,

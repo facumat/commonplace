@@ -1,0 +1,16 @@
+[
+    {
+        "thing": null,
+        "from": null,
+        "year": null,
+        "image": null,
+        "url": null,
+        "consumed": null,
+        "type": "glossary",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": null
+    }
+]

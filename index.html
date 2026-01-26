@@ -4,17 +4,34 @@
     <title>My Commonplace</title>
     <style>
         body {
-            font-family: "Didot", serif;
-            background-color: #CEE2FF;
-            padding: 0px 24px;
+            font-family: "Times", serif;
+            letter-spacing: -0.6%;
+            background-color: #fffdfb;
+            margin: 0;
+            color: #2E5FFF;
         }
 
+        .entry  {
+            padding: 16px;
+            border: solid;
+            border-width: 0.5px;
+            border-style: dashed;
+        }
 
-        hr {height: 1px; color: #AEC8EF;}
+        .entry-image {
+            margin-top: 8px;
+        }
+
+        hr { 
+            border-bottom: 0.25px dashed ;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            margin-top: 24px;
+ }
 
         .flex-h {
             display: flex;
-            gap: 56px;  
             align-items: flex-start;  
             margin-bottom: 30px;
         }
@@ -26,12 +43,14 @@
 
         .right-panel, .left-panel {
             width: 50%;
+            overflow-y: scroll;
+            height: 100vh;
+            padding: 24px 24px 24px 24px;
         }
 
         .divider {
             width: 100%;
             display: inline-block;
-            height: 32px;
             overflow: hidden;
             vertical-align: middle;
             margin-bottom: 16px;
@@ -42,6 +61,13 @@
             content: "";
             margin-top: 16px; 
         }
+
+        .type-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 99px;
+            background-color: #2E5FFF15;
+        }
     </style>
 </head>
 <body>
@@ -49,8 +75,8 @@
         <div class="left-panel">
             <h1>My Commonplace</h1>
             <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
-            <p><em>Planted: Nov 24, 2025. Last tended: Jan 16, 2025</em></p>
-            <div class="divider"><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p></div>
+            <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr class="divider"></hr>
             <h2>Construction journal</h2>
             <p class="journal-entry">
                 <br>---
@@ -61,21 +87,30 @@
                 Jan 8, 2026.<br>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.<br>---
             </p>
             <p class="journal-entry">
-                Jan 8, 2025<br>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?<br>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.<br>---
+                Jan 8, 2026<br>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?<br>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.<br>---
             </p>
-         <p class="journal-entry">
-                Jan 14, 2025<br>Dear diary, doubt and insecurity has gotten to me again ☹ Does it makes sense to create this beast of a site? Why not use are.na instead?<br>---
+            <p class="journal-entry">
+                Jan 14, 2026<br>Dear diary, doubt and insecurity has gotten to me again ☹ Does it makes sense to create this beast of a site? Why not use are.na instead?<br>---
+            </p>
+            <p class="journal-entry">
+                Jan 20, 2026<br>Finally I decide how to split my jsons: read, for all read things such as books, articles, quotes, definitions, anything consumed primarly through reading. Watched, all that has been ingested primarly in that way, like movies, music performances, concerts, series, video essays. And listened, or hear? This one would encompass music, mostly in album format, podcasts episodes, etc.<br>---
             </p>
         </div>
         <div class="right-panel">
-            <div class="collection">
-                <h2>Video</h2>
-                <div id="movies"></div>
+            <div id="movies" class="collection">
             </div>
         </div>
     </section>
     
     <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
         // Function to format date
         function formatDate(dateString) {
             if (!dateString || dateString === 'YYYY-MM-DD') return '';
@@ -126,7 +161,8 @@
                     if (item.type === 'movie') {
                         entryHTML = `
                             <div class="entry entry-movie">
-                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                                <div class="type-tag">movie</div>
+                                <div>${item.image ? `<img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                                 <div class="content">
                                     <h3>${title}</h3>
                                     <p>${from} ${yearDisplay} - ${formattedDate}</p>
@@ -134,17 +170,17 @@
                                     ${thoughts ? `<p>${thoughts}</p>` : ''}
                                 </div>
                             </div>
-                            <div class="divider"><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>
                         `;
                     } else if (item.type === 'glossary') {
                         entryHTML = `
                             <div class="entry entry-glossary">
+                                <div class="type-tag">glossary</div>
                                 <h3>${from}</h3>
                                 <p class="definition">${title}</p>
-                                <p class="meta">Consumed ${formattedDate} · On ${tags.join(', ')}</p>
+                                <p class="meta">Consumed ${formattedDate}</p>
+                                <p>On <em>${tags.join(', ')}</em></p>
                                 ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
                             </div>
-                            <div class="divider"><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>
                         `;
                     } else if (item.type === 'image') {
                         entryHTML = `
@@ -154,7 +190,29 @@
                                 <p>${from} ${yearDisplay} - ${formattedDate}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
-                            <div class="divider"><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>
+                        `;
+                    } else if (item.type === 'article') {
+                        entryHTML = `
+                            <div class="entry entry-article">
+                                <div class="type-tag">article</div>
+                                <h3>${title}</h3>
+                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                                <p>On <em>${tags.join(', ')}</em></p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
+
+                        `;
+                    } else if (item.type === 'quote') {
+                        entryHTML = `
+                            <div class="entry entry-quote">
+                                <div class="type-tag">quote</div>
+                                <h3>"${title}"</h3>
+                                <p>From ${from} ${yearDisplay} - ${formattedDate}</p>
+                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                                <p>On <em>${tags.join(', ')}</em></p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
 
                         `;
                     } else {
@@ -164,11 +222,10 @@
                                 ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
                                 <h3>${title}</h3>
                                 <p>${from} ${yearDisplay} - ${formattedDate}</p>
-                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link ↗</a>` : ''}
-                                <p><em>${tags.join(', ')}</em></p>
+                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                                <p>On <em>${tags.join(', ')}</em></p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
-                            <div class="divider"><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>
                         `;
                     }
                     

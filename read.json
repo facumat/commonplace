@@ -1,6 +1,6 @@
 [
     {
-        "name": null,
+        "thing": null,
         "from": "null",
         "year": "YYYY",
         "image": "images/sample.gif",
@@ -31,10 +31,130 @@
         "thing": "Resonant Computing Manifesto",
         "from": null,
         "year": "2025",
-        "image": "images",
+        "image": null,
         "url": "https://resonantcomputing.org/",
         "consumed": "2026-01-14",
         "type": "article",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "The term 'handmade' usually refers to objects made by hand or by using simple tools rather than machines. The result may be homely — as in a child's clay ashtray — or exquisite — as in a pair of bespoke brogues. I evoke the term 'handmade web' to refer to web pages coded by hand rather than by software; web pages made and maintained by individuals rather than by businesses or corporations; web pages which are provisional, temporary, or one-of-a-kind; web pages which challenge conventions of reading, writing, design, ownership, privacy, security, or identity.",
+        "from": "Handmade Web",
+        "year": null,
+        "image": null,
+        "url": "https://luckysoap.com/statements/handmadeweb.html",
+        "consumed": "2025-11-07",
+        "type": "glossary",
+        "tags": [
+            "handmade web",
+            "tag2"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "Permacomputing is both a concept and a community of practice oriented around issues of resilience and regenerativity in computer and network technology inspired by permaculture. ପໄଓ☾☼✫ -☆:*",
+        "from": "Permacomputing",
+        "year": null,
+        "image": null,
+        "url": null,
+        "consumed": "2024-08-08",
+        "type": "glossary",
+        "tags": [
+            "handmade web",
+            "permacomputing"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "American standard code for international interchange",
+        "from": "ASCII",
+        "year": null,
+        "image": null,
+        "url": null,
+        "consumed": "2023-12-07",
+        "type": "glossary",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "There's a feeling you get in the presence of beautiful buildings and bustling courtyards. A sense that these spaces are inviting you to slow down, deepen your attention and be a bit more human. What if our software could do the same?",
+        "from": "Resonant Computer Manifesto",
+        "year": null,
+        "image": null,
+        "url": "https://resonantcomputing.org/",
+        "consumed": "2026-01-14",
+        "type": "quote",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "A commonplace book (or commonplaces) is a personal notebook for collecting and organizing information, such as quotes, poems, recipes, and thoughts, that you find inspiring or useful. It serves as a personal treasury of knowledge to be revisited later and can be adapted to include a wide variety of content.",
+        "from": "Commonplace book",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2025-11-23",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Ana Julia, my boyfriend's friend/family, mentioned how Antonio Lussich would keep books classifying things like seeds, wood, plants, and much more. Instantly, it ringed a bell with my need and jhoy in collecting pieces of things that interest me."
+    },
+    {
+        "thing": " Locus amoenus (Latin for 'pleasant place') is a literary topos involving an idealized place of safety or comfort. A locus amoenus is usually a beautiful, shady lawn or open woodland, or a group of idyllic islands, sometimes with connotations of Eden or Elysium. A locus amoenus will have three basic elements: trees, grass, and water. Often, the garden will be in a remote place and function as a landscape of the mind. It can also be used to highlight the differences between urban and rural life or be a place of refuge from the processes of time and mortality.",
+        "from": "Locus amoenus",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2026-01-12",
+        "type": "glossary",
+        "tags": [
+            "urbanism"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "The branch of science concerned with classification, especially of organisms; systematics.",
+        "from": "Taxonomy",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2025-11-22",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Found in an article. This was the start of something new: having a name for the joy of classifying and the need to create one place to hold everything together."
+    },
+    {
+        "thing": "Tiny Awards",
+        "from": "dnr",
+        "year": null,
+        "image": null,
+        "url": "https://tinyawards.net/",
+        "consumed": "2025-11-22",
+        "type": "website",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "Annual awards that, since 2023, select small, poetic, personal and handmade websites."
+    },
+    {
+        "thing": "100% hand coded",
+        "from": "are.na",
+        "year": null,
+        "image": "images/100handcoded.webp",
+        "url": null,
+        "consumed": "2025-11-22",
+        "type": "image",
         "tags": [
             "handmade web"
         ],
