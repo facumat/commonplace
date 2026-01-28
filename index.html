@@ -28,12 +28,14 @@
             border-right: 0px;
             border-left: 0px;
             margin-top: 24px;
- }
+            border-color: #2E5FFF;
+        }
 
         .flex-h {
             display: flex;
-            align-items: flex-start;  
-            margin-bottom: 30px;
+            align-items: flex-start;
+            height: 100vh;  
+            overflow: hidden;
         }
 
         .flex-h img {
@@ -44,7 +46,7 @@
         .right-panel, .left-panel {
             width: 50%;
             overflow-y: scroll;
-            height: 100vh;
+            height: 100%;
             padding: 24px 24px 24px 24px;
         }
 
@@ -68,6 +70,47 @@
             border-radius: 99px;
             background-color: #2E5FFF15;
         }
+
+        .button {
+            font-family: "Times", serif;
+            font-size: 16px;
+            letter-spacing: -0.6%;
+            color: #2E5FFF;
+            border-radius: 99px;
+            padding: 4px 8px;
+            border: 0.25px dashed ;
+            border-color: #ffffff00;   
+        }
+
+        .button.secondary {
+            background-color: #2E5FFF15;
+        }
+
+        .filters-group {
+            display: flex;            
+            gap: 4px;
+            row-gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .tag-filter-btn, .type-filter-btn{
+            font-family: "Times", serif;
+            font-size: 16px;
+            letter-spacing: -0.6%;
+            color: #2E5FFF;
+            border-radius: 99px;
+            padding: 4px 8px;
+            background-color: #2E5FFF15;
+            border: 0.25px dashed ;
+            border-color: #ffffff00;        }
+
+        .tag-filter-btn.active, .type-filter-btn.active {
+            background-color: #2E5FFF35;
+            border: 0.25px dashed ;
+            border-color: #2E5FFF;
+        }
+
     </style>
 </head>
 <body>
@@ -76,6 +119,19 @@
             <h1>My Commonplace</h1>
             <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
             <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr class="divider"></hr>
+
+            <div class="filters">
+                <div class="filter-section">
+                    <p>Filter by Type:</p>
+                    <div class="filters-group" id="type-filters"></div>
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Tags:</p>
+                    <div class="filters-group" id="tag-filters"></div>
+                </div>
+                <button class="button secondary" onclick="clearAllFilters()">Clear All Filters</button>
+            </div>
             <hr class="divider"></hr>
             <h2>Construction journal</h2>
             <p class="journal-entry">
@@ -103,6 +159,11 @@
     </section>
     
     <script>
+        // Global variables for filtering
+        let allItems = [];
+        let selectedTypes = new Set();
+        let selectedTags = new Set();
+
         function showLastModified() {
             var lastModifiedDate = new Date(document.lastModified);
             var options = { month: 'short', day: 'numeric', year: 'numeric' };
@@ -111,6 +172,7 @@
         }
         // Call the function when the page loads
         window.onload = showLastModified;
+        
         // Function to format date
         function formatDate(dateString) {
             if (!dateString || dateString === 'YYYY-MM-DD') return '';
@@ -120,117 +182,233 @@
             return date.toLocaleDateString('en-US', options);
         }
 
-        // Fetch and dsplay movies and collected items
+        // Toggle type filter
+        function toggleTypeFilter(type) {
+            if (selectedTypes.has(type)) {
+                selectedTypes.delete(type);
+            } else {
+                selectedTypes.add(type);
+            }
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Toggle tag filter
+        function toggleTagFilter(tag) {
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+            } else {
+                selectedTags.add(tag);
+            }
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Update button active states
+        function updateFilterButtons() {
+            document.querySelectorAll('.type-filter-btn').forEach(btn => {
+                const type = btn.dataset.type;
+                if (selectedTypes.has(type)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.tag-filter-btn').forEach(btn => {
+                const tag = btn.dataset.tag;
+                if (selectedTags.has(tag)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            selectedTypes.clear();
+            selectedTags.clear();
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Display filtered items
+        function displayFilteredItems() {
+            let filteredItems = allItems;
+
+            // Filter by type if any types selected
+            if (selectedTypes.size > 0) {
+                filteredItems = filteredItems.filter(item => 
+                    selectedTypes.has(item.type)
+                );
+            }
+
+            // Filter by tags if any tags selected
+            if (selectedTags.size > 0) {
+                filteredItems = filteredItems.filter(item => {
+                    const itemTags = item.tags || [];
+                    return itemTags.some(tag => selectedTags.has(tag));
+                });
+            }
+
+            displayItems(filteredItems);
+        }
+
+        // Display items function
+        function displayItems(items) {
+            const container = document.getElementById('movies');
+            container.innerHTML = '';
+
+            items.forEach(item => {
+                const title = item.thing;
+                const date = item.consumed;
+                const tags = item.tags || [];
+                const thoughts = item.thoughts || '';
+                const from = item.from || '';
+                
+                const yearDisplay = (item.year && item.year !== 'YYYY' && item.year !== 'null') 
+                    ? `(${item.year})` 
+                    : '';
+                
+                const formattedDate = formatDate(date);
+                
+                // Different HTML based on type
+                let entryHTML = '';
+                
+                if (item.type === 'movie') {
+                    entryHTML = `
+                        <div class="entry entry-movie">
+                            <div class="type-tag">${item.type}</div>
+                            <!-- <div>${item.image ? `<img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div> --!>
+                            <div class="content">
+                                <h3>${title}</h3>
+                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p>On <em>${tags.join(', ')}</em></p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
+                        </div>
+                    `;
+                } else if (item.type === 'glossary') {
+                    entryHTML = `
+                        <div class="entry entry-glossary">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>${from}</h3>
+                            <p class="definition">${title}</p>
+                            <p class="meta">Consumed ${formattedDate}</p>
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'image') {
+                    entryHTML = `
+                        <div class="entry entry-image">
+                            ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                            <p class="caption">${title}</p>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'article') {
+                    entryHTML = `
+                        <div class="entry entry-article">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>${title}</h3>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'quote') {
+                    entryHTML = `
+                        <div class="entry entry-quote">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>"${title}"</h3>
+                            <p>From ${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else {
+                    // Default format for other types
+                    entryHTML = `
+                        <div class="entry entry-${item.type || 'default'}">
+                            <div class="type-tag">${item.type}</div>
+                            <div>${item.image ? `<img <img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
+                            <h3>${title}</h3>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                }
+                
+                container.innerHTML += entryHTML;
+            });
+        }
+
+        // Fetch and display collected items
         Promise.all([
             fetch('watched.json').then(response => response.json()),
             fetch('collected.json').then(response => response.json()).catch(() => []),
-            fetch('read.json').then(response => response.json()).catch(() => [])
+            fetch('read.json').then(response => response.json()).catch(() => []),
+            fetch('listened.json').then(response => response.json()).catch(() => [])
         ])
-        .then(([watched, collected, read]) => {
-            // Combine both arrays
-            const allItems = [...watched, ...collected, ...read];
+        .then(([watched, collected, read, listened]) => {
+            // Combine all arrays
+            allItems = [...watched, ...collected, ...read, ...listened];
             
             // Sort by date, newest first
             allItems.sort((a, b) => {
                 const dateA = a.consumed || a.collected || '';
                 const dateB = b.consumed || b.collected || '';
-
                 return dateB.localeCompare(dateA);
             });
-            
-            const container = document.getElementById('movies');
 
-            allItems
-                .filter(item => (item.name !== null || item.thing !== null))
-                .forEach(item => {
-                    const title = item.name || item.thing;
-                    const date = item.consumed || item.collected;
-                    const tags = item.tags || [];
-                    const thoughts = item.thoughts || '';
-                    const from = item.from || '';
-                    
-                    const yearDisplay = (item.year && item.year !== 'YYYY' && item.year !== 'null') 
-                        ? `(${item.year})` 
-                        : '';
-                    
-                    const formattedDate = formatDate(date);
-                    
-                    // Different HTML based on type
-                    let entryHTML = '';
-                    
-                    if (item.type === 'movie') {
-                        entryHTML = `
-                            <div class="entry entry-movie">
-                                <div class="type-tag">movie</div>
-                                <!--<div>${item.image ? `<img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>--!>
-                                <div class="content">
-                                    <h3>${title}</h3>
-                                    <p>${from} ${yearDisplay} - ${formattedDate}</p>
-                                    <p>On <em>${tags.join(', ')}</em></p>
-                                    ${thoughts ? `<p>${thoughts}</p>` : ''}
-                                </div>
-                            </div>
-                        `;
-                    } else if (item.type === 'glossary') {
-                        entryHTML = `
-                            <div class="entry entry-glossary">
-                                <div class="type-tag">glossary</div>
-                                <h3>${from}</h3>
-                                <p class="definition">${title}</p>
-                                <p class="meta">Consumed ${formattedDate}</p>
-                                <p>On <em>${tags.join(', ')}</em></p>
-                                ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
-                            </div>
-                        `;
-                    } else if (item.type === 'image') {
-                        entryHTML = `
-                            <div class="entry entry-image">
-                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
-                                <p class="caption">${title}</p>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
-                                ${thoughts ? `<p>${thoughts}</p>` : ''}
-                            </div>
-                        `;
-                    } else if (item.type === 'article') {
-                        entryHTML = `
-                            <div class="entry entry-article">
-                                <div class="type-tag">article</div>
-                                <h3>${title}</h3>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
-                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
-                                <p>On <em>${tags.join(', ')}</em></p>
-                                ${thoughts ? `<p>${thoughts}</p>` : ''}
-                            </div>
+            // Filter out null items
+            allItems = allItems.filter(item => (item.thing !== null));
 
-                        `;
-                    } else if (item.type === 'quote') {
-                        entryHTML = `
-                            <div class="entry entry-quote">
-                                <div class="type-tag">quote</div>
-                                <h3>"${title}"</h3>
-                                <p>From ${from} ${yearDisplay} - ${formattedDate}</p>
-                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
-                                <p>On <em>${tags.join(', ')}</em></p>
-                                ${thoughts ? `<p>${thoughts}</p>` : ''}
-                            </div>
+            // Extract unique types
+            const types = new Set();
+            allItems.forEach(item => {
+                if (item.type) types.add(item.type);
+            });
 
-                        `;
-                    } else {
-                        // Default format for other types
-                        entryHTML = `
-                            <div class="entry entry-${item.type || 'default'}">
-                                ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
-                                <h3>${title}</h3>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
-                                ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
-                                <p>On <em>${tags.join(', ')}</em></p>
-                                ${thoughts ? `<p>${thoughts}</p>` : ''}
-                            </div>
-                        `;
-                    }
-                    
-                    container.innerHTML += entryHTML;
-                });
+            // Extract unique tags
+            const tags = new Set();
+            allItems.forEach(item => {
+                if (item.tags) {
+                    item.tags.forEach(tag => tags.add(tag));
+                }
+            });
+
+            // Create type filter buttons
+            const typeFiltersContainer = document.getElementById('type-filters');
+            Array.from(types).sort().forEach(type => {
+                const btn = document.createElement('button');
+                btn.className = 'type-filter-btn';
+                btn.dataset.type = type;
+                btn.textContent = type;
+                btn.onclick = () => toggleTypeFilter(type);
+                typeFiltersContainer.appendChild(btn);
+            });
+
+            // Create tag filter buttons
+            const tagFiltersContainer = document.getElementById('tag-filters');
+            Array.from(tags).sort().forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = 'tag-filter-btn';
+                btn.dataset.tag = tag;
+                btn.textContent = tag;
+                btn.onclick = () => toggleTagFilter(tag);
+                tagFiltersContainer.appendChild(btn);
+            });
+
+            // Display all items initially
+            displayItems(allItems);
         })
         .catch(error => {
             console.error('Error loading data:', error);

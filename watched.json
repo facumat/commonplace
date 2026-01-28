@@ -8,10 +8,22 @@
         "consumed": null,
         "type": "movie",
         "tags": [
-            "tag1",
-            "tag2"
+
         ],
         "thoughts": null
+    },
+    {
+        "thing": "Caught by the tides",
+        "from": "Jia Zhangke",
+        "year": "2024",
+        "image": null,
+        "url": "null",
+        "consumed": "2026-01-27",
+        "type": "movie",
+        "tags": [
+            "loneliness"
+        ],
+        "thoughts": "Al principio me preguntaba si estaba viendo un documental, una ficción, una cosa abstracta o qué. Hasta que entré en el lenguaje de la ficción contada por el contexto. Temáticamente, una película sobre la soledad y la desconexión en tiempos donde propiciar el sustento es difícil y las ciudades con puñados de millones de personas resultan asficciantes."
     },
     {
         "thing": "Sangue Latino",
@@ -35,7 +47,7 @@
         "consumed": "2026-01-10",
         "type": "movie",
         "tags": [
-            "musicals", "queerness"
+            "musicals", "queerness", "dictadura"
         ],
         "thoughts": "★1.5 -  Una estrella y media por buenos actores supongo? Se siente peligroso hacer una película tan despolitizada sobre la dictadura hoy en día. She be like oh imaginate que estas en un musical y la dictadura ya no existirá (??????). La cara toda aibrusheada de Jlo. La latinoamerica pobre o tropical que se imagina yankilandia. Estereotipo de mujer trans queriendo ser ama de casa. El sexo homosexual violento y despersonalizado. Que bien baila Jlo igual. "
     },
@@ -48,7 +60,7 @@
         "consumed": "2026-01-09",
         "type": "movie",
         "tags": [
-            "biopics", "queerness", "music"
+            "biopics", "queerness", "mpb"
         ],
         "thoughts": "★5 -  Que espectacular madre mía. Tenemos que revitalizar los íconos maricones locales mi gente latino. A Ney Matogrosso lo tenía de nombre, sabía muy poco de él y no había escuchado nada. Ante la búsqueda de ver algo random y ligero en Netflix apareció esta joya: la historia, los actores, el vestuario, las perfos, ese pack de lujurias cinematográficas qu se te quedan estancadas en la mente por días. Obviamente esto llevó a lanzarme en la discrografía de este ícono. I love she"
     },
@@ -75,7 +87,9 @@
         "type": "movie",
         "tags": [
             "documentaries",
-            "queerness"
+            "queerness",
+            "spain",
+            "religion"
         ],
         "thoughts": "★3,5 - Claro, al final tiene sentido toda la fascinacón madonnesca con toda la imagen religiosa de la Semana Santa por los maricas. No option but to stan. Hubiese sido un lindo balance mostrar más imagen de los pasos, de la Semana, de todo el despliegue para darle imágenes a esos testimonios."
     },
@@ -88,9 +102,8 @@
         "consumed": "2025-12-27",
         "type": "movie",
         "tags": [
-            "comedy",
-            "crime",
-            "sci-fi"
+            "sci-fi",
+            "dystopian"
         ],
         "thoughts": "★3 - Con mi marido salimos charlando sobre si la ema era alien o no. Para él era obvio unilateralmente y literalmente que era alien. Para mi anything goes. Ahí, en el ida y vuelta de la charla pensé que tal vez esto de hacer creer al espectador de que la Emma es alien, es parte del juego: los incels se convencen también en su echo chamber que hasta nosotros los que estamos frente a la pantalla, nos lo creemos. El efecto ambiguo simple y clásico pero bien logrado me pareció que estaba bueno. El resto, entretenido."
     },
@@ -103,9 +116,8 @@
         "consumed": "2025-12-13",
         "type": "movie",
         "tags": [
-            "drama",
-            "thriller"
-        ],
+            "mental health"
+            ],
         "thoughts": "★3"
     },
     {
@@ -117,8 +129,8 @@
         "consumed": "2025-12-12",
         "type": "movie",
         "tags": [
-            "crime",
-            "drama"
+            "nyc",
+            "violence"
         ],
         "thoughts": null
     },
@@ -130,7 +142,10 @@
         "url": "https://boxd.it/1JAY",
         "consumed": "2025-11-26",
         "type": "movie",
-        "tags": [],
+        "tags": [
+            "ghibli",
+            "animation"
+        ],
         "thoughts": null
     },
     {
@@ -141,7 +156,9 @@
         "url": "https://boxd.it/Q7ge",
         "consumed": "2025-11-11",
         "type": "movie",
-        "tags": [],
+        "tags": [
+            "drama"
+        ],
         "thoughts": "★4 - Banco mucho a la Kelly. No es una película que se vaya a quedar conmigo mucho tiempo, aunque la re disfruté. De todos modos le pongo 4 estrellas para peliar las reviews de gente malhumorada que no puede sentarse durante 2 hs de películas sencillas y lentas."
     },
     {
@@ -152,7 +169,9 @@
         "url": "https://boxd.it/Ecsg",
         "consumed": "2025-11-11",
         "type": "movie",
-        "tags": [],
+        "tags": [
+            "mystical"
+        ],
         "thoughts": "★2 - Fun fun. Aunque pensé que iba a tener mejor fotografía, con todos los sets espectaculares y vestuarios y escenografía que tiene, podría haberlo merecido. La clásica versión de mostro es humano, mostro quiere amor, mostro es femicida, kinda story."
     },
     {
