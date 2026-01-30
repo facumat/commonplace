@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: "Times", serif;
+            letter-spacing: -0.6%;
+            background-color: #fffdfb;
+            margin: 0;
+            color: #ff9d2e;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: "Helvetica", sans-serif;
+        }
+
+        .section {
+            padding: 24px;
+        }
+
+        hr { 
+            border-bottom: 0.25px dashed ;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-color: #ff9d2e;
+        }
+
+        br {
+            display: block;
+            content: "";
+            margin-top: 16px; 
+        }
+
+        .button {
+            font-family: "Helvetica", sans-serif;
+            font-size: 16px;
+            letter-spacing: -0.6%;
+            color: #ff9d2e;
+            border-radius: 99px;
+            padding: 4px 8px;
+            border: 0.25px dashed ;
+            border-color: #ffffff00;   
+        }
+
+        .button.secondary {
+            background-color: #ff9d2e15;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="section" id="hero">
+        <div class="left-panel">
+            <button class="button secondary" onclick="history.back()">Go Back</button>
+            <h1>This is will be a collection of the articles, books and materials that inspired me making this site. Nothing here yet, sorry :/</h1>
+            <p></p>
+            <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr class="divider"></hr>
+            <h2>Construction journal</h2>
+            <p class="journal-entry">
+                <br>---
+            </p>
+            <div class="journal-entry">
+                <p>Jan 29, 2026.</p>
+                <p>Just planting the seed I guess.</p>
+                <p>---</p>
+            </div>
+            <!--
+            <div class="journal-entry">
+                <p>
+                Jan 8, 2026.<br>Text<br>---
+                </p>
+            </div>
+             -->
+        </div>
+        <div class="right-panel">
+            <div id="movies" class="collection">
+            </div>
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+    </script>
+</body>
+</html>
