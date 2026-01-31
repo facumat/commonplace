@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Commonplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-commonplace.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #2E5FFF;
+            --main-muted: #2E5FFF15;
+        }
+
+        .entry  {
+            padding: 16px;
+            border: solid;
+            border-width: 0.5px;
+            border-style: dashed;
+        }
+
+        .entry-image {
+             width: 75px; 
+            height: auto;
+            margin-top: 8px;
+        }
+
+        .type-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 99px;
+            background-color: #2E5FFF15;
+        }
+        
+        .filter-section {
+            margin-bottom: 24px;
+        }
+
+        .filter-section p {
+            margin-bottom: 8px;
+        }
+
+        .filters-group {
+            display: flex;            
+            gap: 4px;
+            row-gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .tag-filter-btn, .type-filter-btn{
+            font-family: "Times", serif;
+            font-size: 16px;
+            letter-spacing: -0.6%;
+            color: var(--main-color);
+            border-radius: 99px;
+            padding: 4px 8px;
+            background-color: var(--main-muted);
+            border: 0.25px dashed ;
+            border-color: #ffffff00;        }
+
+        .tag-filter-btn.active, .type-filter-btn.active {
+            background-color: #2E5FFF35;
+            border: 0.25px dashed ;
+            border-color: var(--main-color);
+        }
+
+    </style>
+</head>
+<body>
+    <section class="two-columns">
+        <div class="left-panel container">
+            <button class="button secondary" onclick="history.back()">← Go Back</button>
+            <h1>My Commonplace</h1>
+            <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
+            <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr>
+            <div class="filters">
+                <div class="filter-section">
+                    <p>Filter by Type:</p>
+                    <div class="filters-group" id="type-filters"></div>
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Tags:</p>
+                    <div class="filters-group" id="tag-filters"></div>
+                </div>
+                <button class="button outline" onclick="clearAllFilters()">Clear All Filters</button>
+            </div>
+            <hr>
+            <h2>Construction journal</h2>
+            <!--
+            <div class="journal-entry">
+                <p>
+                Jan 8, 2026.<br>Text<br>---
+                </p>
+            </div>
+             -->
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 6, 2026.</p>
+                <p>This construction journal starts here because the idea did too. This has been in construction for a couple months now, but documentation of thought process starts here.</p>
+                <p>Why english? I don't really know, I guess it's gravitational force of the global north, in a way. The handmade poetic web world is mostly created in english and I want to be a part of that club too. I feel there's two things to weigh in: on one side, I have my integrity and love for the spanish language, being able to express myself with all due confidence my own language provides. On the other hand: I have the ease of use of keeping one language only, as well as being able to reach a broader audience. This commonplace is obviously not about reaching an audience, but doing so is a secondary goal. So for now, I will be contempt with just achieving the creation of this commonplace no matter the language, and try not to put too many sticks on my own wheels by just following my gut. For now, sorry to my country, my dear Spanish and Latinamerica (lol who do you think you are Facundo)</p>
+                <p>On another note, maybe, MAYBE, maybe I should just add consumed things and avoid the to watch, to read, to listen. Just actually consumed items. All in the same json. Just like a commonplace book. One file to handle all. Collected can stay separate tho, like a "notes" book</p>
+                </div>
+            </div>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 8, 2026.</p>
+                <p>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.</p>
+                </div>
+            </div>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 8, 2026.</p>
+                <p>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?</p>
+                <p>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.</p>
+                </div>
+            </div>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 14, 2026.</p>
+                <p>Dear diary, doubt and insecurity has gotten to me again ☹ Does it makes sense to create this beast of a site? Why not use are.na instead?</p>
+                </div>
+            </div>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 20, 2026.</p>
+                <p>Finally I decide how to split my jsons: read, for all read things such as books, articles, quotes, definitions, anything consumed primarly through reading. Watched, all that has been ingested primarly in that way, like movies, music performances, concerts, series, video essays. And listened, or hear? This one would encompass music, mostly in album format, podcasts episodes, etc.</p>
+                </div>
+            </div>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 29, 2026.</p>
+                <p>I haven't made any tweaks to the commonplace today. I just took a glimpse at the code and the site to rejoice for a minute at how it's coming together. The tag and type filters are there. Now, all that remains is to fill in the json databases for all the items I have documented in the past. My last resolution as to how to structure these databases has changed quite abruptely: for some weeks I was determined to use only one json called Collected, after trying it and feeling it was chaotic and too many objects of too many different natures were colliding in one file, I opted for separating them in the jsons mentioned in the previous entry. Part of the lesson of this project is that there's no perfect taxonomy, all that is needed is to start with something even if it doesn't feel perfectly organized. The joy of taxonomy might be something close to this discomfort, to be always improving the categories, the lists, the boxes one works with.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel container">
+            <div id="movies" class="collection">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Global variables for filtering
+        let allItems = [];
+        let selectedTypes = new Set();
+        let selectedTags = new Set();
+
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+        // Function to format date
+        function formatDate(dateString) {
+            if (!dateString || dateString === 'YYYY-MM-DD') return '';
+            
+            const date = new Date(dateString);
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        // Toggle type filter
+        function toggleTypeFilter(type) {
+            if (selectedTypes.has(type)) {
+                selectedTypes.delete(type);
+            } else {
+                selectedTypes.add(type);
+            }
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Toggle tag filter
+        function toggleTagFilter(tag) {
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+            } else {
+                selectedTags.add(tag);
+            }
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Update button active states
+        function updateFilterButtons() {
+            document.querySelectorAll('.type-filter-btn').forEach(btn => {
+                const type = btn.dataset.type;
+                if (selectedTypes.has(type)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.tag-filter-btn').forEach(btn => {
+                const tag = btn.dataset.tag;
+                if (selectedTags.has(tag)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            selectedTypes.clear();
+            selectedTags.clear();
+            updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Display filtered items
+        function displayFilteredItems() {
+            let filteredItems = allItems;
+
+            // Filter by type if any types selected
+            if (selectedTypes.size > 0) {
+                filteredItems = filteredItems.filter(item => 
+                    selectedTypes.has(item.type)
+                );
+            }
+
+            // Filter by tags if any tags selected
+            if (selectedTags.size > 0) {
+                filteredItems = filteredItems.filter(item => {
+                    const itemTags = item.tags || [];
+                    return itemTags.some(tag => selectedTags.has(tag));
+                });
+            }
+
+            displayItems(filteredItems);
+        }
+
+        // Display items function
+        function displayItems(items) {
+            const container = document.getElementById('movies');
+            container.innerHTML = '';
+
+            items.forEach(item => {
+                const title = item.thing;
+                const date = item.consumed;
+                const tags = item.tags || [];
+                const thoughts = item.thoughts || '';
+                const from = item.from || '';
+                
+                const yearDisplay = (item.year && item.year !== 'YYYY' && item.year !== 'null') 
+                    ? `(${item.year})` 
+                    : '';
+                
+                const formattedDate = formatDate(date);
+                
+                // Different HTML based on type
+                let entryHTML = '';
+                
+                if (item.type === 'movie') {
+                    entryHTML = `
+                        <div class="entry entry-movie">
+                            <div class="type-tag">${item.type}</div>
+                            <!-- <div>${item.image ? `<img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div> --!>
+                            <div class="content">
+                                <h3>${title}</h3>
+                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p>On <em>${tags.join(', ')}</em></p>
+                                ${thoughts ? `<p>${thoughts}</p>` : ''}
+                            </div>
+                        </div>
+                    `;
+                } else if (item.type === 'glossary') {
+                    entryHTML = `
+                        <div class="entry entry-glossary">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>${from}</h3>
+                            <p class="definition">${title}</p>
+                            <p class="meta">Consumed ${formattedDate}</p>
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'image') {
+                    entryHTML = `
+                        <div class="entry entry-image">
+                            ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                            <p class="caption">${title}</p>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'article') {
+                    entryHTML = `
+                        <div class="entry entry-article">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>${title}</h3>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'quote') {
+                    entryHTML = `
+                        <div class="entry entry-quote">
+                            <div class="type-tag">${item.type}</div>
+                            <h3>"${title}"</h3>
+                            <p>From ${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                } else {
+                    // Default format for other types
+                    entryHTML = `
+                        <div class="entry entry-${item.type || 'default'}">
+                            <div class="type-tag">${item.type}</div>
+                            <div>${item.image ? `<img <img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
+                            <h3>${title}</h3>
+                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
+                            <p>On <em>${tags.join(', ')}</em></p>
+                            ${thoughts ? `<p>${thoughts}</p>` : ''}
+                        </div>
+                    `;
+                }
+                
+                container.innerHTML += entryHTML;
+            });
+        }
+
+        // Fetch and display collected items
+        Promise.all([
+            fetch('watched.json').then(response => response.json()),
+            fetch('collected.json').then(response => response.json()).catch(() => []),
+            fetch('read.json').then(response => response.json()).catch(() => []),
+            fetch('listened.json').then(response => response.json()).catch(() => [])
+        ])
+        .then(([watched, collected, read, listened]) => {
+            // Combine all arrays
+            allItems = [...watched, ...collected, ...read, ...listened];
+            
+            // Sort by date, newest first
+            allItems.sort((a, b) => {
+                const dateA = a.consumed || a.collected || '';
+                const dateB = b.consumed || b.collected || '';
+                return dateB.localeCompare(dateA);
+            });
+
+            // Filter out null items
+            allItems = allItems.filter(item => (item.thing !== null));
+
+            // Extract unique types
+            const types = new Set();
+            allItems.forEach(item => {
+                if (item.type) types.add(item.type);
+            });
+
+            // Extract unique tags
+            const tags = new Set();
+            allItems.forEach(item => {
+                if (item.tags) {
+                    item.tags.forEach(tag => tags.add(tag));
+                }
+            });
+
+            // Create type filter buttons
+            const typeFiltersContainer = document.getElementById('type-filters');
+            Array.from(types).sort().forEach(type => {
+                const btn = document.createElement('button');
+                btn.className = 'type-filter-btn';
+                btn.dataset.type = type;
+                btn.textContent = type;
+                btn.onclick = () => toggleTypeFilter(type);
+                typeFiltersContainer.appendChild(btn);
+            });
+
+            // Create tag filter buttons
+            const tagFiltersContainer = document.getElementById('tag-filters');
+            Array.from(tags).sort().forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = 'tag-filter-btn';
+                btn.dataset.tag = tag;
+                btn.textContent = tag;
+                btn.onclick = () => toggleTagFilter(tag);
+                tagFiltersContainer.appendChild(btn);
+            });
+
+            // Display all items initially
+            displayItems(allItems);
+        })
+        .catch(error => {
+            console.error('Error loading data:', error);
+            document.getElementById('movies').innerHTML = '<p>Error loading content</p>';
+        });
+    </script>
+</body>
+</html>

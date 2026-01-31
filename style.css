@@ -1,0 +1,76 @@
+body {
+    font-family: "Times", serif;
+    letter-spacing: -0.6%;
+    background-color: #fffdfb;
+    margin: 0;
+    color: var(--main-color);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Helvetica", sans-serif;
+    line-height: 120%;
+    }
+
+.button {
+    font-family: "Times", serif;
+    font-size: 16px;
+    letter-spacing: -0.6%;
+    border-radius: 99px;
+    padding: 4px 8px;
+    border: 0.25px dashed ;
+    border-color: #ffffff00;   
+    color: var(--main-color);
+}
+
+.button.secondary {
+    background-color: var(--main-muted);
+}
+
+.button.outline {
+    border: 0.25px solid ;
+    background-color: #fffdfb;
+    border-color: var(--main-color);   
+}
+
+.button.outline:hover {
+    background-color: var(--main-muted);
+}
+
+.container {
+    padding: 24px;
+}
+
+hr { 
+    border-bottom: 0.25px dashed ;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin: 40px 0px;
+    border-color: var(--main-color);
+}
+
+br {
+    display: inline;
+    content: "";
+    margin-top: 16px; 
+}
+
+
+    .journal-entry {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+        }
+
+      .two-columns {
+            display: flex;
+            align-items: flex-start;
+            height: 100vh;  
+            overflow: hidden;
+        }
+
+        .right-panel, .left-panel {
+            width: 50%;
+            overflow-y: scroll;
+            height: 100%;
+        }
