@@ -13,6 +13,20 @@
         "thoughts": null
     },
     {
+        "thing": "Hamnet",
+        "from": "Chloé Zhao",
+        "year": "2026",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": "2026-01-31",
+        "type": "movie",
+        "tags": [
+            "romance", "theatre"
+
+        ],
+        "thoughts": "Lo más cautivante fue ver la relación de Agnes con el bosque, las plantas, las medicinas, la naturaleza. Una de las representaciones más nobles y humanas que recuerdo de lo que esta gente consideraría una bruja. Salir del bosque, parir en el bosque, curar en el bosque, dormir en el bosque. Su relación más estable y amorosa parecía ser con el mismo, relación que pareciera que se rompe y se aleja cuando ella se -domestica-. Elijo creer que después del final, ella vuelve a este primer amante.<br>Me dieron ganas de tomar un té de carqueja"
+    },
+    {
         "thing": "Caught by the tides",
         "from": "Jia Zhangke",
         "year": "2024",
