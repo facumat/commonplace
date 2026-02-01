@@ -13,6 +13,19 @@
         "thoughts": "thoughts"
     },
     {
+        "thing": "null",
+        "from": "Orlando by Virginia Woolf",
+        "year": "YYYY",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": "2026-01-31",
+        "type": "quote",
+        "tags": [
+            "abajo el trabajo"
+        ],
+        "thoughts": null
+    },
+    {
         "thing": "Research as leisure activity",
         "from": "Celine Nguyen",
         "year": "2025",
