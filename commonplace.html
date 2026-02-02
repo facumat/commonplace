@@ -18,7 +18,7 @@
             border-style: dashed;
         }
 
-        .entry-image {
+        .entry image {
              width: 75px; 
             height: auto;
             margin-top: 8px;
@@ -331,7 +331,7 @@
                     entryHTML = `
                         <div class="entry entry-${item.type || 'default'}">
                             <div class="type-tag">${item.type}</div>
-                            <div>${item.image ? `<img <img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
+                            <div>${item.image ? `<img <img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <h3>${title}</h3>
                             <p>${from} ${yearDisplay} - ${formattedDate}</p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
