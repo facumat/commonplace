@@ -18,8 +18,8 @@
             border-style: dashed;
         }
 
-        .entry image {
-             width: 75px; 
+        .entry img {
+            width: 75px; 
             height: auto;
             margin-top: 8px;
         }
@@ -275,7 +275,6 @@
                     entryHTML = `
                         <div class="entry entry-movie">
                             <div class="type-tag">${item.type}</div>
-                            <!-- <div>${item.image ? `<img class="entry-image" src="${item.image}" alt="${title}" loading="lazy">` : ''}</div> --!>
                             <div class="content">
                                 <h3>${title}</h3>
                                 <p>${from} ${yearDisplay} - ${formattedDate}</p>
@@ -298,7 +297,8 @@
                 } else if (item.type === 'image') {
                     entryHTML = `
                         <div class="entry entry-image">
-                            ${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}
+                            <div class="type-tag">${item.type}</div>
+                            <div>${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <p class="caption">${title}</p>
                             <p>${from} ${yearDisplay} - ${formattedDate}</p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
