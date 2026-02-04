@@ -13,6 +13,29 @@
         "thoughts": "thoughts"
     },
     {
+        "thing": "Solar Protocol",
+        "from": "null",
+        "url": "https://solarprotocol.net/index.html",
+        "consumed": "2026-02-04",
+        "type": "community",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "From website: A naturally intelligent network. This website is hosted across a network of solar powered servers and is sent to you from whichever server is in the most sunshine. "
+    },
+    {
+        "thing": "XPUB",
+        "from": "Piet Zwart Institute",
+        "url": "https://xpub.nl/",
+        "consumed": "2026-02-04",
+        "type": "community",
+        "tags": [
+            "handmade web",
+            "publishing"
+        ],
+        "thoughts": "From website: XPUB is the Master of Arts in Fine Art and Design: Experimental Publishing of the Piet Zwart Institute. XPUB focuses on the acts of making things public and creating publics in the age of post-digital networks. Also see https://project.xpub.nl/ for their projects repository."
+    },
+    {
         "thing": "Daily coffee page",
         "from": "youngjo",
         "year": null,

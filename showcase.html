@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #000000;
+            --main-muted: #00000010;
+        }
+
+        .flex-h {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .flex-h a {
+            flex: 1;
+            width: 100%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+
+        .showcase-img img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <div class="container">
+            <p>A bit of this and that</p>
+            <h1>Design Showcase </h1>
+            <p>My main, rent-paying profession is as in UX/UI and Visual Designer. Below, you'll find some works related to this.</p>
+            <p><em><b>Planted:</b> Jan 30, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr>
+            <p>A bit of everything</p>
+            <h2>Showcase</h2>
+            <div class="cases-group flex-h">
+                <a href="#">
+                    <div>
+                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <h3>Neonledger</h3>
+                        <p>A tracking platform for all you could need to know about your NFT's trading.</p>
+                        <div class="badge-group flex-h">
+                            <div class="badge"><p>web app</p></div>
+                            <div class="badge"><p>web3</p></div>
+                            <div class="badge"><p>figma</p></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <h3>Birdie Tiger</h3>
+                        <p>Building a young and vibrant agency landing page and identity in a week.</p>
+                        <div class="badge-group flex-h">
+                            <div class="badge"><p>web design</p></div>
+                            <div class="badge"><p>agency</p></div>
+                            <div class="badge"><p>figma</p></div>
+                            <div class="badge"><p>webflow</p></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <h3>The Skin Club</h3>
+                        <p>Designing a 360 hub for the skincare enthusiasts: from learning to purchasing.</p>
+                        <div class="badge-group flex-h">
+                            <div class="badge"><p>mobile app</p></div>
+                            <div class="badge"><p>skincare</p></div>
+                            <div class="badge"><p>figma</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <p>A bit of everything</p>
+            <h2>Showcase</h2>
+            <div class="showcase">
+                <div class="grid">
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/100handcoded.webp">
+                        <p>Short description</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <p>This is this page</p>
+            <h2>Construction journal</h2>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Feb 2, 2026.</p>
+                <p>Planted!</p>
+                </div>
+            </div>
+            <!--
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 29, 2026.</p>
+                <p>Text</p>
+                </div>
+            </div>
+             -->
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+    </script>
+</body>
+</html>
