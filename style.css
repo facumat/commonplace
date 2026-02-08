@@ -26,14 +26,19 @@ h1, h2, h3, h4, h5 {
     background-color: var(--main-muted);
 }
 
-.button.outline {
+.button.secondary:hover {
     border: 0.25px solid ;
+
+}
+
+.button.outline {
+    border: 0.25px dashed ;
     background-color: #fffdfb;
     border-color: var(--main-color);   
 }
 
 .button.outline:hover {
-    background-color: var(--main-muted);
+    border: 0.25px solid ;
 }
 
 .container {

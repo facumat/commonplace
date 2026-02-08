@@ -13,6 +13,16 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"The ghost of flea",
+        "from":"William Blake",
+        "year":"1819",
+        "image":"/images/ghost-of-flea-market-william-blak.webp",
+        "url":"https://en.wikipedia.org/wiki/The_Ghost_of_a_Flea#",
+        "consumed":"2025-5-17",
+        "type":"image",
+        "tags":["creatures"]
+    },
+    {
         "thing": "Solar Protocol",
         "from": "null",
         "url": "https://solarprotocol.net/index.html",

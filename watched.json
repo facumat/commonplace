@@ -13,6 +13,26 @@
         "thoughts": null
     },
     {
+        "thing":" Weaving software into core memory by hand ",
+        "url":"https://www.youtube.com/watch?v=P12r8DKHsak&list=PLnqmbY_4qjzsXfatfs7e2BN0ICX_mK5N2",
+        "consumed":"2025-10-15",
+        "type":"video",
+        "tags":["weaving software"]
+    },
+    {
+        "thing": "Marty Supreme",
+        "from": "Josh Safdie",
+        "year": "2026",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": null,
+        "type": "movie",
+        "tags": [
+
+        ],
+        "thoughts": "Shit is crazy. Lowkey reminded me of Falling Down, but with a better ending obviously. The protagonist is both lovable and a prick, which makes up for a fun and interesting character, although he is sometimes a bit shallow in his drive, which makes sense for a 23 y/o tho... P.D.1: Thimothe is a great actor. P.D.2: stop selling me the american dream/fight for your dreams stuff, I just want to code and read."
+    },
+    {
         "thing": "Hamnet",
         "from": "Chloé Zhao",
         "year": "2026",

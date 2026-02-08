@@ -13,6 +13,24 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Sasha Stiles: A LIVING POEM",
+        "from":"Terry Nguyen",
+        "year":"2026",
+        "url":"https://brooklynrail.org/2026/02/artseen/sasha-stiles-a-living-poem/",
+        "consumed":"2026-2-7",
+        "type":"article",
+        "tags":["art","ai"],
+        "thoughts":"This article speaks about the contradictions and hollowness of usinf AI to produce text based art that says nothing. Basically."
+    },
+    {
+        "thing": "“We may say most aptly that the Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.”",
+        "from":"Ada Lovelace",
+        "year": "1843",
+        "consumed": "2026-2-7",
+        "type": "quote",
+        "tags":["handmade web", "weaving software"]
+    },
+    {
         "thing": "The Poetic Web is a practice and process towards a place: a web that is more handmade, expressive, and intimate; where site-making is a political, personal, and poetic act.",
         "from": "Poetic Web",
         "consumed": "2026-2-4",

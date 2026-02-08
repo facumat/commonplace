@@ -9,6 +9,8 @@
         :root {
             --main-color: #2E5FFF;
             --main-muted: #2E5FFF15;
+            --main-secondary: #2E5FFF50;
+
         }
 
         .entry  {
@@ -58,10 +60,30 @@
             border: 0.25px dashed ;
             border-color: #ffffff00;        }
 
+        .tag-filter-btn:hover, .type-filter-btn:hover {
+            border: 0.25px solid ;
+            border-color: var(--main-color);
+        }
+
         .tag-filter-btn.active, .type-filter-btn.active {
             background-color: #2E5FFF35;
             border: 0.25px dashed ;
             border-color: var(--main-color);
+        }
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            padding: 8px;
+            font-family: "Times", serif;
+            font-size: 16px;
+            border: 0.25px solid var(--main-color);
+            border-radius: 4px;
+            color: var(--main-color);
+        }
+
+        input::placeholder {
+            color: var(--main-secondary);
         }
 
     </style>
@@ -69,12 +91,16 @@
 <body>
     <section class="two-columns">
         <div class="left-panel container">
-            <button class="button secondary" onclick="history.back()">← Go Back</button>
+            <button class="button outline" onclick="history.back()">← Go Back</button>
             <h1>My Commonplace</h1>
             <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
             <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
             <hr>
             <div class="filters">
+                <div class="filter-section">
+                    <p>Search:</p>
+                    <input type="text" id="search-input" placeholder="Search items..." />
+                </div>
                 <div class="filter-section">
                     <p>Filter by Type:</p>
                     <div class="filters-group" id="type-filters"></div>
@@ -161,10 +187,11 @@
     </section>
     
     <script>
-        // Global variables for filtering
+        // variables for filtering
         let allItems = [];
         let selectedTypes = new Set();
         let selectedTags = new Set();
+        let searchText = '';
 
         function showLastModified() {
             var lastModifiedDate = new Date(document.lastModified);
@@ -172,10 +199,10 @@
             var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
             document.getElementById("last-modified-date").innerHTML = formattedDate;
         }
-        // Call the function when the page loads
+
         window.onload = showLastModified;
         
-        // Function to format date
+        // format date
         function formatDate(dateString) {
             if (!dateString || dateString === 'YYYY-MM-DD') return '';
             
@@ -184,7 +211,7 @@
             return date.toLocaleDateString('en-US', options);
         }
 
-        // Toggle type filter
+        // toggle type filter
         function toggleTypeFilter(type) {
             if (selectedTypes.has(type)) {
                 selectedTypes.delete(type);
@@ -203,6 +230,12 @@
                 selectedTags.add(tag);
             }
             updateFilterButtons();
+            displayFilteredItems();
+        }
+
+        // Handle search input
+        function handleSearch(event) {
+            searchText = event.target.value.toLowerCase();
             displayFilteredItems();
         }
 
@@ -227,15 +260,17 @@
             });
         }
 
-        // Clear all filters
+        // Clear filters
         function clearAllFilters() {
             selectedTypes.clear();
             selectedTags.clear();
+            searchText = '';
+            document.getElementById('search-input').value = '';
             updateFilterButtons();
             displayFilteredItems();
         }
 
-        // Display filtered items
+        // Display filtered 
         function displayFilteredItems() {
             let filteredItems = allItems;
 
@@ -251,6 +286,21 @@
                 filteredItems = filteredItems.filter(item => {
                     const itemTags = item.tags || [];
                     return itemTags.some(tag => selectedTags.has(tag));
+                });
+            }
+
+            // Filter by search text
+            if (searchText) {
+                filteredItems = filteredItems.filter(item => {
+                    const title = (item.thing || '').toLowerCase();
+                    const from = (item.from || '').toLowerCase();
+                    const thoughts = (item.thoughts || '').toLowerCase();
+                    const tags = (item.tags || []).join(' ').toLowerCase();
+                    
+                    return title.includes(searchText) || 
+                           from.includes(searchText) || 
+                           thoughts.includes(searchText) ||
+                           tags.includes(searchText);
                 });
             }
 
@@ -408,6 +458,9 @@
                 btn.onclick = () => toggleTagFilter(tag);
                 tagFiltersContainer.appendChild(btn);
             });
+
+            // Connect search input
+            document.getElementById('search-input').addEventListener('input', handleSearch);
 
             // Display all items initially
             displayItems(allItems);
