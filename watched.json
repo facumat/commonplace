@@ -13,6 +13,29 @@
         "thoughts": null
     },
     {
+        "thing": "The Phoenician Scheme",
+        "from": "Wes Anderson",
+        "year": "2025",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": null,
+        "type": "movie",
+        "tags": ["things I hated"
+
+        ],
+        "thoughts": "lol me olvidé que había visto esta porquería, aunque de vez en cuando se me revive la sensación de que vi una película mala, pero no me acuerdo cuál es. Realmente inseguible, la misma historia de siempre con las mismas mini historias ramificadas de siempre, con los mismos personas de siempre. En realidad pienso que se puede tener un estilo muy marcado, con unos temas e historias bien recurrentes, pero el tema es hacerlo con un poco de alma. Almodovar por ejemplo tiene un estilo, unas historias, unos intereses marcadísimos pero no tengo problema en verlo volver a ellos una y otra vez porque tiene ángel. En cambio este señor, era como ver una historia hecha con inteligencia artifical. Amigo conseguite una hiper fijación honesta."
+    },
+    {
+        "thing": "Sinners",
+        "from": "Ryan Coogler",
+        "year": "2026",
+        "consumed": "2026-2-8",
+        "type": "movie",
+        "tags": ["social justice"
+        ],
+        "thoughts": "Unexpectedly amazing. Not a terror movie fan, came into this movie with a friend who wanted to watch it and -even though my nerves were wrecked, a little- it was a tour de force of music, bonding, endurance, remembrance, suspense. It is quite frightening that we are at a time when this type of movies are necessary again, to remember this fight, to remember the enemy is still fresh and out there, to remember we need to come together over music and bonfires. Also THE scene where the past, present and future collide in that joyous explosion? One of those moments when the big screen sucks you in and everything from your life is left outside the cinema."
+    },
+    {
         "thing":" Weaving software into core memory by hand ",
         "url":"https://www.youtube.com/watch?v=P12r8DKHsak&list=PLnqmbY_4qjzsXfatfs7e2BN0ICX_mK5N2",
         "consumed":"2025-10-15",
@@ -107,7 +130,8 @@
         "consumed": "2026-01-05",
         "type": "movie",
         "tags": [
-            "western drama"
+            "mental health",
+            "family"
         ],
         "thoughts": "Ya con el primer tramo narrando como Nora había escrito un cuento desde la perspectiva de su casa-objeto dije bueno, estoy sentadoseated."
     },
@@ -120,7 +144,6 @@
         "consumed": "2026-01-02",
         "type": "movie",
         "tags": [
-            "documentaries",
             "queerness",
             "spain",
             "religion"
@@ -177,8 +200,7 @@
         "consumed": "2025-11-26",
         "type": "movie",
         "tags": [
-            "ghibli",
-            "animation"
+            "ghibli"
         ],
         "thoughts": null
     },
@@ -191,7 +213,6 @@
         "consumed": "2025-11-11",
         "type": "movie",
         "tags": [
-            "drama"
         ],
         "thoughts": "★4 - Banco mucho a la Kelly. No es una película que se vaya a quedar conmigo mucho tiempo, aunque la re disfruté. De todos modos le pongo 4 estrellas para peliar las reviews de gente malhumorada que no puede sentarse durante 2 hs de películas sencillas y lentas."
     },
