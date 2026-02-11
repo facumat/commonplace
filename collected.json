@@ -13,6 +13,13 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Connie's personal website",
+        "url":"https://connie.surf/",
+        "consumed":"2026-2-11",
+        "type":"website",
+        "tags":["portfolio"]
+    },
+    {
         "thing":"The ghost of flea",
         "from":"William Blake",
         "year":"1819",
@@ -25,7 +32,6 @@
     },
     {
         "thing": "Solar Protocol",
-        "from": "null",
         "url": "https://solarprotocol.net/index.html",
         "consumed": "2026-02-04",
         "type": "community",

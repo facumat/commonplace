@@ -13,6 +13,16 @@
         "thoughts": "thoughts"
     },  
     {
+        "thing":"The Web's grain",
+        "from":"Frank Chimero",
+        "year":"2015",
+        "url":"https://frankchimero.com/blog/2015/the-webs-grain/",
+        "consumed":"2026-2-10",
+        "type":"article",
+        "tags":["handmade web", "the web"],
+        "thoughts":"Great article to thing of the web as tghe material with which we work, a parelilism between the paper on which we print"
+    },
+    {
         "thing": null,
         "from": "null",
         "year": "YYYY",
