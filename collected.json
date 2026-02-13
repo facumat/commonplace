@@ -13,6 +13,14 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"inprogress.works",
+        "from":"Connie",
+        "url":"https://www.inprogress.works",
+        "consumed":"2026-2-11",
+        "type":"website",
+        "tags":["gathering", "personal projects"]
+    },
+    {
         "thing":"Antique Pattern Library",
         "from":"Metaverse Libraries",
         "url":"https://antiquepatternlibrary.org/html/warm/xstitch.htm",
@@ -42,7 +50,7 @@
         "thing": "Solar Protocol",
         "url": "https://solarprotocol.net/index.html",
         "consumed": "2026-02-04",
-        "type": "community",
+        "type": "website",
         "tags": [
             "handmade web"
         ],
@@ -53,7 +61,7 @@
         "from": "Piet Zwart Institute",
         "url": "https://xpub.nl/",
         "consumed": "2026-02-04",
-        "type": "community",
+        "type": "website",
         "tags": [
             "handmade web",
             "publishing"
