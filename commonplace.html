@@ -254,10 +254,10 @@
 
         // Toggle genre filter
         function toggleGenreFilter(genre) {
-            if (selectedGenre.has(genre)) {
-                selectedGenre.delete(genre);
+            if (selectedGenres.has(genre)) {
+                selectedGenres.delete(genre);
             } else {
-                selectedGenre.add(genre);
+                selectedGenres.add(genre);
             }
             updateFilterButtons();
             displayFilteredItems();
@@ -349,7 +349,7 @@
                     return title.includes(searchText) || 
                            from.includes(searchText) || 
                            thoughts.includes(searchText) ||
-                           tags.includes(searchText);
+                           tags.includes(searchText) ||
                            genre.includes(searchText);
 
                 });
@@ -534,7 +534,7 @@
             Array.from(genres).sort().forEach(genre => {
                 const btn = document.createElement('button');
                 btn.className = 'genre-filter-btn';
-                btn.dataset.tag = genre;
+                btn.dataset.genre = genre;
                 btn.textContent = genre;
                 btn.onclick = () => toggleGenreFilter(genre);
                 genreFiltersContainer.appendChild(btn);
