@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-foundations.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --main-color: #ff9d2e;
+            --main-muted: #ff9d2e10;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <div class="container">
+            <button class="button outline" onclick="history.back()">← Go Back</button>
+            <h1>This is will be a collection of the articles, books and materials that inspired me making this site. Nothing here yet, sorry :/</h1>
+            <p></p>
+            <p><em><b>Planted:</b> Jan 31, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr>
+            <h2>Construction journal</h2>
+            <div class="journal-entry">
+                <p>⤷</p>
+                <div>
+                <p>Jan 29, 2026.</p>
+                <p>Just planting the seed I guess.</p>
+                </div>
+            </div>
+            <!--
+            <div class="journal-entry">
+                <p>
+                Jan 8, 2026.<br>Text<br>---
+                </p>
+            </div>
+             -->
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+[
+    {
+        "thing": null,
+        "from": "null",
+        "year": "YYYY",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": null,
+        "type": "quote",
+        "tags": [
+
+        ],
+        "thoughts": "thoughts"
+    },  
+    {
+        "thing": "Orlando: A Biography",
+        "from": "Virginia Woolf",
+        "year": "1928",
+        "consumed": "2026-2-10",
+        "type": "book",
+        "tags": ["gender"
+
+        ],
+        "thoughts": "thoughts"
+    },  
+    {
+        "thing":"The Web's grain",
+        "from":"Frank Chimero",
+        "year":"2015",
+        "url":"https://frankchimero.com/blog/2015/the-webs-grain/",
+        "consumed":"2026-2-10",
+        "type":"article",
+        "tags":["handmade web", "the web"],
+        "thoughts":"Great article to thing of the web as tghe material with which we work, a parelilism between the paper on which we print"
+    },
+    {
+        "thing": null,
+        "from": "null",
+        "year": "YYYY",
+        "consumed": "202",
+        "type": "quote",
+        "tags": []
+    },
+    {
+        "thing": "But to feel nothing so as not to feel anything—what a waste!",
+        "from": "Call me by your name, André Aciman",
+        "year": "2007",
+        "consumed": "2024-5-13",
+        "type": "quote",
+        "tags": ["love"]
+    },
+    {
+        "thing": "Ahora señor, Tomo la pluma por no tomar una soga que acabe con todo y deje descansar a vuestra merced de mis pesadumbres",
+        "from": "Luis de Góngora",
+        "year": "1623",
+        "consumed": "2024-6-9",
+        "type": "quote",
+        "tags": ["tired body"]
+    },
+    {
+        "thing": "It is 11:30 p.m. on the evening of August first,<br><br>and I am very tired. I wonder why I don't go to bed and go to sleep. But then it would be tomorrow, so I decide that no matter how tired, no matter how incoherent I am, I can skip one hour more of sleep and live. If I did not have this time to be myself, to write here, to be alone, I would somehow, inexplicably, lose a part of my integrity.",
+        "from": "Sylvia Plath",
+        "consumed": "2024-8-2",
+        "type": "quote",
+        "tags": ["tired body"]
+    },
+    {
+        "thing": "What seems threatening about AI is that it further clutters the world",
+        "consumed": "2024-8-14",
+        "type": "quote",
+        "tags": ["ai", "virality"]
+    },
+    {
+        "thing": "Pero si gritase aunque fuese una vez, tal vez nunca más podría parar. Si gritase, nadie podría hacer ya nada por mí; en cambio, si nunca revelase mi carencia, nadie se asustaría conmigo y me ayudarían sin saberlo; pero solo en tanto no asustase a nadie por haber transgredido las normas. Pero si lo supieran, se asustarían, nosotros que guardamos el grito bajo un secreto inolvidable. Si diera el grito de alarma por estar viva, me arrastrarían hacia la mudez y la dureza, pues arrastran a los que se salen afuera del mundo posible. El ser excepcional es arrastrado, el ser gritante.",
+        "from": "La pasión según G H, de Lispector",
+        "year": "1964",
+        "consumed": "2024-8-27",
+        "type": "quote",
+        "tags": ["mental health"]
+    },
+    {
+        "thing": "Ah, mi amor, no tengas miedo de la carencia: ella es nuestro mayor destino. El amor es mucho más fatal de lo que había pensado, el amor es tan inherente como la propia carencia, y nosotros estamos asegurados por una necesidad que se renovará continuamente. El amor ya está, está siempre. Falta solo el golpe de gracias — que se llama pasión.",
+        "from": "null",
+        "year": "YYYY",
+        "url": "",
+        "consumed": "2024-12-8",
+        "type": "quote",
+        "tags": ["love"]
+    },
+    {
+        "thing": "The Antilibrary: The Hidden Value of Unread Books",
+        "from": "null",
+        "year": "YYYY",
+        "url":"https://fs.blog/the-antilibrary/",
+        "consumed": "2024-2-28",
+        "type": "article",
+        "tags": ["literature"
+
+        ]
+    },
+    {
+        "thing": "Principles of the indie web",
+        "from": "indieweb.org",
+        "year": "YYYY",
+        "url":"https://indieweb.org/principles",
+        "consumed": "2025-12-9",
+        "type": "article",
+        "tags": ["handmade web"
+
+        ]
+    },
+    {
+        "thing": "The Internet Exists on Planet Earth",
+        "from": "Mandy Seu",
+        "year": "2022",
+        "url":"https://www.sourcetype.com/editorial/24436/",
+        "consumed": "2025-11-21",
+        "type": "article",
+        "tags": ["handmade web", "the web"
+
+        ]
+    },
+    {
+        "thing": "This Page is Designed to Last",
+        "from": "Jeff Huang",
+        "year": "2019",
+        "url":"https://jeffhuang.com/designed_to_last/",
+        "consumed": "2025-12-9",
+        "type": "article",
+        "tags": ["handmade web", "manifesto"
+
+        ]
+    },
+    {
+        "thing": "🌱 My blog is a digital garden, not a blog",
+        "from": "Joel Hooks",
+        "year": "YYYY",
+        "url":"https://joelhooks.com/digital-garden/",
+        "consumed": "2026-1-29",
+        "type": "article",
+        "tags": ["personal site"
+
+        ]
+    },
+    {
+        "thing": "My fav saints: St Sebastian",
+        "from": "Eleanor Janega",
+        "year": "2022",
+        "url":"https://going-medieval.com/2022/04/07/my-fav-saints-st-sebastian/",
+        "consumed": "2026-2-10",
+        "type": "article",
+        "tags": ["Saint Sebastian"
+
+        ]
+    },
+    {
+        "thing": "How the Blog Broke the Web",
+        "from": "Amy Hoy",
+        "year": "YYYY",
+        "url":"https://stackingthebricks.com/how-blogs-broke-the-web/",
+        "consumed": "2025-12-12",
+        "type": "article",
+        "tags": ["the web"
+
+        ]
+    },
+    {
+        "thing": "Worse is better",
+        "from": "Richard P. Gabriel",
+        "year": "YYYY",
+        "url":"https://www.dreamsongs.com/WorseIsBetter.html",
+        "consumed": "2025-12-12",
+        "type": "article",
+        "tags": ["handmade web"
+
+        ]
+    },
+    {
+        "thing": "Mindy Seu Traces the Origins of Internet Green",
+        "from": "Mindy Seu",
+        "year": "https://artlab.hyundai.com/editorial/mindy-seu-traces-the-origins-of-internet-green",
+        "url":"https://artlab.hyundai.com/editorial/mindy-seu-traces-the-origins-of-internet-green",
+        "consumed": "2025-11-21",
+        "type": "article",
+        "tags": ["the web"
+
+        ]
+    },    
+    {
+        "thing": "Homesteading a personal site",
+        "from": "Frank Chimero",
+        "year": "2013",
+        "url":"https://archive.ph/2013.12.27-041357/http://frankchimero.com/blog/2013/12/homesteading-2014/#selection-125.260-125.308",
+        "consumed": "2025-11-18",
+        "type": "article",
+        "tags": ["handmade web", "personal site"]
+    },
+    {
+        "thing": "Guidelines for brutalist web design",
+        "from": "David Bryant Copeland",
+        "year": "2025",
+        "url":"https://brutalist-web.design/",
+        "consumed": "2025-11-18",
+        "type": "article",
+        "tags": ["design","handmade web"
+        ]
+    },
+    {
+        "thing": "A Handmade Web",
+        "from": "J. R. Carpenter",
+        "year": "2016",
+        "url": "https://luckysoap.com/statements/handmadeweb.html",
+        "consumed": "2025-11-17",
+        "type": "article",
+        "tags": ["handmade web"
+
+        ],
+        "thoughts": "thoughts"
+    },
+    {
+        "thing": "Hago lo que puedo con las palabras que tengo<br>*****<br>Si acaso, intento inventarme alguna más.",
+        "from": "Alejandra Pizarnki",
+        "consumed": "2024-5-13",
+        "type": "quote",
+        "tags": ["literature"
+
+        ]
+    },
+    {
+        "thing": "See enough and write it down.",
+        "from": "Joan Didion",
+        "year": "1966",
+        "consumed": "2024-2-15",
+        "type": "quote",
+        "tags": ["journaling"
+
+        ]
+    },
+    {
+        "thing": "La noche se le cuela en la razón",
+        "from": "Un transeúnte, Darnauchans",
+        "year": "1984",
+        "consumed": "2024-2-15",
+        "type": "quote",
+        "tags": ["sadness is a blessing"
+
+        ]
+    },
+    {
+        "thing": "-¿Estás locom, Alejo?<br>-No, enamorado.",
+        "from": "Pantalones azules, de Sara Gallardo",
+        "year": "1965",
+        "consumed": "2024-6-6",
+        "type": "quote",
+        "tags": ["love"
+
+        ]
+    },
+   {
+        "thing": "It was from a weekly visit to the cinema that you learned (or tried to learn) how to strut, to smoke, to kiss, to fight, to grieve.",
+        "from": "Susan Sontag",
+        "year": "2023-9-26",
+        "consumed": null,
+        "type": "quote",
+        "tags": ["cinema"
+
+        ]
+    },
+    {
+        "thing": "The most terrifying fact about the universe is not that it is hostile but that it is indifferent; but if we can come to terms with this indifference and accept the challenges of life within the boundaries of death — however mutable man may be able to make them — our existence as a species can have genuine meaning and fulfillment. However vast the darkness, we must supply our own light.",
+        "from": "Stanley Kubric",
+        "year": "YYYY",
+        "consumed": "2024-1-1",
+        "type": "quote",
+        "tags": ["existence"
+
+        ]
+    },
+    {
+        "thing":"Sasha Stiles: A LIVING POEM",
+        "from":"Terry Nguyen",
+        "year":"2026",
+        "url":"https://brooklynrail.org/2026/02/artseen/sasha-stiles-a-living-poem/",
+        "consumed":"2026-2-7",
+        "type":"article",
+        "tags":["art","ai"],
+        "thoughts":"This article speaks about the contradictions and hollowness of usinf AI to produce text based art that says nothing. Basically."
+    },
+    {
+        "thing": "“We may say most aptly that the Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.”",
+        "from":"Ada Lovelace",
+        "year": "1843",
+        "consumed": "2026-2-7",
+        "type": "quote",
+        "tags":["handmade web", "weaving software"]
+    },
+    {
+        "thing": "The Poetic Web is a practice and process towards a place: a web that is more handmade, expressive, and intimate; where site-making is a political, personal, and poetic act.",
+        "from": "Poetic Web",
+        "consumed": "2026-2-4",
+        "type": "glossary",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "Concept from Chia Amisola"
+    },
+   {
+        "thing": "“The Web Revival is about reviving the spirit of openness and fresh excitement that surrounded the web in its earliest days.”<br>“As for today, I still think the true spirit of the internet remains in the unexpected, individual contributions,” says Ross. “That playground isn’t exactly gone. It’s just more scattered and hidden across personal sites, experimental tools, and gated subcultures that require an active effort to discover.”",
+        "from": "Paul Moore",
+        "year": "2026",
+        "url": "https://www.itsnicethat.com/features/forward-thinking-open-your-laptop-digital-creative-industry-120126",
+        "consumed": "2026-02-04",
+        "type": "quote",
+        "tags": [
+            "handmade web"
+        ]
+    },
+    {
+        "thing": "Open your laptop! The creatives designing a more inspiring internet",
+        "from": "Paul Moore",
+        "year": "2026",
+        "url": "https://www.itsnicethat.com/features/forward-thinking-open-your-laptop-digital-creative-industry-120126",
+        "consumed": "2026-02-04",
+        "type": "article",
+        "tags": [
+            "handmade web"
+        ]
+    },
+    {
+        "thing": "There’s a version of today’s analogue fixation that could move in this direction. It might be that an idiosyncratic, un-vibe-coded website is more meaningfully analogue than a typeface designed to simulate handwriting.",
+        "from": "Elizabeth Goodspeed on the limits of imperfection as a design strategy",
+        "year": "2026",
+        "image": "images/sample.gif",
+        "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-on-analogue-creative-industry-290126",
+        "consumed": "2026-02-02",
+        "type": "quote",
+        "tags": [
+            "handmade web"
+        ]
+    },
+    {
+        "thing": "Elizabeth Goodspeed on the limits of imperfection as a design strategy",
+        "from": "Elizabeth Good",
+        "year": "2026",
+        "image": "images/sample.gif",
+        "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-on-analogue-creative-industry-290126",
+        "consumed": "2026-02-02",
+        "type": "article",
+        "tags": [
+            "handmade web"
+        ]
+    },
+    {
+        "thing": "null",
+        "from": "Orlando by Virginia Woolf",
+        "year": "YYYY",
+        "image": "images/sample.gif",
+        "url": "null",
+        "consumed": "2026-01-31",
+        "type": "quote",
+        "tags": [
+            "abajo el trabajo"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "Research as leisure activity",
+        "from": "Celine Nguyen",
+        "year": "2025",
+        "image": null,
+        "url": "https://substack.com/home/post/p-145011020",
+        "consumed": "2026-01-14",
+        "type": "article",
+        "tags": [
+            "research",
+            "creativity"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "Resonant Computing Manifesto",
+        "from": null,
+        "year": "2025",
+        "image": null,
+        "url": "https://resonantcomputing.org/",
+        "consumed": "2026-01-14",
+        "type": "article",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "The term 'handmade' usually refers to objects made by hand or by using simple tools rather than machines. The result may be homely — as in a child's clay ashtray — or exquisite — as in a pair of bespoke brogues. I evoke the term 'handmade web' to refer to web pages coded by hand rather than by software; web pages made and maintained by individuals rather than by businesses or corporations; web pages which are provisional, temporary, or one-of-a-kind; web pages which challenge conventions of reading, writing, design, ownership, privacy, security, or identity.",
+        "from": "Handmade Web",
+        "year": null,
+        "image": null,
+        "url": "https://luckysoap.com/statements/handmadeweb.html",
+        "consumed": "2025-11-07",
+        "type": "glossary",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "Permacomputing is both a concept and a community of practice oriented around issues of resilience and regenerativity in computer and network technology inspired by permaculture. ପໄଓ☾☼✫ -☆:*",
+        "from": "Permacomputing",
+        "year": null,
+        "image": null,
+        "url": null,
+        "consumed": "2024-08-08",
+        "type": "glossary",
+        "tags": [
+            "handmade web",
+            "permacomputing"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "American standard code for international interchange",
+        "from": "ASCII",
+        "year": null,
+        "image": null,
+        "url": null,
+        "consumed": "2023-12-07",
+        "type": "glossary",
+        "tags": [
+ 
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "There's a feeling you get in the presence of beautiful buildings and bustling courtyards. A sense that these spaces are inviting you to slow down, deepen your attention and be a bit more human. What if our software could do the same?",
+        "from": "Resonant Computer Manifesto",
+        "year": null,
+        "image": null,
+        "url": "https://resonantcomputing.org/",
+        "consumed": "2026-01-14",
+        "type": "quote",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "A commonplace book (or commonplaces) is a personal notebook for collecting and organizing information, such as quotes, poems, recipes, and thoughts, that you find inspiring or useful. It serves as a personal treasury of knowledge to be revisited later and can be adapted to include a wide variety of content.",
+        "from": "Commonplace book",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2025-11-23",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Ana Julia, my boyfriend's friend/family, mentioned how Antonio Lussich would keep books classifying things like seeds, wood, plants, and much more. Instantly, it ringed a bell with my need and jhoy in collecting pieces of things that interest me."
+    },
+    {
+        "thing": " Locus amoenus (Latin for 'pleasant place') is a literary topos involving an idealized place of safety or comfort. A locus amoenus is usually a beautiful, shady lawn or open woodland, or a group of idyllic islands, sometimes with connotations of Eden or Elysium. A locus amoenus will have three basic elements: trees, grass, and water. Often, the garden will be in a remote place and function as a landscape of the mind. It can also be used to highlight the differences between urban and rural life or be a place of refuge from the processes of time and mortality.",
+        "from": "Locus amoenus",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2026-01-12",
+        "type": "glossary",
+        "tags": [
+            "urbanism"
+        ],
+        "thoughts": null
+    },
+    {
+        "thing": "The branch of science concerned with classification, especially of organisms; systematics.",
+        "from": "Taxonomy",
+        "year": null,
+        "image": null,
+        "url": "null",
+        "consumed": "2025-11-22",
+        "type": "glossary",
+        "tags": [
+            "taxonomy"
+        ],
+        "thoughts": "Found in an article. This was the start of something new: having a name for the joy of classifying and the need to create one place to hold everything together."
+    },
+    {
+        "thing": "Tiny Awards",
+        "from": "dnr",
+        "year": null,
+        "image": null,
+        "url": "https://tinyawards.net/",
+        "consumed": "2025-11-22",
+        "type": "website",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": "Annual awards that, since 2023, select small, poetic, personal and handmade websites."
+    },
+    {
+        "thing": "100% hand coded",
+        "from": "are.na",
+        "year": null,
+        "image": "images/100handcoded.webp",
+        "url": null,
+        "consumed": "2025-11-22",
+        "type": "image",
+        "tags": [
+            "handmade web"
+        ],
+        "thoughts": null
+    }
+]
