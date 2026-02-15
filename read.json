@@ -164,7 +164,7 @@
         "url":"https://joelhooks.com/digital-garden/",
         "consumed": "2026-1-29",
         "type": "article",
-        "tags": ["personal site"
+        "tags": ["digital gardening"
 
         ]
     },
@@ -175,7 +175,7 @@
         "url":"https://going-medieval.com/2022/04/07/my-fav-saints-st-sebastian/",
         "consumed": "2026-2-10",
         "type": "article",
-        "tags": ["Saint Sebastian"
+        "tags": ["Saint Sebastian", "religion"
 
         ]
     },
@@ -219,7 +219,7 @@
         "url":"https://archive.ph/2013.12.27-041357/http://frankchimero.com/blog/2013/12/homesteading-2014/#selection-125.260-125.308",
         "consumed": "2025-11-18",
         "type": "article",
-        "tags": ["handmade web", "personal site"]
+        "tags": ["handmade web", "digital gardening"]
     },
     {
         "thing": "Guidelines for brutalist web design",
@@ -273,7 +273,7 @@
         ]
     },
     {
-        "thing": "-¿Estás locom, Alejo?<br>-No, enamorado.",
+        "thing": "-¿Estás loco, Alejo?<br>-No, enamorado.",
         "from": "Pantalones azules, de Sara Gallardo",
         "year": "1965",
         "consumed": "2024-6-6",
