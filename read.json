@@ -13,6 +13,32 @@
         "thoughts": "thoughts"
     },  
     {
+        "thing":"Hail! natural desire! Hail! happiness! divine happiness! and pleasure of all sorts, flowers and wine, though one fades and the other intoxicates; and half-crown tickets out of London on Sundays, and singing in a dark chapel hymns about death, and anything, anything that interrupts and confounds the tapping of typewriters and filing of letters and forging of links and chains, binding the Empire together.",
+        "from":"Orlando, by Virginia Woolf",
+        "year":"1928",
+        "consumed":"2026-2-1",
+        "type":"quote",
+        "tags":["abajo el trabajo"],
+        "thoughts":"go off socialist queen"
+    },
+    {
+        "thing":"For it is a difficult business, this timekeeping; nothing more quickly disorders it than contact with any of the arts...",
+        "from":"Orlando, by Virginia Woolf",
+        "year":"1928",
+        "consumed":"2026-2-4",
+        "type":"quote",
+        "tags":["productivity"]
+    },
+    {
+        "thing":"This, too, was all in the day's routine. As soon would she come home and leave her own grandmother without a kiss as come back and leave the house unvisited. She fancied that the rooms brightened as she came in; stirred, opened their eyes as if they had been dozing in her absence. She fancied, too, that, hundreds and thousands of times as she had seen them, they never looked the same twice, as if so long a life as theirs had stored in them a myriad moods which changed with winter and summer, bright weather and dark, and her own fortunes and the people's characters who visited them. Polite, they always were to strangers, but a little weary: with her, they were entirely open and at their ease. Thy not, indeed? They had nothing to conceal. She knew their sorrows and joys. She knew what age each part of them was and its little secrets - a hidden drawer, a concealead cupboard, or some defficiency, perhaps, such as a part made up, or added later. They, too, knew her in all her moods and changes. She had hidden nothing from them: had come to them as boy and woman, crying and dancing, brooding and gay. In this window-seat she had written her first verses: in that chapel she had been married. And she would be buried here, she reflected, kneeling on the windowsill in the long gallery and sipping her Spanish wine.",
+        "from":"Orlando, by Virginia Woolf",
+        "year":"1928",
+        "consumed":"2026-2-10",
+        "type":"quote",
+        "tags":["house"]
+
+    },
+    {
         "thing": "Orlando: A Biography",
         "from": "Virginia Woolf",
         "year": "1928",
@@ -349,19 +375,6 @@
         "tags": [
             "handmade web"
         ]
-    },
-    {
-        "thing": "null",
-        "from": "Orlando by Virginia Woolf",
-        "year": "YYYY",
-        "image": "images/sample.gif",
-        "url": "null",
-        "consumed": "2026-01-31",
-        "type": "quote",
-        "tags": [
-            "abajo el trabajo"
-        ],
-        "thoughts": null
     },
     {
         "thing": "Research as leisure activity",
