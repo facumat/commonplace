@@ -13,6 +13,51 @@
         "thoughts": "thoughts"
     },  
     {
+        "thing":"Una curiosidad nueva",
+        "from":"Santiago Nader",
+        "year":"2020",
+        "consumed":"2026-2-16",
+        "type":"book",
+        "tags":["queerness"],
+        "thoughts":"Cuatro estrellas por todes quienes le pusieron poquitas. Disfruté de estar atrás de los ojos y oídos de este personaje. Al menos yo, me lo imaginé como un único personaje que está presente en todos los cuentos porque su curiosidad era muy constante siempre, observando el mundo, lo que pasa a su alrededor, y sin querer queriendo terminar siendo parte de esas situaciones que él chusmeaba. Muy tierno muy lindo muy cute"
+    },
+    {
+        "thing":"Why I gave the world wide web away for free",
+        "from":"Tim Berners-Lee",
+        "url":"https://www.theguardian.com/technology/2025/sep/28/why-i-gave-the-world-wide-web-away-for-free",
+        "year":"2025",
+        "consumed":"2026-2-15",
+        "type":"article",
+        "tags":["the web"],
+        "thoughts":"A lot of talk about how AI operates rampant on the web and questions about if and how we could regulate it. I want ro read more about Tim, he seems like quite the revolutionary not giving up on the idea of the www being free and open to everyone, and for individuals to be able to own their data."
+    },
+    {
+        "thing":"AGI is here (and I feel fine)",
+        "from":"Robin Sloan",
+        "year":"2026",
+        "url":"https://www.robinsloan.com/winter-garden/agi-is-here/",
+        "consumed":"2026-2-15",
+        "type":"article",
+        "tags":["ai"],
+        "thoughts":"How radical can it be to go up and express that AGI is here? Maybe i could eteriorate the overtly powerful AI business as it would limit them on keeping to create new goals. Maybe."
+    },
+    {
+        "thing":"Why own books",
+        "from":"Nico Chilla",
+        "year":"2025",
+        "url":"https://nicochilla.com/why-own-books/",
+        "type":"article",
+        "consumed":"2026-2-15",
+        "tags":["literature"]
+    },
+    {
+        "thing":"I believe every material has a grain, including the web. But this assumption flies in the face of our expectations for technology. Too often, the internet is cast as a wide-open, infinitely malleable material. We expect technology to help us overcome limitations, not produce more of them. In spite of those promises, we typically yield consistent design results.",
+        "from":"The web's grain, by Frabk Chimero",
+        "year":"2015",
+        "consumed":"2026-2-10",
+        "tags":["the web"]
+    },
+    {
         "thing":"Hail! natural desire! Hail! happiness! divine happiness! and pleasure of all sorts, flowers and wine, though one fades and the other intoxicates; and half-crown tickets out of London on Sundays, and singing in a dark chapel hymns about death, and anything, anything that interrupts and confounds the tapping of typewriters and filing of letters and forging of links and chains, binding the Empire together.",
         "from":"Orlando, by Virginia Woolf",
         "year":"1928",
@@ -47,7 +92,7 @@
         "tags": ["gender"
 
         ],
-        "thoughts": "thoughts"
+        "thoughts": "Terminé!!! Me distraje entre otros libros y lecturas, y un cambio de edición en el medio: lo estaba leyendo en español hasta que me rescaté de que la traducción estaba hecha por borges, y ahí el gaydar, el sistema antipaki y todas las herramientas lgbtquá que la disidencia me ha dado, hicieron sonar alguna alarma. Indagué un poco y resulat que sí, el señor Borges se había cargado las sutilezas que hacen de este libro un rompecocos del género, feminismos y afines. En este momento decido pasarme a la edición original en inglés. En este momento iba por la mitad del libro, que se pone más delulu y surreal a medida que avanza. En este momento empiezo a entender menos qué estaba leyendo.<br> Así y todo, a pesar de que sea una lectura inglesamente difícil, lo disfruté. Me voló la mente con lo naturalizado que estaban los géneros y la sexualidades fluidas en esta obra, de repente Orlando le gustan tanto las mujeres como los hombres, de repente le gusta draguearse de hombre para salir al bar y hacer locurillas, de repente es nobinarie.<br>Lectura rapidísima, me sentí un perrito con la cabeza fuera de la ventanilla del auto que se desfigura su cara con tal de estar frente al viento vertiginoso, pero perrito elige estar ahí. Cada página un suceso. Agotado pero feliz de haberme enfrentado a Orlando."
     },  
     {
         "thing":"The Web's grain",

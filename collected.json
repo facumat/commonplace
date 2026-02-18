@@ -13,11 +13,35 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"School for Poetic Computation",
+        "url":"https://sfpc.study/",
+        "type":"community",
+        "consumed":"2026-2-18",
+        "tags":["handmade web"],
+        "thoughts":"From website: The School for Poetic Computation is an experimental school in New York City and online supporting interdisciplinary study in art, code, hardware and critical theory."
+    },
+    {
+        "thing":"Sunday Sites",
+        "url":"https://sundaysites.cafe/",
+        "type":"community",
+        "consumed":"2026-2-18",
+        "tags":["handmade web"],
+        "thoughts":"From website:This is a place to write code and socialize. Around one Sunday a month or so, we meet on Gather and write HTML for around two hours."
+    },
+    {
+        "thing":"The HTML Review",
+        "url":"https://thehtml.review/about",
+        "consumed":"2026-2-18",
+        "type":"publication",
+        "tags":["literature", "net art", "handmade web"],
+        "thoughts":"So much to uncover here, to read. A gold mine."
+    },
+    {
         "thing":"inprogress.works",
         "from":"Connie",
         "url":"https://www.inprogress.works",
         "consumed":"2026-2-11",
-        "type":"website",
+        "type":"community",
         "tags":["gathering", "personal projects"]
     },
     {
@@ -26,7 +50,7 @@
         "url":"https://antiquepatternlibrary.org/html/warm/xstitch.htm",
         "type":"website",
         "consumed":"2026-2-11",
-        "tags":["cross stitch"]
+        "tags":["cross stitch", "gathering"]
     },
     {
         "thing":"Connie's personal website",
@@ -61,10 +85,9 @@
         "from": "Piet Zwart Institute",
         "url": "https://xpub.nl/",
         "consumed": "2026-02-04",
-        "type": "website",
+        "type": "publication",
         "tags": [
-            "handmade web",
-            "publishing"
+            "handmade web"
         ],
         "thoughts": "From website: XPUB is the Master of Arts in Fine Art and Design: Experimental Publishing of the Piet Zwart Institute. XPUB focuses on the acts of making things public and creating publics in the age of post-digital networks. Also see https://project.xpub.nl/ for their projects repository."
     },
