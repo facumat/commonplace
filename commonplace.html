@@ -369,6 +369,8 @@
         function displayItems(items) {
             const container = document.getElementById('movies');
             container.innerHTML = '';
+            
+            let lastDate = null;  // Add this line
 
             items.forEach(item => {
                 const title = item.thing;

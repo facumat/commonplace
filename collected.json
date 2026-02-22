@@ -13,6 +13,13 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Small File Media festival",
+        "url":"https://smallfile.ca/about/",
+        "consumed":"2026-2-20",
+        "type":"community",
+        "tags":["the web", "digital sustainability"]
+    },
+    {
         "thing":"AYFP, A Yarn and Fabric Publication",
         "from":"Emma Crabtree",
         "url":"https://ayfp.co.uk/",
@@ -84,7 +91,7 @@
         "consumed": "2026-02-04",
         "type": "website",
         "tags": [
-            "handmade web"
+            "the web", "digital sustainability"
         ],
         "thoughts": "From website: A naturally intelligent network. This website is hosted across a network of solar powered servers and is sent to you from whichever server is in the most sunshine. "
     },
