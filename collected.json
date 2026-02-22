@@ -13,6 +13,14 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"AYFP, A Yarn and Fabric Publication",
+        "from":"Emma Crabtree",
+        "url":"https://ayfp.co.uk/",
+        "consumed":"2026-2-20",
+        "type":"publication",
+        "tags":["literature", "textile"]
+    },
+    {
         "thing":"School for Poetic Computation",
         "url":"https://sfpc.study/",
         "type":"community",
