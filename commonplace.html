@@ -413,7 +413,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
@@ -425,7 +425,7 @@
                             <div class="type-tag">${item.type}</div>
                             <h3>${from}</h3>
                             <p class="definition">${title}</p>
-                            <p class="meta">Consumed ${formattedDate}</p>
+                            <!--<p class="meta">Consumed ${formattedDate}</p>-->
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
                         </div>
@@ -436,7 +436,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                                 ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -449,7 +449,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
@@ -461,7 +461,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div>${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <p class="caption">${title}</p>
-                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
                         </div>
                     `;
@@ -470,7 +470,7 @@
                         <div class="entry entry-article">
                             <div class="type-tag">${item.type}</div>
                             <h3>${title}</h3>
-                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -481,7 +481,7 @@
                         <div class="entry entry-quote">
                             <div class="type-tag">${item.type}</div>
                             <h3>"${title}"</h3>
-                            <p>From ${from} ${yearDisplay} - ${formattedDate}</p>
+                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -494,7 +494,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div>${item.image ? `<img <img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <h3>${title}</h3>
-                            <p>${from} ${yearDisplay} - ${formattedDate}</p>
+                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
