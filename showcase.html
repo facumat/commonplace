@@ -20,6 +20,12 @@
         .flex-h a {
             flex: 1;
             width: 100%;
+            color: var(--main-color);
+            text-decoration: none;
+        }
+
+        .flex-h h3 {
+            margin-bottom: 4px;
         }
 
         .grid {
@@ -28,10 +34,31 @@
             gap: 24px;
         }
         
-
         .showcase-img img {
             width: 100%;
             height: auto;
+        }
+
+        .showcase a,p {
+            margin: 0px 0px;
+            color: var(--main-color);
+        }
+
+        .badge-group {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            padding: 4px 6px;
+            border-radius: 99px;
+            border: var(--main-color) solid 1px;
+        }
+
+        .badge p {
+            margin: 0px;
         }
 
     </style>
@@ -42,17 +69,17 @@
             <p>A bit of this and that</p>
             <h1>Design Showcase </h1>
             <p>My main, rent-paying profession is as in UX/UI and Visual Designer. Below, you'll find some works related to this.</p>
-            <p><em><b>Planted:</b> Jan 30, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <p><em><b>Planted:</b> Feb 2, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
             <hr>
-            <p>A bit of everything</p>
-            <h2>Showcase</h2>
+            <p>A couple projects'</p>
+            <h2>Case Studies</h2>
             <div class="cases-group flex-h">
                 <a href="#">
                     <div>
-                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <img style="width: 100%;" src="images/neonledger-cover.avif">
                         <h3>Neonledger</h3>
                         <p>A tracking platform for all you could need to know about your NFT's trading.</p>
-                        <div class="badge-group flex-h">
+                        <div class="badge-group">
                             <div class="badge"><p>web app</p></div>
                             <div class="badge"><p>web3</p></div>
                             <div class="badge"><p>figma</p></div>
@@ -61,10 +88,10 @@
                 </a>
                 <a href="#">
                     <div>
-                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <img style="width: 100%;" src="images/bigtiger-cover.avif">
                         <h3>Birdie Tiger</h3>
                         <p>Building a young and vibrant agency landing page and identity in a week.</p>
-                        <div class="badge-group flex-h">
+                        <div class="badge-group">
                             <div class="badge"><p>web design</p></div>
                             <div class="badge"><p>agency</p></div>
                             <div class="badge"><p>figma</p></div>
@@ -74,10 +101,10 @@
                 </a>
                 <a href="#">
                     <div>
-                        <img style="width: 100%;" src="images/100handcoded.webp">
+                        <img style="width: 100%;" src="images/tsc-cover.png">
                         <h3>The Skin Club</h3>
                         <p>Designing a 360 hub for the skincare enthusiasts: from learning to purchasing.</p>
-                        <div class="badge-group flex-h">
+                        <div class="badge-group">
                             <div class="badge"><p>mobile app</p></div>
                             <div class="badge"><p>skincare</p></div>
                             <div class="badge"><p>figma</p></div>
@@ -91,42 +118,56 @@
             <div class="showcase">
                 <div class="grid">
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase1.avif">
+                        <a href="https://www.prolongpharma.com/" target="_blank">A pharmaceutical website ↗</a>
                     </div>
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase2.webp">
+                        <p>A fashion app</p>
                     </div>
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase3.avif">
+                        <p>An ads dashboard</p>
                     </div>
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase4.avif">
+                        <p>A match-making real state app</p>
                     </div>
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase5.webp">
+                        <a href="https://cobrowse.io/" target="_blank">A cobrowsing website ↗</a>
                     </div>
                     <div class="showcase-img">
-                        <img src="images/100handcoded.webp">
-                        <p>Short description</p>
+                        <img src="images/showcase6.avif">
+                        <p>A website hero</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase7.webp">
+                        <a href="https://appetize.io/" target="_blank">An app emulator view ↗</a>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase8.webp">
+                        <a href="https://hostedscan.com/" target="_blank">A vulnerabilities scanner ↗</a>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase9.avif">
+                        <p>A coupons app</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase10.avif">
+                        <a href="https://appetize.io/" target="_blank">An emulators website ↗</a>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase11.webp">
+                        <p>A money transfer app</p>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="images/showcase12.avif">
+                        <p>A file-dealing AI</p>
                     </div>
                 </div>
             </div>
 
-            <hr>
-            <p>This is this page</p>
-            <h2>Construction journal</h2>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Feb 2, 2026.</p>
-                <p>Planted!</p>
-                </div>
-            </div>
             <!--
             <div class="journal-entry">
                 <p>⤷</p>

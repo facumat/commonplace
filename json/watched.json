@@ -14,10 +14,22 @@
         "thoughts": null
     },
     {
+        "thing":"Sirat",
+        "from":"Oliver Laxe",
+        "year":"2025",
+        "consumed":"2026-2-25",
+        "type":"movie",
+        "genre":"thriller",
+        "tags":["things I hated"],
+        "thoughts":"Traigo una mala racha de películas. La segunda parte desbarranca totalmente."
+    },
+    {
         "thing":"No Other Choice",
         "from":"Park Chan-wook",
         "year":"2025",
         "type":"movie",
+        "genre":"comedy",
+        "tags":["ai"],
         "thoughts":"Me embola cuando las películas entran en modo 'ahora el protagonista se embarcará en [inserte número aquí] misiones idénticas' hasta terminar la película. Igual gagging de que todo fue inútil porque lo va a reemplazar la IA. Same hermana."
     },
     {
@@ -26,6 +38,7 @@
         "year":"2026",
         "consumed":"2026-2-20",
         "type":"movie",
+        "genre":"romance",
         "tags":["things I hated"],
         "thoughts":"Chiques, miren que fui con las expectativas bajas. Mi único cometido era disfrutar lo que prometía ser una película visualmente hermosa. No sé, me esperaba como una Poor things de pseudoépoca pero ni eso.<br>No sé si odié más la película o el público que se reía con cosas del tipo: la escena más hot de Heathcliff chupándole los dedos lubricados de la otra boluda.<br>En fin. El impacto visual eran solo unos pocos minutos de la película. La gente ríe y llora con cosas que me hacen pensar que me metí en una sala de pelotudos. Los dos protagonistas son meh, ni muy malos, ni muy buenos, cero profundidad. Aburridora."
     },
@@ -35,6 +48,7 @@
         "year":"2024",
         "type":"movie",
         "consumed":"2026-2-19",
+        "genre":"documentary",
         "tags":["spain"],
         "thoughts":"Brutal y desgarrador pero que sucede y ha sido retratado en esta película. Sin saber mucho sobre el film, pensé que mostraría más de la cultura que rodea la tauromaquia, el detrás de escena, algo de eso. Pero no había nada de eso. El 95% de la película sucedía en el rodeo.<br>Aunque había algo de sentido en ello, ya que a mis ojos el director pone al toro y al torero en el mismo lugar, misma altura, misma soledad, mismo silencio, como dos animales que se enfrentan. Obviamente desde la desventaja, el torero tiene a su cuadrilla que lo auxilia y el toro está solo. Tal vez las tardes de soledad son las del animal."
     },

@@ -508,10 +508,10 @@
 
         // Fetch and display collected items
         Promise.all([
-            fetch('watched.json').then(response => response.json()),
-            fetch('collected.json').then(response => response.json()).catch(() => []),
-            fetch('read.json').then(response => response.json()).catch(() => []),
-            fetch('listened.json').then(response => response.json()).catch(() => [])
+            fetch('json/watched.json').then(response => response.json()),
+            fetch('json/collected.json').then(response => response.json()).catch(() => []),
+            fetch('json/read.json').then(response => response.json()).catch(() => []),
+            fetch('json/listened.json').then(response => response.json()).catch(() => [])
         ])
         .then(([watched, collected, read, listened]) => {
             // Combine all arrays

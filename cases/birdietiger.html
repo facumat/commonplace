@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #000000;
+            --main-muted: #00000010;
+        }
+
+        .badge-group {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            padding: 4px 6px;
+            border-radius: 99px;
+            border: var(--main-color) solid 1px;
+        }
+
+        .badge p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="content">
+        <div class="container">
+            <h1>Birdie Tiger</h1>
+            <p><em><b>Planted:</b> Feb 27, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <div class="badge-group">
+                <div class="badge"><p>web design</p></div>
+                <div class="badge"><p>agency</p></div>
+                <div class="badge"><p>figma</p></div>
+                <div class="badge"><p>webflow</p></div>
+            </div>
+            <p>Creating an agency... in a week</p><p>Internal projects can be great: total freedom and ownership. But sometimes, it also comes with the confidence of building something awesome in just a couple days. This was the case with Birdie Tiger: a newborn sister agency that needed to have a brand and landing page in a week in order to start showing it at upcoming conferences and events, so we set a plan to have everything we needed in five days:</p>
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+    </script>
+</body>
+</html>
