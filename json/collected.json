@@ -13,6 +13,13 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Philly Queer Book Club",
+        "url":"https://www.phillyqueerbookclub.com/",
+        "type":"community",
+        "consumed":"2026-2-15",
+        "tags":["queerness", "literature"]
+    },
+    {
         "thing":"Small File Media festival",
         "url":"https://smallfile.ca/about/",
         "consumed":"2026-2-20",

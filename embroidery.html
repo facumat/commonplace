@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #000000;
+            --main-muted: #00000010;
+        }
+
+        .flex-h {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .flex-h a {
+            flex: 1;
+            width: 100%;
+            color: var(--main-color);
+            text-decoration: none;
+        }
+
+        .flex-h h3 {
+            margin-bottom: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0px;
+        }
+
+        .grid img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <div class="container">
+            <button class="button outline" onclick="history.back()">← Go Back</button>
+            <h1><em>Embroidery</em> art practice</h1>
+            <p><em><b>Planted:</b> Mar 7, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr>
+            <p style="width: 50%; margin-bottom: 48px;">Quite a few years ago, I started feeling the need of expressing myself in a visual way. So I tried the normal stuff: drawing, painting, watercolors... and I was horrible at all of them. Most of all, I didn't feel at ease while practicing the techniques. Randomly, I see someone on Instagram who had just started embroidery, and I went through a rabbit hole of looking at modern embroideries online. This way, I discovered that embroidery could be much more than the outdated vision of it I had in my mind. So, I purchased my first embroidery kit and got going. My first results were horrible too. But most importantly: it felt good while doing it, improving and exploring on it. The pace of the needle and thread was a good match for me.</p>
+            <div class="grid">
+                <img class="mini" src="images/embroidery/mini1.avif">
+                <img class="mini" src="images/embroidery/mini2.avif">
+                <img class="mini" src="images/embroidery/mini3.avif">
+                <img class="mini" src="images/embroidery/main1.avif">
+                <img class="mini" src="images/embroidery/mini5.avif">
+                <img class="mini" src="images/embroidery/main4.avif">
+                <img class="mini" src="images/embroidery/mini6.avif">
+                <img class="mini" src="images/embroidery/mini9.avif">
+                <img class="mini" src="images/embroidery/mini8.avif">
+                <img class="mini" src="images/embroidery/mini10.avif">
+                <img class="mini" src="images/embroidery/mini11.avif">
+                <img class="mini" src="images/embroidery/mini12.avif">
+                <img class="mini" src="images/embroidery/mini13.avif">
+                <img class="mini" src="images/embroidery/mini14.avif">
+                <img class="mini" src="images/embroidery/mini15.avif">
+                <img class="mini" src="images/embroidery/mini16.avif">
+                <img class="mini" src="images/embroidery/main5.avif">
+                <img class="mini" src="images/embroidery/mini18.avif">
+            </div>
+        </div>
+        <div class="container">
+            <h2>Exploring the artistic side of things</h2>
+            <p style="width: 50%; margin-bottom: 48px;">These past couple of years, my creative expression started shifting, or growing. Just doing cute stuff didn't feel like enough. I had this urge to get my personal ideas, beliefs and feelings into the world, and embroidery had to become my tools for this. Since then I have been exploring the idea of not only being an embroiderer, but an artist too, creating projects that speak of my ongoing life and sentiments. You can check some of these here:
+            </p>
+            <div class="flex-h">
+                <a href="embroidery/messagesoftenderness.html">
+                    <div class="project">
+                        <h3>A year of queerness</h3>
+                        <p>Throughout 2022, there was a strong theme of queerness on many of my pieces. So, this collection captures a year of queerness—phrases, images, books, and inspirations in various formats and techniques.</p>
+                        <p>Learn more →</p>
+                    </div>
+                </a>
+                <a>
+                    <div class="project">
+                        <h3>On memory pt. I</h3>
+                        <p>Grief often distorts memory, making final moments feel heavier than the joy that came before. Embroidery became a way to reclaim those lost details—stitching objects, words, and images to keep memories alive.</p>
+                        <p>Learn more →</p>
+                    </div>
+                </a>
+                <a>
+                    <div class="project">
+                        <h3>On memory pt. II</h3>
+                        <p>Adding more about this project soon.</p>
+                    </div>
+                </a>
+                <a>
+                    <div class="project">
+                        <h3>Public messages of tenderness</h3>
+                        <p>A series of embroidered messages received sent or imagined to uphold sentimentality and pour into the streets and the public. A small fight against the ephemeral nature of modern communication.</p>
+                        <p>Learn more →</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+        
+    </script>
+</body>
+</html>

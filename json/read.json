@@ -11,7 +11,15 @@
 
         ],
         "thoughts": "thoughts"
-    },  
+    }, 
+    {
+        "thing":"Philly Queer Book Club Manifesto",
+        "from":"Danny",
+        "url":"https://www.phillyqueerbookclub.com/about",
+        "consumed":"2026-2-28",
+        "type":"article",
+        "tags":["queerness", "literature"]
+    },
     {
         "thing":"The hypomnēmata (ὑπομνήματα) were personal notebooks kept in the ancient Greek and Roman world — not diaries or journals, but something closer to a commonplace book. A place to gather fragments: quotes encountered in reading, thoughts overheard in conversation, principles worth returning to, reflections born from experience.",
         "from":"hypomnēmata",

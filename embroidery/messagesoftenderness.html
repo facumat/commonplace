@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #000000;
+            --main-muted: #00000010;
+        }
+
+        .hero {
+            background-image: url("../images/embroidery/messageshero.avif");
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .badge-group {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            padding: 4px 6px;
+            border-radius: 99px;
+            border: var(--main-color) solid 1px;
+        }
+
+        .badge p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="content">
+        <div class="container hero">
+            <p>A touch of color and cuteness on the streets</p>
+            <h1>Public messages of tenderness</h1>
+            <div class="badge-group">
+                <div class="badge"><p><span style="opacity: 50%;">Size</span> 120 x 150 cm</p></div>
+                <div class="badge"><p><span style="opacity: 50%;">Materials</span> 120 x 150 cm</p></div>
+                <div class="badge"><p><span style="opacity: 50%;">Technique</span> Petit point, photography</p></div>
+                <div class="badge"><p><span style="opacity: 50%;">Year</span> 2024 - Ongoing</p></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
