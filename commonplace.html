@@ -86,6 +86,17 @@
             color: var(--main-secondary);
         }
 
+        .month-year-select {
+            background-color: transparent;
+            padding: 8px;
+            font-family: "Times", serif;
+            font-size: 16px;
+            border: 0.25px solid var(--main-color);
+            border-radius: 4px;
+            color: var(--main-color);
+            width: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -102,12 +113,27 @@
                     <input type="text" id="search-input" placeholder="Search items..." />
                 </div>
                 <div class="filter-section">
-                    <p>Filter by Date Range:</p>
+                    <p>Filter by Month:</p>
                     <div style="display: flex; gap: 8px; align-items: center;">
-                        <input type="date" id="date-from" onchange="filterByDateRange()">
-                        <span>to</span>
-                        <input type="date" id="date-to" onchange="filterByDateRange()">
-                        <button onclick="clearDateFilter()">Clear</button>
+                        <select id="month-select" class="month-year-select" onchange="filterByMonth()">
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="year-select" class="month-year-select" onchange="filterByMonth()">
+                            <option value="">Year</option>
+                        </select>
+                        <button class="button outline" onclick="clearMonthFilter()">Clear</button>
                     </div>
                 </div>
                 <div class="filter-section">
@@ -126,13 +152,6 @@
             </div>
             <hr>
             <h2>Construction journal</h2>
-            <!--
-            <div class="journal-entry">
-                <p>
-                Jan 8, 2026.<br>Text<br>---
-                </p>
-            </div>
-             -->
             <div class="journal-entry">
                 <p>⤷</p>
                 <div>
@@ -210,7 +229,7 @@
                 <p>⤷</p>
                 <div>
                     <p>Feb 15, 2026.</p>
-                    <p>"Sharing your information in a smart way can also liberate it. Why is your smartwatch writing your biological data to one silo in one format? Why is your credit card writing your financial data to a second silo in a different format? Why are your YouTube comments, Reddit posts, Facebook updates and tweets all stored in different places? Why is the default expectation that you aren’t supposed to be able to look at any of this stuff? You generate all this data – your actions, your choices, your body, your preferences, your decisions. You should own it. You should be empowered by it."<br>This -said by Tim Berners-Lee- feels true for this commonplace. I am trying to break away from my preferences, ineterests and activity to be in different silos, and insetad create a common place for all of them. Heck of a lot of work, but maybe worth it</p>
+                    <p>"Sharing your information in a smart way can also liberate it. Why is your smartwatch writing your biological data to one silo in one format? Why is your credit card writing your financial data to a second silo in a different format? Why are your YouTube comments, Reddit posts, Facebook updates and tweets all stored in different places? Why is the default expectation that you aren't supposed to be able to look at any of this stuff? You generate all this data – your actions, your choices, your body, your preferences, your decisions. You should own it. You should be empowered by it."<br>This -said by Tim Berners-Lee- feels true for this commonplace. I am trying to break away from my preferences, ineterests and activity to be in different silos, and insetad create a common place for all of them. Heck of a lot of work, but maybe worth it</p>
                 </div>
             </div>
             <div class="journal-entry">
@@ -235,6 +254,7 @@
         let selectedGenres = new Set();
         let selectedTags = new Set();
         let searchText = '';
+        let selectedMonth = '';
 
         function showLastModified() {
             var lastModifiedDate = new Date(document.lastModified);
@@ -287,6 +307,19 @@
             displayFilteredItems();
         }
 
+        // Filter by month/year
+        function filterByMonth() {
+            selectedMonth = document.getElementById('month-filter').value;
+            displayFilteredItems();
+        }
+
+        // Clear month filter
+        function clearMonthFilter() {
+            document.getElementById('month-filter').value = '';
+            selectedMonth = '';
+            displayFilteredItems();
+        }
+
         // Handle search input
         function handleSearch(event) {
             searchText = event.target.value.toLowerCase();
@@ -329,7 +362,9 @@
             selectedTags.clear();
             selectedGenres.clear();
             searchText = '';
+            selectedMonth = '';
             document.getElementById('search-input').value = '';
+            document.getElementById('month-filter').value = '';
             updateFilterButtons();
             displayFilteredItems();
         }
@@ -345,29 +380,20 @@
                 );
             }
 
-            // Filter by genre if any types selected
+            // Filter by genre if any genres selected
             if (selectedGenres.size > 0) {
                 filteredItems = filteredItems.filter(item => 
                     selectedGenres.has(item.genre)
                 );
             }
 
-            //Filter by date range
-            let dateFrom = '';
-            let dateTo = '';
-
-            function filterByDateRange() {
-                dateFrom = document.getElementById('date-from').value;
-                dateTo = document.getElementById('date-to').value;
-                displayFilteredItems();
-            }
-
-            function clearDateFilter() {
-                document.getElementById('date-from').value = '';
-                document.getElementById('date-to').value = '';
-                dateFrom = '';
-                dateTo = '';
-                displayFilteredItems();
+            // Filter by month/year
+            if (selectedMonth) {
+                filteredItems = filteredItems.filter(item => {
+                    const itemDate = item.consumed || '';
+                    if (!itemDate) return false;
+                    return itemDate.startsWith(selectedMonth);
+                });
             }
 
             // Filter by tags if any tags selected
@@ -384,7 +410,6 @@
                     const title = (item.thing || '').toLowerCase();
                     const from = (item.from || '').toLowerCase();
                     const genre = (item.genre || '').toLowerCase();
-
                     const thoughts = (item.thoughts || '').toLowerCase();
                     const tags = (item.tags || []).join(' ').toLowerCase();
                     
@@ -393,7 +418,6 @@
                            thoughts.includes(searchText) ||
                            tags.includes(searchText) ||
                            genre.includes(searchText);
-
                 });
             }
 
@@ -405,7 +429,7 @@
             const container = document.getElementById('movies');
             container.innerHTML = '';
             
-            let lastDate = null;  // Add this line
+            let lastDate = null;
 
             items.forEach(item => {
                 const title = item.thing;
@@ -440,7 +464,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                                <p>${from} ${yearDisplay}</p>
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
@@ -452,7 +476,6 @@
                             <div class="type-tag">${item.type}</div>
                             <h3>${from}</h3>
                             <p class="definition">${title}</p>
-                            <!--<p class="meta">Consumed ${formattedDate}</p>-->
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p class="notes">${thoughts}</p>` : ''}
                         </div>
@@ -463,7 +486,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                                <p>${from} ${yearDisplay}</p>
                                 ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -476,7 +499,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div class="content">
                                 <h3>${title}</h3>
-                                <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                                <p>${from} ${yearDisplay}</p>
                                 <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
@@ -488,7 +511,7 @@
                             <div class="type-tag">${item.type}</div>
                             <div>${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <p class="caption">${title}</p>
-                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                            <p>${from} ${yearDisplay}</p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
                         </div>
                     `;
@@ -497,7 +520,7 @@
                         <div class="entry entry-article">
                             <div class="type-tag">${item.type}</div>
                             <h3>${title}</h3>
-                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                            <p>${from} ${yearDisplay}</p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -508,7 +531,7 @@
                         <div class="entry entry-quote">
                             <div class="type-tag">${item.type}</div>
                             <h3>"${title}"</h3>
-                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                            <p>${from} ${yearDisplay}</p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
@@ -519,9 +542,9 @@
                     entryHTML = `
                         <div class="entry entry-${item.type || 'default'}">
                             <div class="type-tag">${item.type}</div>
-                            <div>${item.image ? `<img <img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
+                            <div>${item.image ? `<img src="${item.image}" alt="${title}" loading="lazy">` : ''}</div>
                             <h3>${title}</h3>
-                            <p>${from} ${yearDisplay}</p><p><!-- ${formattedDate}--></p>
+                            <p>${from} ${yearDisplay}</p>
                             ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
                             <p>On <em>${tags.join(', ')}</em></p>
                             ${thoughts ? `<p>${thoughts}</p>` : ''}
