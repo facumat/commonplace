@@ -13,6 +13,30 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Everest Pipkin",
+        "url":"https://everest-pipkin.com/#",
+        "type":"website",
+        "consumed":"2026-3-11",
+        "tags":["the web", "net art"],
+        "thoughts":"Great collection of game/net art projects by the artist."
+    },
+    {
+        "thing":"Net art anthology",
+        "from":"Rhizome",
+        "type":"website",
+        "consumed":"2026-3-11",
+        "tags":["the web", "net art"],
+        "thoughts":"Cool resources and list of projects on net art by New museum / Rhizome."
+    },
+    {
+        "thing":"Critical Code Studies",
+        "url":"https://criticalcodestudies.com/index.html",
+        "type":"community",
+        "consumed":"2026-3-11",
+        "tags":["the web"],
+        "thoughts":"They have an amazing reding list on the topics of critical code critique and production.<br>From website: Critical Code Studies is the application of the hermeneutics of the humanities to the interpretation of the extra-functional significance of computer source code. 'Extra' does not here mean 'outside of' but rather 'growing out from.' In Critical Code Studies, computer code serves as the entry point to explorations of digital culture."
+    },
+    {
         "thing":"Philly Queer Book Club",
         "url":"https://www.phillyqueerbookclub.com/",
         "type":"community",
