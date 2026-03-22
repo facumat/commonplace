@@ -1,0 +1,17 @@
+[
+    {
+        "book": "null",
+        "from": "null",
+        "read": true
+    },
+    {
+        "book": "Aún soltera",
+        "from": "Dani Umpi",
+        "read": true
+    },
+    {
+        "book": "Aún soltera",
+        "from": "Dani Umpi",
+        "read": false
+    }
+]

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Commonplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-commonplace.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #2E5FFF;
+            --main-muted: #2E5FFF15;
+            --main-secondary: #2E5FFF50;
+
+        }
+
+        .entry  {
+            padding: 16px;
+            border: solid;
+            border-width: 0.5px;
+            border-style: dashed;
+        }
+
+        .entry img {
+            width: 150px; 
+            height: auto;
+            margin-top: 8px;
+        }
+
+        .type-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 99px;
+            background-color: #2E5FFF15;
+        }
+        
+        .filter-section {
+            margin-bottom: 24px;
+        }
+
+        .filter-section p {
+            margin-bottom: 8px;
+        }
+
+        .filters-group {
+            display: flex;            
+            gap: 4px;
+            row-gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .tag-filter-btn, .type-filter-btn, .genre-filter-btn {
+            font-family: "Times", serif;
+            font-size: 16px;
+            letter-spacing: -0.6%;
+            color: var(--main-color);
+            border-radius: 99px;
+            padding: 4px 8px;
+            background-color: var(--main-muted);
+            border: 0.25px dashed ;
+            border-color: #ffffff00;        }
+
+        .tag-filter-btn:hover, .type-filter-btn:hover, .genre-filter-btn:hover  {
+            border: 0.25px solid ;
+            border-color: var(--main-color);
+        }
+
+        .tag-filter-btn.active, .type-filter-btn.active, .genre-filter-btn.active {
+            background-color: #2E5FFF35;
+            border: 0.25px dashed ;
+            border-color: var(--main-color);
+        }
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            padding: 8px;
+            font-family: "Times", serif;
+            font-size: 16px;
+            border: 0.25px solid var(--main-color);
+            border-radius: 4px;
+            color: var(--main-color);
+        }
+
+        input::placeholder {
+            color: var(--main-secondary);
+        }
+
+        .month-year-select {
+            background-color: transparent;
+            padding: 8px;
+            font-family: "Times", serif;
+            font-size: 16px;
+            border: 0.25px solid var(--main-color);
+            border-radius: 4px;
+            color: var(--main-color);
+            width: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="two-columns">
+        <div class="left-panel container">
+            <button class="button outline" onclick="history.back()">← Go Back</button>
+            <h1>My Commonplace</h1>
+            <p>Pleasant is the glint of the sun today upon these margins, because it flickers so.</p>
+            <p><em><b>Planted:</b> Nov 24, 2025. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <hr>
+            <div class="filters">
+                <div class="filter-section">
+                    <p>Search:</p>
+                    <input type="text" id="search-input" placeholder="Search items..." />
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Month:</p>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <select id="month-select" class="month-year-select" onchange="filterByMonth()">
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="year-select" class="month-year-select" onchange="filterByMonth()">
+                            <option value="">Year</option>
+                        </select>
+                        <button class="button outline" onclick="clearMonthFilter()">Clear</button>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Type:</p>
+                    <div class="filters-group" id="type-filters"></div>
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Genre:</p>
+                    <div class="filters-group" id="genre-filters"></div>
+                </div>
+                <div class="filter-section">
+                    <p>Filter by Tags:</p>
+                    <div class="filters-group" id="tag-filters"></div>
+                </div>
+                <button class="button outline" onclick="clearAllFilters()">Clear All Filters</button>
+            </div>
+        </div>
+        <div class="right-panel container">
+            <div id="movies" class="collection">
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

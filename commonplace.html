@@ -86,17 +86,6 @@
             color: var(--main-secondary);
         }
 
-        .month-year-select {
-            background-color: transparent;
-            padding: 8px;
-            font-family: "Times", serif;
-            font-size: 16px;
-            border: 0.25px solid var(--main-color);
-            border-radius: 4px;
-            color: var(--main-color);
-            width: auto;
-        }
-
     </style>
 </head>
 <body>
@@ -113,30 +102,6 @@
                     <input type="text" id="search-input" placeholder="Search items..." />
                 </div>
                 <div class="filter-section">
-                    <p>Filter by Month:</p>
-                    <div style="display: flex; gap: 8px; align-items: center;">
-                        <select id="month-select" class="month-year-select" onchange="filterByMonth()">
-                            <option value="">Month</option>
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                        </select>
-                        <select id="year-select" class="month-year-select" onchange="filterByMonth()">
-                            <option value="">Year</option>
-                        </select>
-                        <button class="button outline" onclick="clearMonthFilter()">Clear</button>
-                    </div>
-                </div>
-                <div class="filter-section">
                     <p>Filter by Type:</p>
                     <div class="filters-group" id="type-filters"></div>
                 </div>
@@ -149,96 +114,6 @@
                     <div class="filters-group" id="tag-filters"></div>
                 </div>
                 <button class="button outline" onclick="clearAllFilters()">Clear All Filters</button>
-            </div>
-            <hr>
-            <h2>Construction journal</h2>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 6, 2026.</p>
-                <p>This construction journal starts here because the idea did too. This has been in construction for a couple months now, but documentation of thought process starts here.</p>
-                <p>Why english? I don't really know, I guess it's gravitational force of the global north, in a way. The handmade poetic web world is mostly created in english and I want to be a part of that club too. I feel there's two things to weigh in: on one side, I have my integrity and love for the spanish language, being able to express myself with all due confidence my own language provides. On the other hand: I have the ease of use of keeping one language only, as well as being able to reach a broader audience. This commonplace is obviously not about reaching an audience, but doing so is a secondary goal. So for now, I will be contempt with just achieving the creation of this commonplace no matter the language, and try not to put too many sticks on my own wheels by just following my gut. For now, sorry to my country, my dear Spanish and Latinamerica (lol who do you think you are Facundo)</p>
-                <p>On another note, maybe, MAYBE, maybe I should just add consumed things and avoid the to watch, to read, to listen. Just actually consumed items. All in the same json. Just like a commonplace book. One file to handle all. Collected can stay separate tho, like a "notes" book</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 8, 2026.</p>
-                <p>Actually, this is my casita. My digital garden. In a way, a dumpster storage for my brain, so it only makes sense for it to be a bilingual spansglish enviroment just like my brain is. So, expect mostly the thoughts to be written on both languages. Soon, when this is merged to my website, spaces like design, showcase, etc will be probably in english, but the more personal ones like the commonplace be a mix of both.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 8, 2026.</p>
-                <p>Been hesitant about how to manage Colledted and Consumed jsons. My gut feeling was to keep Consumed for all pieces of cultural content I have watched, read, or listened. Collected more like an are.na category where I put the quotes, the words, the pictures I collect. But after starting to fill these out with samples, I start to realize all of those things could live within one single json and just let the 'type' key be the one to really separate categories, and avoid such higher and broader Consumed and Collected umbrellas. At the end of the day, the difference between what is consumed as art and collected as "oh interesting" is very subtle and foggy. What is the difference between a meme and a painting? A book and a quote? A movie and a video interview?</p>
-                <p>Oh, the taxonomical, white and middle class struggle of it all. Tomorrow shall bring clarity to this issue.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 14, 2026.</p>
-                <p>Dear diary, doubt and insecurity has gotten to me again ☹ Does it makes sense to create this beast of a site? Why not use are.na instead?</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 20, 2026.</p>
-                <p>Finally I decide how to split my jsons: read, for all read things such as books, articles, quotes, definitions, anything consumed primarly through reading. Watched, all that has been ingested primarly in that way, like movies, music performances, concerts, series, video essays. And listened, or hear? This one would encompass music, mostly in album format, podcasts episodes, etc.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Jan 29, 2026.</p>
-                <p>I haven't made any tweaks to the commonplace today. I just took a glimpse at the code and the site to rejoice for a minute at how it's coming together. The tag and type filters are there. Now, all that remains is to fill in the json databases for all the items I have documented in the past. My last resolution as to how to structure these databases has changed quite abruptely: for some weeks I was determined to use only one json called Collected, after trying it and feeling it was chaotic and too many objects of too many different natures were colliding in one file, I opted for separating them in the jsons mentioned in the previous entry. Part of the lesson of this project is that there's no perfect taxonomy, all that is needed is to start with something even if it doesn't feel perfectly organized. The joy of taxonomy might be something close to this discomfort, to be always improving the categories, the lists, the boxes one works with.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Feb 1, 2026.</p>
-                <p>All my collected items only have the tag key which is mostly about themes, but there're a lot of items, mainly books and movies, where tag can become ambigious. Should I write a genre there? Or a theme? or should I avoid genres at all? Thinking about adding two separate keys: genres and themes.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Feb 4, 2026.</p>
-                <p>Once again tempted to loose focus on my job and keep working on this commonplace. Common Facu focus. Thinking about wether to merge quotes and its read origin, or to keep separate. The latter seems better for discoverability.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Feb 11, 2026.</p>
-                <p>Getting real. This past weekend I started to migrate things scattered across platforms. Mymind, letterbox, goodreads, notion... Also, I've been trying to get into the habit of documenting stuff consumed on the day. So, I'm caught in an in between of worlds: updating new stuff as I go, but lacking a history of things consumed. I'll get there. At the same time, I've made peace with the fact that not all that has ever been consumed by me will be rescued to put into this commonplace. For the past I'll do what I can, and for the present I'll take joy in archiving everything.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                <p>Feb 12, 2026.</p>
-                <p>Found this image from Sep 12 2025 of this commonplace very early jsons "architecture". I remember at that point struggling with the idea of having one json for each type of entry. Crazy.</p><img src="images/sep122025.JPG" style="width: 300px;"><p>Now I want to start adding more screenshots, images, photos of this commonplace progress and different states, will try to do going forward. It's a pity I haven't record any of the previous states, like for example when this page used to have a baby blue background and all black serif font. Just make peace with an incomplete journal Facundo. Start recording now.</p><p>Been reading Frank Chimero's the Web's Grain, funnily enough he talks about how we are over stretching the web's material and polluting it with overtly complex spaces, and I'm here creating a journal no one will read, but just for my own, taking up space in some remote and cold server. He also talks about working with what you got, getting to know your tools, your materials, your fabrics, your threads (remember I'm an embroidery artist). I guess this journal is part of that too, conciously documenting the progress and how each element, class or property can change, my very own way of creating a personal relationship with this website, making it tangible and previous to me no more than my favorite book on my library or the plant that has been with me since I first moved out. Lowkey worrying this is some schizo behavior and I'm romanticizing the web.</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                    <p>Feb 15, 2026.</p>
-                    <p>"Sharing your information in a smart way can also liberate it. Why is your smartwatch writing your biological data to one silo in one format? Why is your credit card writing your financial data to a second silo in a different format? Why are your YouTube comments, Reddit posts, Facebook updates and tweets all stored in different places? Why is the default expectation that you aren't supposed to be able to look at any of this stuff? You generate all this data – your actions, your choices, your body, your preferences, your decisions. You should own it. You should be empowered by it."<br>This -said by Tim Berners-Lee- feels true for this commonplace. I am trying to break away from my preferences, ineterests and activity to be in different silos, and insetad create a common place for all of them. Heck of a lot of work, but maybe worth it</p>
-                </div>
-            </div>
-            <div class="journal-entry">
-                <p>⤷</p>
-                <div>
-                    <p>Feb 20, 2026.</p>
-                    <p>Added cute dividers between days, maybe I'll turn them into collapsible ones. Maybe. Also addign a screenshot here of how it used to look without them.<br>Today I'm thinking about how to handle images, mostly for visual art collected items, for which I haven't migrated my previous collection yet. Should I upload them in the highest quality possible? Should I use a small media approach? Will I waste more energy if I store them in high quality and load them all the time, or if I store them in a very small size way and I google higgh res version only when needed? This makes me think a lot about how to utilize the internet in a carbon foot print efficient way. Will research on this.</p>
-                    <img src="images/feb202026.png" style="width: 300px;">
-                </div>
             </div>
         </div>
         <div class="right-panel container">
@@ -254,8 +129,6 @@
         let selectedGenres = new Set();
         let selectedTags = new Set();
         let searchText = '';
-        let selectedMonth = '';
-
         function showLastModified() {
             var lastModifiedDate = new Date(document.lastModified);
             var options = { month: 'short', day: 'numeric', year: 'numeric' };
@@ -307,19 +180,6 @@
             displayFilteredItems();
         }
 
-        // Filter by month/year
-        function filterByMonth() {
-            selectedMonth = document.getElementById('month-filter').value;
-            displayFilteredItems();
-        }
-
-        // Clear month filter
-        function clearMonthFilter() {
-            document.getElementById('month-filter').value = '';
-            selectedMonth = '';
-            displayFilteredItems();
-        }
-
         // Handle search input
         function handleSearch(event) {
             searchText = event.target.value.toLowerCase();
@@ -362,9 +222,7 @@
             selectedTags.clear();
             selectedGenres.clear();
             searchText = '';
-            selectedMonth = '';
             document.getElementById('search-input').value = '';
-            document.getElementById('month-filter').value = '';
             updateFilterButtons();
             displayFilteredItems();
         }
@@ -385,15 +243,6 @@
                 filteredItems = filteredItems.filter(item => 
                     selectedGenres.has(item.genre)
                 );
-            }
-
-            // Filter by month/year
-            if (selectedMonth) {
-                filteredItems = filteredItems.filter(item => {
-                    const itemDate = item.consumed || '';
-                    if (!itemDate) return false;
-                    return itemDate.startsWith(selectedMonth);
-                });
             }
 
             // Filter by tags if any tags selected
