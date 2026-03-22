@@ -19,6 +19,40 @@
             height: 100vh;
         }
 
+        .grid4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0px;
+            width: 100%;
+        }
+
+        .grid4 img {
+            width: 100%;
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+            width: 100%;
+        }
+
+        .grid3 img {
+            width: 100%;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute; /* Positions the overlay precisely */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000080; /* Black with 50% opacity */
+            /* Ensures the overlay is behind the content but in front of the background image */
+            z-index: 0; 
+        }
+
         .badge-group {
             display: flex;
             flex-direction: row;
@@ -29,18 +63,37 @@
         .badge {
             padding: 4px 6px;
             border-radius: 99px;
-            border: var(--main-color) solid 1px;
+            border: #ffffff50 solid 1px;
         }
 
         .badge p {
             margin: 0px;
         }
 
+        .content h2 {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .content p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 128px;
+        }
+
     </style>
 </head>
 <body>
-    <section id="content">
-        <div class="container hero">
+    <section id="content" class="hero">
+        <div class="container" style="color: white;">
+            <button class="button outline white" onclick="history.back()">← Go Back</button>
             <p>A touch of color and cuteness on the streets</p>
             <h1>Public messages of tenderness</h1>
             <div class="badge-group">
@@ -48,6 +101,58 @@
                 <div class="badge"><p><span style="opacity: 50%;">Materials</span> 120 x 150 cm</p></div>
                 <div class="badge"><p><span style="opacity: 50%;">Technique</span> Petit point, photography</p></div>
                 <div class="badge"><p><span style="opacity: 50%;">Year</span> 2024 - Ongoing</p></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container content">
+            <h2>Messages received, sent or imagined...</h2>
+            <p>I wanted to do something with those sentences that had an impact in me to perpetuate them into, at least, a longer time span than those of the ephemeral chats, as I felt at unease with the quickness and short lifespan of nowadays' communication. So I started these series of embroidered messages, stitching together my little public manifesto of color and tenderness.</p>
+            <div class="grid4">
+                <img class="mini" src="../images/embroidery/messageszoom1.jpg">
+                <img class="mini" src="../images/embroidery/messageszoom2.jpg">
+                <img class="mini" src="../images/embroidery/messageszoom3.jpg">
+                <img class="mini" src="../images/embroidery/messageszoom4.jpg">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container content">
+            <h2>... and onto the streets</h2>
+            <p>But I also felt that bringing attention and care to these messages of affection was something that not only I, but my surroundings, needed to dedicate more attention to. Specially on times where everything that surrounds us feels pessimistic at times. So I took those messages that brightened my day, made me sigh, or helped sweep away sadness, and I started leaving them as stickers on columns, posters, or mirrors around Montevideo.</p>
+            <div class="grid3">
+                <img class="mini" src="../images/embroidery/messages1.avif">
+                <img class="mini" src="../images/embroidery/messages2.avif">
+                <img class="mini" src="../images/embroidery/messages3.avif">
+                <img class="mini" src="../images/embroidery/messages4.avif">
+                <img class="mini" src="../images/embroidery/messages5.avif">
+                <img class="mini" src="../images/embroidery/messages6.avif">
+                <img class="mini" src="../images/embroidery/messages7.avif">
+                <img class="mini" src="../images/embroidery/messages8.avif">
+                <img class="mini" src="../images/embroidery/messages9.avif">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container content">
+            <h2>How to showcase <span style="color: #ff2e74;">what wasn't there</span></h2>
+            <p>As this project was to be presented at <a href="https://www.nuevoreino.uy/portal-2024" style="color: #ff2e74;">Nuevo Reino's 2024 Portal</a>, I needed a way to show not only the dedication of embroidering these messages but also the purpose of them living on the city. So each embroidery was shown alongside a photograph of a sticker of it on the streets.</p>
+            <div class="grid3">
+                <img class="mini" src="../images/embroidery/messagesportal1.avif">
+                <img class="mini" src="../images/embroidery/messagesportal2.avif">
+                <img class="mini" src="../images/embroidery/messagesportal3.avif">
+
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container footer">
+            <div style="display: flex; gap: 8px;">
+                <p style="margin: 0px;">Got lost? Maybe you cant to go back to one of these:</p>
+                <a href="../index.html">Home</a>
+                <a href="../showcase.html">Showcase</a>
+                <a href="../embroidery.html">Embroidery</a>
+                <a href="../about.html">About</a>
             </div>
         </div>
     </section>

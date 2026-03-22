@@ -33,8 +33,15 @@ h1, h2, h3, h4, h5 {
 
 .button.outline {
     border: 0.25px dashed ;
-    background-color: #fffdfb;
+    background-color: #fffdfb00;
     border-color: var(--main-color);   
+}
+
+.button.white {
+    border: 0.25px dashed ;
+    color: white;
+    background-color: #fffdfb00;
+    border-color: white;   
 }
 
 .button.outline:hover {

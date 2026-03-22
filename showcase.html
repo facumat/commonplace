@@ -45,7 +45,12 @@
             height: auto;
         }
 
-        .showcase a,p {
+        .showcase a {
+            margin: 0px 0px;
+            color: var(--main-color);
+        }
+
+        .showcase p {
             margin: 0px 0px;
             color: var(--main-color);
         }
@@ -72,6 +77,7 @@
 <body>
     <section id="hero">
         <div class="container">
+            <button class="button outline" onclick="history.back()">← Go Back</button>
             <p>A bit of this and that</p>
             <h1>Design Showcase </h1>
             <p>My main, rent-paying profession is as in UX/UI and Visual Designer. Below, you'll find some works related to this.</p>
@@ -191,6 +197,18 @@
                         <p>An ads dashboard</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container footer">
+            <hr>
+            <div style="display: flex; gap: 8px;">
+                <p style="margin: 0px;">Got lost? Maybe you cant to go back to one of these:</p>
+                <a href="../index.html">Home</a>
+                <a href="../showcase.html">Showcase</a>
+                <a href="../embroidery.html">Embroidery</a>
+                <a href="../about.html">About</a>
             </div>
         </div>
     </section>
