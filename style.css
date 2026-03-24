@@ -1,15 +1,4 @@
-body {
-    font-family: "Times", serif;
-    letter-spacing: -0.6%;
-    background-color: #fffdfb;
-    margin: 0;
-    color: var(--main-color);
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: "Helvetica", sans-serif;
-    line-height: 120%;
-    }
+/* buttons */
 
 .button {
     font-family: "Times", serif;
@@ -18,23 +7,13 @@ h1, h2, h3, h4, h5 {
     border-radius: 99px;
     padding: 4px 8px;
     border: 0.25px dashed ;
-    border-color: #ffffff00;   
-    color: var(--main-color);
-}
-
-.button.secondary {
-    background-color: var(--main-muted);
-}
-
-.button.secondary:hover {
-    border: 0.25px solid ;
-
-}
-
-.button.outline {
-    border: 0.25px dashed ;
-    background-color: #fffdfb00;
     border-color: var(--main-color);   
+    color: var(--main-color);
+    background-color:#fffdfb00;
+}
+
+.button:hover {
+    border: 0.25px solid ;
 }
 
 .button.white {
@@ -44,15 +23,21 @@ h1, h2, h3, h4, h5 {
     border-color: white;   
 }
 
-.button.outline:hover {
-    border: 0.25px solid ;
-}
+/* containers */
 
 .container {
-    padding: 24px;
+    padding: 24px;    
     position: relative;
     box-sizing: border-box;
 }
+
+.footer {
+    padding: 0px 24px 24px 24px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* dividers */
 
 hr { 
     border-bottom: 0.25px dashed ;
@@ -68,6 +53,7 @@ br {
     content: "";
 }
 
+/* */
 
     .journal-entry {
             display: flex;
@@ -91,3 +77,113 @@ br {
 
 
         
+/* text styles */
+
+body {
+    font-family: "Times", serif;
+    letter-spacing: -0.6%;
+    background-color: #fffdfb;
+    margin: 0;
+    color: var(--main-color);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: -1%;
+    line-height: 120%;
+    }
+
+.card {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.eyebrow {
+    color: var(--main-secondary) ;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+/* elements */
+
+.badge {
+    padding: 4px 6px;
+    border-radius: 99px;
+    border: var(--main-color) solid 1px;
+}
+
+.badge p {
+    margin: 0px;
+}
+
+/* layouts */
+
+.grid {
+    display: grid;
+}
+
+.flex-h {
+    display: flex;
+    flex-direction: row;
+}
+
+/* gaps */
+
+.g0 {
+    gap: 0px;
+}
+
+.g8 {
+    gap: 8px;
+}
+
+.g16 {
+    gap: 16px;
+}
+
+.g24 {
+    gap: 24px;
+}
+
+.g32 {
+    gap: 32px;
+}
+
+/* columns */
+
+.c3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.c4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.c6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* spacing */
+
+.m0 {
+    margin: 0px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mt24 {
+    margin-top: 24px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

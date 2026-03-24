@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Brain Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Notion hub/template to organize my design-related resources.">
+    <style>
+        :root {
+            --main-color: #000000;
+            --main-muted: #00000010;
+        }
+
+        .dbf-hero {
+            background-color: #000;
+            color: #fff;
+            padding: 48px 24px 0;
+        }
+
+        .dbf-hero h1 {
+            color: #fff;
+            margin: 8px 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .dbf-hero h1 img {
+            width: 48px;
+            height: auto;
+        }
+
+        .dbf-hero .label {
+            font-family: "Times", serif;
+            font-size: 14px;
+            color: #888;
+            margin: 0 0 8px;
+        }
+
+        .dbf-screenshot {
+            width: 100%;
+            display: block;
+        }
+
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 0.25px dashed var(--main-color);
+            border-radius: 99px;
+            padding: 6px 14px;
+            font-family: "Arial", sans-serif;
+            font-size: 48px;
+            letter-spacing: -1px;
+            color: white;
+            background-color: #000;
+        }
+
+        .pill img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .card {
+            border: 0.25px dashed var(--main-color);
+            padding: 20px;
+        }
+
+        .card img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .dbf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--main-color);
+            margin-bottom: 24px;
+        }
+
+        .dbf-link h2 {
+            margin: 0;
+            font-size: 2em;
+            font-family: "Helvetica", sans-serif;
+        }
+
+        .dbf-link img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .dbf-final {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dbf-hero h1 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dbf-hero">
+        <div class="container">
+            <button class="button white" onclick="history.back()">← Go Back</button>
+            <p>A public collection of resources</p>
+            <h1>
+                Design Brain Food
+                <img src="images/dbf/logo.svg">
+            </h1>
+        </div>
+        <img src="images/dbf/preview.png" alt="Design Brain Food preview" class="dbf-screenshot" loading="lazy">
+    </div>
+
+    <section>
+        <div class="container">
+            <h2 style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">Organizing my resources</h2>
+            <p style="max-width: 640px; text-align: center; margin-left: auto; margin-right: auto;">I was feeling like my design-related knowledge was disperse and unorganized: blogs I liked over there, my favorite podcasts on Spotify, the best inspo sites... in my memory? Stuff was scattered all over the digital and physical realm. The thing is, I am at ease when my knowledge is tidied up and secured somewhere I can go back to whenever the need arises. Hence the birth of Design Brain Food: a Notion space where I could save my design-related resources, organize it by media type, and categorize it in different sub-areas.</p>
+
+            <div class="pills">
+                <span class="pill">a bit of everything</span>
+                <span class="pill"><img src="images/dbf/podcasts.svg">podcasts</span>
+                <span class="pill"><img src="images/dbf/agencies.svg">agencies</span>
+                <span class="pill"><img src="images/dbf/courses.svg">courses</span>
+                <span class="pill"><img src="images/dbf/influencers.svg">influencers</span>
+                <span class="pill"><img src="images/dbf/books.svg">books</span>
+                <span class="pill"><img src="images/dbf/inspo.svg">inspo sites</span>
+                <span class="pill"><img src="images/dbf/resources.svg">resources</span>
+                <span class="pill"><img src="images/dbf/blogs.svg">blogs</span>
+                <span class="pill"><img src="images/dbf/tools.svg">tools</span>
+            </div>
+
+            <hr style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">
+            <h2 style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">But why keep it to myself?</h2>
+            <p style="max-width: 640px;">Realized that this hub of resources could be useful to many more people other than me: junior designers looking for places to start creating their own repertoire, enthusiasts that want to expand their vision, seniors looking for a model to store their resources. So, public it is then.</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="images/dbf/duplicate.svg">
+                    <p>If you want your own, you can duplicate the space and create your personal DBF.</p>
+                </div>
+                <div class="card">
+                    <img src="images/dbf/pin.svg">
+                    <p>Pin it in your browser so you don't loose sight of it.</p>
+                </div>
+                <div class="card">
+                    <img src="images/dbf/rocket.svg">
+                    <p>Set a goal to explore one new resource each day... or week if you're lazy.</p>
+                </div>
+                <div class="card">
+                    <img src="images/dbf/feedback.svg">
+                    <p>Use it, share it, brake it, and if you have any feedback, send me an email!</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">Now it's your turn to explore it:</p>
+            <a href="https://facundodesign.notion.site/fba947a46f2d47beb765547e8f584abe?v=a853bf20307d443b8778ac3e707cdb5a&pvs=4" target="_blank" class="dbf-link" style=" text-align: center; margin-left: auto; margin-right: auto;">
+                <h2>Design Brain Food →</h2>
+            </a>
+        <img src="images/dbf/sharing-is-caring.svg" alt="Sharing is caring" class="dbf-final" loading="lazy" style="width: 100%;">
+
+        </div>
+
+    </section>
+
+</body>
+</html>
