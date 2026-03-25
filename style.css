@@ -116,7 +116,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .w50 {
-    width: 50%;
+    width: 100%;
+    max-width: 800px;
 }
 
 .w25 {
@@ -251,6 +252,7 @@ td {
 
     .w25 {
         width: 100%;
+        max-width: 800px;
     }
 
     .big-badge {
