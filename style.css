@@ -60,6 +60,10 @@
     align-items: center;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 /* sizing */
 
 .h100 {
