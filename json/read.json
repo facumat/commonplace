@@ -13,6 +13,30 @@
         "thoughts": "thoughts"
     }, 
     {
+        "thing":"Ritual transvestism is the ceremonial practice of wearing clothing associated with the opposite gender, often used in initiation rites, religious festivals, and spiritual ceremonies to temporarily reverse gender roles or honor specific deities. These practices act as structural inversions, bridging spiritual, social, or cosmic dualities. ",
+        "from":"Ritual transvestism",
+        "type":"glossary",
+        "consumed":"2026-3-25",
+        "tags":["queerness"],
+        "thoughts":"See connections to heresy."
+    },
+    {
+        "thing":"The crime of buggery is a historical legal term primarily referring to anal intercourse (male-male or male-female) and bestiality, officially criminalized in England by the Buggery Act 1533. Historically, it was a capital offence often termed 'the detestable and abominable vice,' used to regulate same-sex acts and moral conduct. It was repealed in the UK in the 20th century, though similar colonial-era laws persist in some regions. ",
+        "from":"Buggery, crime of",
+        "type":"glossary",
+        "consumed":"2026-3-25",
+        "tags":["queerness"],
+        "thoughts":"Es interesante el link entre buggery y bug, bug siendo insecto y la mariquita siendo un insecto, aunque tal vez no se le llame a la marica así por el insecto, pero hay una conexión sospechosa ahí."
+    },
+    {
+        "thing":"La Virgen Cabeza",
+        "from":"Gabriela Cabezón Cámara",
+        "year":"2009",
+        "consumed":"2026-2-16",
+        "tags":["letras cuir"],
+        "thoughts":"Es una cosa muy borroscosa, barroca, atrevida y apresurada. COn mucha fuerza travesti villera. Lo lleva. apensar a uno si no es demasiado villera, demasiado romántica, pero con las perspectiva de outsider. O sea: eso de la apropiación. Pero no sé. Capaz que la autora es villera. ¿Qué tanta propiedad hay que tener para hablar de lo villero?"
+    },
+    {
         "thing":"Philly Queer Book Club Manifesto",
         "from":"Danny",
         "url":"https://www.phillyqueerbookclub.com/about",

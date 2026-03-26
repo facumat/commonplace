@@ -15,21 +15,8 @@
         .dbf-hero {
             background-color: #000;
             color: #fff;
-            padding: 48px 24px 0;
         }
 
-        .dbf-hero h1 {
-            color: #fff;
-            margin: 8px 0 24px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .dbf-hero h1 img {
-            width: 48px;
-            height: auto;
-        }
 
         .dbf-hero .label {
             font-family: "Times", serif;
@@ -47,25 +34,27 @@
             display: flex;
             flex-wrap: wrap;
             margin: 24px 0;
+            justify-content: center;
+            align-items: center;
         }
 
         .pill {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 16px;
             border: 0.25px dashed var(--main-color);
             border-radius: 99px;
-            padding: 6px 14px;
+            padding: 8px 24px;
             font-family: "Arial", sans-serif;
-            font-size: 48px;
+            font-size: 36px;
             letter-spacing: -1px;
             color: white;
             background-color: #000;
         }
 
         .pill img {
-            width: 16px;
-            height: 16px;
+            width: 32px;
+            height: 32px;
         }
 
         .cards-grid {
@@ -125,21 +114,28 @@
 </head>
 <body>
     <div class="dbf-hero">
-        <div class="container">
-            <button class="button white" onclick="history.back()">← Go Back</button>
-            <p>A public collection of resources</p>
-            <h1>
-                Design Brain Food
-                <img src="images/dbf/logo.svg">
-            </h1>
+        <div class="navbar" style="color: white;">
+            <button class="button outline white" onclick="history.back()">← Go Back</button>
+            <a href="./index.html">⌂</a>
+            ⊂(◉‿◉)つ
         </div>
-        <img src="images/dbf/preview.png" alt="Design Brain Food preview" class="dbf-screenshot" loading="lazy">
+        <div class="container center">
+            <p>A public collection of resources</p>
+            <div class="flex-hcenter">
+            <h1 class="flex-hcenter" style="color: #fff; margin: 8px 0 24px;
+">
+                Design Brain Food
+            </h1>
+            </div>
+
+        </div>
+        <img src="images/dbf/preview.png" alt="Design Brain Food preview" class="dbf-screenshot" loading="lazy" style="padding-left: 24px; padding-right: 24px; box-sizing: border-box;">
     </div>
 
     <section>
-        <div class="container">
-            <h2 style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">Organizing my resources</h2>
-            <p style="max-width: 640px; text-align: center; margin-left: auto; margin-right: auto;">I was feeling like my design-related knowledge was disperse and unorganized: blogs I liked over there, my favorite podcasts on Spotify, the best inspo sites... in my memory? Stuff was scattered all over the digital and physical realm. The thing is, I am at ease when my knowledge is tidied up and secured somewhere I can go back to whenever the need arises. Hence the birth of Design Brain Food: a Notion space where I could save my design-related resources, organize it by media type, and categorize it in different sub-areas.</p>
+        <div class="container w50">
+            <h2 class="center mt96">Organizing my resources</h2>
+            <p class="center"> I was feeling like my design-related knowledge was disperse and unorganized: blogs I liked over there, my favorite podcasts on Spotify, the best inspo sites... in my memory? Stuff was scattered all over the digital and physical realm. The thing is, I am at ease when my knowledge is tidied up and secured somewhere I can go back to whenever the need arises. Hence the birth of Design Brain Food: a Notion space where I could save my design-related resources, organize it by media type, and categorize it in different sub-areas.</p>
 
             <div class="pills">
                 <span class="pill">a bit of everything</span>
@@ -155,10 +151,10 @@
             </div>
 
             <hr style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">
-            <h2 style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">But why keep it to myself?</h2>
-            <p style="max-width: 640px;">Realized that this hub of resources could be useful to many more people other than me: junior designers looking for places to start creating their own repertoire, enthusiasts that want to expand their vision, seniors looking for a model to store their resources. So, public it is then.</p>
+            <h2 class="center mt96">But why keep it to myself?</h2>
+            <p class="center">Realized that this hub of resources could be useful to many more people other than me: junior designers looking for places to start creating their own repertoire, enthusiasts that want to expand their vision, seniors looking for a model to store their resources. So, public it is then.</p>
 
-            <div class="cards-grid">
+            <div class="grid c4 g0">
                 <div class="card">
                     <img src="images/dbf/duplicate.svg">
                     <p>If you want your own, you can duplicate the space and create your personal DBF.</p>
@@ -177,15 +173,31 @@
                 </div>
             </div>
 
-            <p style="margin-top: 96px; text-align: center; margin-left: auto; margin-right: auto;">Now it's your turn to explore it:</p>
-            <a href="https://facundodesign.notion.site/fba947a46f2d47beb765547e8f584abe?v=a853bf20307d443b8778ac3e707cdb5a&pvs=4" target="_blank" class="dbf-link" style=" text-align: center; margin-left: auto; margin-right: auto;">
+            <p class="center mt96">Now it's your turn to explore it:</p>
+            <a href="https://facundodesign.notion.site/fba947a46f2d47beb765547e8f584abe?v=a853bf20307d443b8778ac3e707cdb5a&pvs=4" target="_blank" class="center" style="text-align: center; margin-left: auto; margin-right: auto;">
                 <h2>Design Brain Food →</h2>
             </a>
-        <img src="images/dbf/sharing-is-caring.svg" alt="Sharing is caring" class="dbf-final" loading="lazy" style="width: 100%;">
-
         </div>
+        <img src="images/dbf/sharing-is-caring.svg" alt="Sharing is caring" class="dbf-final" loading="lazy" style="width: 100%; margin-bottom: -12px;">
 
     </section>
-
+    <section id="footer">
+        <div class="container footer">
+            <div class="footer-content">
+                <p style="margin: 0px;">Got lost? Maybe you cant to go back to one of these:</p>
+                <a href="../index.html">Home</a>
+                <a href="../showcase.html">Showcase</a>
+                <a href="../embroidery.html">Embroidery</a>
+                <a href="../about.html">About</a>
+                <div class="footer-socials">
+                    <a href="https://www.are.na/facundo-matiaude/channels" target="_blank">are.na</a>
+                    <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
+                    <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
+                    <a href="https://x.com/facumatiaude" target="_blank">x</a>
+                    Montevideo, UY.
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

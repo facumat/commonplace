@@ -13,6 +13,14 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"faggoting",
+        "image":"images/faggoting.jpg",
+        "type":"image",
+        "consumed":"2026-3-25",
+        "tags":["queerness", "textile"],
+        "thoughts":"Faggoting refers to two distinct techniques: a metalworking process and a decorative embroidery stitch. In metalworking, it is the forge welding of bundled iron/steel bars to create a grain, increasing strength. In textiles, it is a decorative embroidery stitch used to join fabric edges or create open, lace-like seams. "
+    },
+    {
         "thing":"Everest Pipkin",
         "url":"https://everest-pipkin.com/#",
         "type":"website",

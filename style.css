@@ -37,6 +37,29 @@
     box-sizing: border-box;
 }
 
+.footer-content {
+    display: flex; 
+    gap: 8px; 
+    align-items: start;
+}
+
+.footer-socials {
+    display: flex; 
+    gap: 8px; 
+    flex-grow: 1; 
+    justify-content: flex-end;
+}
+
+.navbar {
+    padding: 24px;    
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* sizing */
 
 .h100 {
@@ -53,6 +76,10 @@ hr {
     border-left: 0px;
     margin: 40px 0px;
     border-color: var(--main-color);
+}
+
+.biggerhr {
+    margin: 80px 0px !important;
 }
 
 br {
@@ -100,6 +127,24 @@ h1, h2, h3, h4, h5 {
     line-height: 120%;
     }
 
+.megah {
+    font-family: 'Times' serif !important; 
+    letter-spacing: -10px; 
+    font-size: 250px; 
+    line-height: 200px; 
+    margin: 32px 0px 0px 0px;
+}
+
+.megap {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 600;
+    letter-spacing: -1%;
+    line-height: 120%;
+    letter-spacing: -1%;
+    line-height: 120%;
+    font-size: 32px;
+}
+
 .sans {
     font-family: "Helvetica", sans-serif;
     letter-spacing: -1%; 
@@ -118,6 +163,8 @@ h1, h2, h3, h4, h5 {
 .w50 {
     width: 100%;
     max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .w25 {
@@ -156,6 +203,13 @@ h1, h2, h3, h4, h5 {
 
 .grid {
     display: grid;
+}
+
+.sampler {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(6, 1fr);
+
 }
 
 .flex-h {
@@ -226,6 +280,18 @@ h1, h2, h3, h4, h5 {
     margin-top: 24px;
 }
 
+.mt48 {
+    margin-top: 48px;
+}
+
+.mt96 {
+    margin-top: 96px;
+}
+
+.mb48 {
+    margin-bottom: 48px;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -246,6 +312,11 @@ td {
         flex-direction: column;
     }
 
+    .sampler {
+    grid-template-columns: repeat(3, 1fr);
+
+    }
+
     .w50 {
     width: 100%;
     }
@@ -258,6 +329,18 @@ td {
     .big-badge {
         font-size: 24px;
         line-height: 24px;
+    }
+
+    .megah {
+        letter-spacing: -4px; 
+        font-size: 128px; 
+        line-height: 128px; 
+        margin: 4px 0 0 0;
+    }
+
+    .megap {
+        font-size: 24px;
+        margin-top: 16px;
     }
 
 }
@@ -273,6 +356,20 @@ td {
 
     .w25 {
         width: 50%;
+    }
+
+    .footer-content {
+        display: flex; 
+        flex-direction: column;
+        gap: 8px; 
+        align-items: start;
+    }
+
+    .footer-socials {
+        display: flex; 
+        flex-direction: column;
+        gap: 8px; 
+        justify-content: start;
     }
 }
 
