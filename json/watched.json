@@ -14,6 +14,34 @@
         "thoughts": null
     },
     {
+        "thing":"Kajillionaire",
+        "from":"Miranda July",
+        "year":"2020",
+        "type":"movie",
+        "consumed":"2026-3-27",
+        "thoughts":"Raro el romance pero muy entretenida y rara, e incómoda y real a la vez."
+    },
+    {
+        "thing":"In Jackson Heights",
+        "from":"Frederick Wiseman",
+        "year":"2015",
+        "type":"movie",
+        "consumed":"2026-3-19",
+        "genre":"documentary",
+        "tags":["urbanism"],
+        "thoughts":"Increíble, las tres horas se me pasaron volando. Es la riqueza de lo que muestra que hacern que escuchara y mirara atentamente todos los 180 minutos. Como si me topara con una charla interesante en un café, obvio que quiero chusmear todo lo que dicen. Un cine denso el de este señor, porque cada charla que el filmaba estaba cargada de problemáticas sociales, luchas de los vecinos, etc. Pero siento que no queda otra que se haga de este largo, para así mostrar la realidad de esta gente de la manera más pura, honesta y sin editar.<br>Veo que pasa un poco en Montevideo, y otras localidades de Uruguay, que lo que pasa en ciudades más cosmopolitas como esta. El capital va corriendo a los habitantes y comerciantes. hace poco en Progreso, mi ciudad natal de 11 mil habitantes, instalaron un Farmashop (una de las cadenas de farmacias más grandes de uruwhy) donde antes estaba la farmacia de barrio. Ahora ya no hay una farmacia de barrio en progreso, porque algun señoro propietario de cadenas e inversiones pudo pagar más que la farmacia de barrio, pudo negociar más que la misma, pudo forzar a más proveedores a trabajar con él.<br>Etc.<br>La rueda sigue girando."
+    },
+    {
+        "thing":"Ex Libris: The New York Public Library",
+        "from":"Frederick Wiseman",
+        "year":"2017",
+        "type":"movie",
+        "consumed":"2026-3-20",
+        "genre":"documentary",
+        "tags":["literature"],
+        "thoughts":"El otro día cuando vi esta ya pasé a hacerme fan del señor. La necesidad de hiperfijarse con algo y excavarlo hasta conocer todos sus recovecos y mirar cada segundo de ello desde la pared. Un poco dan ganas de ser trabajador público cool."
+    },
+    {
         "thing":"The Moment",
         "from":"Aidan Zamiri",
         "year":"2026",

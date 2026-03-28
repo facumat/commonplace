@@ -4,7 +4,7 @@
 <head>
     <title>My Homepage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon-foundations.ico">
+    <link rel="icon" type="image/x-icon" href="images/faviconabout.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,6 +20,35 @@
         a {
             color: #FF9D2E;
         }
+
+        .sticker-l {
+            position: fixed; left: 20px; bottom: 100px; transform: rotate(-25deg);
+        }
+
+        .sticker-r {
+            position: fixed; right: 20px; top: 100px; transform: rotate(25deg);
+        }
+
+        .sticker-content {
+           text-align: center; padding: 24px; border-radius: 999px; background-color: #004631; color: #FF9D2E; border: 0.25px solid #FF9D2E;
+        }
+
+    @media (max-width: 640px) {
+        .sticker-l {
+            display: none;
+        }
+
+        .sticker-r {
+            display: none;
+        }
+
+        tr {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+        }
+        }
+
     </style>
 </head>
 
@@ -144,7 +173,7 @@
         <div class="container footer">
             <hr>
             <div class="footer-content">
-                <p style="margin: 0px;">Got lost? Maybe you cant to go back to one of these:</p>
+                <p style="margin: 0px;">Got lost? Maybe you can to go back to one of these:</p>
                 <a href="../index.html">Home</a>
                 <a href="../showcase.html">Showcase</a>
                 <a href="../embroidery.html">Embroidery</a>
@@ -154,11 +183,20 @@
                     <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
                     <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
                     <a href="https://x.com/facumatiaude" target="_blank">x</a>
-                    Montevideo, UY.
                 </div>
             </div>
         </div>
     </section>
+    <pre class="sticker-l">
+        <div class="sticker-content">
+            <p>Made in 🇺🇾 Uruwhy</p>
+        </div>
+    </pre>
+    <pre class="sticker-r">
+        <div class="sticker-content">
+            <p>small town boy</p>
+        </div>
+    </pre>
     <script>
         function showLastModified() {
             var lastModifiedDate = new Date(document.lastModified);

@@ -3,12 +3,12 @@
 <head>
     <title>My Homepage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <link rel="icon" type="image/x-icon" href="images/faviconblog.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root {
-            --main-color: #ff2e74;
-            --main-muted: #ff2e7410;
+            --main-color: #fff;
+            --main-muted: #ffffff10;
         }
 
         .socials {
@@ -17,40 +17,107 @@
             flex-direction: row;
             gap: 24px;
         }
+
+        a {
+            color: white;
+        }
+
+        .card {
+             color: white; background-size: cover;
+             background-position: center;
+        }
+
+        .project {
+            padding:24px; 
+            align-items: start ; 
+            justify-content: start;
+            gap: 32px;
+        }
+
     </style>
 </head>
-<body>
+<body style="color: white; background: linear-gradient(rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); ">
     <section id="hero">
         <div class=" navbar">
-            <button class="button outline" onclick="history.back()">← Go Back</button>
+            <button class="button outline white" onclick="history.back()">← Go Back</button>
             <a href="./index.html">⌂</a>
             ⊂(◉‿◉)つ
         </div>
-        <div class="container">
-            <p style="font-family: 'Times' serif; letter-spacing: -10px; font-size: 250px; line-height: 200px; margin: 0px;">Hola!</p>
-            <h1>This is the entrance to my personal site. It hosts some my <a href="showcase.html">UX/UI and design showcase</a>, interests and <a href="about.html">info about me</a>, my <a href="embroidery.html">embroidery art practice</a>, a personal <a href="commonplace.html">digital commonplace</a>, some <a href="blog.html">blog posts</a>, a <a href="dbf.html">design resources repository</a>, a construction <a href="journal.html">journal of this site</a>, and other random projects both for fun and research. Hope you enjoy it.<br><br>I recently discarded my fully modern and functional webflow site for a handmade one due to ethical and conceptual reasons (for which reason you still might find most of this site in progress), <a href="foundations.html" title="Sorry, this page doesn't exist yet. But it will !!! hope so.">you can learn more about the motives here</a>.</h1>
+        <div class="container w50l">
+            <p>Blog</p>
+            <h1>Some thoughts on things that have been on my mind, into the void</h1>
             <p><em><b>Planted:</b> Mar 24, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
-            <hr>
-            <div class="me">
-                <p>This is me</p>
-                <img src="images/me.gif" style="width: 100%; max-width: 500px; height: auto;">
-            </div>
-            <hr>
-            <p>These are my socials</p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/facumatiaude/?locale=en_US" target="_blank">LinkedIn</a>
-                <a href="https://www.are.na/facundo-matiaude/channels" target="_blank">are.na</a>
-                <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
-                <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
-                <a href="https://x.com/facumatiaude" target="_blank">x</a>
-            </div>
         </div>
+            <div class="grid c1">
+                <hr style="margin: 0px;">
+                <a href="https://medium.com/@facumatiaude/eulogy-for-a-product-that-really-cared-read-cv-and-posts-cv-say-goodbye-1b793741715f" class="card" target="_blank">
+                    <div class="project grid c4">
+                        <img src="images/blog/readcv.webp">
+                        <h3>Eulogy for a product that really cared: read.cv and posts.cv say goodbye</h3>
+                        <div>
+                            <p>So read.cv and post.cv are being winded down. Which is corporate-speak for the sudden death of a beloved space. Excuse my hyperbole, but understand: I’m in my {denial} stage of grief.</p>
+                            <p > 16 feb, 2025</p>
+                        </div>
+                        <p style="text-align: right;">→</p>
+                    </div>
+                </a>
+                <hr style="margin: 0px;">
+                <a href="https://medium.com/@facumatiaude/would-the-success-of-brat-have-happened-without-the-precedent-of-queer-culture-6915de074353" class="card" target="_blank">
+                    <div class="project grid c4">
+                        <img src="images/blog/brat.webp">
+                        <h3>Would the success of ‘Brat’ branding have happened without the precedent of queer culture?</h3>
+                        <div>
+                            <p>I don't think so hun.</p>
+                            <p > 26 jul, 2024</p>
+                        </div>
+                        <p style="text-align: right;">→</p>
+                    </div>
+                </a>
+                <hr style="margin: 0px;">
+                <a href="https://medium.com/@facumatiaude/all-i-see-are-buttons-mastering-cta-usage-without-going-overboard-a3d405c85709" class="card" target="_blank">
+                    <div class="project grid c4">
+                        <img src="images/blog/pollution.webp">
+                        <h3>All I see are buttons: Mastering CTA usage without going overboard.</h3>
+                        <div>
+                            <p>How many CTAs are too many CTAs? A quick guide to effectively design them and use the right amount to boost conversions without overwhelming users.</p>
+                            <p > 23 may, 2024</p>
+                        </div>
+                        <p style="text-align: right;">→</p>
+                    </div>
+                </a>
+                <div style="padding-left: 24px; padding-right: 24px;">
+                <hr style="margin: 0px;">
+                </div>
+                <a href="https://medium.com/@facumatiaude/an-indie-movie-and-the-designers-quintessential-habit-of-observing-c27cbdd3a739" class="card" target="_blank">
+                    <div class="project grid c4">
+                        <img src="images/blog/movie.webp">
+                        <h3>An indie movie and the designer’s quintessential habit of observing</h3>
+                        <div>
+                            <p>I just arrived from my local arthouse cinema and I couldn’t keep myself from connecting the movie I experienced to a fundamental design habit. Let me elucidate why.</p>
+                            <p > 24 aug, 2023</p>
+                        </div>
+                        <p style="text-align: right;">→</p>
+                    </div>
+                </a>
+                <hr style="margin: 0px;">
+                <a href="https://medium.com/design-bootcamp/this-is-not-a-drill-how-to-take-advantage-of-ai-as-a-designer-now-a96eec5f0410" class="card" target="_blank">
+                    <div class="project grid c4">
+                        <img src="images/blog/ai.jpg">
+                        <h3>This is not a drill: how to take advantage of AI as a designer now.</h3>
+                        <div>
+                            <p>AI used to feel like a summer shadow that looms ever larger but never engulfs you in it because it simply cannot. Because it’s slow; because you’re faster. We, designers, used to feel safe about it because of how utopian everything about it seemed. But guess what?</p>
+                            <p > 2 aug, 2023</p>
+                        </div>
+                        <p style="text-align: right;">→</p>
+                    </div>
+                </a>
+            </div>
     </section>
-        <section id="footer">
+    <section id="footer">
         <div class="container footer">
-            <hr>
+            <hr style="margin-top: 0px;">
             <div class="footer-content">
-                <p style="margin: 0px;">Got lost? Maybe you cant to go back to one of these:</p>
+                <p style="margin: 0px;">Got lost? Maybe you can to go back to one of these:</p>
                 <a href="../index.html">Home</a>
                 <a href="../showcase.html">Showcase</a>
                 <a href="../embroidery.html">Embroidery</a>
@@ -60,7 +127,6 @@
                     <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
                     <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
                     <a href="https://x.com/facumatiaude" target="_blank">x</a>
-                    Montevideo, UY.
                 </div>
             </div>
         </div>

@@ -1,47 +1,183 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Homepage</title>
+    <title>Birdie Tiger</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon-home.ico">
+    <link rel="icon" type="image/x-icon" href="../images/faviconshowcase.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root {
-            --main-color: #000000;
-            --main-muted: #00000010;
+            --main-color: #ffffff;
+            --main-muted: #ffffff10;
         }
 
-        .badge-group {
-            display: flex;
-            flex-direction: row;
-            gap: 0px;
-            margin-top: 8px;
+        .sample-mini {
+            width: 100px;
+            height: auto;
         }
 
-        .badge {
-            padding: 4px 6px;
-            border-radius: 99px;
-            border: var(--main-color) solid 1px;
+        body {
+            background-color: black;
         }
 
-        .badge p {
-            margin: 0px;
+        a {
+            color: var(--main-color);
         }
-
     </style>
 </head>
+
 <body>
     <section id="content">
-        <div class="container">
+        <div class=" navbar">
+            <button class="button outline white" onclick="history.back()">← Go Back</button>
+            <a href="../index.html">⌂</a>
+            ⊂(◉‿◉)つ
+        </div>
+        <div class="container w50l">
             <h1>Birdie Tiger</h1>
-            <p><em><b>Planted:</b> Feb 27, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
-            <div class="badge-group">
-                <div class="badge"><p>web design</p></div>
-                <div class="badge"><p>agency</p></div>
-                <div class="badge"><p>figma</p></div>
-                <div class="badge"><p>webflow</p></div>
+            <p><em><b>Planted:</b> Mar 27, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <div class="flex-h">
+                <div class="badge">
+                    <p>web design</p>
+                </div>
+                <div class="badge">
+                    <p>agency</p>
+                </div>
+                <div class="badge">
+                    <p>figma</p>
+                </div>
+                <div class="badge">
+                    <p>webflow</p>
+                </div>
+                <div class="badge">
+                    <p>2022</p>
+                </div>
             </div>
-            <p>Creating an agency... in a week</p><p>Internal projects can be great: total freedom and ownership. But sometimes, it also comes with the confidence of building something awesome in just a couple days. This was the case with Birdie Tiger: a newborn sister agency that needed to have a brand and landing page in a week in order to start showing it at upcoming conferences and events, so we set a plan to have everything we needed in five days:</p>
+            <p>Creating an agency... in a week</p>
+            <p>Internal projects can be great: total freedom and ownership. But sometimes, it also comes with the
+                confidence of building something awesome in just a couple days. This was the case with Birdie Tiger: a
+                newborn sister agency that needed to have a brand and landing page in a week in order to start showing
+                it at upcoming conferences and events, so we set a plan to have everything we needed in five days:</p>
+
+        </div>
+            <div class="container grid c5 g24 mt24">
+                <div>
+                    <p>Day 1</p>
+                    <h3>Exploring visual paths</h3>
+                </div>
+                <div>
+                    <p>Day 2</p>
+                    <h3>Defining the landing page</h3>
+                </div>
+                <div>
+                    <p>Day 3</p>
+                    <h3>Going into Webflow</h3>
+                </div>
+                <div>
+                    <p>Day 4</p>
+                    <h3>More Webflow...</h3>
+                </div>
+                <div>
+                    <p>Day 5</p>
+                    <h3>Completing the brand</h3>
+                </div>
+            </div>
+        <div class="container">
+            <img src="../images/visual-design/birdie/birdie-hero.png">
+        </div>
+        <hr class="mt96">
+        <div class="container w50l mt48">
+            <h2>Exploring the options</h2>
+            <p>The idea of this agency was for it to be young, experimental and almost naively confident. Therefore, we
+                set to explore three distinct fields of styles:</p>
+        </div>
+        <div class="container grid c4 g32">
+            <div style="padding-right: 96px;">
+                <img class="sample-mini" src="../images/visual-design/birdie/samplemini1.avif">
+                <p>Vibrant and colorful visuals highlighting the energetic spirit of the young agency.</p>
+            </div>
+            <div style="grid-column: span 3;">
+                <img src="../images/visual-design/birdie/sample1.avif">
+            </div>
+        </div>
+        <div class="container grid c4 g32">
+            <div style="padding-right: 96px;">
+                <img class="sample-mini" src="../images/visual-design/birdie/samplemini2.avif">
+                <p>Vibrant and colorful visuals highlighting the energetic spirit of the young agency.</p>
+            </div>
+            <div style="grid-column: span 3;">
+                <img src="../images/visual-design/birdie/sample2.avif">
+            </div>
+        </div>
+        <div class="container grid c4 g32">
+            <div style="padding-right: 96px;">
+                <img class="sample-mini" src="../images/visual-design/birdie/samplemini3.avif">
+                <p>Vibrant and colorful visuals highlighting the energetic spirit of the young agency.</p>
+            </div>
+            <div style="grid-column: span 3;">
+                <img src="../images/visual-design/birdie/sample3.avif">
+            </div>
+        </div>
+        <hr class="mt96">
+        <div class="container w50l mt48">
+            <h2>About the tiger</h2>
+            <p>Before this project reached me, some attempts were made to create a brand for this company, which
+                resulted in the tiger illustration you’ll see in all these samples, originally created by Diego Tapié.
+                The original material were not aligned to the trendy and youthful vision for the company, but the
+                stakeholders wanted to include the tiger illustration in some way. So, I experimented with different
+                approaches, colors, and styles to make it look updated and modern.</p>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/birdie/tiger.avif">
+        </div>
+        <hr class="mt96">
+        <div class="container w50l mt48">
+            <h2>Selecting final path</h2>
+            <p>Together with the C-team, we decided on going the more vibrant and experimental way, and completing the
+                rest of the landing page following one of the tests on that category. This proved a bit of a challenge
+                because there wasn’t much to show about this company but a few design shots. So, we made a short page
+                explaining mostly the visions and ways of working of the newly found team, all of this through a
+                humorous and witty identity.</p>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/birdie/path.avif">
+        </div>
+        <hr class="mt96">
+        <div class="container w50l mt48">
+            <h2>Wrapping up</h2>
+            <p>Once we moved the landing page to Webflow... in one day and a half, we still had some more work to do
+                with the brand. SO we filled all the gaps in the assets needed for this company to have a visible face
+                everywhere it was needed.</p>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/birdie/wrapping.avif">
+        </div>
+        <div class="container w50 center">
+            <h2>Thanks for watching 💝</h2>
+                    <p>You can see more about this project here:</p>
+                    <div class="flex-h-center g24">
+                        <a href="#">Figma Link →</a>
+                        <a href="#">Landing Prototype →</a>
+                    </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container footer">
+            <hr>
+            <div class="footer-content">
+                <p style="margin: 0px;">Got lost? Maybe you can to go back to one of these:</p>
+                <a href="../index.html">Home</a>
+                <a href="../showcase.html">Showcase</a>
+                <a href="../embroidery.html">Embroidery</a>
+                <a href="../about.html">About</a>
+                <div class="footer-socials">
+                    <a href="https://www.are.na/facundo-matiaude/channels" target="_blank">are.na</a>
+                    <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
+                    <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
+                    <a href="https://x.com/facumatiaude" target="_blank">x</a>
+                </div>
+            </div>
         </div>
     </section>
     <script>
@@ -53,7 +189,8 @@
         }
         // Call the function when the page loads
         window.onload = showLastModified;
-        
+
     </script>
 </body>
+
 </html>

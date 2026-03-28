@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neonledger</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../images/faviconshowcase.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-color: #ffffff;
+            --main-muted: #ffffff10;
+        }
+
+        .sample-mini {
+            width: 100px;
+            height: auto;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        a {
+            color: var(--main-color);
+        }
+
+        .eyebrow {
+            opacity: 0.5;
+            font-family: "Helvetica", sans-serif;
+            letter-spacing: -1%;    
+        }
+    </style>
+</head>
+
+<body>
+    <section id="content">
+        <div class=" navbar">
+            <button class="button outline white" onclick="history.back()">← Go Back</button>
+            <a href="../index.html">⌂</a>
+            ⊂(◉‿◉)つ
+        </div>
+        <div class="container w50l">
+            <h1>Neonledger</h1>
+            <p><em><b>Planted:</b> Mar 27, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
+            <div class="flex-h">
+                <div class="badge">
+                    <p>web app</p>
+                </div>
+                <div class="badge">
+                    <p>NFTs</p>
+                </div>
+                <div class="badge">
+                    <p>web3</p>
+                </div>
+                <div class="badge">
+                    <p>figma</p>
+                </div>
+                <div class="badge">
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/neonledger/neonledger-hero.jpg">
+        </div>
+        <hr class="mt96">
+        <div class="container grid c2 g96 mt96">
+            <div>
+                <p class="eyebrow">Offloading info</p>
+                <h2>The prompt</h2>
+                <p>Once upon a time we used to be overrun by NFTs and web3 projects one after the other. Simpler times huh? So this project was one of those. We were approached with a simple foundational idea for a NFT hub where users could track both the ones they owned and the market in general, in order to make better trading decisions.</p>
+            </div>
+            <div>
+                <p class="eyebrow">One step at a time</p>
+                <h2>Understanding a new structure of information</h2>
+                <p>The challenge was that as this was a new industry to us at the, we needed to spend a lot of time understanding how Web3, Crypto and NFTs worked. And the initial idea was very brief and global, so it was up to us to determine the whole flow, sections and tools of the app. For that we used many meetings with the stakeholders as well as sketching and flow tools to get a better understanding and validate the elements and interactions the interface needed, resulting in med-res wireframes which clearly shown the basics of this product.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/neonledger/wireframe.png">
+        </div>
+                <hr class="mt96">
+        <div class="container grid c2 g96 mt96">
+            <div>
+                <p class="eyebrow">One step at a time</p>
+                <h2>Going all-in with UI</h2>
+                <p>The stakeholders were clear in the visual style they were after: videogames inspired, and futuristic but in a playful way. So we created a heavily styles design system which made use of custom containers, shadows, light effects, transparencies and more to get that rich, textured and interactive style.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../images/visual-design/neonledger/ui.jpg">
+        </div>
+                <hr class="mt96">
+
+        <div class="container grid c2 g96 mt96">
+            <div>
+                <h2>Keeping track of NFTs</h2>
+                <p>The main usage of the product was being able to track all the info related to the NFTs, pulling across from a lot of databases to showcase the item's history, projections, current state, value and more. All of this information would help the users better decide what to do with their NFTs.</p>
+            </div>
+            <div>
+                <img src="../images/visual-design/neonledger/ui2.png">
+            </div>
+        </div>
+        <div class="container grid c2 g96 mt48">
+            <div>
+                <img src="../images/visual-design/neonledger/ui3.png">
+            </div>
+            <div>
+                <h2>Building community</h2>
+                <p>Part of knowing what to do in the NFTs world was also informed by what the people were saying and doing in that space. So it was really important to add a community aspect to the app, so we created a feed which also tied into each individual NFT and project.</p>
+            </div>
+        </div>
+        <div class="container grid c2 g96 mt48">
+            <div>
+                <h2>Everything-NFTs hub</h2>
+                <p>All of this together resulted in a hub that combined both the community aspects as well as the technical specs of the NFT world. Calendar, gas trackers, own portfolio tracker, etc. Everything was there for Neonledger to become your very own NFT toolset.</p>
+            </div>
+            <div>
+                <img src="../images/visual-design/neonledger/ui4.png">
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container footer">
+            <hr>
+            <div class="footer-content">
+                <p style="margin: 0px;">Got lost? Maybe you can to go back to one of these:</p>
+                <a href="../index.html">Home</a>
+                <a href="../showcase.html">Showcase</a>
+                <a href="../embroidery.html">Embroidery</a>
+                <a href="../about.html">About</a>
+                <div class="footer-socials">
+                    <a href="https://www.are.na/facundo-matiaude/channels" target="_blank">are.na</a>
+                    <a href="https://www.instagram.com/f.matiaude/" target="_blank">Instagram</a>
+                    <a href="mailto:matiaudefacundo@gmail.com" target="_blank">Email</a>
+                    <a href="https://x.com/facumatiaude" target="_blank">x</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showLastModified() {
+            var lastModifiedDate = new Date(document.lastModified);
+            var options = { month: 'short', day: 'numeric', year: 'numeric' };
+            var formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+            document.getElementById("last-modified-date").innerHTML = formattedDate;
+        }
+        // Call the function when the page loads
+        window.onload = showLastModified;
+
+    </script>
+</body>
+
+</html>
