@@ -11,9 +11,82 @@
             --main-muted: #ff2e7410;
         }
 
+/* ─── GIF INTRO OVERLAY ─── */
+
+.gif-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gif-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gif-overlay.gone {
+    display: none;
+}
+
+.gif-label {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.gif-label.hidden {
+    opacity: 0;
+}
+
+.gif-poster,
+.gif-anim {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    object-position: bottom;
+}
+
+.gif-anim {
+    opacity: 0;
+}
+
+.gif-anim.playing {
+    opacity: 1;
+}
+
+.gif-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: white;
+    opacity: 0;
+    transition: width linear;
+    z-index: 2;
+}
+
+.gif-progress.active {
+    opacity: 1;
+}
+
     </style>
 </head>
 <body>
+<div id="gifOverlay" class="gif-overlay" onclick="startGif()">
+    <span class="gif-label" id="gifLabel">Knock to enter</span>
+    <img class="gif-poster" id="gifPoster" src="images/doorstill.gif" alt="">
+    <img class="gif-anim"   id="gifAnim"   src="images/doorgif.gif" alt="">
+    <div class="gif-progress" id="gifProgress"></div>
+</div>
     <section id="hero">
         <div class="container w50" style="margin-left: auto; margin-right: auto;">
             <p>:)</p>
@@ -22,7 +95,7 @@
             <p><em><b>Planted:</b> Jan 30, 2026. <b>Last tended:</b> <span id="last-modified-date"></span></em></p>
             <hr>
             <div class="me">
-                <p>This is me</p>
+                <p>This is (dithered) me</p>
                 <img src="images/me.png" style="width: 100%; max-width: 500px; height: auto;">
             </div>
             <hr>
@@ -45,25 +118,75 @@
         }
         // Call the function when the page loads
         window.onload = showLastModified;
-        
+
+        // ─── CONFIG ───────────────────────────────────────────
+        const GIF_SRC      = 'images/doorgif.gif'; // path to your gif
+        const GIF_DURATION = 2000;                  // gif length in milliseconds
+        const SESSION_KEY  = 'intro_seen';
+        // ──────────────────────────────────────────────────────
+
+        const gifOverlay  = document.getElementById('gifOverlay');
+        const gifPoster   = document.getElementById('gifPoster');
+        const gifAnim     = document.getElementById('gifAnim');
+        const gifProgress = document.getElementById('gifProgress');
+        const gifLabel    = document.getElementById('gifLabel');
+
+        const pageElements = document.querySelectorAll('.hero, .about, .bio, .footer');
+
+        // ─── SESSION CHECK ────────────────────────────────────
+
+        if (sessionStorage.getItem(SESSION_KEY)) {
+            gifOverlay.classList.add('gone');
+        } else {
+            sessionStorage.setItem(SESSION_KEY, 'true');
+        }
+
+        // ─── CLICK HANDLER ────────────────────────────────────
+
+        var gifStarted = false;
+
+        function startGif() {
+            if (gifStarted) return;
+            gifStarted = true;
+
+            gifLabel.classList.add('hidden');
+
+            gifAnim.src = GIF_SRC;
+            gifAnim.classList.add('playing');
+            gifPoster.style.opacity = '0';
+
+            gifProgress.classList.add('active');
+            gifProgress.getBoundingClientRect();
+            gifProgress.style.transitionDuration = GIF_DURATION + 'ms';
+            gifProgress.style.width = '100%';
+
+            setTimeout(dismissGifOverlay, GIF_DURATION);
+        }
+
+        function dismissGifOverlay() {
+            gifOverlay.classList.add('fade-out');
+            gifOverlay.addEventListener('transitionend', function () {
+                gifOverlay.classList.add('gone');
+            }, { once: true });
+        }
     </script>
-    <a href="herelies.html" style="color: var(--main-color);">
-    <pre style="position: fixed; right: 20px; bottom: 20px;">
+    <a href="herelies.html" style="color: var(--main-color); text-decoration: none;">
+    <pre style="position: fixed; right: 20px; bottom: 20px; margin: 0px;">
   _____
  /     \
 |  _|_  |
 |   |   |
 |   |   |
 |_______|
+</a>
 </pre>
-    <pre style="position: fixed; left: 20px; bottom: 20px;">
-
+    <pre style="position: fixed; left: 20px; bottom: 20px; margin: 0px;"">
 
 <em>proudly</em>
 <b>desktop</b>
 first
 
+
 </pre>
-</a>
 </body>
 </html>

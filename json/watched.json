@@ -14,6 +14,23 @@
         "thoughts": null
     },
     {
+        "thing":"Por el bien de Adam",
+        "from":"Laura Wandel",
+        "year":"2025",
+        "type":"movie",
+        "genre":"drama",
+        "thoughts":"44 FCIU. La sensación de asfixia y derrumbe social y logístico del hospital es total, la impotencia, lo abrumador, y sin embargo hacerse el tiempo para escuchar a alguien. Tal vez es por ahí."
+    },
+    {
+        "thing":"La Grazia",
+        "from":"Paolo Sorrentino",
+        "date":"2025",
+        "consumed":"2026-3-29",
+        "type":"movie",
+        "genre":"drama",
+        "thoughts":"Fun fun. Sorrentino tiene un superpoder de hacer cine telenovelesco sin lo crigne de las telenovelas. La música siempre hilando las escenas una tras otra."
+    },
+    {
         "thing":"Kajillionaire",
         "from":"Miranda July",
         "year":"2020",
@@ -96,7 +113,7 @@
         "year":"2025",
         "url":"https://youtu.be/SEUMHTHGwlw?list=RDSEUMHTHGwlw",
         "consumed":"2026-2-12",
-        "type":"videoclip",
+        "type":"video",
         "genre": "spanish pop",
         "tags":["homoerotic art"],
         "thoughts":"Ok wow. Conocía la canción pero no el video y el ultimate hombre trola. Hay mucho twink y mucho arequetipó del ideal gay, pero es muy hermoso ke decirte. For the record: así queda inaugurada la sección videoclip del commonplace"
@@ -180,7 +197,7 @@
         "image": null,
         "url": "https://youtu.be/HVy6fSdOzpw?list=RDHVy6fSdOzpw",
         "consumed": null,
-        "type": "videoclip",
+        "type": "video",
         "genre": null,
         "tags": [
             "mpb"
@@ -238,7 +255,7 @@
         "url": "https://boxd.it/xFcM",
         "consumed": "2026-01-02",
         "type": "movie",
-        "genre": null,
+        "genre": "documentary",
         "tags": [
             "queerness",
             "spain",
@@ -254,11 +271,7 @@
         "url": "https://boxd.it/qeWY",
         "consumed": "2025-12-27",
         "type": "movie",
-        "genre": null,
-        "tags": [
-            "sci-fi",
-            "dystopian"
-        ],
+        "genre": "dystopian",
         "thoughts": "★3 - Con mi marido salimos charlando sobre si la ema era alien o no. Para él era obvio unilateralmente y literalmente que era alien. Para mi anything goes. Ahí, en el ida y vuelta de la charla pensé que tal vez esto de hacer creer al espectador de que la Emma es alien, es parte del juego: los incels se convencen también en su echo chamber que hasta nosotros los que estamos frente a la pantalla, nos lo creemos. El efecto ambiguo simple y clásico pero bien logrado me pareció que estaba bueno. El resto, entretenido."
     },
     {
@@ -326,9 +339,6 @@
         "consumed": "2025-11-11",
         "type": "movie",
         "genre": null,
-        "tags": [
-            "mystical"
-        ],
         "thoughts": "★2 - Fun fun. Aunque pensé que iba a tener mejor fotografía, con todos los sets espectaculares y vestuarios y escenografía que tiene, podría haberlo merecido. La clásica versión de mostro es humano, mostro quiere amor, mostro es femicida, kinda story."
     },
     {

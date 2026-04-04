@@ -14,7 +14,7 @@
     },
     {
         "thing":"faggoting",
-        "image":"images/faggoting.jpg",
+        "image":"../images/collected/faggoting.jpg",
         "type":"image",
         "consumed":"2026-3-25",
         "tags":["queerness", "textile"],
@@ -117,7 +117,7 @@
         "thing":"The ghost of flea",
         "from":"William Blake",
         "year":"1819",
-        "image":"images/ghost-of-flea-market-william-blak.webp",
+        "image":"../images/collected/ghost-of-flea-market-william-blak.webp",
         "url":"https://en.wikipedia.org/wiki/The_Ghost_of_a_Flea#",
         "consumed":"2025-5-17",
         "type":"image",
