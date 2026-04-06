@@ -18,7 +18,7 @@
     inset: 0;
     z-index: 1000;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gif-overlay.fade-out {
@@ -82,9 +82,9 @@
 </head>
 <body>
 <div id="gifOverlay" class="gif-overlay" onclick="startGif()">
-    <span class="gif-label" id="gifLabel">Knock to enter</span>
+    <span class="gif-label" id="gifLabel" style="text-align: center;">Hey stranger...<br>Knock [click] on the door to enter</span>
     <img class="gif-poster" id="gifPoster" src="images/doorstill.gif" alt="">
-    <img class="gif-anim"   id="gifAnim"   src="images/doorgif.gif" alt="">
+    <img class="gif-anim"   id="gifAnim"   src="" alt="">
     <div class="gif-progress" id="gifProgress"></div>
 </div>
     <section id="hero">
@@ -123,7 +123,10 @@
         const GIF_SRC      = 'images/doorgif.gif'; // path to your gif
         const GIF_DURATION = 2000;                  // gif length in milliseconds
         const SESSION_KEY  = 'intro_seen';
-        // ──────────────────────────────────────────────────────
+
+        // Preload the GIF as soon as the page loads
+const preloadedGif = new Image();
+preloadedGif.src = GIF_SRC;
 
         const gifOverlay  = document.getElementById('gifOverlay');
         const gifPoster   = document.getElementById('gifPoster');
