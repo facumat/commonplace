@@ -13,6 +13,15 @@
         "thoughts": "thoughts"
     }, 
     {
+        "thing":"Brujería y contracultura gay",
+        "from":"Arthut Evans",
+        "year":"1978",
+        "type":"book",
+        "consumed":"2026-4-10",
+        "tags":["queerness", "religion"],
+        "thoughts":"Nah tremendo. Libro rompe cocos. Aunque hay que tomarlo con pinzas de vez en cuando, tremendo en fin. Así y todo, la edición que leí venía acompañada de un prólogo y un epílogo que dejaban las bases sentadas de manera muy clara para leer el libro de manera crítica y cuidadosa del estilo y el contexto del autor.<br>Más que brujería, cubre todo desde la religión a la política, siendo la línea común [cómo la iglesia-cristianismo y el complejo militar-industrial nos cagaron la vida]. Me dejó la mente fértil para repensar todo lo escuchado de la historia universal mainstream."
+    },
+    {
         "thing":"Ritual transvestism is the ceremonial practice of wearing clothing associated with the opposite gender, often used in initiation rites, religious festivals, and spiritual ceremonies to temporarily reverse gender roles or honor specific deities. These practices act as structural inversions, bridging spiritual, social, or cosmic dualities. ",
         "from":"Ritual transvestism",
         "type":"glossary",
@@ -518,11 +527,11 @@
         "thoughts": null
     },
     {
-        "thing": "Permacomputing is both a concept and a community of practice oriented around issues of resilience and regenerativity in computer and network technology inspired by permaculture. ପໄଓ☾☼✫ -☆:*",
+        "thing": "Permacomputing is both a concept and a community of practice oriented around issues of resilience and regenerativity in computer and network technology inspired by permaculture. oeriginally coined by viznut in 2020.",
         "from": "Permacomputing",
         "year": null,
         "image": null,
-        "url": null,
+        "url": "https://permacomputing.net/",
         "consumed": "2024-08-08",
         "type": "glossary",
         "tags": [

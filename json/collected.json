@@ -13,6 +13,22 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"permacomputing",
+        "url":"https://permacomputing.net/",
+        "type":"website",
+        "consumed":"2026-4-15",
+        "tags":["handmade web", "the web"],
+        "thoughts":"Great collection of articles, thoughts and resources about permacomputing. See meaning in Glossary."
+    },
+    {
+        "thing":"Maya Man website",
+        "type":"website",
+        "consumed":"2026-4-8",
+        "url":"https://mayaontheinter.net/",
+        "tags":["personal site"],
+        "thoughts":"Another great collection of net art and quirky small sites."
+    },
+    {
         "thing":"faggoting",
         "image":"../images/collected/faggoting.jpg",
         "type":"image",

@@ -32,9 +32,11 @@
 }
 
 .footer {
-    padding: 0px 24px 24px 24px;
+    padding: 24px 24px 24px 24px;
     position: relative;
     box-sizing: border-box;
+    border-top: 0.25px dashed ;
+    border-color: var(--main-color);
 }
 
 .footer-content {
@@ -172,7 +174,10 @@ h2 {
 
 
 .eyebrow {
-    color: var(--main-secondary) ;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 6%;
+    font-size: 12px;
 }
 
 .w50 {

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyph Flux</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #0c150d;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+<script>
+const ASCII_ART = `
+                                                                                                                                                                                               @@@@@@@
+@@@@@                       @@@@@                                                                                                                                        @@@@@            @@@@@@@@@@@@@@@@@
+@@@@@                       @@@@@                                                                                                                                        @@@@@         @@@@@@@@@@@@@@@@@@@@@@;
+@@@@@                       @@@@@                                                                      @@@@@                                                             @@@@@        @@@@@@@@;      .@@@@@@@@@
+@@@@@                       @@@@@                                                                      @@@@@                                                             @@@@@       @@@@@@               @@@@@@
+@@@@@                       @@@@@                                                                      @@@@@                                                             @@@@@      @@@@@@                 @@@@@@
+@@@@@                       @@@@@                                                                      @@@@@                                                             @@@@@      @@@@@                   @@@@@@
+@@@@@                       @@@@@               +@@@@@@@,                     @@@@@@@@            ,,,,,@@@@@,,,,,,             +@@@@@@#                     +@@@@@@      @@@@@      @@@@@@                                      @@@@@@@                     ,@@@@@@@@             .,,,,       @@@@@@@
+@@@@@                       @@@@@           @@@@@@@@@@@@@@@@@             @@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@         .@@@@@@@@@@@@@@S              @@@@@@@@@@@@@%  @@@@@       @@@@@@                                 @@@@@@@@@@@@@@@             +@@@@@@@@@@@@@@@@         @@@@@*  @@@@@@@@@@@@@@@
+@@@@@                       @@@@@         @@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@      @@@@@@@@@@@@@@@@       :@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@@@@@@@@%@@@@@        @@@@@@@@                            @@@@@@@@@@@@@@@@@@@         ?@@@@@@@@@@@@@@@@@@@:       @@@@@S@@@@@@@@@@@@@@@@@@
+@@@@@                       @@@@@       @@@@@@@@         @@@@@@@@      @@@@@@*         @@@@@@          @@@@@            @@@@@@@        @@@@@@@       :@@@@@@@      ,@@@@@@@@@@         ?@@@@@@@@@@#                      @@@@@@@       .@@@@@@.      @@@@@@@         @@@@@@.      @@@@@@@@@@         @@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@:             #@@@@@@     @@@@@            ;@@@@#         @@@@@           @@@@@@            @@@@@@     .@@@@@@           @@@@@@@@            @@@@@@@@@@@@@@                @@@@@@            @@@@@      @@@@@             @@@@@      @@@@@@@@            @@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@                 @@@@@@    @@@@@@                          @@@@@          S@@@@@              @@@@@*    @@@@@;             @@@@@@@               :@@@@@@@@@@@@@@           @@@@@@              @@;                        @@@@@@      @@@@@@.              @@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    *@@@@@                   @@@@@     @@@@@@@                        @@@@@          @@@@@                @@@@@   @@@@@@               @@@@@@                     #@@@@@@@@@@@        @@@@@                                        @@@@@@@@      @@@@@@               @@@@@
+@@@@@                       @@@@@    @@@@@+                   @@@@@@     @@@@@@@@@@@@                  @@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@                ;@@@@@                          @@@@@@@@@     @@@@@*                                  #@@@@@@@@@@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@    @@@@@                     @@@@@        @@@@@@@@@@@@@S             @@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@                 @@@@@                             @@@@@@@    @@@@@                             .@@@@@@@@@@@@@*@@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@    @@@@@                    ,@@@@@            @@@@@@@@@@@@           @@@@@          @@@@@                        @@@@@                 @@@@@                               @@@@@    @@@@@                           @@@@@@@@@@@@     @@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@    @@@@@@                   @@@@@@                  @@@@@@@@         @@@@@          @@@@@                        @@@@@                %@@@@@     @@@@@                     @@@@@@   %@@@@@                        @@@@@@@@           @@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@     @@@@@.                 %@@@@@                      @@@@@@        @@@@@          @@@@@@               ,       .@@@@@               @@@@@@     @@@@@@                    @@@@@@    @@@@@               @@@@+    @@@@@              @@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@     S@@@@@@               @@@@@@    @@@@@@              @@@@@        @@@@@           @@@@@#             %@@@@:    @@@@@@             @@@@@@@      @@@@@@                   @@@@@     %@@@@@             @@@@@;   @@@@@;              @@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@      *@@@@@@+           #@@@@@@      @@@@@@            @@@@@@        @@@@@            @@@@@@           @@@@@@      @@@@@@+         @@@@@@@@@       @@@@@@@               @@@@@@@      @@@@@@@         @@@@@@@    ;@@@@@            @@@@@@@      @@@@@*               @@@@@
+@@@@@                       @@@@@        @@@@@@@@@?. .S@@@@@@@@@        @@@@@@@@#.   +@@@@@@@@         @@@@@@@?+++:      @@@@@@@@@,.:@@@@@@@@@        @@@@@@@@@+,?@@@@@@@@@@@@        @@@@@@@@@+      ,@@@@@@@@@#        +@@@@@@@@%,*@@@@@@@@@      @@@@@@@@,  ,@@@@@@@@@@@@@     @@@@@*               @@@@@
+@@@@@                       @@@@@          @@@@@@@@@@@@@@@@@@@            @@@@@@@@@@@@@@@@@@+           @@@@@@@@@@%       ,@@@@@@@@@@@@@@@@@            @@@@@@@@@@@@@@@# @@@@@          @@@@@@@@@@@@@@@@@@@@@@@            @@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@ @@@@@@@   @@@@@*               @@@@@
+@@@@@                       @@@@@             @@@@@@@@@@@@@                 ?@@@@@@@@@@@@@               S@@@@@@@@%          @@@@@@@@@@@@                 @@@@@@@@@@@    @@@@@             @@@@@@@@@@@@@@@@@                  @@@@@@@@@@@:              @@@@@@@@@@@@     @@@@@@   @@@@@*               @@@@@`;
+
+const GLYPHS = {
+    calm:  ['·', '.', ':', ';', "'", '`'],
+    wave:  ['#', '+', '~', '-', '='],
+    surge: ['$', '%', '*', '!', '^'],
+    hover: ['>', '<', '|', '/', '\\', '?', '!', '~', '*', '#', '^', '&']
+};
+
+const WAVE_SPEED   = 0.006;
+const WAVE_SCALE   = 0.025;
+const HOVER_RADIUS = 70;
+const ART_COLOR    = [232, 230, 220];
+const HOVER_COLOR  = [217, 119, 87];
+const BG_COLOR     = [12, 21, 13];
+const DOT_SPACING  = 14;
+
+let cells  = [];
+let bgDots = [];
+let charW  = 5;
+let charH  = 9;
+let t      = 0;
+
+function buildCells() {
+    cells = [];
+    randomSeed(42);
+    noiseSeed(42);
+
+    const lines = ASCII_ART.split('\n');
+    let minC = 99999, maxC = 0, minR = 99999, maxR = 0;
+
+    for (let r = 0; r < lines.length; r++) {
+        for (let c = 0; c < lines[r].length; c++) {
+            if (lines[r][c] !== ' ') {
+                if (c < minC) minC = c;
+                if (c > maxC) maxC = c;
+                if (r < minR) minR = r;
+                if (r > maxR) maxR = r;
+            }
+        }
+    }
+    if (minC === 99999) return;
+
+    const artW = maxC - minC + 1;
+    const artH = maxR - minR + 1;
+    const padX = 32, padY = 36;
+
+    charW = Math.max(3, Math.floor((width  - padX * 2) / artW));
+    charH = Math.max(5, Math.floor((height - padY * 2) / artH));
+
+    const offX = Math.floor((width  - artW * charW) / 2);
+    const offY = Math.floor((height - artH * charH) / 2);
+
+    for (let r = minR; r <= maxR; r++) {
+        const line = lines[r] || '';
+        for (let c = minC; c <= maxC; c++) {
+            const ch  = (c < line.length) ? line[c] : ' ';
+            const col = c - minC;
+            const row = r - minR;
+            const px  = offX + col * charW;
+            const py  = offY + row * charH;
+            cells.push({
+                ch, origCh: ch,
+                active: ch !== ' ',
+                col, row,
+                no:        random(600),
+                heat:      0,
+                displayCh: ch,
+                swapTimer: Math.floor(random(40)),
+                px, py,
+                cx: px + charW * 0.5,
+                cy: py + charH * 0.65
+            });
+        }
+    }
+}
+
+function buildBgDots() {
+    bgDots = [];
+    const cols = Math.ceil(width  / DOT_SPACING) + 1;
+    const rows = Math.ceil(height / DOT_SPACING) + 1;
+    for (let r = 0; r < rows; r++)
+        for (let c = 0; c < cols; c++)
+            bgDots.push({ x: c * DOT_SPACING, y: r * DOT_SPACING, no: random(400) });
+}
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    textFont('Courier New');
+    textAlign(LEFT, TOP);
+    noStroke();
+    buildCells();
+    buildBgDots();
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    buildCells();
+    buildBgDots();
+}
+
+function draw() {
+    background(BG_COLOR[0], BG_COLOR[1], BG_COLOR[2]);
+
+    // Background dot grid
+    for (let i = 0; i < bgDots.length; i++) {
+        const d = bgDots[i];
+        const n = noise(d.x * 0.013, d.y * 0.013, t * 0.18 + d.no * 0.0025);
+        fill(ART_COLOR[0], ART_COLOR[1], ART_COLOR[2], 6 + 22 * n);
+        ellipse(d.x, d.y, 1.5, 1.5);
+    }
+
+    // Art cells
+    textSize(charH);
+    const mx = mouseX;
+    const my = mouseY;
+
+    for (let i = 0; i < cells.length; i++) {
+        const cell = cells[i];
+        if (!cell.active) continue;
+
+        const dx   = mx - cell.cx;
+        const dy   = my - cell.cy;
+        const prox = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) / HOVER_RADIUS);
+        cell.heat  = prox > 0
+            ? Math.min(1.0, cell.heat + prox * 0.32)
+            : cell.heat * 0.90;
+        const h = cell.heat;
+
+        const n = noise(
+            cell.col * WAVE_SCALE,
+            cell.row * WAVE_SCALE * 0.72,
+            t + cell.no * 0.0018
+        );
+
+        if (--cell.swapTimer <= 0) {
+            if      (h > 0.22) { cell.displayCh = GLYPHS.hover[Math.floor(random(GLYPHS.hover.length))]; cell.swapTimer = Math.floor(2  + random(4));  }
+            else if (n > 0.80) { cell.displayCh = GLYPHS.surge[Math.floor(random(GLYPHS.surge.length))]; cell.swapTimer = Math.floor(3  + random(9));  }
+            else if (n > 0.60) { cell.displayCh = GLYPHS.wave [Math.floor(random(GLYPHS.wave.length))];  cell.swapTimer = Math.floor(7  + random(16)); }
+            else if (n < 0.20) { cell.displayCh = GLYPHS.calm [Math.floor(random(GLYPHS.calm.length))];  cell.swapTimer = Math.floor(12 + random(28)); }
+            else               { cell.displayCh = cell.origCh;                                            cell.swapTimer = Math.floor(14 + random(32)); }
+        }
+
+        const brightness = 0.50 + 0.50 * n;
+        let r, g, b, a;
+        if (h > 0.01) {
+            const f = Math.min(h * 1.1, 1.0);
+            r = ART_COLOR[0] + (HOVER_COLOR[0] - ART_COLOR[0]) * f;
+            g = ART_COLOR[1] + (HOVER_COLOR[1] - ART_COLOR[1]) * f;
+            b = ART_COLOR[2] + (HOVER_COLOR[2] - ART_COLOR[2]) * f;
+            a = 150 + 105 * Math.min(h, 1) + 20 * Math.sin(t * 8 + i * 0.3) * h;
+        } else {
+            r = ART_COLOR[0] * brightness;
+            g = ART_COLOR[1] * brightness;
+            b = ART_COLOR[2] * brightness;
+            a = 100 + 155 * n;
+        }
+
+        fill(r, g, b, a);
+        text(cell.displayCh, cell.px, cell.py);
+    }
+
+    t += WAVE_SPEED;
+}
+</script>
+</body>
+</html>
