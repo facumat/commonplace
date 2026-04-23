@@ -201,6 +201,18 @@ h2 {
     margin-left: auto;
 }
 
+.wf50l {
+    width: 50%;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.wf50r {
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+}
+
 .w25 {
     width: 25%;
 }
@@ -333,6 +345,10 @@ h2 {
     margin-bottom: 48px;
 }
 
+.mb96 {
+    margin-bottom: 96px;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -361,6 +377,14 @@ td {
     .w50 {
     width: 100%;
     }
+
+    .wf50l {
+    width: 100%;
+}
+
+.wf50r {
+    width: 100%;
+}
 
     .w25 {
         width: 100%;
@@ -395,6 +419,14 @@ td {
     .w50 {
     width: 100%;
     }
+
+        .wf50l {
+    width: 100%;
+}
+
+.wf50r {
+    width: 100%;
+}
 
     .w25 {
         width: 50%;

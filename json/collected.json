@@ -13,6 +13,20 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Jake",
+        "type":"website",
+        "consumed":"2026-4-22",
+        "tags":["personal site"],
+        "thoughts":"Love how scrappy it looks. Feels like a homemade notebook cover."
+    },
+    {
+        "thing":"Spencer Chang",
+        "consumed":"2026-4-10",
+        "type":"website",
+        "url":"https://spencer.place/",
+        "tags":["personal site"]
+    },
+    {
         "thing":"permacomputing",
         "url":"https://permacomputing.net/",
         "type":"website",
