@@ -409,6 +409,10 @@ td {
         margin-top: 16px;
     }
 
+    .h1 {
+        font-size: 24px;
+    }
+
 }
 
 @media (max-width: 1024px) {
