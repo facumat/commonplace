@@ -13,6 +13,39 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Damaged eart technology",
+        "from":"Marloes de Valk",
+        "url":"https://damaged.bleu255.com/",
+        "consumed":"2026-5-5",
+        "type":"resource",
+        "tags":["the web"],
+        "thoughts":"Collection of info on thoughs and movements for sustainable technology."
+    },
+    {
+        "thing":"The big artists opportunities list",
+        "type":"resource",
+        "consumed":"2026-5-5",
+        "url":"https://docs.google.com/spreadsheets/d/1KWIzznlFNs_rQCEzW5ub6ehwaLcwR80xbuOokXwRa_Y/htmlview#gid=0",
+        "tags":["art opportunities"],
+        "thoughts":"Mostly residencies, some grant funding & galleries. International, but with a US-lens (where I'm from so it leans that way). Please share with your communities! "
+    },
+    {
+        "thing":"Places from computational poetry",
+        "url":"https://docs.google.com/document/d/1B9AWI6OCtClxu1WnuXJgq6at0dvIdJwviksExzw0TDA/edit?usp=sharing",
+        "consumed":"2026-5-5",
+        "type":"resource",
+        "tags":["art opportunities", "poetic web"],
+        "thgoughts":"zines, mags, and venues that are dedicated to something like computational poetry (that accept submissions)"
+    },
+    {
+        "thing":"If, then: Technology and Poetics",
+        "type":"community",
+        "url":"https://ifthen.cargo.site/",
+        "consumed":"2026-5-5",
+        "tags":["handmade web", "poetic web"],
+        "thoughts":"Started during the fall of 2020, If, Then: Technology and Poetics is a working group and workshop series that meets monthly over Zoom. In this space, we bring together writers, programmers, artists, and scholars investigating the relationships between humans and machines and the works of art, literature, and visual knowledge they produce together. "
+    },
+    {
         "thing":"ONE the homosexual viewpoint - Digital magazines collection",
         "from":"Houston LGBT history",
         "type":"archive",
