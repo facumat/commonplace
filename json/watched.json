@@ -14,6 +14,23 @@
         "thoughts": null
     },
     {
+        "thing":" Why Do We Anthropomorphize Computers?... and dehumanize ourselves in the process? ",
+        "from":"Marloes de Valk",
+        "url":"https://media.ccc.de/v/34c3-9296-why_do_we_anthropomorphize_computers",
+        "consumed":"2026-5-6",
+        "type":"video",
+        "tags":["permacomputing"]
+    },
+    {
+        "thing":"Resisting AI",
+        "from":"Dan McQuillan",
+        "type":"video",
+        "url":"https://www.youtube.com/watch?v=WCnSCB19l7A&t=4s",
+        "consumed":"2026-5-6",
+        "tags":["ai", "permacomputing"],
+        "thoughts":"Great and engaging talk on resisting AI and decomputing as both degrowth on technology and decolonialisim."
+    },
+    {
         "thing":"Por el bien de Adam",
         "from":"Laura Wandel",
         "year":"2025",
