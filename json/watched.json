@@ -13,6 +13,16 @@
         ],
         "thoughts": null
     },
+
+    {
+        "thing": "Bobbin lace and the ancestral skill (and patience) of the palilleiras for its preparation",
+        "from":"Eugenio Monesma - Documentales",
+        "type":"video",
+        "tags":["textile"],
+        "consumed":"2026-5-18",
+        "thoughts":"Ugh quiero aprender esta t[ecnica.",
+        "url":"https://www.youtube.com/watch?v=d7eqwQ3RtXU"
+    },
     {
         "thing":" Why Do We Anthropomorphize Computers?... and dehumanize ourselves in the process? ",
         "from":"Marloes de Valk",
@@ -321,7 +331,6 @@
         "thing": "Kiki's Delivery Service",
         "from": null,
         "year": "1989",
-        "image": "images/kikis-delivery-service-1989.gif",
         "url": "https://boxd.it/1JAY",
         "consumed": "2025-11-26",
         "type": "movie",
@@ -335,7 +344,6 @@
         "thing": "The Mastermind",
         "from": "Kelly Reichardt",
         "year": "2025",
-        "image": "images/the-mastermind-2025.gif",
         "url": "https://boxd.it/Q7ge",
         "consumed": "2025-11-11",
         "type": "movie",
@@ -348,7 +356,6 @@
         "thing": "Frankenstein",
         "from": "Guillermo Del Toro",
         "year": "2025",
-        "image": "images/frankenstein-2025.gif",
         "url": "https://boxd.it/Ecsg",
         "consumed": "2025-11-11",
         "type": "movie",

@@ -13,6 +13,40 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"Museum of the Human Web",
+        "url":"https://museum.parallel.ai/",
+        "consumed":"2026-6-19",
+        "type":"website",
+        "tags":["the web"]
+    },
+    {
+        "thing":"Sampler",
+        "from":"Elizabeth Parker",
+        "year":"1813",
+        "image":"..images/collected/elizabethparker.jpg",
+        "url":"https://www.vam.ac.uk/articles/katerina-jebb-installation#slideshow=55436&slide=0",
+        "type":"art",
+        "tags":["embroidery", "cross stitch"],
+        "thoughts":"Such a contemporary use of cross stitch is amazing to see in s19. See the link for zoomable file."
+    },
+    {
+        "thing":"19th century embroidery sampler",
+        "from":"Katerina Jebb / Elizabeth Parker installation",
+        "consumed":"2026-5-18",
+        "type":"art",
+        "tags":["embroidery"],
+        "url":"https://www.vam.ac.uk/articles/katerina-jebb-installation#slideshow=55436&slide=0"
+    },
+    {
+        "thing":"EAC-ACB",
+        "from":"Embroiderer's Association of Canada",
+        "type":"community",
+        "consumed":"2026-5-12",
+        "utl":"https://eac-acb.ca/product/advanced-counted-thread",
+        "tags":["textile", "embroidery"],
+        "thoughts":"Has a beginner and advanced course on counted thread techniques. Looking foraward to do them"
+    },
+    {
         "thing":"Damaged earth technology",
         "from":"Marloes de Valk",
         "url":"https://damaged.bleu255.com/",
@@ -201,7 +235,7 @@
         "image":"../images/collected/ghost-of-flea-market-william-blak.webp",
         "url":"https://en.wikipedia.org/wiki/The_Ghost_of_a_Flea#",
         "consumed":"2025-5-17",
-        "type":"image",
+        "type":"art",
         "tags":["creatures"],
         "thoughts":"I always see this creature as a magician or a showman dancing around with his hat lol"
     },
