@@ -49,7 +49,7 @@
             margin-bottom: 16px;
         }
 
-        .tag-filter-btn, .type-filter-btn, .genre-filter-btn {
+        .tag-filter-btn, .type-filter-btn {
             font-family: "Times", serif;
             font-size: 16px;
             letter-spacing: -0.6%;
@@ -60,12 +60,12 @@
             border: 0.25px dashed ;
             border-color: #ffffff00;        }
 
-        .tag-filter-btn:hover, .type-filter-btn:hover, .genre-filter-btn:hover  {
+        .tag-filter-btn:hover, .type-filter-btn:hover  {
             border: 0.25px solid ;
             border-color: var(--main-color);
         }
 
-        .tag-filter-btn.active, .type-filter-btn.active, .genre-filter-btn.active {
+        .tag-filter-btn.active, .type-filter-btn.active {
             background-color: #2E5FFF35;
             border: 0.25px dashed ;
             border-color: var(--main-color);
@@ -105,10 +105,6 @@
                 <div class="filter-section">
                     <p>Filter by Type:</p>
                     <div class="filters-group" id="type-filters"></div>
-                </div>
-                <div class="filter-section">
-                    <p>Filter by Genre:</p>
-                    <div class="filters-group" id="genre-filters"></div>
                 </div>
                 <div class="filter-section">
                     <p>Filter by Tags:</p>
@@ -170,16 +166,6 @@
             displayFilteredItems();
         }
 
-        // Toggle genre filter
-        function toggleGenreFilter(genre) {
-            if (selectedGenres.has(genre)) {
-                selectedGenres.delete(genre);
-            } else {
-                selectedGenres.add(genre);
-            }
-            updateFilterButtons();
-            displayFilteredItems();
-        }
 
         // Handle search input
         function handleSearch(event) {
@@ -207,14 +193,6 @@
                 }
             });
 
-            document.querySelectorAll('.genre-filter-btn').forEach(btn => {
-                const genre = btn.dataset.genre;
-                if (selectedGenres.has(genre)) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
         }
 
         // Clear filters
@@ -239,12 +217,6 @@
                 );
             }
 
-            // Filter by genre if any genres selected
-            if (selectedGenres.size > 0) {
-                filteredItems = filteredItems.filter(item => 
-                    selectedGenres.has(item.genre)
-                );
-            }
 
             // Filter by tags if any tags selected
             if (selectedTags.size > 0) {
@@ -259,7 +231,6 @@
                 filteredItems = filteredItems.filter(item => {
                     const title = (item.thing || '').toLowerCase();
                     const from = (item.from || '').toLowerCase();
-                    const genre = (item.genre || '').toLowerCase();
                     const thoughts = (item.thoughts || '').toLowerCase();
                     const tags = (item.tags || []).join(' ').toLowerCase();
                     
@@ -267,7 +238,6 @@
                            from.includes(searchText) || 
                            thoughts.includes(searchText) ||
                            tags.includes(searchText) ||
-                           genre.includes(searchText);
                 });
             }
 
@@ -283,7 +253,6 @@
 
             items.forEach(item => {
                 const title = item.thing;
-                const genre = item.genre;
                 const date = item.consumed;
                 const tags = item.tags || [];
                 const thoughts = item.thoughts || '';
@@ -315,7 +284,7 @@
                             <div class="content">
                                 <h3>${title}</h3>
                                 <p>${from} ${yearDisplay}</p>
-                                <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
+                                <p>${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
                         </div>
@@ -338,7 +307,7 @@
                                 <h3>${title}</h3>
                                 <p>${from} ${yearDisplay}</p>
                                 ${item.url && item.url !== 'null' ? `<a href="${item.url}" target="_blank">Link</a>` : ''}
-                                <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
+                                <p>${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
                         </div>
@@ -350,7 +319,7 @@
                             <div class="content">
                                 <h3>${title}</h3>
                                 <p>${from} ${yearDisplay}</p>
-                                <p>${genre}${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
+                                <p>${thoughts ? `. On <em>${tags.join(', ')}</em>` : ''}</p>
                                 ${thoughts ? `<p>${thoughts}</p>` : ''}
                             </div>
                         </div>
@@ -442,11 +411,6 @@
                 if (item.type) types.add(item.type);
             });
 
-            // Extract unique genres
-            const genres = new Set();
-            allItems.forEach(item => {
-                if (item.genre) genres.add(item.genre);
-            });
 
             // Extract unique tags
             const tags = new Set();
@@ -476,17 +440,6 @@
                 btn.textContent = tag;
                 btn.onclick = () => toggleTagFilter(tag);
                 tagFiltersContainer.appendChild(btn);
-            });
-
-            // Create genre filter buttons
-            const genreFiltersContainer = document.getElementById('genre-filters');
-            Array.from(genres).sort().forEach(genre => {
-                const btn = document.createElement('button');
-                btn.className = 'genre-filter-btn';
-                btn.dataset.genre = genre;
-                btn.textContent = genre;
-                btn.onclick = () => toggleGenreFilter(genre);
-                genreFiltersContainer.appendChild(btn);
             });
 
             // Connect search input
