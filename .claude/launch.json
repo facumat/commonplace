@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cross-stitch-font",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "cross-stitch-font"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "static-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "http-server", "-p", "8899", "-c-1", "--silent"],
+      "port": 8899
+    }
+  ]
+}

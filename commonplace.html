@@ -226,7 +226,6 @@
                 });
             }
 
-            // Filter by search text
             if (searchText) {
                 filteredItems = filteredItems.filter(item => {
                     const title = (item.thing || '').toLowerCase();
@@ -235,9 +234,9 @@
                     const tags = (item.tags || []).join(' ').toLowerCase();
                     
                     return title.includes(searchText) || 
-                           from.includes(searchText) || 
-                           thoughts.includes(searchText) ||
-                           tags.includes(searchText) ||
+                        from.includes(searchText) || 
+                        thoughts.includes(searchText) ||
+                        tags.includes(searchText);   // ← remove trailing `||`, add semicolon
                 });
             }
 
