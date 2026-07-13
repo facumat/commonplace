@@ -5,13 +5,13 @@
   --muted: #8a8378;
   --line: #e4dccd;
   --line-major: #cfc4ad;
-  --thread: #a63d2f;
-  --thread-soft: rgba(166, 61, 47, 0.12);
-  --baseline: #c0392b;
+  --thread: #33302b;
+  --thread-soft:#55432725;
+  --baseline: #4015FF;
   --xheight: #2980b9;
   --cap: #8e44ad;
   --accent: #4a6b52;
-  font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Arial', system-ui, sans-serif;
   color: var(--ink);
 }
 
@@ -161,7 +161,7 @@ body {
 .glyph-cell.is-drawn {
   color: var(--ink);
   background: var(--thread-soft);
-  border-color: rgba(166, 61, 47, 0.4);
+  border: 1px solid #33302b65;
 }
 
 .glyph-cell.is-current {

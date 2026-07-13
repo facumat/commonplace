@@ -49,8 +49,10 @@ npm run build -- --outDir ../xstitch-font-builder --emptyOutDir
   glyph.
 - **Export** builds TTFs entirely client-side with `opentype.js`, each style
   downloadable individually or all at once: Block, the solid font
-  (`name.ttf`); Cross, where every cell is an X stitch (`name-stitch.ttf`,
-  family "Name Stitch"); and Cross + grid, the Xs over the fabric grid
+  (`name.ttf`); Outline, every cell as a hollow square frame
+  (`name-outline.ttf`, family "Name Outline"); Cross, where every cell is an
+  X stitch (`name-stitch.ttf`, family "Name Stitch"); and Cross + grid, the
+  Xs over the fabric grid
   (`name-chart.ttf`, family "Name Chart") — the grid covers each glyph's full
   advance width and em height (space included), so chart text sets as one
   continuous band of fabric. The chart font is a COLR/CPAL color font: the

@@ -22,6 +22,7 @@ export default function ExportPanel({ project, onImport, onReset, onClearFont }:
 
   const VARIANTS: { variant: FontVariant; label: string; fileSuffix: string }[] = [
     { variant: 'solid', label: 'Block', fileSuffix: '' },
+    { variant: 'outline', label: 'Outline', fileSuffix: '-outline' },
     { variant: 'stitch', label: 'Cross', fileSuffix: '-stitch' },
     { variant: 'chart', label: 'Cross + grid', fileSuffix: '-chart' },
   ];
@@ -79,7 +80,7 @@ export default function ExportPanel({ project, onImport, onReset, onClearFont }:
         onClick={() => void exportAll()}
         disabled={drawnCount === 0}
       >
-        Download all three
+        Download all four
       </button>
       {drawnCount === 0 && <p className="hint">Draw at least one glyph first.</p>}
       {error && <p className="error">{error}</p>}

@@ -7,17 +7,20 @@ import { halfStitchPolygon } from './stitchShapes';
 export const UNITS_PER_EM = 1000;
 
 /**
- * solid  — merged squares, the "real" font
- * stitch — every cell drawn as an X cross
- * chart  — X crosses plus the underlying fabric grid
+ * solid   — merged squares, the "real" font
+ * stitch  — every cell drawn as an X cross
+ * chart   — X crosses plus the underlying fabric grid
+ * outline — every cell drawn as a hollow square frame
  */
-export type FontVariant = 'solid' | 'stitch' | 'chart';
+export type FontVariant = 'solid' | 'stitch' | 'chart' | 'outline';
 
 // X-cross proportions, as fractions of one cell
 const X_INSET = 0.15;
 const X_THICKNESS = 0.28;
 // fabric grid line thickness in font units
 const GRID_LINE_UNITS = 4;
+// outline variant frame thickness, as a fraction of one cell
+const OUTLINE_THICKNESS = 0.08;
 
 // chart variant colors (CPAL palette): fabric at 50% black, crosses full black
 const CHART_GRID_COLOR = '#00000080';
@@ -218,6 +221,52 @@ function addStitchCrosses(
 }
 
 /**
+ * Draw every stitched cell as a hollow frame: thin bars along the edges of
+ * the cell square (or of the half-stitch band). Bars sit centered on the
+ * edges and extend half a thickness past each corner, so neighboring cells
+ * share their boundary line and corners close cleanly.
+ */
+function addOutlinedCells(
+  path: Path,
+  stitches: Map<string, StitchType>,
+  gridSize: number,
+  metrics: GridMetrics
+): void {
+  const { baselineRow } = metrics;
+  const scale = UNITS_PER_EM / gridSize;
+  const t = Math.max(4, OUTLINE_THICKNESS * scale);
+  for (const [key, type] of stitches) {
+    const [c, r] = parseKey(key);
+    let poly: Pt[];
+    if (type === 'x') {
+      const x0 = c * scale;
+      const x1 = (c + 1) * scale;
+      const yTop = (baselineRow - r) * scale;
+      const yBot = (baselineRow - r - 1) * scale;
+      poly = [
+        [x0, yTop],
+        [x1, yTop],
+        [x1, yBot],
+        [x0, yBot],
+      ];
+    } else {
+      poly = halfStitchPolygon(type, c, r).map(([gx, gy]) => [
+        gx * scale,
+        (baselineRow - gy) * scale,
+      ]);
+    }
+    for (let i = 0; i < poly.length; i++) {
+      const [ax, ay] = poly[i];
+      const [bx, by] = poly[(i + 1) % poly.length];
+      const len = Math.hypot(bx - ax, by - ay);
+      const ux = ((bx - ax) / len) * (t / 2);
+      const uy = ((by - ay) / len) * (t / 2);
+      addBar(path, ax - ux, ay - uy, bx + ux, by + uy, t);
+    }
+  }
+}
+
+/**
  * The fabric grid behind a glyph: horizontal lines on every row across the
  * full advance width, vertical lines on every column. The right-edge column
  * is skipped and the left edge straddles x=0, so adjacent glyphs share their
@@ -283,6 +332,8 @@ export function buildFont(
       if (hasInk) path = glyphToPath(data, gridSize, metrics);
     } else if (variant === 'stitch') {
       if (hasInk) addStitchCrosses(path, data.stitches, gridSize, metrics);
+    } else if (variant === 'outline') {
+      if (hasInk) addOutlinedCells(path, data.stitches, gridSize, metrics);
     } else {
       // the space gets fabric too, so chart text reads as one continuous band
       gridPath = new Path();
@@ -327,7 +378,14 @@ export function buildFont(
   }
 
   const baseName = familyName || project.name || 'My Stitch Font';
-  const suffix = variant === 'stitch' ? ' Stitch' : variant === 'chart' ? ' Chart' : '';
+  const suffix =
+    variant === 'stitch'
+      ? ' Stitch'
+      : variant === 'chart'
+        ? ' Chart'
+        : variant === 'outline'
+          ? ' Outline'
+          : '';
 
   const font = new Font({
     familyName: baseName + suffix,

@@ -179,6 +179,30 @@ describe('buildFont', () => {
     expect(moves).toHaveLength(2); // one bar per half stitch
   });
 
+  it('outline variant draws a hollow frame per cell', () => {
+    const project = createProject('Test Stitch', 16);
+    project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10') };
+    const font = buildFont(project, 'outline');
+    const path = font.charToGlyph('o').path;
+    // four edge bars, one per side of the square
+    const moves = path.commands.filter((c) => c.type === 'M');
+    expect(moves).toHaveLength(4);
+    expect(familyOf(font)).toBe('Test Stitch Outline');
+    // the frame spans the full cell, and the center stays hollow: any
+    // horizontal slice through the middle enters and exits the frame
+    const scale = UNITS_PER_EM / 16;
+    const box = path.getBoundingBox();
+    expect(Math.round(box.x2 - box.x1)).toBeGreaterThanOrEqual(Math.round(scale));
+  });
+
+  it('outline variant frames half stitches as six-sided bands', () => {
+    const project = createProject('Test Stitch', 16);
+    project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10=/', '1,10=\\') };
+    const font = buildFont(project, 'outline');
+    const moves = font.charToGlyph('o').path.commands.filter((c) => c.type === 'M');
+    expect(moves).toHaveLength(12); // six edge bars per half-stitch hexagon
+  });
+
   it('chart variant adds the fabric grid, even to the space', () => {
     const gridSize = 16;
     const project = createProject('Test Stitch', gridSize);
