@@ -208,10 +208,40 @@ body {
   vertical-align: super;
 }
 
-.toolbar-hint {
+.toolbar-spacer {
   flex: 1;
-  text-align: center;
-  margin: 0;
+}
+
+.info-tip {
+  cursor: help;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  padding: 2px;
+}
+
+.info-tip:hover {
+  color: var(--ink);
+}
+
+.selection-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(41, 128, 185, 0.08);
+  border: 1px solid rgba(41, 128, 185, 0.35);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.selection-actions span {
+  font-size: 12px;
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.selection-actions .btn {
+  padding: 3px 7px;
 }
 
 .btn-save {
@@ -320,6 +350,23 @@ body {
 
 .cell-hover {
   fill: rgba(166, 61, 47, 0.15);
+  pointer-events: none;
+}
+
+.stitch-grid.is-select {
+  cursor: default;
+}
+
+.cell-selected {
+  fill: rgba(41, 128, 185, 0.25);
+  pointer-events: none;
+}
+
+.marquee {
+  fill: rgba(41, 128, 185, 0.12);
+  stroke: #2980b9;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
   pointer-events: none;
 }
 

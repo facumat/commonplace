@@ -6,7 +6,11 @@ export const SPANISH = [
   'á', 'é', 'í', 'ó', 'ú', 'ü', 'ñ',
   'Á', 'É', 'Í', 'Ó', 'Ú', 'Ü', 'Ñ',
 ];
-export const PUNCTUATION = ['.', ',', '!', '?', '¡', '¿', "'", '"', '-', ':'];
+export const PUNCTUATION = [
+  '.', ',', ';', ':', '!', '?', '¡', '¿',
+  "'", '"', '«', '»', '-', '_', '(', ')',
+  '&', '@', '#', '%', '+', '=', '*', '/', '…',
+];
 export const SPACE = ' ';
 
 export const GLYPH_SET: string[] = [
@@ -52,11 +56,26 @@ const GLYPH_NAMES: Record<string, string> = {
   '¿': 'questiondown',
   '.': 'period',
   ',': 'comma',
+  ';': 'semicolon',
   '!': 'exclam',
   '?': 'question',
   "'": 'quotesingle',
   '"': 'quotedbl',
+  '«': 'guillemotleft',
+  '»': 'guillemotright',
   '-': 'hyphen',
+  '_': 'underscore',
+  '(': 'parenleft',
+  ')': 'parenright',
+  '&': 'ampersand',
+  '@': 'at',
+  '#': 'numbersign',
+  '%': 'percent',
+  '+': 'plus',
+  '=': 'equal',
+  '*': 'asterisk',
+  '/': 'slash',
+  '…': 'ellipsis',
   ':': 'colon',
   ' ': 'space',
   '0': 'zero',

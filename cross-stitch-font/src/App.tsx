@@ -42,12 +42,19 @@ const TOOLS: { type: StitchType; label: string; title: string }[] = [
 
 const EMPTY_STITCHES: Stitches = new Map();
 
+const TOOLBAR_TIP =
+  'Click / drag to stitch · right-click or ⌥ to unpick · ⏎ saves the glyph · ' +
+  'type a character to jump to it · ⇥ toggles select mode · in select mode: ' +
+  'drag to select an area, drag the selection to move it, ⌫ deletes it, Esc clears it';
+
 export default function App() {
   const [project, setProject] = useState<Project>(loadProject);
   // unsaved, per-character work — only "Save glyph" burns a draft into the font
   const [drafts, setDrafts] = useState<DraftMap>(loadDrafts);
   const [currentChar, setCurrentChar] = useState('A');
   const [tool, setTool] = useState<StitchType>('x');
+  const [editMode, setEditMode] = useState<'stitch' | 'select'>('stitch');
+  const [selection, setSelection] = useState<Set<string>>(new Set());
   const [leftTab, setLeftTab] = useState<'chars' | 'grid'>('chars');
   const [rightTab, setRightTab] = useState<'glyph' | 'text'>('glyph');
   const [sampleText, setSampleText] = useState('Abc 123');
@@ -60,6 +67,8 @@ export default function App() {
   projectRef.current = project;
   const draftsRef = useRef(drafts);
   draftsRef.current = drafts;
+  const selectionRef = useRef(selection);
+  selectionRef.current = selection;
   // bump to re-render undo/redo button state after history mutations
   const [, setHistoryTick] = useState(0);
 
@@ -102,6 +111,11 @@ export default function App() {
       return next;
     });
   }, []);
+
+  // the selection belongs to one glyph; leaving it clears the selection
+  useEffect(() => {
+    setSelection(new Set());
+  }, [currentChar]);
 
   const historyFor = (char: string): GlyphHistory => {
     let h = historyRef.current.get(char);
@@ -148,6 +162,36 @@ export default function App() {
     setHistoryTick((t) => t + 1);
   }, [currentChar, setDraft]);
 
+  /** Apply one atomic, undoable edit to the current draft. */
+  const applyEdit = useCallback(
+    (next: Stitches) => {
+      const before = draftNow(currentChar);
+      if (stitchesEqual(before, next)) return;
+      pushHistory(currentChar, before);
+      setDraft(currentChar, next);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [currentChar, setDraft]
+  );
+
+  const deleteSelection = useCallback(() => {
+    const sel = selectionRef.current;
+    if (sel.size === 0) return;
+    const next = new Map(draftNow(currentChar));
+    for (const key of sel) next.delete(key);
+    applyEdit(next);
+    setSelection(new Set());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentChar, applyEdit]);
+
+  const restyleSelection = (type: StitchType) => {
+    const sel = selectionRef.current;
+    if (sel.size === 0) return;
+    const next = new Map(draftNow(currentChar));
+    for (const key of sel) if (next.has(key)) next.set(key, type);
+    applyEdit(next);
+  };
+
   /** Burn the current draft into the font (set, previews, export). */
   const saveGlyph = useCallback(() => {
     const char = currentChar;
@@ -174,15 +218,16 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setTextFullSize(false);
-        return;
-      }
       const target = e.target as HTMLElement;
       const typing =
         target.tagName === 'INPUT' ||
         target.tagName === 'TEXTAREA' ||
         target.tagName === 'SELECT';
+      if (e.key === 'Escape') {
+        if (selectionRef.current.size > 0) setSelection(new Set());
+        else setTextFullSize(false);
+        return;
+      }
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'z') {
         if (typing) return;
         e.preventDefault();
@@ -190,11 +235,32 @@ export default function App() {
         else undo();
         return;
       }
+      // select all stitches of the current draft
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'a') {
+        if (typing) return;
+        e.preventDefault();
+        setSelection(new Set(draftNow(currentChar).keys()));
+        setEditMode('select');
+        return;
+      }
       if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
-      // Return saves ("burns") the current draft
+      // Tab toggles between stitching and selecting
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        setEditMode((m) => (m === 'select' ? 'stitch' : 'select'));
+        return;
+      }
+      // Return always saves ("burns") the current draft
       if (e.key === 'Enter') {
-        if (target.tagName === 'BUTTON') return; // focused buttons keep Enter
+        e.preventDefault();
         saveGlyph();
+        return;
+      }
+      if (e.key === 'Delete' || e.key === 'Backspace') {
+        if (selectionRef.current.size > 0) {
+          e.preventDefault();
+          deleteSelection();
+        }
         return;
       }
       // typing a character jumps straight to it
@@ -206,7 +272,8 @@ export default function App() {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [undo, redo, saveGlyph]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [undo, redo, saveGlyph, deleteSelection, currentChar]);
 
   /** Empty the working draft; the saved glyph stays until "Save glyph". */
   const clearDraft = () => {
@@ -214,6 +281,7 @@ export default function App() {
     if (before.size === 0) return;
     pushHistory(currentChar, before);
     setDraft(currentChar, new Map());
+    setSelection(new Set());
   };
 
   const changeGridSize = (size: number) => {
@@ -254,6 +322,7 @@ export default function App() {
   const clearFont = () => {
     historyRef.current.clear();
     setDrafts(new Map());
+    setSelection(new Set());
     clearSavedDrafts();
     setProject((p) => ({ ...p, glyphs: {} }));
   };
@@ -261,6 +330,7 @@ export default function App() {
   const resetProject = () => {
     historyRef.current.clear();
     setDrafts(new Map());
+    setSelection(new Set());
     clearSavedDrafts();
     clearSavedProject();
     setProject(createProject());
@@ -330,17 +400,29 @@ export default function App() {
                 </span>
               )}
             </span>
-            <div className="tool-group" role="group" aria-label="Stitch type">
+            <div className="tool-group" role="group" aria-label="Tool">
               {TOOLS.map((t) => (
                 <button
                   key={t.type}
-                  className={tool === t.type ? 'btn tool is-active' : 'btn tool'}
+                  className={
+                    editMode === 'stitch' && tool === t.type ? 'btn tool is-active' : 'btn tool'
+                  }
                   title={t.title}
-                  onClick={() => setTool(t.type)}
+                  onClick={() => {
+                    setTool(t.type);
+                    setEditMode('stitch');
+                  }}
                 >
                   {t.label}
                 </button>
               ))}
+              <button
+                className={editMode === 'select' ? 'btn tool is-active' : 'btn tool'}
+                title="Select area (Tab)"
+                onClick={() => setEditMode('select')}
+              >
+                ⬚
+              </button>
             </div>
             <button className="btn btn-quiet" onClick={undo} disabled={!h || h.past.length === 0}>
               Undo
@@ -352,8 +434,31 @@ export default function App() {
             >
               Redo
             </button>
-            <span className="hint toolbar-hint">
-              click / drag to stitch · ⌥ to unpick · ⏎ saves · type a character to jump to it
+            {selection.size > 0 && (
+              <div className="selection-actions">
+                <span>{selection.size} selected</span>
+                {TOOLS.map((t) => (
+                  <button
+                    key={t.type}
+                    className="btn btn-quiet"
+                    title={`Change selection to: ${t.title.toLowerCase()}`}
+                    onClick={() => restyleSelection(t.type)}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+                <button
+                  className="btn btn-quiet btn-danger"
+                  title="Delete selection (⌫)"
+                  onClick={deleteSelection}
+                >
+                  Delete
+                </button>
+              </div>
+            )}
+            <span className="toolbar-spacer" />
+            <span className="info-tip" title={TOOLBAR_TIP}>
+              ⓘ
             </span>
             <button
               className="btn btn-quiet"
@@ -382,7 +487,11 @@ export default function App() {
               guides={project.guides}
               stitches={currentDraft}
               tool={tool}
+              mode={editMode}
+              selection={selection}
+              onSelectionChange={setSelection}
               onChange={(next) => setDraft(currentChar, next)}
+              onEdit={applyEdit}
               onStrokeStart={handleStrokeStart}
               onStrokeEnd={handleStrokeEnd}
             />
@@ -447,6 +556,7 @@ export default function App() {
             onImport={(p) => {
               historyRef.current.clear();
               setDrafts(new Map());
+              setSelection(new Set());
               clearSavedDrafts();
               setProject(p);
             }}
