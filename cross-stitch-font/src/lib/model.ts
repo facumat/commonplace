@@ -3,10 +3,27 @@ export type StitchType = 'x' | '/' | '\\';
 
 export const STITCH_TYPES: StitchType[] = ['x', '/', '\\'];
 
+/** 'solid' = full black, 'muted' = 50% black. */
+export type StitchShade = 'solid' | 'muted';
+
+export const STITCH_SHADES: StitchShade[] = ['solid', 'muted'];
+
+export interface Stitch {
+  type: StitchType;
+  shade: StitchShade;
+}
+
+export const makeStitch = (type: StitchType, shade: StitchShade = 'solid'): Stitch => ({
+  type,
+  shade,
+});
+
+export type StitchMap = Map<string, Stitch>;
+
 export interface GlyphData {
   char: string;
-  /** Stitched cells, keyed as "col,row" (row 0 = top of the grid), with their stitch type. */
-  stitches: Map<string, StitchType>;
+  /** Stitched cells, keyed as "col,row" (row 0 = top of the grid). */
+  stitches: StitchMap;
   /** Optional per-glyph advance width override, in grid cells. */
   advanceWidth?: number;
 }
@@ -88,7 +105,7 @@ export function metricsEqual(a: GridMetrics, b: GridMetrics): boolean {
 }
 
 export function inkBounds(
-  stitches: Map<string, StitchType>
+  stitches: StitchMap
 ): { minCol: number; maxCol: number; minRow: number; maxRow: number } | null {
   if (stitches.size === 0) return null;
   let minCol = Infinity,
@@ -121,11 +138,11 @@ export function createProject(name = 'My Stitch Font', gridSize = 16): Project {
   return { name, gridSize, metrics: defaultMetrics(gridSize), guides: [], glyphs: {} };
 }
 
-export function stitchesEqual(
-  a: Map<string, StitchType>,
-  b: Map<string, StitchType>
-): boolean {
+export function stitchesEqual(a: StitchMap, b: StitchMap): boolean {
   if (a.size !== b.size) return false;
-  for (const [k, v] of a) if (b.get(k) !== v) return false;
+  for (const [k, v] of a) {
+    const o = b.get(k);
+    if (!o || o.type !== v.type || o.shade !== v.shade) return false;
+  }
   return true;
 }

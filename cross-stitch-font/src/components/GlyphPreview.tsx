@@ -1,6 +1,11 @@
-import type { GlyphData, GridMetrics, StitchType } from '../lib/model';
+import type { GlyphData, GridMetrics, StitchMap, StitchShade } from '../lib/model';
 import { getAdvanceCells, parseKey } from '../lib/model';
 import { halfStitchPolygon } from '../lib/stitchShapes';
+
+// block preview mirrors the solid font: muted stitches are gray, everything
+// else (solid and dotted, which can't be dotted in a fill) is black.
+const inkClass = (shade: StitchShade) =>
+  shade === 'muted' ? 'preview-ink preview-ink-muted' : 'preview-ink';
 
 interface Props {
   glyph: GlyphData | undefined;
@@ -24,7 +29,7 @@ export default function GlyphPreview({
   const cell = Math.floor(160 / gridSize);
   const { baselineRow } = metrics;
   const advance = getAdvanceCells(glyph, gridSize);
-  const stitches = glyph?.stitches ?? new Map<string, StitchType>();
+  const stitches: StitchMap = glyph?.stitches ?? new Map();
   const width = Math.max(gridSize, advance) * cell + 2;
   const height = gridSize * cell + 2;
 
@@ -38,9 +43,10 @@ export default function GlyphPreview({
       )}
       <svg width={width} height={height}>
         <rect x={0} y={0} width={width} height={height} className="preview-bg" />
-        {[...stitches].map(([key, type]) => {
+        {[...stitches].map(([key, s]) => {
           const [c, r] = parseKey(key);
-          if (type === 'x') {
+          const cls = inkClass(s.shade);
+          if (s.type === 'x') {
             return (
               <rect
                 key={key}
@@ -48,14 +54,14 @@ export default function GlyphPreview({
                 y={1 + r * cell}
                 width={cell}
                 height={cell}
-                className="preview-ink"
+                className={cls}
               />
             );
           }
-          const points = halfStitchPolygon(type, c, r)
+          const points = halfStitchPolygon(s.type, c, r)
             .map(([px, py]) => `${1 + px * cell},${1 + py * cell}`)
             .join(' ');
-          return <polygon key={key} points={points} className="preview-ink" />;
+          return <polygon key={key} points={points} className={cls} />;
         })}
         <line
           x1={0}

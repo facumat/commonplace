@@ -13,6 +13,19 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"LibraryThing",
+        "url":"https://www.librarything.com/",
+        "type":"resource",
+        "tags":["taxonomy", "literature"],
+        "thoughts":"maybe can replace goodreads w this?"
+    },
+    {
+        "thing":"Cybernetic Library",
+        "url":"https://www.cyberneticslibrary.org/",
+        "type":"community",
+        "tags":["library", "literature"]
+    },
+    {
         "thing":"Museum of the Human Web",
         "url":"https://museum.parallel.ai/",
         "consumed":"2026-6-19",
@@ -70,7 +83,7 @@
         "consumed":"2026-5-5",
         "type":"resource",
         "tags":["art opportunities", "poetic web"],
-        "thgoughts":"zines, mags, and venues that are dedicated to something like computational poetry (that accept submissions)"
+        "thoughts":"zines, mags, and venues that are dedicated to something like computational poetry (that accept submissions)"
     },
     {
         "thing":"If, then: Technology and Poetics",

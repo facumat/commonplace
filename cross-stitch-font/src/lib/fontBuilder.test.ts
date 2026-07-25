@@ -1,23 +1,34 @@
 import { describe, expect, it } from 'vitest';
 import { parse } from 'opentype.js';
 import { buildFont, glyphToPath, traceOutlines, UNITS_PER_EM } from './fontBuilder';
-import type { StitchType } from './model';
-import { createProject, defaultMetrics } from './model';
+import type { Stitch, StitchMap, StitchShade, StitchType } from './model';
+import { createProject, defaultMetrics, makeStitch } from './model';
 
 /** Cell keys for the outline tracer (full crosses only). */
 const stitchSet = (...keys: string[]) => new Set(keys);
-/** Glyph stitches: keys become full crosses unless written as "key=type". */
-const stitchMap = (...keys: string[]): Map<string, StitchType> =>
-  new Map(
+/** Glyph stitches: "key", "key=type", or "key=type:shade" (defaults x/solid). */
+const stitchMap = (...keys: string[]): StitchMap =>
+  new Map<string, Stitch>(
     keys.map((k) => {
-      const [key, type] = k.split('=');
-      return [key, (type ?? 'x') as StitchType];
+      const [key, spec] = k.split('=');
+      const [type, shade] = (spec ?? 'x').split(':');
+      return [key, makeStitch((type || 'x') as StitchType, (shade ?? 'solid') as StitchShade)];
     })
   );
 
 /** opentype.js 2.x nests names per platform; the 1.x type defs don't know. */
-const familyOf = (font: { names: unknown }) =>
-  (font.names as { windows: { fontFamily: { en: string } } }).windows.fontFamily.en;
+type Names = {
+  windows: {
+    fontFamily: { en: string };
+    preferredFamily?: { en: string };
+    preferredSubfamily?: { en: string };
+  };
+};
+const familyOf = (font: { names: unknown }) => (font.names as Names).windows.fontFamily.en;
+const typographicFamilyOf = (font: { names: unknown }) =>
+  (font.names as Names).windows.preferredFamily?.en;
+const typographicStyleOf = (font: { names: unknown }) =>
+  (font.names as Names).windows.preferredSubfamily?.en;
 
 /** Sort contours and normalize rotation so comparisons ignore start point. */
 function normalize(contours: [number, number][][]): string[] {
@@ -168,7 +179,8 @@ describe('buildFont', () => {
     // one contour per bar, two bars per stitch
     const moves = path.commands.filter((c) => c.type === 'M');
     expect(moves).toHaveLength(4);
-    expect(familyOf(font)).toBe('Test Stitch Stitch');
+    expect(familyOf(font)).toBe('Test Stitch Cross');
+    expect(typographicStyleOf(font)).toBe('Cross');
   });
 
   it('stitch variant draws a single bar for half stitches', () => {
@@ -188,6 +200,7 @@ describe('buildFont', () => {
     const moves = path.commands.filter((c) => c.type === 'M');
     expect(moves).toHaveLength(4);
     expect(familyOf(font)).toBe('Test Stitch Outline');
+    expect(typographicStyleOf(font)).toBe('Outline');
     // the frame spans the full cell, and the center stays hollow: any
     // horizontal slice through the middle enters and exits the frame
     const scale = UNITS_PER_EM / 16;
@@ -208,7 +221,8 @@ describe('buildFont', () => {
     const project = createProject('Test Stitch', gridSize);
     project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10') };
     const font = buildFont(project, 'chart');
-    expect(familyOf(font)).toBe('Test Stitch Chart');
+    expect(familyOf(font)).toBe('Test Stitch Cross Grid');
+    expect(typographicStyleOf(font)).toBe('Cross Grid');
 
     const { baselineRow, descenderRows } = project.metrics;
     const scale = UNITS_PER_EM / gridSize;
@@ -231,6 +245,24 @@ describe('buildFont', () => {
     expect(moves).toHaveLength(1);
   });
 
+  it('all four variants group under one typographic family with distinct styles', () => {
+    const project = createProject('Test Stitch', 16);
+    project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10') };
+    const variants = ['solid', 'outline', 'stitch', 'chart'] as const;
+    const parsed = variants.map((v) => parse(buildFont(project, v).toArrayBuffer()));
+    // one shared typographic family (name ID 16), survives a serialize round-trip
+    for (const p of parsed) expect(typographicFamilyOf(p)).toBe('Test Stitch');
+    // distinct subfamilies (name ID 17) = the four style entries in a font menu
+    expect(parsed.map((p) => typographicStyleOf(p))).toEqual([
+      'Block',
+      'Outline',
+      'Cross',
+      'Cross Grid',
+    ]);
+    // legacy family names (name ID 1) stay unique so PostScript names don't clash
+    expect(new Set(parsed.map((p) => familyOf(p))).size).toBe(4);
+  });
+
   it('chart variant is a COLR color font: gray grid layer under black crosses', () => {
     const project = createProject('Test Stitch', 16);
     project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10') };
@@ -247,13 +279,36 @@ describe('buildFont', () => {
     const oLayers = layered.layers.get(parsed.charToGlyphIndex('o'));
     expect(oLayers.map((l) => [l.glyph.name, l.paletteIndex])).toEqual([
       ['o.grid', 0],
-      ['o.cross', 1],
+      ['o.ink', 1],
     ]);
     // the space has a fabric layer only
     const spaceLayers = layered.layers.get(parsed.charToGlyphIndex(' '));
     expect(spaceLayers.map((l) => [l.glyph.name, l.paletteIndex])).toEqual([['space.grid', 0]]);
     // fallback outline (for non-COLR renderers) still carries everything
     expect(parsed.charToGlyph('o').path.commands.length).toBeGreaterThan(0);
+  });
+
+  it('muted stitches make a color font with a gray layer under the black', () => {
+    const project = createProject('Test Stitch', 16);
+    // one solid + one muted full cell, in the Block variant
+    project.glyphs['o'] = { char: 'o', stitches: stitchMap('0,10', '2,10=x:muted') };
+    const parsed = parse(buildFont(project, 'solid').toArrayBuffer());
+    // Block is normally monochrome, but a muted stitch turns on CPAL/COLR
+    expect(parsed.tables.cpal.colorRecords).toEqual([0x00000080, 0x000000ff]);
+    type LayerAPI = {
+      layers: { get(i: number): { glyph: { name: string }; paletteIndex: number }[] };
+    };
+    const layered = parsed as unknown as LayerAPI;
+    const oLayers = layered.layers.get(parsed.charToGlyphIndex('o'));
+    expect(oLayers.map((l) => [l.glyph.name, l.paletteIndex])).toEqual([
+      ['o.mute', 0],
+      ['o.ink', 1],
+    ]);
+    // a glyph with only solid stitches stays a plain monochrome glyf (no layers)
+    project.glyphs['n'] = { char: 'n', stitches: stitchMap('0,10') };
+    const parsed2 = parse(buildFont(project, 'solid').toArrayBuffer());
+    const nLayers = (parsed2 as unknown as LayerAPI).layers.get(parsed2.charToGlyphIndex('n'));
+    expect(nLayers).toEqual([]);
   });
 
   it('exports Spanish characters with proper names and unicodes', () => {

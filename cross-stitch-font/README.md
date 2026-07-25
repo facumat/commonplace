@@ -25,10 +25,11 @@ npm run build -- --outDir ../xstitch-font-builder --emptyOutDir
   holds the grid & guide settings. Typing any character jumps straight to it.
 - **Draw** on the grid: click toggles a stitch, dragging paints a stroke,
   right-click or ⌥-drag unpicks. The toolbar picks the stitch type — full
-  cross (✕), half stitch to the left (╱), or half stitch to the right (╲);
-  painting over a cell replaces its type, clicking with the same type unpicks.
-  Baseline / x-height / cap-line / descender guides keep letters consistent.
-  ⌘Z / ⇧⌘Z undo and redo per glyph.
+  cross (✕), half stitch to the left (╱), or half stitch to the right (╲) —
+  and a shade: solid black or 50% gray. Painting over a cell replaces its
+  type/shade, clicking with the same type + shade unpicks. Gray stitches
+  export too, as a COLR/CPAL color-font layer. Baseline / x-height / cap-line
+  / descender guides keep letters consistent. ⌘Z / ⇧⌘Z undo and redo per glyph.
 - **Save ("burn") a glyph**: the grid edits a draft — *Save glyph* (or ⏎)
   burns it into the font (navigator, previews, export); *Clear* empties the
   draft without touching the saved design. Drafts survive reloads but never
@@ -48,16 +49,19 @@ npm run build -- --outDir ../xstitch-font-builder --emptyOutDir
   pangram paragraph plus every uppercase, lowercase, digit, and punctuation
   glyph.
 - **Export** builds TTFs entirely client-side with `opentype.js`, each style
-  downloadable individually or all at once: Block, the solid font
-  (`name.ttf`); Outline, every cell as a hollow square frame
-  (`name-outline.ttf`, family "Name Outline"); Cross, where every cell is an
-  X stitch (`name-stitch.ttf`, family "Name Stitch"); and Cross + grid, the
-  Xs over the fabric grid
-  (`name-chart.ttf`, family "Name Chart") — the grid covers each glyph's full
+  downloadable individually or all at once: Block, the solid font (`name.ttf`);
+  Outline, every cell as a hollow square frame (`name-outline.ttf`); Cross,
+  where every cell is an X stitch (`name-stitch.ttf`); and Cross + grid, the
+  Xs over the fabric grid (`name-chart.ttf`) — the grid covers each glyph's full
   advance width and em height (space included), so chart text sets as one
   continuous band of fabric. The chart font is a COLR/CPAL color font: the
   fabric grid paints at 50% black while the crosses stay full black, with a
   monochrome fallback outline for renderers without color-font support.
+  All four share one **typographic family** (name ID 16, your font name) and
+  differ only by **subfamily** (name ID 17: Block / Outline / Cross / Cross
+  Grid), so a font menu lists them as one family with four styles rather than
+  four separate families; each also keeps a unique legacy family name (name ID
+  1) so PostScript names don't collide and old RIBBI-only apps still work.
   Projects autosave to localStorage and can be exported / imported as
   `.stitchfont.json` files.
 
@@ -76,15 +80,17 @@ width defaults to ink width + one cell of side bearing, overridable per glyph.
 
 ```
 Project { name, gridSize, metrics, guides,
-          glyphs: { char -> { stitches: Map<"col,row" -> "x" | "/" | "\\">, advanceWidth? } } }
+          glyphs: { char -> { stitches: Map<"col,row" -> { type: "x"|"/"|"\\", shade: "solid"|"muted" }>, advanceWidth? } } }
 ```
 
 Grid size (stitches per em, default 16) is shared by all glyphs in a project —
 that's what keeps the metrics coherent. Serialization lives in
 `src/lib/projectStorage.ts` and is file-format-ready (versioned JSON), so
 save/load can move from localStorage to project files later. Older saved
-projects (stitches as plain arrays) migrate automatically — every legacy cell
-loads as a full cross.
+projects migrate automatically — both the plain-array format and the
+type-only string-map format load as solid full/half crosses. Solid stitches
+still serialize compactly as a bare type string; only shaded cells store the
+`{ t, s }` object.
 
 ## Possible future directions
 

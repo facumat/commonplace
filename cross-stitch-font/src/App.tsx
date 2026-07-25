@@ -1,13 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { CustomGuide, GridMetrics, Project, StitchType } from './lib/model';
+import type { CustomGuide, GridMetrics, Project, Stitch, StitchShade, StitchType } from './lib/model';
 import {
   MAX_GRID_SIZE,
   MIN_GRID_SIZE,
+  cellKey,
   clampGuides,
   clampMetrics,
   createProject,
   defaultMetrics,
+  makeStitch,
   metricsEqual,
+  parseKey,
   stitchesEqual,
 } from './lib/model';
 import type { DraftMap } from './lib/projectStorage';
@@ -27,11 +30,20 @@ import TextPreview from './components/TextPreview';
 import ExportPanel from './components/ExportPanel';
 import MetricsPanel from './components/MetricsPanel';
 
-type Stitches = Map<string, StitchType>;
+type Stitches = Map<string, Stitch>;
 
 interface GlyphHistory {
   past: Stitches[];
   future: Stitches[];
+}
+
+/** Copied stitches, stored relative to their bounding-box top-left. */
+interface Clipboard {
+  cells: { c: number; r: number; stitch: Stitch }[];
+  w: number;
+  h: number;
+  originC: number;
+  originR: number;
 }
 
 const TOOLS: { type: StitchType; label: string; title: string }[] = [
@@ -40,12 +52,18 @@ const TOOLS: { type: StitchType; label: string; title: string }[] = [
   { type: '\\', label: '╲', title: 'Half stitch to the right' },
 ];
 
+const SHADES: { shade: StitchShade; label: string; title: string }[] = [
+  { shade: 'solid', label: '■', title: 'Solid black' },
+  { shade: 'muted', label: '■', title: '50% gray' },
+];
+
 const EMPTY_STITCHES: Stitches = new Map();
 
 const TOOLBAR_TIP =
-  'Click / drag to stitch · right-click or ⌥ to unpick · ⏎ saves the glyph · ' +
-  'type a character to jump to it · ⇥ toggles select mode · in select mode: ' +
-  'drag to select an area, drag the selection to move it, ⌫ deletes it, Esc clears it';
+  'Click / drag to stitch · right-click or ⌥ to unpick · pick a stitch type and a ' +
+  'shade (solid or 50% gray) · ⏎ saves the glyph · type a character to jump ' +
+  'to it · ⇥ toggles select mode · in select mode: drag to select an area, drag the ' +
+  'selection to move it, ⌘C / ⌘V copy and paste, ⌫ deletes it, Esc clears it';
 
 export default function App() {
   const [project, setProject] = useState<Project>(loadProject);
@@ -53,6 +71,7 @@ export default function App() {
   const [drafts, setDrafts] = useState<DraftMap>(loadDrafts);
   const [currentChar, setCurrentChar] = useState('A');
   const [tool, setTool] = useState<StitchType>('x');
+  const [shade, setShade] = useState<StitchShade>('solid');
   const [editMode, setEditMode] = useState<'stitch' | 'select'>('stitch');
   const [selection, setSelection] = useState<Set<string>>(new Set());
   const [leftTab, setLeftTab] = useState<'chars' | 'grid'>('chars');
@@ -69,6 +88,9 @@ export default function App() {
   draftsRef.current = drafts;
   const selectionRef = useRef(selection);
   selectionRef.current = selection;
+  // copied stitches, kept across glyph switches so you can paste elsewhere
+  const clipboardRef = useRef<Clipboard | null>(null);
+  const [hasClipboard, setHasClipboard] = useState(false);
   // bump to re-render undo/redo button state after history mutations
   const [, setHistoryTick] = useState(0);
 
@@ -188,9 +210,78 @@ export default function App() {
     const sel = selectionRef.current;
     if (sel.size === 0) return;
     const next = new Map(draftNow(currentChar));
-    for (const key of sel) if (next.has(key)) next.set(key, type);
+    for (const key of sel) {
+      const s = next.get(key);
+      if (s) next.set(key, makeStitch(type, s.shade));
+    }
     applyEdit(next);
   };
+
+  const reshadeSelection = (nextShade: StitchShade) => {
+    const sel = selectionRef.current;
+    if (sel.size === 0) return;
+    const next = new Map(draftNow(currentChar));
+    for (const key of sel) {
+      const s = next.get(key);
+      if (s) next.set(key, makeStitch(s.type, nextShade));
+    }
+    applyEdit(next);
+  };
+
+  /** Copy the selected stitches to the internal clipboard. */
+  const copySelection = useCallback(() => {
+    const sel = selectionRef.current;
+    const draft = draftNow(currentChar);
+    const raw: { c: number; r: number; stitch: Stitch }[] = [];
+    let minC = Infinity,
+      minR = Infinity,
+      maxC = -Infinity,
+      maxR = -Infinity;
+    for (const key of sel) {
+      const stitch = draft.get(key);
+      if (stitch == null) continue;
+      const [c, r] = parseKey(key);
+      raw.push({ c, r, stitch });
+      if (c < minC) minC = c;
+      if (c > maxC) maxC = c;
+      if (r < minR) minR = r;
+      if (r > maxR) maxR = r;
+    }
+    if (raw.length === 0) return;
+    clipboardRef.current = {
+      cells: raw.map(({ c, r, stitch }) => ({ c: c - minC, r: r - minR, stitch })),
+      w: maxC - minC + 1,
+      h: maxR - minR + 1,
+      originC: minC,
+      originR: minR,
+    };
+    setHasClipboard(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentChar]);
+
+  /** Paste the clipboard, nudged one cell down-right, and select the result. */
+  const pasteClipboard = useCallback(() => {
+    const clip = clipboardRef.current;
+    if (!clip) return;
+    const gs = projectRef.current.gridSize;
+    const tc = Math.max(0, Math.min(gs - clip.w, clip.originC + 1));
+    const tr = Math.max(0, Math.min(gs - clip.h, clip.originR + 1));
+    const next = new Map(draftNow(currentChar));
+    const pasted = new Set<string>();
+    for (const { c, r, stitch } of clip.cells) {
+      const col = tc + c;
+      const row = tr + r;
+      if (col < 0 || col >= gs || row < 0 || row >= gs) continue;
+      const key = cellKey(col, row);
+      next.set(key, stitch);
+      pasted.add(key);
+    }
+    if (pasted.size === 0) return;
+    applyEdit(next);
+    setSelection(pasted);
+    setEditMode('select');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentChar, applyEdit]);
 
   /** Burn the current draft into the font (set, previews, export). */
   const saveGlyph = useCallback(() => {
@@ -243,6 +334,20 @@ export default function App() {
         setEditMode('select');
         return;
       }
+      // copy the selection
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'c') {
+        if (typing || selectionRef.current.size === 0) return;
+        e.preventDefault();
+        copySelection();
+        return;
+      }
+      // paste the clipboard
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'v') {
+        if (typing || !clipboardRef.current) return;
+        e.preventDefault();
+        pasteClipboard();
+        return;
+      }
       if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
       // Tab toggles between stitching and selecting
       if (e.key === 'Tab') {
@@ -273,7 +378,7 @@ export default function App() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [undo, redo, saveGlyph, deleteSelection, currentChar]);
+  }, [undo, redo, saveGlyph, deleteSelection, copySelection, pasteClipboard, currentChar]);
 
   /** Empty the working draft; the saved glyph stays until "Save glyph". */
   const clearDraft = () => {
@@ -424,6 +529,18 @@ export default function App() {
                 ⬚
               </button>
             </div>
+            <div className="tool-group" role="group" aria-label="Shade">
+              {SHADES.map((s) => (
+                <button
+                  key={s.shade}
+                  className={`btn tool shade-${s.shade}${shade === s.shade ? ' is-active' : ''}`}
+                  title={s.title}
+                  onClick={() => setShade(s.shade)}
+                >
+                  {s.label}
+                </button>
+              ))}
+            </div>
             <button className="btn btn-quiet" onClick={undo} disabled={!h || h.past.length === 0}>
               Undo
             </button>
@@ -447,6 +564,25 @@ export default function App() {
                     {t.label}
                   </button>
                 ))}
+                <span className="sel-divider" />
+                {SHADES.map((s) => (
+                  <button
+                    key={s.shade}
+                    className={`btn btn-quiet shade-${s.shade}`}
+                    title={`Shade selection: ${s.title.toLowerCase()}`}
+                    onClick={() => reshadeSelection(s.shade)}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+                <span className="sel-divider" />
+                <button
+                  className="btn btn-quiet"
+                  title="Copy selection (⌘C)"
+                  onClick={copySelection}
+                >
+                  Copy
+                </button>
                 <button
                   className="btn btn-quiet btn-danger"
                   title="Delete selection (⌫)"
@@ -455,6 +591,15 @@ export default function App() {
                   Delete
                 </button>
               </div>
+            )}
+            {hasClipboard && (
+              <button
+                className="btn btn-quiet"
+                title="Paste copied stitches (⌘V)"
+                onClick={pasteClipboard}
+              >
+                Paste
+              </button>
             )}
             <span className="toolbar-spacer" />
             <span className="info-tip" title={TOOLBAR_TIP}>
@@ -487,6 +632,7 @@ export default function App() {
               guides={project.guides}
               stitches={currentDraft}
               tool={tool}
+              shade={shade}
               mode={editMode}
               selection={selection}
               onSelectionChange={setSelection}
@@ -538,7 +684,7 @@ export default function App() {
                         [currentChar]: {
                           ...(p.glyphs[currentChar] ?? {
                             char: currentChar,
-                            stitches: new Map<string, StitchType>(),
+                            stitches: new Map<string, Stitch>(),
                           }),
                           advanceWidth: advance,
                         },

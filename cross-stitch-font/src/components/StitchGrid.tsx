@@ -1,21 +1,23 @@
 import { useRef, useState } from 'react';
-import type { CustomGuide, GridMetrics, StitchType } from '../lib/model';
-import { cellKey, parseKey } from '../lib/model';
+import type { CustomGuide, GridMetrics, Stitch, StitchMap, StitchShade, StitchType } from '../lib/model';
+import { cellKey, makeStitch, parseKey } from '../lib/model';
 
 interface Props {
   gridSize: number;
   metrics: GridMetrics;
   guides: CustomGuide[];
-  stitches: Map<string, StitchType>;
+  stitches: StitchMap;
   /** Stitch type painted by the left mouse button. */
   tool: StitchType;
+  /** Shade applied to newly painted stitches. */
+  shade: StitchShade;
   /** 'stitch' paints; 'select' drags a marquee / moves the selection. */
   mode: 'stitch' | 'select';
   selection: Set<string>;
   onSelectionChange: (selection: Set<string>) => void;
-  onChange: (next: Map<string, StitchType>) => void;
+  onChange: (next: StitchMap) => void;
   /** Atomic, undoable edit (used when committing a selection move). */
-  onEdit: (next: Map<string, StitchType>) => void;
+  onEdit: (next: StitchMap) => void;
   onStrokeStart: () => void;
   onStrokeEnd: () => void;
 }
@@ -43,6 +45,7 @@ export default function StitchGrid({
   guides,
   stitches,
   tool,
+  shade,
   mode,
   selection,
   onSelectionChange,
@@ -97,13 +100,15 @@ export default function StitchGrid({
     ];
   };
 
+  const sameAsTool = (s: Stitch | undefined) => s != null && s.type === tool && s.shade === shade;
+
   const applyCell = (key: string) => {
     const current = stitchesRef.current;
     const paintMode = modeRef.current;
     if (!paintMode) return;
-    if (paintMode === 'paint' ? current.get(key) === tool : !current.has(key)) return;
+    if (paintMode === 'paint' ? sameAsTool(current.get(key)) : !current.has(key)) return;
     const next = new Map(current);
-    if (paintMode === 'paint') next.set(key, tool);
+    if (paintMode === 'paint') next.set(key, makeStitch(tool, shade));
     else next.delete(key);
     onChange(next);
   };
@@ -151,9 +156,9 @@ export default function StitchGrid({
     e.preventDefault();
     capturePointer(e);
     const erase = e.button === 2 || e.altKey;
-    // clicking a cell that already has the active tool's stitch unpicks it
+    // clicking a cell that already has the active tool + shade unpicks it
     modeRef.current =
-      erase ? 'erase' : stitchesRef.current.get(key) === tool ? 'erase' : 'paint';
+      erase ? 'erase' : sameAsTool(stitchesRef.current.get(key)) ? 'erase' : 'paint';
     onStrokeStart();
     applyCell(key);
   };
@@ -186,15 +191,15 @@ export default function StitchGrid({
   const commitMove = (dc: number, dr: number) => {
     const current = stitchesRef.current;
     const next = new Map(current);
-    const moved: [string, StitchType][] = [];
+    const moved: [string, Stitch][] = [];
     for (const key of selectionRef.current) {
-      const type = current.get(key);
-      if (type == null) continue;
+      const s = current.get(key);
+      if (s == null) continue;
       next.delete(key);
       const [c, r] = parseKey(key);
-      moved.push([cellKey(c + dc, r + dr), type]);
+      moved.push([cellKey(c + dc, r + dr), s]);
     }
-    for (const [k, t] of moved) next.set(k, t);
+    for (const [k, s] of moved) next.set(k, s);
     onEdit(next);
     onSelectionChange(new Set(moved.map(([k]) => k)));
   };
@@ -312,7 +317,7 @@ export default function StitchGrid({
 
       {/* stitches: X = both legs, half stitches = one leg */}
       <g className="stitches">
-        {[...stitches].map(([key, type]) => {
+        {[...stitches].map(([key, s]) => {
           const [baseC, baseR] = parseKey(key);
           const selected = selection.has(key);
           const c = baseC + (selected ? offset[0] : 0);
@@ -324,14 +329,10 @@ export default function StitchGrid({
           const x1 = gx(c + 1) - inset;
           const y1 = gy(r + 1) - inset;
           return (
-            <g key={key}>
+            <g key={key} className={`stitch shade-${s.shade}`}>
               <rect x={gx(c)} y={gy(r)} width={cell} height={cell} className="cell-fill" />
-              {type !== '/' && (
-                <line x1={x0} y1={y0} x2={x1} y2={y1} strokeWidth={cell * 0.2} />
-              )}
-              {type !== '\\' && (
-                <line x1={x0} y1={y1} x2={x1} y2={y0} strokeWidth={cell * 0.2} />
-              )}
+              {s.type !== '/' && <line x1={x0} y1={y0} x2={x1} y2={y1} strokeWidth={cell * 0.2} />}
+              {s.type !== '\\' && <line x1={x0} y1={y1} x2={x1} y2={y0} strokeWidth={cell * 0.2} />}
             </g>
           );
         })}

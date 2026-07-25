@@ -1,14 +1,28 @@
-import type { CustomGuide, GlyphData, GridMetrics, Project, StitchType } from './model';
+import type {
+  CustomGuide,
+  GlyphData,
+  GridMetrics,
+  Project,
+  Stitch,
+  StitchMap,
+  StitchShade,
+  StitchType,
+} from './model';
 import {
+  STITCH_SHADES,
   STITCH_TYPES,
   clampGuides,
   clampMetrics,
   createProject,
   defaultMetrics,
+  makeStitch,
   newGuideId,
 } from './model';
 
 const STORAGE_KEY = 'cross-stitch-font-project-v1';
+
+/** Serialized cell: a bare type string when solid, or {t, s} when shaded. */
+type StitchJSON = string | { t: StitchType; s: StitchShade };
 
 interface ProjectJSON {
   version: 1;
@@ -16,21 +30,36 @@ interface ProjectJSON {
   gridSize: number;
   metrics?: GridMetrics;
   guides?: CustomGuide[];
-  /** stitches: legacy files store an array of keys (all full crosses), newer ones a key→type map */
-  glyphs: Record<
-    string,
-    { stitches: string[] | Record<string, StitchType>; advanceWidth?: number }
-  >;
+  /** stitches: oldest files store a key array, older a key→type map, now key→StitchJSON. */
+  glyphs: Record<string, { stitches: string[] | Record<string, StitchJSON>; advanceWidth?: number }>;
 }
 
-function parseStitches(raw: unknown): Map<string, StitchType> {
-  const map = new Map<string, StitchType>();
+const asType = (v: unknown): StitchType =>
+  STITCH_TYPES.includes(v as StitchType) ? (v as StitchType) : 'x';
+const asShade = (v: unknown): StitchShade =>
+  STITCH_SHADES.includes(v as StitchShade) ? (v as StitchShade) : 'solid';
+
+function serializeStitches(stitches: StitchMap): Record<string, StitchJSON> {
+  const out: Record<string, StitchJSON> = {};
+  for (const [key, s] of stitches) {
+    out[key] = s.shade === 'solid' ? s.type : { t: s.type, s: s.shade };
+  }
+  return out;
+}
+
+function parseStitches(raw: unknown): StitchMap {
+  const map: StitchMap = new Map<string, Stitch>();
   if (Array.isArray(raw)) {
-    // legacy format: plain list of keys, everything is a full cross
-    for (const key of raw) if (typeof key === 'string') map.set(key, 'x');
+    // oldest format: plain list of keys, everything is a solid full cross
+    for (const key of raw) if (typeof key === 'string') map.set(key, makeStitch('x'));
   } else if (raw && typeof raw === 'object') {
-    for (const [key, type] of Object.entries(raw)) {
-      map.set(key, STITCH_TYPES.includes(type as StitchType) ? (type as StitchType) : 'x');
+    for (const [key, v] of Object.entries(raw)) {
+      if (typeof v === 'string') {
+        map.set(key, makeStitch(asType(v))); // solid full/half cross
+      } else if (v && typeof v === 'object') {
+        const o = v as { t?: unknown; s?: unknown; type?: unknown; shade?: unknown };
+        map.set(key, makeStitch(asType(o.t ?? o.type), asShade(o.s ?? o.shade)));
+      }
     }
   }
   return map;
@@ -67,7 +96,7 @@ export function serializeProject(project: Project): string {
   for (const [char, g] of Object.entries(project.glyphs)) {
     if (g.stitches.size === 0 && g.advanceWidth == null) continue;
     glyphs[char] = {
-      stitches: Object.fromEntries(g.stitches),
+      stitches: serializeStitches(g.stitches),
       ...(g.advanceWidth != null ? { advanceWidth: g.advanceWidth } : {}),
     };
   }
@@ -132,12 +161,12 @@ export function clearSavedProject(): void {
 
 const DRAFTS_KEY = 'cross-stitch-font-drafts-v1';
 
-export type DraftMap = Map<string, Map<string, StitchType>>;
+export type DraftMap = Map<string, StitchMap>;
 
 export function saveDrafts(drafts: DraftMap): void {
   try {
-    const obj: Record<string, Record<string, StitchType>> = {};
-    for (const [char, stitches] of drafts) obj[char] = Object.fromEntries(stitches);
+    const obj: Record<string, Record<string, StitchJSON>> = {};
+    for (const [char, stitches] of drafts) obj[char] = serializeStitches(stitches);
     localStorage.setItem(DRAFTS_KEY, JSON.stringify(obj));
   } catch (err) {
     console.warn('Could not save drafts.', err);

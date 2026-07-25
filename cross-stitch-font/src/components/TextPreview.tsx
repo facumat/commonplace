@@ -1,6 +1,9 @@
-import type { Project, StitchType } from '../lib/model';
+import type { Project, StitchMap, StitchShade } from '../lib/model';
 import { getAdvanceCells, parseKey } from '../lib/model';
 import { halfStitchPolygon } from '../lib/stitchShapes';
+
+const inkClass = (shade: StitchShade) =>
+  shade === 'muted' ? 'preview-ink preview-ink-muted' : 'preview-ink';
 
 interface Props {
   project: Project;
@@ -25,7 +28,7 @@ export default function TextPreview({ project, text, onTextChange, cellPx = 5, r
     x: number;
     char: string;
     missing: boolean;
-    stitches: Map<string, StitchType>;
+    stitches: StitchMap;
   }
 
   const renderLine = (line: string, lineIdx: number) => {
@@ -65,9 +68,10 @@ export default function TextPreview({ project, text, onTextChange, cellPx = 5, r
             />
           ) : (
             <g key={i}>
-              {[...p.stitches].map(([key, type]) => {
+              {[...p.stitches].map(([key, s]) => {
                 const [c, r] = parseKey(key);
-                if (type === 'x') {
+                const cls = inkClass(s.shade);
+                if (s.type === 'x') {
                   return (
                     <rect
                       key={key}
@@ -75,14 +79,14 @@ export default function TextPreview({ project, text, onTextChange, cellPx = 5, r
                       y={4 + r * cellPx}
                       width={cellPx}
                       height={cellPx}
-                      className="preview-ink"
+                      className={cls}
                     />
                   );
                 }
-                const points = halfStitchPolygon(type, p.x + c, r)
+                const points = halfStitchPolygon(s.type, p.x + c, r)
                   .map(([px, py]) => `${px * cellPx},${4 + py * cellPx}`)
                   .join(' ');
-                return <polygon key={key} points={points} className="preview-ink" />;
+                return <polygon key={key} points={points} className={cls} />;
               })}
             </g>
           )

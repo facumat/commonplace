@@ -1,5 +1,5 @@
 import { Font, Glyph, Path } from 'opentype.js';
-import type { GlyphData, GridMetrics, Project, StitchType } from './model';
+import type { GlyphData, GridMetrics, Project, StitchMap } from './model';
 import { defaultMetrics, getAdvanceCells, parseKey } from './model';
 import { GLYPH_SET, glyphName } from './glyphSet';
 import { halfStitchPolygon } from './stitchShapes';
@@ -22,9 +22,12 @@ const GRID_LINE_UNITS = 4;
 // outline variant frame thickness, as a fraction of one cell
 const OUTLINE_THICKNESS = 0.08;
 
-// chart variant colors (CPAL palette): fabric at 50% black, crosses full black
-const CHART_GRID_COLOR = '#00000080';
-const CHART_INK_COLOR = '#000000ff';
+// CPAL palette (index order): 50% black for muted stitches & the fabric grid,
+// then full black. Muted stitches render as gray, everything else full black.
+const GRAY_COLOR = '#00000080';
+const BLACK_COLOR = '#000000ff';
+const PAL_GRAY = 0;
+const PAL_BLACK = 1;
 
 // opentype.js 2.x palette/layer managers, missing from the 1.x type defs
 interface ColorFontAPI {
@@ -33,6 +36,15 @@ interface ColorFontAPI {
 }
 
 type Pt = [number, number];
+
+/** A glyph's thread split by color: solid/dotted go black, muted goes gray. */
+interface Ink {
+  black: Path;
+  gray: Path;
+}
+
+const newInk = (): Ink => ({ black: new Path(), gray: new Path() });
+const inkFor = (ink: Ink, shade: string): Path => (shade === 'muted' ? ink.gray : ink.black);
 
 const ptKey = (p: Pt) => `${p[0]},${p[1]}`;
 
@@ -132,12 +144,12 @@ function simplifyContour(points: Pt[]): Pt[] {
   return out;
 }
 
-/** Build the opentype path for one glyph, in font units (y up, baseline 0). */
-export function glyphToPath(glyph: GlyphData, gridSize: number, metrics: GridMetrics): Path {
+/** Block-variant geometry (merged filled squares), split into black and gray. */
+function blockInk(glyph: GlyphData, gridSize: number, metrics: GridMetrics): Ink {
   const { baselineRow } = metrics;
   const scale = UNITS_PER_EM / gridSize;
-  const path = new Path();
-  const addContour = (contour: Pt[]) => {
+  const ink = newInk();
+  const addContour = (path: Path, contour: Pt[]) => {
     contour.forEach(([gx, gy], i) => {
       const x = Math.round(gx * scale);
       const y = Math.round((baselineRow - gy) * scale);
@@ -147,19 +159,29 @@ export function glyphToPath(glyph: GlyphData, gridSize: number, metrics: GridMet
     path.close();
   };
 
-  // full crosses merge into solid rectilinear outlines
-  const fullCells = new Set<string>();
-  for (const [key, type] of glyph.stitches) if (type === 'x') fullCells.add(key);
-  traceOutlines(fullCells).forEach(addContour);
+  // full crosses merge into solid rectilinear outlines, per color group
+  const blackFull = new Set<string>();
+  const grayFull = new Set<string>();
+  for (const [key, s] of glyph.stitches) {
+    if (s.type !== 'x') continue;
+    (s.shade === 'muted' ? grayFull : blackFull).add(key);
+  }
+  traceOutlines(blackFull).forEach((c) => addContour(ink.black, c));
+  traceOutlines(grayFull).forEach((c) => addContour(ink.gray, c));
 
   // half stitches become corner-to-corner diagonal bands (same winding as the
   // traced outlines, so touching shapes union under nonzero fill)
-  for (const [key, type] of glyph.stitches) {
-    if (type === 'x') continue;
+  for (const [key, s] of glyph.stitches) {
+    if (s.type === 'x') continue;
     const [c, r] = parseKey(key);
-    addContour(halfStitchPolygon(type, c, r));
+    addContour(inkFor(ink, s.shade), halfStitchPolygon(s.type, c, r));
   }
-  return path;
+  return ink;
+}
+
+/** Build the opentype path for one glyph, in font units (y up, baseline 0). */
+export function glyphToPath(glyph: GlyphData, gridSize: number, metrics: GridMetrics): Path {
+  return combineInk(blockInk(glyph, gridSize, metrics));
 }
 
 /**
@@ -198,26 +220,31 @@ function addBar(path: Path, ax: number, ay: number, bx: number, by: number, t: n
   ]);
 }
 
+/** Flatten an Ink into a single monochrome Path (fallback for non-COLR). */
+function combineInk(ink: Ink): Path {
+  const p = new Path();
+  p.commands = [...ink.black.commands, ...ink.gray.commands];
+  return p;
+}
+
 /** Draw every stitched cell as thread: X = two crossed bars, halves = one bar. */
-function addStitchCrosses(
-  path: Path,
-  stitches: Map<string, StitchType>,
-  gridSize: number,
-  metrics: GridMetrics
-): void {
+function stitchInk(stitches: StitchMap, gridSize: number, metrics: GridMetrics): Ink {
   const { baselineRow } = metrics;
   const scale = UNITS_PER_EM / gridSize;
   const inset = X_INSET * scale;
   const t = X_THICKNESS * scale;
-  for (const [key, type] of stitches) {
+  const ink = newInk();
+  for (const [key, s] of stitches) {
     const [c, r] = parseKey(key);
+    const target = inkFor(ink, s.shade);
     const x0 = c * scale + inset;
     const x1 = (c + 1) * scale - inset;
     const yTop = (baselineRow - r) * scale - inset;
     const yBot = (baselineRow - r - 1) * scale + inset;
-    if (type !== '\\') addBar(path, x0, yBot, x1, yTop, t); // "/" leg
-    if (type !== '/') addBar(path, x0, yTop, x1, yBot, t); // "\" leg
+    if (s.type !== '\\') addBar(target, x0, yBot, x1, yTop, t); // "/" leg
+    if (s.type !== '/') addBar(target, x0, yTop, x1, yBot, t); // "\" leg
   }
+  return ink;
 }
 
 /**
@@ -226,19 +253,16 @@ function addStitchCrosses(
  * edges and extend half a thickness past each corner, so neighboring cells
  * share their boundary line and corners close cleanly.
  */
-function addOutlinedCells(
-  path: Path,
-  stitches: Map<string, StitchType>,
-  gridSize: number,
-  metrics: GridMetrics
-): void {
+function outlineInk(stitches: StitchMap, gridSize: number, metrics: GridMetrics): Ink {
   const { baselineRow } = metrics;
   const scale = UNITS_PER_EM / gridSize;
   const t = Math.max(4, OUTLINE_THICKNESS * scale);
-  for (const [key, type] of stitches) {
+  const ink = newInk();
+  for (const [key, s] of stitches) {
     const [c, r] = parseKey(key);
+    const target = inkFor(ink, s.shade);
     let poly: Pt[];
-    if (type === 'x') {
+    if (s.type === 'x') {
       const x0 = c * scale;
       const x1 = (c + 1) * scale;
       const yTop = (baselineRow - r) * scale;
@@ -250,7 +274,7 @@ function addOutlinedCells(
         [x0, yBot],
       ];
     } else {
-      poly = halfStitchPolygon(type, c, r).map(([gx, gy]) => [
+      poly = halfStitchPolygon(s.type, c, r).map(([gx, gy]) => [
         gx * scale,
         (baselineRow - gy) * scale,
       ]);
@@ -261,9 +285,10 @@ function addOutlinedCells(
       const len = Math.hypot(bx - ax, by - ay);
       const ux = ((bx - ax) / len) * (t / 2);
       const uy = ((by - ay) / len) * (t / 2);
-      addBar(path, ax - ux, ay - uy, bx + ux, by + uy, t);
+      addBar(target, ax - ux, ay - uy, bx + ux, by + uy, t);
     }
   }
+  return ink;
 }
 
 /**
@@ -315,7 +340,14 @@ export function buildFont(
   // Explicit indices are required: constructed fonts never assign glyph.index,
   // and the COLR layer records below are written from it.
   const glyphs: Glyph[] = [notdef];
-  const layerJobs: { base: Glyph; grid: Glyph; cross: Glyph | null }[] = [];
+  type Layer = { glyph: Glyph; paletteIndex: number };
+  const layerJobs: { base: Glyph; layers: Layer[] }[] = [];
+
+  const pushGlyph = (name: string, path: Path, advanceWidth: number, unicode?: number): Glyph => {
+    const g = new Glyph({ index: glyphs.length, name, advanceWidth, path, ...(unicode != null ? { unicode } : {}) });
+    glyphs.push(g);
+    return g;
+  };
 
   for (const char of GLYPH_SET) {
     const data = project.glyphs[char];
@@ -324,71 +356,63 @@ export function buildFont(
     if (!hasInk && char !== ' ') continue;
     const advanceCells = getAdvanceCells(data, gridSize);
     const advanceWidth = Math.round(advanceCells * scale);
+    const name = glyphName(char);
 
-    let path = new Path();
-    let gridPath: Path | null = null;
-    let crossPath: Path | null = null;
-    if (variant === 'solid') {
-      if (hasInk) path = glyphToPath(data, gridSize, metrics);
-    } else if (variant === 'stitch') {
-      if (hasInk) addStitchCrosses(path, data.stitches, gridSize, metrics);
-    } else if (variant === 'outline') {
-      if (hasInk) addOutlinedCells(path, data.stitches, gridSize, metrics);
-    } else {
-      // the space gets fabric too, so chart text reads as one continuous band
-      gridPath = new Path();
-      addFabricGrid(gridPath, advanceCells, gridSize, metrics);
-      if (hasInk) {
-        crossPath = new Path();
-        addStitchCrosses(crossPath, data.stitches, gridSize, metrics);
-      }
-      // base glyph carries everything as the fallback for non-COLR renderers
-      path.commands = [...gridPath.commands, ...(crossPath?.commands ?? [])];
+    // thread geometry, split into black (solid/dotted) and gray (muted)
+    let ink: Ink = newInk();
+    if (hasInk && data) {
+      if (variant === 'solid') ink = blockInk(data, gridSize, metrics);
+      else if (variant === 'outline') ink = outlineInk(data.stitches, gridSize, metrics);
+      else ink = stitchInk(data.stitches, gridSize, metrics); // stitch + chart
     }
+    // chart draws the fabric grid (always gray) behind the thread; space too,
+    // so chart text reads as one continuous band
+    const gridPath = variant === 'chart' ? new Path() : null;
+    if (gridPath) addFabricGrid(gridPath, advanceCells, gridSize, metrics);
 
-    const base = new Glyph({
-      index: glyphs.length,
-      name: glyphName(char),
-      unicode: char.codePointAt(0)!,
-      advanceWidth,
-      path,
-    });
-    glyphs.push(base);
+    // base glyph = everything, monochrome — the fallback for non-COLR renderers
+    const basePath = new Path();
+    basePath.commands = [
+      ...(gridPath?.commands ?? []),
+      ...ink.black.commands,
+      ...ink.gray.commands,
+    ];
+    const base = pushGlyph(name, basePath, advanceWidth, char.codePointAt(0)!);
 
-    if (gridPath) {
-      const grid = new Glyph({
-        index: glyphs.length,
-        name: `${glyphName(char)}.grid`,
-        advanceWidth,
-        path: gridPath,
-      });
-      glyphs.push(grid);
-      let cross: Glyph | null = null;
-      if (crossPath) {
-        cross = new Glyph({
-          index: glyphs.length,
-          name: `${glyphName(char)}.cross`,
-          advanceWidth,
-          path: crossPath,
-        });
-        glyphs.push(cross);
+    // color layers: needed for the chart grid, or whenever muted stitches exist
+    const hasGray = ink.gray.commands.length > 0;
+    const hasBlack = ink.black.commands.length > 0;
+    if (variant === 'chart' || hasGray) {
+      const layers: Layer[] = [];
+      if (gridPath && gridPath.commands.length > 0) {
+        layers.push({ glyph: pushGlyph(`${name}.grid`, gridPath, advanceWidth), paletteIndex: PAL_GRAY });
       }
-      layerJobs.push({ base, grid, cross });
+      if (hasGray) {
+        layers.push({ glyph: pushGlyph(`${name}.mute`, ink.gray, advanceWidth), paletteIndex: PAL_GRAY });
+      }
+      if (hasBlack) {
+        layers.push({ glyph: pushGlyph(`${name}.ink`, ink.black, advanceWidth), paletteIndex: PAL_BLACK });
+      }
+      if (layers.length > 0) layerJobs.push({ base, layers });
     }
   }
 
   const baseName = familyName || project.name || 'My Stitch Font';
-  const suffix =
+  // The style shown within the family (Light / Bold-style slot).
+  const styleLabel =
     variant === 'stitch'
-      ? ' Stitch'
+      ? 'Cross'
       : variant === 'chart'
-        ? ' Chart'
+        ? 'Cross Grid'
         : variant === 'outline'
-          ? ' Outline'
-          : '';
+          ? 'Outline'
+          : 'Block';
+  // nameID 1 (legacy family) must stay unique per style so PostScript names
+  // don't collide and old RIBBI-only apps don't overwrite each other.
+  const legacyFamily = variant === 'solid' ? baseName : `${baseName} ${styleLabel}`;
 
   const font = new Font({
-    familyName: baseName + suffix,
+    familyName: legacyFamily,
     styleName: 'Regular',
     unitsPerEm: UNITS_PER_EM,
     ascender: Math.round(baselineRow * scale),
@@ -396,15 +420,22 @@ export function buildFont(
     glyphs,
   });
 
+  // nameID 16/17 (typographic family + subfamily): all four variants share the
+  // same family and differ only by subfamily, so modern font menus list them
+  // as one family with four styles instead of four separate families.
+  type NameTable = Record<'unicode' | 'macintosh' | 'windows', Record<string, { en: string }>>;
+  const names = font.names as unknown as NameTable;
+  for (const plat of ['unicode', 'macintosh', 'windows'] as const) {
+    if (!names[plat]) continue;
+    names[plat].preferredFamily = { en: baseName };
+    names[plat].preferredSubfamily = { en: styleLabel };
+  }
+
   if (layerJobs.length > 0) {
-    // COLR/CPAL color layers: fabric grid at 50% black under full-black crosses
+    // CPAL palette: 50% black (muted / fabric grid), then full black
     const colorFont = font as unknown as ColorFontAPI;
-    colorFont.palettes.add([CHART_GRID_COLOR, CHART_INK_COLOR]);
-    for (const { base, grid, cross } of layerJobs) {
-      const layers = [{ glyph: grid, paletteIndex: 0 }];
-      if (cross) layers.push({ glyph: cross, paletteIndex: 1 });
-      colorFont.layers.add(base.index, layers);
-    }
+    colorFont.palettes.add([GRAY_COLOR, BLACK_COLOR]);
+    for (const { base, layers } of layerJobs) colorFont.layers.add(base.index, layers);
   }
 
   return font;
