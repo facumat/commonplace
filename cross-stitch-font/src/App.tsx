@@ -307,6 +307,28 @@ export default function App() {
     });
   }, [currentChar]);
 
+  /** Burn every glyph with unsaved changes into the font at once. */
+  const saveAllGlyphs = useCallback(() => {
+    const toSave: [string, Stitches][] = [];
+    for (const [char, draft] of draftsRef.current) {
+      const burned = projectRef.current.glyphs[char]?.stitches ?? EMPTY_STITCHES;
+      if (!stitchesEqual(draft, burned)) toSave.push([char, draft]);
+    }
+    if (toSave.length === 0) return;
+    setProject((p) => {
+      const glyphs = { ...p.glyphs };
+      for (const [char, draft] of toSave) {
+        glyphs[char] = { ...(glyphs[char] ?? { char }), char, stitches: draft };
+      }
+      return { ...p, glyphs };
+    });
+    setDrafts((d) => {
+      const next = new Map(d);
+      for (const [char] of toSave) next.delete(char);
+      return next;
+    });
+  }, []);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
@@ -619,6 +641,14 @@ export default function App() {
               title="Save glyph (Return)"
             >
               Save glyph ⏎
+            </button>
+            <button
+              className="btn btn-save"
+              onClick={saveAllGlyphs}
+              disabled={dirtyChars.size === 0}
+              title="Save every glyph with unsaved changes"
+            >
+              Save all{dirtyChars.size > 0 ? ` (${dirtyChars.size})` : ''}
             </button>
           </div>
           {currentChar === ' ' ? (

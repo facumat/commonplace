@@ -13,12 +13,22 @@
         ],
         "thoughts": null
     },
-
+    {
+        "thing":"Naomi Klein on AI being fascist idea",
+        "from":"The Maybe",
+        "year":"2026",
+        "url":"https://youtu.be/iEf-MNsyUiE",
+        "consumed":"2026-8-5",
+        "type":"video",
+        "tags":["ai", "the web"],
+        "thoughts":"Naomi te amo"
+    },
     {
         "thing": "Bobbin lace and the ancestral skill (and patience) of the palilleiras for its preparation",
         "from":"Eugenio Monesma - Documentales",
         "type":"video",
         "tags":["textile"],
+        "year":"1997",
         "consumed":"2026-5-18",
         "thoughts":"Ugh quiero aprender esta t[ecnica.",
         "url":"https://www.youtube.com/watch?v=d7eqwQ3RtXU"
@@ -27,6 +37,7 @@
         "thing":" Why Do We Anthropomorphize Computers?... and dehumanize ourselves in the process? ",
         "from":"Marloes de Valk",
         "url":"https://media.ccc.de/v/34c3-9296-why_do_we_anthropomorphize_computers",
+        "year":"2017",
         "consumed":"2026-5-6",
         "type":"video",
         "tags":["permacomputing"]
@@ -36,6 +47,7 @@
         "from":"Dan McQuillan",
         "type":"video",
         "url":"https://www.youtube.com/watch?v=WCnSCB19l7A&t=4s",
+        "year":"2024",
         "consumed":"2026-5-6",
         "tags":["ai", "permacomputing"],
         "thoughts":"Great and engaging talk on resisting AI and decomputing as both degrowth on technology and decolonialisim."
