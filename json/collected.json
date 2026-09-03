@@ -13,6 +13,14 @@
         "thoughts": "thoughts"
     },
     {
+        "thing":"The AIDS memorial quilt",
+        "from":"USA National AIDS Memorial",
+        "url":"https://www.aidsmemorial.org/interactive-aids-quilt",
+        "type":"archive",
+        "tags":["queerness", "aids", "embroidery"],
+        "thoughts":"Great archive of the aids memorial quilt, with ability to zoom in the hundres of patches."
+    },
+    {
         "thing":"LibraryThing",
         "url":"https://www.librarything.com/",
         "type":"resource",
